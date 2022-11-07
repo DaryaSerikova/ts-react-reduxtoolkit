@@ -8,8 +8,6 @@ import { ReactComponent as Heart } from '../../assets/img/heart.svg';
 
 
 
-
-
 export default function Header() {
   return (
     <header className={cn.app_header}>
