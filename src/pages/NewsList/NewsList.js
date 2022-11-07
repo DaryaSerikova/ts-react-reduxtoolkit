@@ -17,7 +17,7 @@ export default function NewsList() {
 
   return (
     <div className={`${cn.container} ${cn.news_list}`}>
-    
+
       <div>
         <div className={cn.bread_crumbs}>
           <HomeRun />
@@ -32,6 +32,10 @@ export default function NewsList() {
 
       <div className={cn.cards}>
         {Cards}
+      </div>
+
+      <div className={cn.pagination}>
+        <div>1</div>
       </div>
 
     </div>
