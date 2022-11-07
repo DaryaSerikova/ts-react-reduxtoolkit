@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+// import classes from './Card.module.scss';
+import cn from './Card.module.scss';
+
 
 
 const Card = ({title, description, date}) => {
   return (
-    <div className="card">
-      <div className="wrapper-card-img"></div>
-      <div className="card-title">{title}</div>
-      <div className="card-mini-description">{description}</div>
-      <div className="card-date">{date}</div>
+    <div className={cn.card}>
+      <div className={cn.wrapper_img}></div>
+      <div className={cn.title}>{title}</div>
+      <div className={cn.mini_description}>{description}</div>
+      <div className={cn.date}>{date}</div>
       <button>Читать</button>
     </div>
   )

@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
 import { CardsInfo } from './CardsInfo';
+import cn from "./NewsList.module.scss";
+
+
 
 export default function NewsList() {
 
@@ -10,14 +13,15 @@ export default function NewsList() {
       description={item.description}
       date={item.date}
     />)
+
   return (
-    <div className="news-list-content">
+    <div className={`${cn.container} ${cn.news_list}`}>
       <div>
         <div className="bread-crumbs">Новости</div>
         <div className="title">Новости</div>
         <input/>
       </div>
-      <div className="cards">
+      <div className={cn.cards}>
         {Cards}
       </div>
 

@@ -1,0 +1,127 @@
+.app_header {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+
+  .container {
+    margin: 0 auto;
+    min-width: 1284px;
+  }
+
+  .container_up_header, .container_down_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .container_up_header {
+    justify-content: space-between;
+  }
+
+  .container_down_header {
+    // gap: 78px;
+    // gap: 83px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+
+  .up_header, .down_header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .up_header {
+    background-color:  #F8F8F8;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -2px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8291A3;
+
+    .first_up_header {
+      gap: 58px;
+      margin-top: -2px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .second_up_header {
+      gap: 39px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .wrapper_point {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .point_text {
+      margin-left: 3px;
+    }
+
+    .wrapper_heart {
+      display: flex;
+      flex-direction: row;
+      width: 95px;
+    }
+
+    .heart_text {
+      margin-right: 13px;
+      // margin-left: -2px;
+    }
+
+    .login {
+      margin-right: 3px;
+    }
+
+  }
+
+
+  .down_header {
+
+    height: 60px;
+  
+    .logo {
+      margin: -2px 0px 0 1px;
+    }
+
+    .wrapper_point_2 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .point_2_text {
+      margin-right: 15px;
+    }
+  
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+      border-radius: 19px;
+      padding: 10px 18px 10px 18px;
+      color: white;
+      width: 224px;
+      height: 27px;
+    }
+  }
+  
+}
