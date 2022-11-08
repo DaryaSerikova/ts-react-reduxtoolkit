@@ -6,13 +6,11 @@ import { CardsInfo } from './NewsListCardsInfo';
 import { ReactComponent as Search } from '../../assets/img/search.svg';
 import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
 
-
-
-import cn from "./NewsList.module.scss";
+import cn from "./NewsListPage.module.scss";
 
 
 
-export default function NewsList() {
+export default function NewsListPage() {
 
   const Cards = CardsInfo.map(
     item => <Card 

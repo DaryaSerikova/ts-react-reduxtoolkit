@@ -2,9 +2,9 @@ import React from 'react';
 import { ReactComponent as PurpleBackground1 } from '../../assets/img/error404_purple_background.svg';
 import { ReactComponent as PurpleBackground2 } from '../../assets/img/error404_purple_background_maskgroup.svg';
 
-import cn from "./Error404.module.scss";
+import cn from "./Error404Page.module.scss";
 
-const Error404 = () => {
+const Error404Page = () => {
   return (
     <div className={cn.container}>
       <div className={cn.page_error404}>
@@ -25,4 +25,4 @@ const Error404 = () => {
   )
 }
 
-export default Error404;
+export default Error404Page;

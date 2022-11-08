@@ -1,19 +1,24 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import NewsList from './pages/NewsList/NewsList';
-import OneNews from './pages/OneNews/OneNews';
-import Error404 from './pages/Error404/Error404';
+import Footer from './components/Footer/Footer';
+import NewsListPage from './pages/NewsListPage/NewsListPage';
+import OneNewsPage from './pages/OneNewsPage/OneNewsPage';
+import Error404Page from './pages/Error404Page/Error404Page';
+import ContactPage from './pages/ContactPage/ContactPage';
+
 import cn from './App.module.scss';
-import { Footer } from './components/Footer/Footer';
+
+
 
 function App() {
   return (
     <div className={cn.app}>
       <Header />
 
-      {/* <NewsList /> */}
-      {/* <OneNews /> */}
-      <Error404 />
+      {/* <NewsListPage /> */}
+      {/* <OneNewsPage /> */}
+      {/* <Error404Page /> */}
+      <ContactPage />
 
       <Footer />
     </div>

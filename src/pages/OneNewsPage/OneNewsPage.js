@@ -13,12 +13,12 @@ import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_ne
 
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { CardsInfo } from './OneNewsCardsInfo';
-import cn from "./OneNews.module.scss";
+import cn from "./OneNewsPage.module.scss";
 import Cards from '../../components/Cards/Cards';
 
 
 
-const OneNews = () => {
+const OneNewsPage = () => {
 
   const Cards = CardsInfo.map(
     item => <Card 
@@ -92,4 +92,4 @@ const OneNews = () => {
   )
 }
 
-export default OneNews;
+export default OneNewsPage;

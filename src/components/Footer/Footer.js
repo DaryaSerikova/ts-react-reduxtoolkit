@@ -19,7 +19,7 @@ import cn from "./Footer.module.scss";
 
 
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className={`${cn.container} ${cn.footer}`}>
 
@@ -98,3 +98,5 @@ export const Footer = () => {
     </footer>
   )
 }
+
+export default Footer;
