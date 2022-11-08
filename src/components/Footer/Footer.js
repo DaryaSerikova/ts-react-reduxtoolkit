@@ -1,5 +1,19 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
+
+import { ReactComponent as NetworkIcon1 } from '../../assets/img/network_icon_1.svg';
+import { ReactComponent as NetworkIcon2 } from '../../assets/img/network_icon_2.svg';
+import { ReactComponent as NetworkIcon3 } from '../../assets/img/network_icon_3.svg';
+
+
+import { ReactComponent as PaymentIcon1 } from '../../assets/img/payment_icon_1.svg';
+import { ReactComponent as PaymentIcon2 } from '../../assets/img/payment_icon_2.svg';
+import { ReactComponent as PaymentIcon3 } from '../../assets/img/payment_icon_3.svg';
+import { ReactComponent as PaymentIcon4 } from '../../assets/img/payment_icon_4.svg';
+import { ReactComponent as PaymentIcon5 } from '../../assets/img/payment_icon_5.svg';
+import { ReactComponent as PaymentIcon6 } from '../../assets/img/payment_icon_6.svg';
+
+
 import cn from "./Footer.module.scss";
 
 
@@ -50,7 +64,6 @@ export const Footer = () => {
           </div>
 
 
-
           <div className={`${cn.column} ${cn.last_column}`}>
             <div className={cn.item}>Новости</div>
             <div className={cn.item}>Размещение и тарифы </div>
@@ -59,7 +72,26 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className={cn.wrapper_icons}></div>
+
+        <div className={cn.wrapper_icons}>
+          <div className={cn.wrapper_networks}>
+            <div className={cn.networks_text}>Мы в соцсетях</div>
+            <div className={cn.networks}>
+              <NetworkIcon1 />
+              <NetworkIcon2 />
+              <NetworkIcon3 />
+            </div>
+          </div>
+
+          <div className={cn.payments}>
+            <PaymentIcon1 />
+            <PaymentIcon2 />
+            <PaymentIcon3 />
+            <PaymentIcon4 />
+            <PaymentIcon5 />
+            <PaymentIcon6 />
+          </div>
+        </div>
 
       </div>
 

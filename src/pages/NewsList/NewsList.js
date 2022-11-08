@@ -1,7 +1,13 @@
 import React from 'react';
+import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import Card from '../../components/Card/Card';
-import { CardsInfo } from './CardsInfo';
-import { ReactComponent as HomeRun } from '../../assets/img/home_run.svg';
+import { CardsInfo } from './NewsListCardsInfo';
+
+import { ReactComponent as Search } from '../../assets/img/search.svg';
+import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
+
+
+
 import cn from "./NewsList.module.scss";
 
 
@@ -18,15 +24,13 @@ export default function NewsList() {
   return (
     <div className={`${cn.container} ${cn.news_list}`}>
 
-      <div>
-        <div className={cn.bread_crumbs}>
-          <HomeRun />
-          <div>Новости</div>
-        </div>
+      {/* <PurpleRectangle /> */}
 
+      <div>
+        <BreadCrumbs />
         <div className={cn.title_wrapper}>
           <div className={cn.title}>Новости</div>
-          <input/>
+          <input className={cn.input} placeholder="Поиск по статьям"></input>
         </div>
       </div>
 
