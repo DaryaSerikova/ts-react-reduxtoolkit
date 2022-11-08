@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import NewsList from './pages/NewsList/NewsList';
 import OneNews from './pages/OneNews/OneNews';
+import Error404 from './pages/Error404/Error404';
 import cn from './App.module.scss';
 import { Footer } from './components/Footer/Footer';
 
@@ -11,7 +12,8 @@ function App() {
       <Header />
 
       {/* <NewsList /> */}
-      <OneNews />
+      {/* <OneNews /> */}
+      <Error404 />
 
       <Footer />
     </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
 import { ReactComponent as PurpleRectangle1 } from '../../assets/img/purple_rectangle_news.svg';
+import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
+
 import { ReactComponent as PurpleNetworkIcon1 } from '../../assets/img/purple_network_1.svg';
 import { ReactComponent as PurpleNetworkIcon2 } from '../../assets/img/purple_network_2.svg';
 import { ReactComponent as PurpleNetworkIcon3 } from '../../assets/img/purple_network_3.svg';
@@ -27,9 +29,15 @@ const OneNews = () => {
 
   return (
     <div className={`${cn.one_news} ${cn.parent}`}>
+    
       {/* <div className={cn.children}>
         <PurpleRectangle1 />
       </div> */}
+
+      {/* <div className={cn.children}>
+        <YellowDots />
+      </div> */}
+
       <div className={`${cn.container_text} ${cn.content} ${cn.children}`}>
         <BreadCrumbs />
         <div className={cn.title}>Линия Сталина: суровый отдых в усадьбах на сутки </div>
