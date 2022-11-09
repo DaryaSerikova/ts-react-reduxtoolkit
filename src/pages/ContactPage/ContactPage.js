@@ -5,6 +5,14 @@ import { ReactComponent as ContactIcon1 } from '../../assets/img/contact_icon_1.
 import { ReactComponent as ContactIcon2 } from '../../assets/img/contact_icon_2.svg';
 import { ReactComponent as ContactIcon3 } from '../../assets/img/contact_icon_3.svg';
 import { ReactComponent as ContactIcon4 } from '../../assets/img/contact_icon_4.svg';
+
+
+import { ReactComponent as PurpleNetworkIcon1 } from '../../assets/img/purple_network_1.svg';
+import { ReactComponent as PurpleNetworkIcon2 } from '../../assets/img/purple_network_2.svg';
+import { ReactComponent as PurpleNetworkIcon3 } from '../../assets/img/purple_network_3.svg';
+import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_network_4.svg';
+import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
+
 import cn from "./ContactPage.module.scss";
 
 
@@ -21,15 +29,22 @@ const ContactPage = () => {
 
         <div className={cn.contacts_with_icons}>
           <div className={cn.contact_icons}>
-            <ContactIcon1 />
-            <ContactIcon2 />
-            <ContactIcon3 />
-            <ContactIcon4 />
+            <ContactIcon1 className={cn.contact_icon}/>
+            <ContactIcon2 className={cn.contact_icon}/>
+            <ContactIcon3 className={cn.contact_icon}/>
+            <ContactIcon4 className={cn.contact_icon}/>
             
           </div>
           <div className={cn.contact_text}>
             <div className={cn.contact_item}>220068, РБ, г. Минск, ул. Осипенко, 21, кв.23</div>
-            <div className={cn.contact_item}>+375 29 621-48-33  </div>
+            <div className={`${cn.contact_item} ${cn.phone_with_icons}`}>
+              <div>+375 29 621-48-33 </div>
+              <div className={cn.phone_icons}>
+                <PurpleNetworkIcon3 className={cn.phone_icon}/>
+                <PurpleNetworkIcon4 className={cn.phone_icon}/>
+                <PurpleNetworkIcon5 className={cn.phone_icon}/>
+              </div> 
+            </div>
             <div className={`${cn.contact_item} ${cn.email}`}>sdaem@sdaem.by</div>
             <div className={`${cn.contact_item} ${cn.working_hours}`}>Режим работы: 08:00-22:00</div>
           </div>

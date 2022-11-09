@@ -46,6 +46,19 @@
         flex-direction: column;
       }
 
+      .contact_icons {
+        background-color: #686868;
+        margin-top: -1px;
+
+        .contact_icon {
+          margin-bottom: 11px;
+        }
+
+        .contact_icon:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
       .email {
         border-bottom: 1px solid black;
         width: min-content;
@@ -58,6 +71,27 @@
         margin-top: 3px;
         letter-spacing: -0.35px;
         word-spacing: 1px;
+      }
+
+      .phone_with_icons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 12px !important;
+
+        .phone_icons {
+          display: flex;
+          flex-direction: row;
+          margin-top: -1px;
+          gap: 9px;
+
+          .phone_icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+
       }
 
       .contact_item {
