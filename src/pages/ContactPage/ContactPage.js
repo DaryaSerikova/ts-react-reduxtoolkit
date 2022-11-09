@@ -1,4 +1,6 @@
 import React from 'react';
+import { ReactComponent as WarningIcon } from '../../assets/img/warning.svg';
+
 import { ReactComponent as ContactIcon1 } from '../../assets/img/contact_icon_1.svg';
 import { ReactComponent as ContactIcon2 } from '../../assets/img/contact_icon_2.svg';
 import { ReactComponent as ContactIcon3 } from '../../assets/img/contact_icon_3.svg';
@@ -28,8 +30,8 @@ const ContactPage = () => {
           <div className={cn.contact_text}>
             <div className={cn.contact_item}>220068, РБ, г. Минск, ул. Осипенко, 21, кв.23</div>
             <div className={cn.contact_item}>+375 29 621-48-33  </div>
-            <div className={cn.contact_item}>sdaem@sdaem.by</div>
-            <div className={cn.contact_item}>Режим работы: 08:00-22:00</div>
+            <div className={`${cn.contact_item} ${cn.email}`}>sdaem@sdaem.by</div>
+            <div className={`${cn.contact_item} ${cn.working_hours}`}>Режим работы: 08:00-22:00</div>
           </div>
         </div>
 
@@ -39,7 +41,9 @@ const ContactPage = () => {
 
         </div>
         <div className={cn.warning}>
-          <div></div>
+          <div>
+            <WarningIcon />
+          </div>
           <div>Администрация сайта не владеет информацией о наличии свободных квартир</div>
         </div>
 
@@ -48,16 +52,39 @@ const ContactPage = () => {
 
 
       <div className={cn.wrapper_form}>
-        <form>
-          <input />
-          <input />
-          <textarea />
+        <form className={cn.form}>
+          <div className={cn.wrapper_inputs}>
+            <label className={cn.label}>
+              Ваше имя
+              <input type="text"/>
+            </label>
+            <label className={cn.label}>
+              Ваша электронная почта
+              <input type="email"/>
+            </label>
+          </div>
+          <div className={cn.wrapper_textarea}>
+            {/* <label> */}
+              <div className={`${cn.label} ${cn.label_textarea}`}>Ваше сообщение</div>
+              <textarea 
+                className={cn.textarea}
+                placeholder="Сообщение"
+                // rows="9"
+                // cols="45"
+                />
+            {/* </label> */}
+          </div>
 
-          <button 
-            type="submit"
-          >
-            Отправить
-          </button>
+
+          <div className={cn.wrapper_btn}>
+            <button
+              className={cn.btn}
+              type="submit"
+            >
+              Отправить
+            </button>
+          </div>
+
           
         </form>
       </div>
