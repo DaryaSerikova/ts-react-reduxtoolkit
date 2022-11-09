@@ -1,0 +1,108 @@
+.wrapper_box {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100%;
+
+  .box {
+    margin-top: 182px !important;
+    margin: 0px auto;
+    max-width: 406px;
+    // height: 536px;
+    padding: 50px 50px 55px;
+    background: #FFFEFE;
+    box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+    border-radius: 10px;
+
+    font-weight: 400;
+    font-size: 14px;
+    // line-height: 17px;
+    text-align: center;
+    color: #686868;
+
+    .title {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+      color: #000000;
+    }
+
+    .text {
+      margin-top: 15px;
+      margin-left: -3px;
+      // max-width: 280px;
+
+      line-height: 17px;
+    }
+
+    .container_form {
+      margin: 0 auto;
+      max-width: 306px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 35px;
+      box-sizing: border-box;
+
+      input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 17px 20px;
+        gap: 10px;
+
+        background: #F7F7F7;
+        border-radius: 30px;
+        border: none;
+        margin-bottom: 21px;
+
+        // &:last-child {
+        //   margin-bottom: 0;
+        // }
+      }
+
+      .wrapper_settings_remember {
+        display: flex;
+        flex-direction: row;
+        gap: 14px;
+      }
+
+      .login_settings {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        line-height: 20px;
+      }
+
+      .btn {
+        margin-top: 38px;
+        padding: 13px 12px 11px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+
+        background: #FFD54F;
+        border-radius: 33px;
+        border: none;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+
+        color: #1E2123;
+      }
+
+      .logup {
+        margin-top: 55px;
+      }
+    }
+  }
+
+}

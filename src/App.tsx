@@ -6,21 +6,30 @@ import OneNewsPage from './pages/OneNewsPage/OneNewsPage';
 import Error404Page from './pages/Error404Page/Error404Page';
 import ContactPage from './pages/ContactPage/ContactPage';
 
+import LoginPage from './pages/LoginPage/LoginPage';
+
 import cn from './App.module.scss';
+import ModalSent from './modals/ModalSent/ModalSent';
 
 
 
 function App() {
   return (
     <div className={cn.app}>
-      <Header />
+
+      <LoginPage />
+
+
+      {/* <Header /> */}
 
       {/* <NewsListPage /> */}
       {/* <OneNewsPage /> */}
       {/* <Error404Page /> */}
-      <ContactPage />
+      {/* <ContactPage /> */}
 
-      <Footer />
+      {/* <Footer /> */}
+
+      {/* <ModalSent /> */}
     </div>
   );
 }
