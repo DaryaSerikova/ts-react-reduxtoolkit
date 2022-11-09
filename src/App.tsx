@@ -5,11 +5,12 @@ import NewsListPage from './pages/NewsListPage/NewsListPage';
 import OneNewsPage from './pages/OneNewsPage/OneNewsPage';
 import Error404Page from './pages/Error404Page/Error404Page';
 import ContactPage from './pages/ContactPage/ContactPage';
-
 import LoginPage from './pages/LoginPage/LoginPage';
+import LogUpPage from './pages/LogUpPage/LogUpPage';
 
-import cn from './App.module.scss';
 import ModalSent from './modals/ModalSent/ModalSent';
+import cn from './App.module.scss';
+import MainPage from './pages/MainPage/MainPage';
 
 
 
@@ -17,17 +18,19 @@ function App() {
   return (
     <div className={cn.app}>
 
-      <LoginPage />
+      {/* <LoginPage /> */}
+      {/* <LogUpPage /> */}
 
 
-      {/* <Header /> */}
+      <Header />
 
       {/* <NewsListPage /> */}
       {/* <OneNewsPage /> */}
       {/* <Error404Page /> */}
       {/* <ContactPage /> */}
+      <MainPage />
 
-      {/* <Footer /> */}
+      <Footer />
 
       {/* <ModalSent /> */}
     </div>
