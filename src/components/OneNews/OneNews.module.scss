@@ -1,0 +1,27 @@
+.one_news {
+  display: flex;
+  flex-direction: column;
+  // border-bottom: 1px solid #664EF9;
+  border-bottom: 1px solid #654ef915;
+
+  &:last-child {
+    border: none;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1E2123;
+  }
+
+  .date {
+    margin-top: 6px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8291A3;
+  }
+}
