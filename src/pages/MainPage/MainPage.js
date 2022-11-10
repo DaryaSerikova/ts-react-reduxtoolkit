@@ -2,6 +2,8 @@ import React from 'react';
 import AdvertisingCard from '../../components/AdvertisingCard/AdvertisingCard';
 import { AdvertisingCardInfo } from '../../components/AdvertisingCard/AdvertisingCardInfo';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
+import MenuCard from '../../components/MenuCard/MenuCard';
+import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
 import MenuTextList from '../../components/MenuListItems/MenuTextList';
 import News from '../../components/News/News';
 import cn from "./MainPage.module.scss";
@@ -14,15 +16,22 @@ const MainPage = () => {
     el => <AdvertisingCard title={el.title} text={el.text} />
   )
 
+  const menuCards = MenuCardInfo.map(
+    el => <MenuCard subtitle={el.subtitle} title={el.title} cities={el.cities} />
+  )
+
   return (
     <div className={cn.container}>
+
       <div className={cn.middle_title}>Sdaem.by - у нас живут ваши объявления</div>
       <div className={cn.choice_smth}></div>
-      <div wrapper_menus>
-        <div className={cn.menu_cards}></div>
-        {/* <MenuTextList /> */}
-      </div>
+      <div classname={cn.wrapper_menus}>
+        <div className={cn.menu_cards}>
+          {menuCards}
+        </div>
 
+        <MenuTextList />
+      </div>
 
 
 
@@ -68,6 +77,8 @@ const MainPage = () => {
         </div>
       </div>
 
+
+
       <div className={cn.wrapper_search}>
         <div className={`${cn.search_title} ${cn.title}`}>Поиск квартир на карте</div>
         <div className={cn.search_text}>Ищите квартиры на сутки в центре города, возле парка или в живописном районе</div>
@@ -101,9 +112,6 @@ const MainPage = () => {
         </div>
         <News />
       </div>
-
-
-      
 
 
     </div>
