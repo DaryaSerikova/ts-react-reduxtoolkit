@@ -1,4 +1,6 @@
 import React from 'react';
+import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
+import MenuTextList from '../../components/MenuListItems/MenuTextList';
 import cn from "./MainPage.module.scss";
 
 
@@ -10,11 +12,9 @@ const MainPage = () => {
       <div className={cn.choice_smth}></div>
       <div wrapper_menus>
         <div className={cn.menu_cards}></div>
-        <div className={cn.menu_text}>
-          <div className={cn.title}></div>
-          <div className={cn.menu_text_item}></div>
-        </div>
+        {/* <MenuTextList /> */}
       </div>
+      <CardWithDetails />
     </div>
   )
 }

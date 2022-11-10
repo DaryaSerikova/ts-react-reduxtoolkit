@@ -1,34 +1,44 @@
 import React from 'react';
-import { MenuTextListInfo } from './MenuTextListInfo';
+import { MenuTextListInfo, PopularInfo } from './MenuTextListInfo';
+import cn from "./MenuTextList.module.scss";
 
 
 
+const MenuTextList = () => {
 
-export const MenuTextList = () => {
+  const res = MenuTextListInfo.map(el => {
+    
+    const arrItems = el.items;
+    const curTitle = el.title;
 
-  const MenuTextItems = () => {
-
-    // const Items = () => {
-    //   return ()
-    // }
-    const titles = MenuTextItems.forEach(el => {
-      const item = el.it
-      return (<div className={cn.item}></div>)
-      
-    });
-
-    const itemsList = MenuTextItems.filter(el => (el.title === curTitle))
-    // const items = 
-  
-    return(
-      <div className={cn.item}></div>
+    const items = arrItems.map(item => {
+        return(
+        <div className={cn.item}>
+          <div className={cn.item_name}>{item.name}</div>
+          <div className={cn.item_amount}>{item.amount}</div>
+        </div>)
+      }
     )
-  }
-  
-  return (
-    <>
-      <div className={cn.title}></div>
-      <div className={cn.item}></div>
-    </>
-  )
+
+    return (
+      <>
+        <div className={cn.title}>{curTitle}</div>
+        {items}
+        {/* <div>Популярные направления</div> */}
+      </>
+    )
+  })
+
+  const popularItems = PopularInfo.map(el => 
+    <div className={cn.popular_name}>{el}</div>)
+
+  return(
+    <div className={cn.menu_text}>
+      {res}
+      <div className={cn.title}>Популярные направления</div>
+      {popularItems}
+    </div>
+  );
 }
+
+export default MenuTextList;

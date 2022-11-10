@@ -1,0 +1,164 @@
+.box {
+  background: #FFFEFE;
+  border-radius: 10px;
+
+  .container {
+    margin: 0 auto;
+    max-width: 406px;
+
+    .wrapper_img {
+      max-width: 406px;
+      height: 226px;
+
+      .gold {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 66px;
+        padding: 9px 12px;
+        // gap: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
+  
+        background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
+        border-radius: 0px 10px 10px 10px;
+      }
+    }
+
+
+
+    .description {
+
+      .details {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #686868;
+
+        .people, .amount_rooms, .square {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 8px;
+          background: #F8F8F8;
+          border-radius: 18px;
+        }
+
+        .price {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+
+          color: #664EF9;
+        }
+
+        .duration {
+          font-weight: 400;
+          color: #BDBDBD;
+        }
+
+        .people {
+          gap: 6.5px;
+        }
+      }
+
+      .location {
+        margin-top: 23px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+
+        .address, .subway_station, .neighborhood, .subway_with_neighborhood {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .address {
+          gap: 11.5px;
+        }
+
+        .subway_station {
+          gap: 6px;
+        }
+
+
+        .neighborhood {
+          gap: 6px;
+
+          .wrapper_ellipse {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .subway_with_neighborhood {
+          gap: 15px;
+        }
+      }
+
+      .text {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: #8291A3;
+      }
+
+      hr {
+        // border: 1px solid #654ef900;
+        border: 1px solid #664EF9;
+        opacity: 0.1;
+      }
+
+      .wrapper_buttons {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+
+        button {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 15px;
+          max-width: 124px;
+  
+          background: #FFFFFF;
+          border-radius: 18px;
+          border: none;
+        }
+
+        .button_contacts {
+          display: flex;
+          flex-direction: row;
+          gap: 13px;
+          box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+          color: #664EF9;
+        }
+
+        .button_more_details {
+          background: rgba(255, 213, 79, 0.1);
+          color: #FEC100;
+        }
+      }
+    }
+
+
+  }
+}
