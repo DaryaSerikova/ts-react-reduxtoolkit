@@ -5,12 +5,16 @@
 
   .container {
     margin: 0 auto;
-    min-width: 1282px;
+    min-width: 1284px;
+  }
+
+  .container_up_header, .container_down_header, 
+  .up_header, .down_header, .container_down_header {
+    display: flex;
+    flex-direction: row;
   }
 
   .container_up_header, .container_down_header {
-    display: flex;
-    flex-direction: row;
     align-items: center;
   }
 
@@ -19,22 +23,10 @@
   }
 
   .container_down_header {
-    // gap: 78px;
-    // gap: 83px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-
-
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-  }
-
-
-  .up_header, .down_header {
-    display: flex;
-    flex-direction: row;
   }
 
   .up_header {
@@ -45,7 +37,6 @@
     justify-content: space-between;
     margin-top: -1px;
 
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -53,22 +44,22 @@
     line-height: 17px;
     color: #8291A3;
 
-    .first_up_header {
-      gap: 58px;
-      margin-top: -2px;
+    .first_up_header, .second_up_header, .wrapper_point, .wrapper_heart {
       display: flex;
       flex-direction: row;
+    }
+
+    .first_up_header {
+      gap: 58px;
+      margin-top: -3px;
     }
   
     .second_up_header {
       gap: 39px;
-      display: flex;
-      flex-direction: row;
+      margin-top: -3px;
     }
   
     .wrapper_point {
-      display: flex;
-      flex-direction: row;
       align-items: center;
     }
   
@@ -77,14 +68,11 @@
     }
 
     .wrapper_heart {
-      display: flex;
-      flex-direction: row;
       width: 95px;
     }
 
     .heart_text {
       margin-right: 13px;
-      // margin-left: -2px;
     }
 
     .login {
@@ -95,21 +83,29 @@
 
 
   .down_header {
-
+    margin-top: -2px;
     height: 60px;
-  
-    .logo {
-      margin: -2px 0px 0 1px;
-    }
 
-    .wrapper_point_2 {
+    .down_header_items {
       display: flex;
       flex-direction: row;
-    }
+      gap: 81px;
 
-    .point_2_text {
-      margin-right: 15px;
+      .logo {
+        margin: -2px 0px 0 1px;
+      }
+  
+      .wrapper_point_2 {
+        display: flex;
+        flex-direction: row;
+      }
+  
+      .point_2_text {
+        margin-right: 15px;
+      }
     }
+  
+
   
     .btn {
       display: flex;

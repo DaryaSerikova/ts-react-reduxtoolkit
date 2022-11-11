@@ -1,8 +1,7 @@
 import React from 'react';
-// import classes from './Card.module.scss';
+
+import photo from "../../assets/img/photo_1.jpg";
 import cn from './Card.module.scss';
-import { ReactComponent as Photo } from '../../assets/img/photo_1.svg';
-// /home/serikova/Projects/Self-Education/TS/ts-react-reduxtoolkit/src/assets/img/photo_1.svg
 
 
 
@@ -11,7 +10,7 @@ const Card = ({title, description, date}) => {
   return (
     <div className={cn.card}>
       <div className={cn.wrapper_img}>
-        {/* <Photo /> */}
+        <img src={photo} alt={photo}/>
       </div>
       <div className={cn.card_container}>
         <div className={cn.title}>{title}</div>

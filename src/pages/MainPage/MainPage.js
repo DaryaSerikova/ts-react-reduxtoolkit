@@ -4,7 +4,7 @@ import { AdvertisingCardInfo } from '../../components/AdvertisingCard/Advertisin
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import MenuCard from '../../components/MenuCard/MenuCard';
 import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
-import MenuTextList from '../../components/MenuListItems/MenuTextList';
+import MenuTextList from '../../components/MenuTextList/MenuTextList';
 import News from '../../components/News/News';
 import cn from "./MainPage.module.scss";
 
@@ -25,7 +25,7 @@ const MainPage = () => {
 
       <div className={cn.middle_title}>Sdaem.by - у нас живут ваши объявления</div>
       <div className={cn.choice_smth}></div>
-      <div classname={cn.wrapper_menus}>
+      <div className={cn.wrapper_menus}>
         <div className={cn.menu_cards}>
           {menuCards}
         </div>
@@ -72,7 +72,7 @@ const MainPage = () => {
           <div className={cn.wrapper_left_border}>
             <button className={cn.btn}>Посмотреть все</button>
           </div>
-          
+
 
         </div>
       </div>
@@ -98,7 +98,7 @@ const MainPage = () => {
         <div className={cn.apartment_for_day}>
           <div className={cn.purple_subtitle}>ЧТО ТАКОЕ SDAEM.BY</div>
           <div className={`${cn.apartment_title} ${cn.title}`}>Квартира на сутки в Минске</div>
-          
+
           <div className={cn.apartment_img}>img</div>
           <div className={cn.apartment_text}>
             Нужна квартира на сутки в Минске?

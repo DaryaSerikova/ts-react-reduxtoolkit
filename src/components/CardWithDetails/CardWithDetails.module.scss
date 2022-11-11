@@ -4,7 +4,8 @@
 
   .container {
     margin: 0 auto;
-    max-width: 406px;
+    // max-width: 406px;
+    width: 406px;
 
     .wrapper_img {
       max-width: 406px;
@@ -29,14 +30,19 @@
     }
 
 
+    .container_desc {
+      max-width: 365.5px;
+    }
 
     .description {
+      margin-top: 22px;
+      margin-left: 19px;
 
       .details {
-        margin-top: 15px;
         display: flex;
         flex-direction: row;
         gap: 10px;
+        // margin-right: 10px;
 
         font-weight: 500;
         font-size: 14px;
@@ -70,8 +76,12 @@
         }
       }
 
+      .details div:last-child {
+        margin-right: 0px;
+      }
+
       .location {
-        margin-top: 23px;
+        margin-top: 25px;
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
@@ -101,12 +111,13 @@
         }
 
         .subway_with_neighborhood {
-          gap: 15px;
+          gap: 30px;
+          margin-top: 13px;
         }
       }
 
       .text {
-        margin-top: 20px;
+        margin-top: 18px;
         font-weight: 400;
         font-size: 12px;
         line-height: 15px;
@@ -115,6 +126,7 @@
       }
 
       hr {
+        margin-top: 13px;
         // border: 1px solid #654ef900;
         border: 1px solid #664EF9;
         opacity: 0.1;

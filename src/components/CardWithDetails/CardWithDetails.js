@@ -21,7 +21,7 @@ const CardWithDetails = () => {
           <div className={cn.gold}>Gold</div>
 
         </div>
-        <div className={cn.description}>
+        <div className={`${cn.description} ${cn.container_desc}`}>
 
           <div className={cn.details}>
             <div>

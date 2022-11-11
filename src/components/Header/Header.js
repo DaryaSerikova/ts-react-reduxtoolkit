@@ -11,8 +11,8 @@ import { ReactComponent as Heart } from '../../assets/img/heart.svg';
 export default function Header() {
   return (
     <header className={cn.app_header}>
-      <div className={`${cn.up_header}`}>
 
+      <div className={`${cn.up_header}`}>
         <div className={`${cn.container} ${cn.container_up_header}`}>
           <div className={cn.first_up_header}>
             <div>Главная</div>
@@ -33,20 +33,21 @@ export default function Header() {
             <div className={cn.login}>Вход и регистрация</div>
           </div>
         </div>
-
-
       </div>
+
       <div className={cn.down_header}>
         <div className={`${cn.container} ${cn.container_down_header}`}>
-          {/* <div>logo</div> */}
-          <Logo className={cn.logo}/>
-          <div className={cn.wrapper_point_2}>
-            <div className={cn.point_2_text}>Квартиры на сутки</div>
-            <Point2 />
+          <div className={cn.down_header_items}>
+            <Logo className={cn.logo}/>
+            <div className={cn.wrapper_point_2}>
+              <div className={cn.point_2_text}>Квартиры на сутки</div>
+              <Point2 />
+            </div>
+            <div>Коттеджи и усадьбы</div>
+            <div>Бани и Сауны</div>
+            <div>Авто напрокат</div>
           </div>
-          <div>Коттеджи и усадьбы</div>
-          <div>Бани и Сауны</div>
-          <div>Авто напрокат</div>
+
           <button className={cn.btn}>+  Разместить объявление</button>
         </div>
       </div>
