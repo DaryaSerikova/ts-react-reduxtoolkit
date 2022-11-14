@@ -20,17 +20,17 @@ export default function NewsListPage() {
     />)
 
   return (
-    <div className={`${cn.container} ${cn.news_list}`}>
+    <main className={`${cn.container} ${cn.news_list}`}>
 
       {/* <PurpleRectangle /> */}
 
-      <div>
+      <header>
         <BreadCrumbs />
         <div className={cn.title_wrapper}>
-          <div className={cn.title}>Новости</div>
+          <h1 className={cn.title}>Новости</h1>
           <input className={cn.input} placeholder="Поиск по статьям"></input>
         </div>
-      </div>
+      </header>
 
       <div className={cn.cards}>
         {Cards}
@@ -40,6 +40,6 @@ export default function NewsListPage() {
         <div>1</div>
       </div>
 
-    </div>
+    </main>
   )
 }

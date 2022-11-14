@@ -1,85 +1,84 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/typography";
+
+
 .card {
   width: 406px;
   height: 500px;
-  // background-color: bisque;
   background: #FFFEFE;
   border-radius: 10px;
-  // opacity: 1;
 
-  .wrapper_img {
-    width: 406px;
-    height: 227px;
-    border-radius: 9px;
+  .header_card {
+    .wrapper_img {
+      width: 406px;
+      height: 227px;
+      border-radius: 9px;
+    }
+  
+    .title {
+      margin-top: 30px;
+      @extend %fontStyle_1;
+      line-height: 19px;
+      color: $color_1;
+    }
   }
+
 
   .card_container {
     max-width: 365px;
-    margin: 30px auto 0;
+    margin: 0px auto 0;
 
-    .title {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 19px;
-
-      color: #1E2123;
-    }
 
     .description {
       margin-top: 15px;
-      font-weight: 400;
-      font-size: 14px;
+      @extend %fontStyle_2;
       line-height: 17px;
-      color: #686868;
-      
+      color: $color_2;
     }
 
     .hr {
-      border: 1px solid #F8F8F8;
+      border: 1px solid $color_3;
       margin: 24px 0 19px;
     }
 
-    .card_footer {
+  }
+
+  .card_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .date {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      padding: 10px 7px;
+      margin-top: -1px;
+      gap: 10px;
 
-      .date {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        // padding: 12px 8px;
-        padding: 10px 7px;
-        margin-top: -1px;
-        gap: 10px;
+      background: $color_3;
+      border-radius: 18px;
 
-        background: #F8F8F8;
-        border-radius: 18px;
-
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: right;
-        color: #8291A3;
-      }
-
-      .btn {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 11px 16px 10px;
-        gap: 10px;
-  
-        background: rgba(102, 78, 249, 0.1);
-        border: none;
-        border-radius: 17px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        color: #664EF9;
-      }
-
-
+      @extend %fontStyle_3;
+      line-height: 17px;
+      text-align: right;
+      color: $color_4
     }
 
+    .btn {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 11px 16px 10px;
+      gap: 10px;
+
+      background: rgba(102, 78, 249, 0.1);
+      border: none;
+      border-radius: 17px;
+
+      @extend %fontStyle_4;
+      line-height: 17px;
+      color: $color_6;
+    }
   }
 }
