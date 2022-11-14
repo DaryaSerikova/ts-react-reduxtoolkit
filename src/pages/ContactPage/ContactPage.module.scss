@@ -21,8 +21,7 @@
       line-height: 100%;  
       display: flex;
       align-items: center;
-      // color: #FFFFFF;
-      // color: $color_7;
+      // color: $white_3;
 
     }
 
@@ -30,9 +29,7 @@
       margin-top: 30px;
       @extend %fontStyle_6;
       line-height: 150%;
-      // color: #FFFFFF;
-      // color: $color_7;
-
+      // color: $white_3;
     }
 
     .contacts_with_icons {
@@ -47,7 +44,7 @@
       }
 
       .contact_icons {
-        background-color: #686868;
+        background-color: $grey;
         margin-top: -1px;
 
         .contact_icon {
@@ -101,7 +98,7 @@
         font-size: 18px;
         line-height: 150%;
         // color: #FFFFFF;
-        // color: $color_7;
+        // color: $white_3;
       }
 
       .contact_item:last-child {
@@ -116,9 +113,7 @@
 
       @extend %fontStyle_2;
       line-height: 150%;
-      // color: #FFFFFF;
-      // color: $color_7;
-
+      // color: $white_3;
     }
 
     .warning {
@@ -134,9 +129,7 @@
 
       @extend %fontStyle_6;
       line-height: 150%;
-      // color: #FFFFFF;
-      // color: $color_7;
-
+      // color: $white_3;
     }
   }
 
@@ -144,7 +137,7 @@
     box-sizing: border-box;
     padding: 39px;
 
-    background: $color_8;
+    background: $white_1;
     box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
     border-radius: 10px;
     max-width: 625px;
@@ -161,10 +154,10 @@
         .label {
           @extend %fontStyle_3;
           line-height: 17px;
-          color: $color_2;
+          color: $grey;
 
           input {
-            background: $color_3;
+            background: $white_2;
             border-radius: 30px;
             border: none;
             padding: 16px 20px;
@@ -180,7 +173,7 @@
         margin: 3px 0 15px 2px;
         @extend %fontStyle_3;
         line-height: 17px;
-        color: $color_2;
+        color: $grey;
       }
 
       .wrapper_textarea {
@@ -193,16 +186,15 @@
           margin-left: 1px;
           padding: 17px 22px;
 
-          background: $color_3;
+          background: $white_2;
           border-radius: 30px;
           border: none;
 
           font-weight: 500;
           font-size: 15px;
           line-height: 17px;
-          color: $color_2;
+          color: $grey;
         }
-
       }
 
       .wrapper_btn {
@@ -219,14 +211,14 @@
           padding: 14px 20px 11px;
           gap: 10px;
   
-          background: $color_6;
+          background: $purple;
           border-radius: 33px;
           border: none;
 
           @extend %fontStyle_1;
           line-height: 24px;
           text-align: center;
-          color: $color_7;
+          color: $white_3;
         }
       }
 

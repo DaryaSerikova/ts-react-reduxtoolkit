@@ -19,7 +19,7 @@
       margin-top: 30px;
       @extend %fontStyle_1;
       line-height: 19px;
-      color: $color_1;
+      color: $dark-grey;
     }
   }
 
@@ -33,11 +33,11 @@
       margin-top: 15px;
       @extend %fontStyle_2;
       line-height: 17px;
-      color: $color_2;
+      color: $grey;
     }
 
     .hr {
-      border: 1px solid $color_3;
+      border: 1px solid $white_2;
       margin: 24px 0 19px;
     }
 
@@ -56,13 +56,13 @@
       margin-top: -1px;
       gap: 10px;
 
-      background: $color_3;
+      background: $white_2;
       border-radius: 18px;
 
       @extend %fontStyle_3;
       line-height: 17px;
       text-align: right;
-      color: $color_4
+      color: $light-gray;
     }
 
     .btn {
@@ -78,7 +78,7 @@
 
       @extend %fontStyle_4;
       line-height: 17px;
-      color: $color_6;
+      color: $purple;
     }
   }
 }

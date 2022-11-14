@@ -24,25 +24,12 @@
 
 
   .title {
-    @extend %fontStyle_5;
-    // font-weight: 700;
-    // font-size: 30px;
-
-    line-height: 100%;
-    // color: #1E2123;
-    color: $color_1;
-
     margin-top: 25px;
-  }
 
-  // .description {
-  //   font-weight: 400;
-  //   font-size: 16px;
-    
-  //   line-height: 150%;
-  //   // color: #1E2123;
-  //   color: $color_1;
-  // }
+    @extend %fontStyle_5;
+    line-height: 100%;
+    color: $dark-grey;
+  }
 
   .date_with_icons {
 
@@ -65,11 +52,8 @@
       border-radius: 18px;
 
       @extend %fontStyle_3;
-      // font-weight: 500;
-      // font-size: 14px;
-
       line-height: 17px;
-      color: $color_6;
+      color: $purple;
     }
 
     .wrapper_networks {
@@ -80,11 +64,8 @@
         align-items: center;
 
         @extend %fontStyle_2;
-        // font-weight: 400;
-        // font-size: 14px;
-
         line-height: 17px;
-        color: $color_1;
+        color: $dark-grey;
       }
   
       .networks_icons {
@@ -109,12 +90,11 @@
     // font-weight: 400;
     // font-size: 16px;
     // line-height: 150%;
-
     font-size: 12px;
     font-weight: 400;
     line-height: 1.551;
     letter-spacing: 0.3px;
-    color: $color_1;
+    color: $dark-grey;
 
 
     p {
@@ -125,8 +105,6 @@
       margin-bottom: 0px;
     }
   }
-
-
 }
 
 .content_footer {
@@ -136,10 +114,8 @@
   .content_footer_title {
     font-weight: 700;
     font-size: 25px;
-
     line-height: 30px;
-    color: $color_1;
-
+    color: $dark-grey;
   }
 
   .content_footer_cards {

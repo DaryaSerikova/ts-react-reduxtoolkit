@@ -1,5 +1,5 @@
 @import "../../assets/scss/variables";
-// @import "../../assets/scss/typography";
+@import "../../assets/scss/typography";
 
 .container {
 
@@ -14,12 +14,9 @@
       max-width: 474px;
 
       .title {
-        font-weight: 700;
-        font-size: 60px;
+        @extend %fontStyle_9;
         line-height: 73px;
-        // color: #FFFFFF;
-        color: $color_7;
-
+        color: $white_3;
         text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
       }
       
@@ -27,9 +24,7 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
-      
-        // color: #FFFFFF;
-        color: $color_7;
+        color: $white_3;
       }
       
       .btn {
@@ -39,17 +34,15 @@
         padding: 12px 24px;
         gap: 10px;
       
-        background: #FFD54F;
+        background: $yellow;
         border-radius: 33px;
         border: none;
       }
     }
 
 
-    
     .huge_error404 {
-      // background: #FFFFFF;
-      background: $color_7;
+      background: $white_3;
       opacity: 0.3;
       box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.25);
       max-width: 553px;
