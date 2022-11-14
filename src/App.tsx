@@ -25,10 +25,10 @@ function App() {
       <Header />
 
       {/* <NewsListPage /> */}
-      <OneNewsPage />
+      {/* <OneNewsPage /> */}
       {/* <Error404Page /> */}
       {/* <ContactPage /> */}
-      {/* <MainPage /> */}
+      <MainPage />
 
       <Footer />
 

@@ -6,7 +6,7 @@ import cn from "./Error404Page.module.scss";
 
 const Error404Page = () => {
   return (
-    <div className={cn.container}>
+    <main className={cn.container}>
       <div className={cn.page_error404}>
       
         <div className={cn.first_column}>
@@ -20,7 +20,7 @@ const Error404Page = () => {
 
         <div className={cn.huge_error404}>404</div>
       </div>
-    </div>
+    </main>
 
   )
 }

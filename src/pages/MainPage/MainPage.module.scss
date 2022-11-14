@@ -1,11 +1,15 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/typography";
+
+//288 -> 272
+
 .container {
   margin: 82px auto;
   max-width: 1280px;
 
   // shared start
   .purple_subtitle {
-    font-weight: 600;
-    font-size: 14px;
+    @extend %fontStyle_7;
     line-height: 17px;
 
     background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
@@ -16,8 +20,7 @@
   }
 
   .title {
-    font-weight: 700;
-    font-size: 25px;
+    @extend %fontStyle_8;
     line-height: 30px;
   }
   // shared end
@@ -27,26 +30,25 @@
     margin: 0 auto;
     max-width: 629px;
 
-    font-weight: 700;
-    font-size: 30px;
+    @extend %fontStyle_5;
     line-height: 36px;
     text-align: center;
-
-    color: #FFFFFF;
-
+    color: $color_7;
     text-shadow: 0px 2px 5px rgba(0, 14, 142, 0.3);
   }
 
   .choice_smth {
     margin-top: 50px;
-
     height: 170px;
+  }
+
+  .wrapper_menus, .rent_titles_with_selects {
+    display: flex;
+    flex-direction: row;
   }
 
   .wrapper_menus {
     margin-top: 175px;
-    display: flex;
-    flex-direction: row;
     gap: 30px;
 
     .menu_cards {
@@ -64,15 +66,8 @@
   }
 
 
-
-
-
-
-
   .rent_titles_with_selects {
     margin-top: 146px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 
     .rent_titles {
@@ -81,7 +76,7 @@
   
       .rent_title {
         margin-top: 15px;
-        color: #000000;
+        color: $color_10;
       }
     }
 
@@ -94,26 +89,22 @@
         padding: 5px 15px;
         height: 40px;
         width: 185px;
-        background: #FFFFFF;
+        background: $color_7;
         box-shadow: 0px 10px 20px rgba(0, 96, 206, 0.1);
         border-radius: 20px;
 
-        font-weight: 500;
-        font-size: 14px;
+        @extend %fontStyle_3;
         line-height: 17px;
-        color: #686868;
+        color: $color_2;
 
         .rent_option {
-          font-weight: 500;
-          font-size: 14px;
+          @extend %fontStyle_3;
           line-height: 17px;
-          color: #686868;
+          color: $color_2;
         }
       }
     }
   }
-
-
 
 
   .cards_with_details, .offers_for_minsk {
@@ -134,7 +125,6 @@
 
   .offers_for_minsk {
     gap: 39px;
-    // margin-top: 32px;
     margin-top: 72px;
 
     .wrapper_offers {
@@ -142,21 +132,21 @@
       flex-direction: column;
 
       .offers_amount {
-        font-weight: 700;
-        font-size: 60px;
+        @extend %fontStyle_9;
+        // font-weight: 700;
+        // font-size: 60px;
         line-height: 73px;
-        color: #1E2123;
+        color: $color_1;
 
         .plus {
-          color: #664EF9;
+          color: $color_6;
         }
       }
 
       .offers_text {
-        font-weight: 500;
-        font-size: 14px;
+        @extend %fontStyle_3;
         line-height: 17px;
-        color: #8291A3;
+        color: $color_4;
         opacity: 0.6;
       }
     }
@@ -188,17 +178,14 @@
         padding: 10px 18px;
         margin-left: 25px;
 
-        // gap: 5px;
         background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
         box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
         border-radius: 17px;
         border: none;
 
-
-        font-weight: 700;
-        font-size: 14px;
+        @extend %fontStyle_4;
         line-height: 17px;
-        color: #FFFFFF;
+        color: $color_7;
         text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
       }
     }
@@ -213,6 +200,7 @@
     .search_title {
       text-align: center;
       // color: #FFFFFF;
+      // color: $color_7;
     }
 
     .search_text {
@@ -223,6 +211,7 @@
       text-align: center;
 
       // color: #FFFFFF;
+      // color: $color_7;
     }
 
     .search_btn {
@@ -232,26 +221,25 @@
       gap: 5px;
       align-items: center;
       padding: 10px 18px;
-      // gap: 10px;
 
-      background: #FFFFFF;
+      background: $color_7;
       border-radius: 19px;
     }
   }
 
-  .advertising_cards {
-    margin-top: 94px;
+  .advertising_cards, .apartment_with_news {
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
+  }
+
+  .advertising_cards {
+    margin-top: 94px;
     gap: 30px;
     width: 100%;
   }
 
   .apartment_with_news {
     margin-top: 136.5px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 0 0 100px;
 
@@ -263,7 +251,7 @@
       .apartment_title {
         margin-top: 15px;
         margin-bottom: 33px;
-        color: #1E2123;
+        color: $color_1;
       }
 
       .apartment_text {
@@ -275,14 +263,10 @@
         font-size: 14px;
 
         line-height: 150%;
-        color: #1E2123;
+        color: $color_1;
       }
 
 
     }
   }
-
-
-
-
 }

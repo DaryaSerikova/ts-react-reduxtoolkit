@@ -1,7 +1,8 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/typography";
+
 .wrapper_box {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
   width: 100%;
 
   .box {
@@ -10,29 +11,28 @@
     max-width: 406px;
     // height: 536px;
     padding: 50px 50px 55px;
-    background: #FFFEFE;
+
+    background: $color_8;
     box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
     border-radius: 10px;
 
-    font-weight: 400;
-    font-size: 14px;
+    @extend %fontStyle_2;
     // line-height: 17px;
     text-align: center;
-    color: #686868;
+    color: $color_2;
+
 
     .title {
       font-weight: 700;
       font-size: 25px;
       line-height: 30px;
       text-align: center;
-      color: #000000;
+      color: $color_10;
     }
 
     .text {
-      margin-top: 15px;
-      margin-left: -3px;
+      margin: 15px 0 -3px 0;
       // max-width: 280px;
-
       line-height: 17px;
     }
 
@@ -64,39 +64,36 @@
         // }
       }
 
-      .wrapper_settings_remember {
+      .wrapper_settings_remember, .login_settings {
         display: flex;
         flex-direction: row;
+      }
+
+      .wrapper_settings_remember {
         gap: 14px;
       }
 
       .login_settings {
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
-
         line-height: 20px;
       }
 
       .btn {
         margin-top: 38px;
         padding: 13px 12px 11px;
-
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         gap: 10px;
 
-        background: #FFD54F;
+        background: $color_9;
         border-radius: 33px;
         border: none;
 
-        font-weight: 700;
-        font-size: 16px;
+        @extend %fontStyle_1;
         line-height: 24px;
-
-        color: #1E2123;
+        color: $color_1;
       }
 
       .logup {
