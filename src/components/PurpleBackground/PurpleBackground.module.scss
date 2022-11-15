@@ -1,0 +1,29 @@
+@import "../../assets/scss/mixins";
+
+
+.child_background {
+  @include child(-1);
+  position: absolute;
+  height: 100%;
+}
+
+.purple_background {
+  background: linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);
+}
+
+
+// .white_background {
+//   mix-blend-mode: overlay;
+//   // opacity: 0.15;
+//   // filter: blur(2.5px);
+//   opacity: 0.5;
+//   filter: blur(1.5px);
+// }
+
+// .child_content {
+//   @include child(4);
+// }
+
+// .parent {
+//   position: relative;
+// }

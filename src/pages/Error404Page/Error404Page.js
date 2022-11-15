@@ -3,14 +3,19 @@ import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
 import background from "../../assets/img/error404_background.png";
 import cn from "./Error404Page.module.scss";
+import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
 
 const Error404Page = () => {
   return (
     <main className={`${cn.parent}`}>
-      <div className={`${cn.child_background} ${cn.purple_background}`}></div>
+
+      {/* <div className={`${cn.child_background} ${cn.purple_background}`}></div>
       <div className={`${cn.child_background} `}>
         <img className={cn.white_background} src={background} alt={"white-background"}/>
-      </div>
+      </div> */}
+      <PurpleBackground>
+        <img className={cn.white_background} src={background} alt={"white-background"}/>
+      </PurpleBackground>
       
       {/* <div className={cn.child_background}></div> */}
 

@@ -1,15 +1,37 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/typography";
+@import "../../assets/scss/mixins";
+
 
 .container {
-  margin: 77px auto 93px;
+  margin: 0 auto;
+  padding: 77px 0 93px;
   max-width: 1280px;
-}
-
-.contact_page {
   display: flex;
   flex-direction: row;
   gap: 30px;
+
+}
+
+.white_background {
+  mix-blend-mode: overlay;
+  // opacity: 0.15;
+  // filter: blur(2.5px);
+  opacity: 0.5;
+  filter: blur(1.5px);
+}
+
+.child_content {
+  @include child(4);
+}
+
+.parent {
+  position: relative;
+}
+
+.contact_page {
+  // display: flex;
+  // flex-direction: row;
 
   .wrapper_contact {
     display: flex;
@@ -20,13 +42,13 @@
       @include typography(700, 30px, 100%);
       display: flex;
       align-items: center;
-      // color: $white_3;
+      color: $white_3;
     }
 
     .text {
       margin-top: 30px;
       @include typography(500, 16px, 150%);
-      // color: $white_3;
+      color: $white_3;
     }
 
     .contacts_with_icons {
@@ -41,7 +63,6 @@
       }
 
       .contact_icons {
-        background-color: $grey;
         margin-top: -1px;
 
         .contact_icon {
@@ -54,7 +75,7 @@
       }
 
       .email {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $white_3;
         width: min-content;
         height: 24px;
         margin-left: 4.5px;
@@ -91,7 +112,7 @@
       .contact_item {
         margin-bottom: 14px;
         @include typography(600, 18px, 150%);
-        // color: $white_3;
+        color: $white_3;
       }
 
       .contact_item:last-child {
@@ -104,7 +125,7 @@
       display: flex;
       flex-direction: column;
       @include typography(400, 14px, 150%);
-      // color: $white_3;
+      color: $white_3;
     }
 
     .warning {
@@ -118,7 +139,7 @@
       background: rgba(80, 57, 189, 0.5);
       border-radius: 10px;
       @include typography(500, 16px, 150%);
-      // color: $white_3;
+      color: $white_3;
     }
   }
 
@@ -150,8 +171,8 @@
             border: none;
             padding: 16px 20px;
             margin: 17px 0 29px -1px;
-            // width: 260px;
-            width: 221px;
+            width: 260px;
+            // width: 221px;
           }
         }
       }
@@ -186,7 +207,8 @@
         width: 100%;
 
         .btn {
-          margin: 40px 0 0 2px;
+          // margin: 40px 0 0 2px;
+          margin: 73px 0 0 2px;
           width: 200px;
           display: flex;
           flex-direction: column;
