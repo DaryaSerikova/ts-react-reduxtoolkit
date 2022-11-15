@@ -9,6 +9,7 @@
 }
 
 .child_background_2 {
+  // top: -41px;
   top: -79px;
   left: -113px;
 }
@@ -30,9 +31,18 @@
   background: linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);
 }
 
+.white_background {
+  mix-blend-mode: overlay;
+  // opacity: 0.15;
+  // filter: blur(2.5px);
+  opacity: 0.5;
+  filter: blur(1.5px);
+}
+
 .container {
   margin: 0 auto;
   padding: 174px 0 184px;
+  // padding: 136px 0 184px;
   max-width: 1063px;
   
   .page_error404 {
@@ -44,6 +54,7 @@
       max-width: 474px;
 
       .title {
+        margin: 0;
         @include typography(700, 60px, 73px);
         color: $white_3;
         text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
