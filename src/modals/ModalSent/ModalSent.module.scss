@@ -20,17 +20,15 @@
     .title {
       max-width: 300px;
       margin: 0px auto;
-      @extend %fontStyle_8;
-      line-height: 30px;
+
+      @include typography(700, 25px, 30px);
       text-align: center;
       color: $light-black;
     }
     
     .text {
       margin-top: 20px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
+      @include typography(400, 14px, 17px);
       text-align: center;
       color: $grey;
     }
@@ -47,15 +45,13 @@
         align-items: center;
         padding: 12px 24px;
         gap: 10px;
-      
         width: 161px;
         height: 24px;
       
         background: $yellow;
         border-radius: 33px;
       
-        @extend %fontStyle_1;
-        line-height: 24px;
+        @include typography(700, 16px, 24px);
         text-align: center;
         color: $dark-grey;
       }
@@ -70,5 +66,3 @@
   width: 100%;
   height: 100%;
 }
-
-

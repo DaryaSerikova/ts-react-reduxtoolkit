@@ -1,6 +1,6 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/typography";
-
+@import "../../assets/scss/mixins";
 
 .container {
   margin: 42px auto 0;
@@ -14,14 +14,17 @@
   gap: 30px;
 }
 
-.child {
+.child_background {
+  @include child(-1);
+  top: -11px;
+  left: 321px;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  box-sizing: border-box;
-  width: 100%;
 }
+
+.child_content {
+  @include child(4);
+}
+
 .parent {
   position: relative;
 }
@@ -42,18 +45,17 @@
   }
 
   .input {
-    width: 579px;
+    width: 620px;
     height: 35px;
-    margin: 5px 0 0 0;
+    margin: 26px 0 0 0;
     padding: 0px 20px;
 
     @include typography(500, 14px, 17px);
-    // @extend %fontStyle_3;
-    // line-height: 17px;
     color: $grey;
     background: $white_3;
     box-shadow: 0px 10px 20px rgba(0, 96, 206, 0.05);
     border-radius: 20px;
+    border: none;
   }
 }
 

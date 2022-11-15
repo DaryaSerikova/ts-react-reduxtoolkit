@@ -15,17 +15,19 @@
     background: $white_1;
     box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
     border-radius: 10px;
-
-    @extend %fontStyle_2;
+    @include typography(400, 14px, 17px);
+    // @extend %fontStyle_2;
     // line-height: 17px;
     text-align: center;
     color: $grey;
 
 
     .title {
-      font-weight: 700;
-      font-size: 25px;
-      line-height: 30px;
+      @include typography(700, 25px, 30px);
+
+      // font-weight: 700;
+      // font-size: 25px;
+      // line-height: 30px;
       text-align: center;
       color: $color_10;
     }
@@ -91,8 +93,9 @@
         border-radius: 33px;
         border: none;
 
-        @extend %fontStyle_1;
-        line-height: 24px;
+        @include typography(700, 16px, 24px);
+        // @extend %fontStyle_1;
+        // line-height: 24px;
         color: $dark-grey;
       }
 

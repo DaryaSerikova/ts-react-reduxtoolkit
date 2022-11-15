@@ -48,7 +48,7 @@ export default function Header() {
             <div>Авто напрокат</div>
           </div>
 
-          <button className={cn.btn}>+  Разместить объявление</button>
+          <button className={cn.btn}> <span className={cn.plus}>+</span> Разместить объявление</button>
         </div>
       </div>
 

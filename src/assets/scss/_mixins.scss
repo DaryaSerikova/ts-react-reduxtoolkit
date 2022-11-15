@@ -1,0 +1,19 @@
+@mixin typography($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin child($zIndex) {
+  position: relative;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zIndex;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+// .parent {
+//   position: relative;
+// }

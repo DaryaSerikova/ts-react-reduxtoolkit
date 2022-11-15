@@ -4,35 +4,41 @@
   line-height: $lh;
 }
 
-.row {
+.parent {
+  position: relative;
+}
+
+
+
+%row {
   display: flex;
   flex-direction: row;
 }
 
-.column {
+%column {
   display: flex;
   flex-direction: column;
 }
 
-%fontStyle_1 {
-  font-weight: 700;
-  font-size: 16px;
-}
+// %fontStyle_1 {
+//   font-weight: 700;
+//   font-size: 16px;
+// }
 
-%fontStyle_2 { //
-  font-weight: 400;
-  font-size: 14px;
-}
+// %fontStyle_2 { //
+//   font-weight: 400;
+//   font-size: 14px;
+// }
 
-%fontStyle_3 { //
-  font-weight: 500;
-  font-size: 14px;
-}
+// %fontStyle_3 { //
+//   font-weight: 500;
+//   font-size: 14px;
+// }
 
-%fontStyle_4 { //
-  font-weight: 700;
-  font-size: 14px;
-}
+// %fontStyle_4 { //
+//   font-weight: 700;
+//   font-size: 14px;
+// }
 
 
 %fontStyle_5 { //
