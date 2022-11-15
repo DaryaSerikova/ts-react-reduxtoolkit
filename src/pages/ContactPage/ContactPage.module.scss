@@ -17,8 +17,9 @@
     max-width: 515px;
 
     .title {
-      @extend %fontStyle_5;
-      line-height: 100%;  
+      @include typography(700, 30px, 100%);
+      // @extend %fontStyle_5;
+      // line-height: 100%;  
       display: flex;
       align-items: center;
       // color: $white_3;
@@ -27,8 +28,10 @@
 
     .text {
       margin-top: 30px;
-      @extend %fontStyle_6;
-      line-height: 150%;
+      @include typography(500, 16px, 150%);
+      // @extend %fontStyle_6;
+      // line-height: 150%;
+
       // color: $white_3;
     }
 
@@ -92,11 +95,12 @@
       }
 
       .contact_item {
-        font-weight: 600;
         margin-bottom: 14px;
+        @include typography(600, 18px, 150%);
+        // font-weight: 600;
+        // font-size: 18px;
+        // line-height: 150%;
 
-        font-size: 18px;
-        line-height: 150%;
         // color: #FFFFFF;
         // color: $white_3;
       }
@@ -111,8 +115,10 @@
       display: flex;
       flex-direction: column;
 
-      @extend %fontStyle_2;
-      line-height: 150%;
+      @include typography(400, 14px, 150%);
+      // @extend %fontStyle_2;
+      // line-height: 150%;
+
       // color: $white_3;
     }
 
@@ -127,8 +133,10 @@
       background: rgba(80, 57, 189, 0.5);
       border-radius: 10px;
 
-      @extend %fontStyle_6;
-      line-height: 150%;
+      @include typography(500, 16px, 150%);
+      // @extend %fontStyle_6;
+      // line-height: 150%;
+
       // color: $white_3;
     }
   }
@@ -152,8 +160,9 @@
         gap: 31px;
 
         .label {
-          @extend %fontStyle_3;
-          line-height: 17px;
+          @include typography(500, 14px, 17px);
+          // @extend %fontStyle_3;
+          // line-height: 17px;
           color: $grey;
 
           input {
@@ -171,8 +180,9 @@
 
       .label_textarea {
         margin: 3px 0 15px 2px;
-        @extend %fontStyle_3;
-        line-height: 17px;
+        @include typography(500, 14px, 17px);
+        // @extend %fontStyle_3;
+        // line-height: 17px;
         color: $grey;
       }
 
@@ -189,10 +199,10 @@
           background: $white_2;
           border-radius: 30px;
           border: none;
-
-          font-weight: 500;
-          font-size: 15px;
-          line-height: 17px;
+          @include typography(500, 15px, 17px);
+          // font-weight: 500;
+          // font-size: 15px;
+          // line-height: 17px;
           color: $grey;
         }
       }
@@ -214,9 +224,9 @@
           background: $purple;
           border-radius: 33px;
           border: none;
-
-          @extend %fontStyle_1;
-          line-height: 24px;
+          @include typography(700, 16px, 24px);
+          // @extend %fontStyle_1;
+          // line-height: 24px;
           text-align: center;
           color: $white_3;
         }

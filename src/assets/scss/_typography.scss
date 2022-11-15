@@ -1,3 +1,19 @@
+@mixin typography($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 %fontStyle_1 {
   font-weight: 700;
   font-size: 16px;
@@ -46,21 +62,14 @@
   font-size: 60px;
 }
 
+%fontStyle_10 {
+  font-weight: 400;
+  font-size: 14px;
+}
 
-
-%jkd {
+%fontStyle_11 {
   font-weight: 500;
   font-size: 20px;
 }
 
-
-%hjghj {
-  font-weight: 400;
-  margin-top: 20px;
-}
-
-%gfhjg {
-  font-weight: 400;
-  font-size: 14px;
-}
 

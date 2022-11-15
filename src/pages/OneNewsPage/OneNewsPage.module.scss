@@ -25,9 +25,9 @@
 
   .title {
     margin-top: 25px;
-
-    @extend %fontStyle_5;
-    line-height: 100%;
+    @include typography(700, 30px, 100%);
+    // @extend %fontStyle_5;
+    // line-height: 100%;
     color: $dark-grey;
   }
 
@@ -51,8 +51,9 @@
       background: rgba(102, 78, 249, 0.1);
       border-radius: 18px;
 
-      @extend %fontStyle_3;
-      line-height: 17px;
+      @include typography(500, 14px, 17px);
+      // @extend %fontStyle_3;
+      // line-height: 17px;
       color: $purple;
     }
 
@@ -63,8 +64,9 @@
         display: flex;
         align-items: center;
 
-        @extend %fontStyle_2;
-        line-height: 17px;
+        @include typography(400, 14px, 17px);
+        // @extend %fontStyle_2;
+        // line-height: 17px;
         color: $dark-grey;
       }
   
@@ -90,9 +92,11 @@
     // font-weight: 400;
     // font-size: 16px;
     // line-height: 150%;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.551;
+
+    @include typography(400, 12px, 1.551);
+    // font-size: 12px;
+    // font-weight: 400;
+    // line-height: 1.551;
     letter-spacing: 0.3px;
     color: $dark-grey;
 

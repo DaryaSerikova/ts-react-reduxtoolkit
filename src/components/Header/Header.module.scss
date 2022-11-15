@@ -1,3 +1,6 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/typography";
+
 .app_header {
   display: flex;
   flex-direction: column;
@@ -24,25 +27,23 @@
 
   .container_down_header {
     justify-content: space-between;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+    // @extend %fontStyle_7;
+    // line-height: 17px;
+    @include typography(600, 14px, 17px);
+    // @include typography(700, 40px, 1.5);
+
   }
 
   .up_header {
-    background-color:  #F8F8F8;
     height: 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: -1px;
+    background-color:  $white_2;
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #8291A3;
+    @include typography(400, 14px, 17px);
+    color: $light-gray;
 
     .first_up_header, .second_up_header, .wrapper_point, .wrapper_heart {
       display: flex;
@@ -85,7 +86,7 @@
   .down_header {
     margin-top: -2px;
     height: 60px;
-    background: #FFFFFF;
+    background: $white_3;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
 
     .down_header_items {
@@ -113,16 +114,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 36px;
+      width: 224px;
+      margin: -4px 0 0 0px;
       background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
       border-radius: 19px;
       border: none;
       padding: 10px 18px 10px 18px;
       color: white;
-      width: 224px;
-      
-      height: 36px;
-      margin: -4px 0 0 0px;
-
     }
   }
   

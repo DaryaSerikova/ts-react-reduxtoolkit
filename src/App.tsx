@@ -26,9 +26,9 @@ function App() {
 
       {/* <NewsListPage /> */}
       {/* <OneNewsPage /> */}
-      {/* <Error404Page /> */}
+      <Error404Page />
       {/* <ContactPage /> */}
-      <MainPage />
+      {/* <MainPage /> */}
 
       <Footer />
 
