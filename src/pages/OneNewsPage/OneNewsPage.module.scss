@@ -15,8 +15,14 @@
 
 .child_background_2 {
   @include child(-1);
+  top: 80px;
+  left: -113px;
   position: absolute;
-  // top: -60px;
+}
+
+.child_background_3 {
+  @include child(-1);
+  position: absolute;
 }
 
 .child_content {
@@ -28,14 +34,10 @@
 }
 
 .container_text {
-  // z-index: 5;
-
 
   .title {
     margin-top: 25px;
     @include typography(700, 30px, 100%);
-    // @extend %fontStyle_5;
-    // line-height: 100%;
     color: $dark-grey;
   }
 
@@ -58,10 +60,7 @@
 
       background: rgba(102, 78, 249, 0.1);
       border-radius: 18px;
-
       @include typography(500, 14px, 17px);
-      // @extend %fontStyle_3;
-      // line-height: 17px;
       color: $purple;
     }
 
@@ -71,10 +70,7 @@
       .networks_text {
         display: flex;
         align-items: center;
-
         @include typography(400, 14px, 17px);
-        // @extend %fontStyle_2;
-        // line-height: 17px;
         color: $dark-grey;
       }
   
@@ -99,8 +95,6 @@
     margin-top: 41px;
     margin-bottom: 65px;
     @include typography(400, 16px, 150%);
-    // @include typography(400, 12px, 1.551);
-    // letter-spacing: 0.3px;
     color: $dark-grey;
 
 
@@ -121,7 +115,6 @@
     background: linear-gradient(90deg, #94AFFF 0%, #4E64F9 94.5%);
     opacity: 0.1;
     width: 100%;
-    // height: 737px;
     height: 100%;
   }
   
