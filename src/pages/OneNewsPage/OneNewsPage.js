@@ -9,12 +9,12 @@ import { ReactComponent as PurpleNetworkIcon3 } from '../../assets/img/purple_ne
 import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_network_4.svg';
 import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
 
-
-
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { CardsInfo } from './OneNewsCardsInfo';
 import cn from "./OneNewsPage.module.scss";
 import Cards from '../../components/Cards/Cards';
+import photo from "../../assets/img/photo_2.jpg";
+
 
 
 
@@ -30,15 +30,15 @@ const OneNewsPage = () => {
   return (
     <main className={`${cn.one_news} ${cn.parent}`}>
     
-      {/* <div className={cn.children}>
+      <div className={cn.child_background_1}>
         <PurpleRectangle1 />
-      </div> */}
+      </div>
 
-      {/* <div className={cn.children}>
+      {/* <div className={cn.child_background}>
         <YellowDots />
       </div> */}
 
-      <div className={`${cn.container_text} ${cn.content} ${cn.children}`}>
+      <div className={`${cn.container_text} ${cn.content} ${cn.child_content}`}>
 
         <header >
           <BreadCrumbs />
@@ -60,7 +60,9 @@ const OneNewsPage = () => {
         </header>
 
         <article>
-          <div className={cn.wrapper_photo}></div>
+          <div className={cn.wrapper_photo}>
+            <img src={photo} alt={photo}/>
+          </div>
           <div className={cn.description}>
             <p>
             Итак, утром вы выезжаете в путь по Молодеченской трассе. Если автомобиля у вас нет - садитесь на маршрутку в сторону Молодечно от железнодорожного вокзала. Остановка называется «Линия Сталина» - да-да, именно здесь вы и проведёте ближайшие несколько часов, а вероятнее всего – останетесь до самого вечера.
@@ -83,12 +85,20 @@ const OneNewsPage = () => {
       
       </div>
 
-      <div className={cn.content_footer}>
-        <div className={cn.content_footer_title}>Читайте также</div>
-        <div className={cn.content_footer_cards}>
-          {/* <Cards arr={CardsInfo}/> */}
-          {Cards}
+      <div className={`${cn.content_footer} ${cn.parent}`}>
+        <div className={`${cn.purple_background} ${cn.child_background_2}`}></div>
+
+        <div className={`${cn.child_content} ${cn.footer_container}`}>
+          {/* <div className={cn.child_content}> */}
+            <div className={cn.content_footer_title}>Читайте также</div>
+            <div className={cn.content_footer_cards}>
+              {/* <Cards arr={CardsInfo}/> */}
+              {Cards}
+            </div>
+          {/* </div> */}
         </div>
+
+
 
       </div>
 
