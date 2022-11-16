@@ -53,6 +53,11 @@
     .first_up_header {
       gap: 58px;
       margin-top: -3px;
+
+      .header_link {
+        color: $light-gray;
+        text-decoration: none;
+      }
     }
   
     .second_up_header {

@@ -16,14 +16,15 @@ export default function Header() {
       <div className={`${cn.up_header}`}>
         <div className={`${cn.container} ${cn.container_up_header}`}>
           <div className={cn.first_up_header}>
-            <div>Главная</div>
-            <div>Новости</div>
+            <Link className={cn.header_link} to="/main">Главная</Link>
+            <Link className={cn.header_link} to="/newsList">Новости</Link>
             <div>Размещение и тарифы</div>
             <div className={cn.wrapper_point}>
               <Point />
               <div className={cn.point_text}>Объявления на карте</div>
             </div>
-            <div>Контакты</div>
+            <Link className={cn.header_link} to="/contacts">Контакты</Link>
+
           </div>
 
           <div className={cn.second_up_header}>

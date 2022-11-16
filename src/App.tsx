@@ -24,14 +24,14 @@ function App() {
         <Route path="/newsList" element={<NewsListPage />} />
         <Route path="/oneNews" element={<OneNewsPage />} />
         <Route path="*" element={<Error404Page/>} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contacts" element={<ContactPage />} />
 
         <Route path="/signIn" element={<SignInPage />} />
         <Route path="/signUp" element={<SignUpPage />} />
 
         <Route path="/main" element={<MainPage />} />
         
-        
+
       </Routes>
 
       {/* <ModalSent /> */}
