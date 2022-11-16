@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
 import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
 import background from "../../assets/img/error404_background.png";
 import cn from "./Error404Page.module.scss";
-import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
+
+
+
 
 const Error404Page = () => {
   return (
@@ -34,7 +38,7 @@ const Error404Page = () => {
               <div className={cn.btn_icon}>
                 <HomeRun />
               </div>
-              <div className={cn.btn_text}>Вернуться на главную</div>
+              <Link to="/main" className={cn.btn_text}>Вернуться на главную</Link>
             </button>
           </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import OneNews from '../OneNews/OneNews';
 import { OneNewsInfo } from '../OneNews/OneNewsInfo';
 import { ReactComponent as ArrowRightIcon } from "../../assets/img/arrow_right.svg";
@@ -18,7 +19,7 @@ const News = () => {
         <div className={cn.title_news}>Новости</div>
         {news}
         <button className={cn.view_all}>
-          <div className={cn.news_btn_text}>Посмотреть все</div>
+          <Link to="/newsList" className={cn.news_btn_text}>Посмотреть все</Link>
           <div className={cn.news_btn_icon}>
             <ArrowRightIcon />
           </div>

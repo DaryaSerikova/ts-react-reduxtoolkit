@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 
 import { ReactComponent as NetworkIcon1 } from '../../assets/img/network_icon_1.svg';
@@ -65,10 +66,10 @@ const Footer = () => {
 
 
           <div className={`${cn.column} ${cn.last_column}`}>
-            <div className={cn.item}>Новости</div>
+            <Link to="/newsList" className={cn.item}>Новости</Link>
             <div className={cn.item}>Размещение и тарифы </div>
             <div className={cn.item}>Объявления на карте</div>
-            <div className={cn.item}>Контакты</div>
+            <Link to="/contacts" className={cn.item}>Контакты</Link>
           </div>
         </div>
 
