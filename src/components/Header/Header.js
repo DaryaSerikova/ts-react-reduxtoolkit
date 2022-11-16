@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import cn from "./Header.module.scss";
 import { ReactComponent as Point } from '../../assets/img/point.svg';
 import { ReactComponent as Point2 } from '../../assets/img/point_2.svg';
@@ -30,7 +31,12 @@ export default function Header() {
               <div className={cn.heart_text}>Закладки</div>
               <Heart />
             </div>
-            <div className={cn.login}>Вход и регистрация</div>
+            <Link
+              to="/signIn"
+              className={cn.sign_in}
+            >
+              Вход и регистрация
+            </Link>
           </div>
         </div>
       </div>

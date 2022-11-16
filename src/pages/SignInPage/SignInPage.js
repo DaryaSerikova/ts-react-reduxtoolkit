@@ -1,9 +1,10 @@
 import React from 'react';
-import cn from "./LoginPage.module.scss";
+import { Link } from "react-router-dom";
+import cn from "./SignInPage.module.scss";
 
 
 
-const LoginPage = () => {
+const SignInPage = () => {
   return (
     <div className={cn.wrapper_box}>
       <div className={cn.box}>
@@ -26,7 +27,9 @@ const LoginPage = () => {
           </div>
 
           <button className={cn.btn}>Войти</button>
-          <div className={cn.logup}>Еще нет аккаунта? Создайте акканут</div>
+          <div className={cn.logup}>
+            Еще нет аккаунта? <Link to="/signUp" className={cn.create_account}>Создайте акканут</Link>
+          </div>
 
         </div>
 
@@ -35,4 +38,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage;
+export default SignInPage;
