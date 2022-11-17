@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import background1 from "../../assets/img/sigin_background1.png";
+import background2 from "../../assets/img/sigin_background2.png";
+import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
 import cn from "./SignInPage.module.scss";
 
 
@@ -7,9 +10,13 @@ import cn from "./SignInPage.module.scss";
 const SignInPage = () => {
   return (
     <div className={cn.wrapper_box}>
+      <PurpleBackground>
+        <img src={background1} alt="background1" />
+        <img src={background2} alt="background2" />
+      </PurpleBackground>
       <div className={cn.box}>
 
-        <div className={cn.title}>Авторизация</div>
+        <h1 className={cn.title}>Авторизация</h1>
         <div className={cn.text}>
           Авторизируйтесь, чтобы начать публиковать свои объявления
         </div>
@@ -28,7 +35,7 @@ const SignInPage = () => {
 
           <button className={cn.btn}>Войти</button>
           <div className={cn.logup}>
-            Еще нет аккаунта? <Link to="/signUp" className={cn.create_account}>Создайте акканут</Link>
+            Еще нет аккаунта? <Link to="/signup" className={cn.create_account}>Создайте акканут</Link>
           </div>
 
         </div>

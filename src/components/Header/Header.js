@@ -33,7 +33,7 @@ export default function Header() {
               <Heart />
             </div>
             <Link
-              to="/signIn"
+              to="/signin"
               className={cn.sign_in}
             >
               Вход и регистрация
@@ -45,7 +45,9 @@ export default function Header() {
       <div className={cn.down_header}>
         <div className={`${cn.container} ${cn.container_down_header}`}>
           <div className={cn.down_header_items}>
-            <Logo className={cn.logo}/>
+            <Link className={cn.header_link} to="/main">
+              <Logo className={cn.logo}/>
+            </Link>
             <div className={cn.wrapper_point_2}>
               <div className={cn.point_2_text}>Квартиры на сутки</div>
               <Point2 />

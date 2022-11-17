@@ -67,6 +67,7 @@ const CardWithDetails = ( props:ICardWithDetails ) => {
             Какое-то описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание ...
           </div>
           <hr />
+          
           <div className={cn.wrapper_buttons}>
             <button className={cn.button_contacts}>
               {/* <div>icon</div> */}

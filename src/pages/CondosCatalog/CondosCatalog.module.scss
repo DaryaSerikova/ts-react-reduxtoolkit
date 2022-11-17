@@ -1,0 +1,47 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/typography";
+@import "../../assets/scss/mixins";
+
+.parent {
+  position: relative;
+}
+
+.child_background {
+  @include child(-1);
+  position: absolute;
+  height: 100%;
+}
+
+.child_content {
+  @include child(4);
+}
+
+.purple_bg {
+  background: linear-gradient(90deg, #94AFFF 0%, #4E64F9 94.5%);
+  opacity: 0.1;
+}
+//----------------------------------------------------
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1.title {
+  margin-top: 30px;
+}
+
+.recommendation {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  @include typography(500, 16px, 100%);
+  color: #1E2123;
+}
+
+.tags {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,12 +1,11 @@
 import React from 'react';
 
 import photo from "../../assets/img/photo_1.jpg";
-import cn from './Card.module.scss';
+import cn from './NewsCard.module.scss';
 
 
 
-
-const Card = ({title, description, date}) => {
+const NewsCard = ({title, description, date}) => {
   return (
     <div className={cn.card}>
       <header className={cn.header_card}>
@@ -31,19 +30,4 @@ const Card = ({title, description, date}) => {
   )
 }
 
-export default Card;
-
-{/* <div className={cn.wrapper_img}>
-<img src={photo} alt={photo}/>
-</div>
-<div className={cn.card_container}>
-<h1 className={cn.title}>{title}</h1>
-<div className={cn.description}>{description}</div>
-<hr className={cn.hr}/>
-
-<div className={cn.card_footer}>
-  <div className={cn.date}>{date}</div>
-  <button className={cn.btn}>Читать</button>
-</div>
-
-</div> */}
+export default NewsCard;

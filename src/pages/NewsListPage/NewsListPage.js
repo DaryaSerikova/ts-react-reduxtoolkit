@@ -1,6 +1,6 @@
 import React from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import Card from '../../components/Card/Card';
+import Card from '../../components/NewsCard/NewsCard';
 import { CardsInfo } from './NewsListCardsInfo';
 
 import { ReactComponent as Search } from '../../assets/img/search.svg';
@@ -13,7 +13,7 @@ import cn from "./NewsListPage.module.scss";
 export default function NewsListPage() {
 
   const Cards = CardsInfo.map(
-    item => <Card 
+    item => <Card
       title={item.title}
       description={item.description}
       date={item.date}
@@ -21,9 +21,9 @@ export default function NewsListPage() {
 
   return (
     <main className={`${cn.container} ${cn.news_list} `}>
-    
+
       <div className={cn.parent}>
-        <PurpleRectangle className={cn.child_background}/>
+        <PurpleRectangle className={cn.child_background} />
         <div className={cn.child_content}>
           <header>
             <BreadCrumbs />
