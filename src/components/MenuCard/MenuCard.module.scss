@@ -50,13 +50,21 @@
   height: 270px;
   overflow: hidden;
 
-
+  .right_down {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+  }
 
   .container {
     display: flex;
     flex-direction: column;
     // margin: 0 auto;
-    padding: 40px 37px 20px;
+    // padding: 40px 37px 20px;
+    width: 100%;
+    padding: 40px 0px 20px 37px;
+
 
     .subtitle {
       font-weight: 700;
@@ -86,7 +94,26 @@
       // }
     }
 
-    // .smth
+  .smth {
+    .btn_arrow {
+      background: transparent;
+      border: none;
+    }
+
+    .tags {
+      margin-top: 21.25px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px 14px;
+
+      @include typography(500, 14px, 17px);
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+
+  
   }
 }
 

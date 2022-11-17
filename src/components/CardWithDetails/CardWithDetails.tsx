@@ -1,4 +1,5 @@
 import React from 'react';
+import { ICardWithDetails } from './CardWithDetailsInterface';
 import { ReactComponent as UserIcon } from "../../assets/img/user.svg";
 
 import { ReactComponent as LocationIcon } from "../../assets/img/point_3.svg";
@@ -12,46 +13,52 @@ import cn from "./CardWithDetails.module.scss";
 
 
 
-const CardWithDetails = () => {
+const CardWithDetails = ( props:ICardWithDetails ) => {
+  const { gold, price, duration,
+    // people,
+    amount_rooms, square, city, address, subway_station, neighborhood
+   } = props;
+
   return (
     <div className={cn.box}>
       <div className={cn.container}>
 
         <div className={cn.wrapper_img}>
-          <div className={cn.gold}>Gold</div>
+          {gold ? <div className={cn.gold}>Gold</div> : <></>}
 
         </div>
         <div className={`${cn.description} ${cn.container_desc}`}>
 
           <div className={cn.details}>
-            <div>
-              <div className={cn.price}>65.00 BYN</div>
-              <div className={cn.duration}>за сутки</div>
+            <div className={cn.price_with_duration}>
+              <div className={cn.price}>{price} BYN</div>
+              <div className={cn.duration}>{duration}</div>
             </div>
-            <div className={cn.people}>
-              {/* <div>icon</div> */}
-              <UserIcon />
-              <div>4 (2+2)</div>
+            <div className={cn.condo_details}>
+              <div className={cn.people}>
+                <UserIcon />
+                <div>4 (2+2)</div>
+              </div>
+              <div className={cn.amount_rooms}>{amount_rooms} комн.</div>
+              <div className={cn.square}>{square} м²</div>
             </div>
-            <div className={cn.amount_rooms}>4 комн.</div>
-            <div className={cn.square}>179 м²</div>
           </div>
 
           <div className={cn.location}>
             <div className={cn.address}>
               <LocationIcon className={cn.location_icon}/>
-              <div>Минск, б-р Мулявина, д. 10</div>
+              <div>{city}, {address}</div>
             </div>
             <div className={cn.subway_with_neighborhood}>
               <div className={cn.subway_station}>
                 <SubwayIcon className={cn.subway_icon}/>
-                <div>Грушевка</div>
+                <div>{subway_station}</div>
               </div>
               <div className={cn.neighborhood}>
                 <div className={cn.wrapper_ellipse}>
                   <EllipseIcon className={cn.ellipse_icon}/>
                 </div>
-                <div>Шабаны</div>  
+                <div>{neighborhood}</div>  
               </div>
             </div>
           </div>

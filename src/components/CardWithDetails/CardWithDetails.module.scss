@@ -1,15 +1,21 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/typography";
+@import "../../assets/scss/mixins";
+
 .box {
-  background: #FFFEFE;
+  background: $white_1;
   border-radius: 10px;
+  box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
 
   .container {
     margin: 0 auto;
-    // max-width: 406px;
     width: 406px;
 
     .wrapper_img {
       max-width: 406px;
       height: 226px;
+      background: #E0E0E0;
+      border-radius: 10px;
 
       .gold {
         display: flex;
@@ -17,15 +23,13 @@
         align-items: center;
         max-width: 66px;
         padding: 9px 12px;
-        // gap: 10px;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        color: #FFFFFF;
-        text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
   
         background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
         border-radius: 0px 10px 10px 10px;
+
+        @include typography(700, 18px, 22px);
+        color: $white_3;
+        text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
       }
     }
 
@@ -41,39 +45,44 @@
       .details {
         display: flex;
         flex-direction: row;
-        gap: 10px;
-        // margin-right: 10px;
-
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        color: #686868;
+        justify-content: space-between;
+        @include typography(500, 14px, 17px);
+        color: $grey;
 
         .people, .amount_rooms, .square {
           display: flex;
           flex-direction: row;
           align-items: center;
           padding: 8px;
-          background: #F8F8F8;
+          background: $white_2;
           border-radius: 18px;
         }
 
-        .price {
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 24px;
+        .price_with_duration {
 
-          color: #664EF9;
+          .price {
+            @include typography(700, 20px, 24px);
+            color: $purple;
+          }
+  
+          .duration {
+            font-weight: 400;
+            color: #BDBDBD;
+          }
         }
 
-        .duration {
-          font-weight: 400;
-          color: #BDBDBD;
+        .condo_details {
+          display: flex;
+          flex-direction: row;
+          align-items: start;
+          gap: 7px;
+
+          .people {
+            gap: 6.5px;
+          }
+
         }
 
-        .people {
-          gap: 6.5px;
-        }
       }
 
       .details div:last-child {
@@ -82,10 +91,8 @@
 
       .location {
         margin-top: 25px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #000000;
+        @include typography(500, 16px, 19px);
+        color: $light-black;
 
         .address, .subway_station, .neighborhood, .subway_with_neighborhood {
           display: flex;
@@ -118,30 +125,22 @@
 
       .text {
         margin-top: 18px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-
-        color: #8291A3;
+        @include typography(400, 12px, 15px);
+        color: $light-gray;
       }
 
       hr {
         margin-top: 13px;
-        // border: 1px solid #654ef900;
-        border: 1px solid #664EF9;
+        border: 1px solid $purple;
         opacity: 0.1;
       }
 
       .wrapper_buttons {
-
+        padding-bottom: 13px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
 
         button {
           display: flex;
@@ -150,8 +149,7 @@
           align-items: center;
           padding: 10px 15px;
           max-width: 124px;
-  
-          background: #FFFFFF;
+          background: $white_3;
           border-radius: 18px;
           border: none;
         }
@@ -159,13 +157,17 @@
         .button_contacts {
           display: flex;
           flex-direction: row;
+          padding: 13px 15px 10px 15px;
           gap: 13px;
           box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
-          color: #664EF9;
+          @include typography(700, 14px, 17px);
+          color: $purple;
         }
 
         .button_more_details {
+          padding-top: 13px;
           background: rgba(255, 213, 79, 0.1);
+          @include typography(700, 14px, 17px);
           color: #FEC100;
         }
       }
