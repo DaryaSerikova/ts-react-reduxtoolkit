@@ -12,7 +12,7 @@ import background3 from "../../assets/img/main_background_3.png";
 
 import cn from "./MainPage.module.scss";
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
-
+import data from "../../data/data";
 
 const MainPage = () => {
 

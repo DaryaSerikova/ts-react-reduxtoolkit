@@ -6,6 +6,8 @@ import cn from "./CondosCatalog.module.scss";
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { Button } from '../../components/Button/Button';
+import {data} from "../../data/data";
+
 
 
 
@@ -31,7 +33,21 @@ export const CondosCatalog = () => {
 
   const tags = tagsInfo.map(el => <Tag text={el} style={'light_purple'} />);
 
-  const cardsWithDetails = CardWithDetailsInfo.map(
+  // const cardsWithDetails = CardWithDetailsInfo.map(
+  //   el => <CardWithDetails
+  //     type_card='list'
+  //     gold={el.gold}
+  //     price={el.price}
+  //     duration={el.duration}
+  //     // people={el.people}
+  //     amount_rooms={el.amount_rooms}
+  //     square={el.square}
+  //     city={el.city}
+  //     address={el.address} 
+  //     subway_station={el.subway_station} 
+  //     neighborhood={el.neighborhood} 
+  //   />)
+  const cardsWithDetails = data['minsk'].map(
     el => <CardWithDetails
       type_card='list'
       gold={el.gold}
