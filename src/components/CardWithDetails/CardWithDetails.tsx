@@ -10,15 +10,18 @@ import { ReactComponent as PhoneIcon } from "../../assets/img/phone_1.svg";
 
 
 import cn from "./CardWithDetails.module.scss";
+import { Button } from '../Button/Button';
 
 
 
 const CardWithDetails = ( props:ICardWithDetails ) => {
-  const { gold, price, duration,
+  const { type_card, gold, price, duration,
     // people,
     amount_rooms, square, city, address, subway_station, neighborhood
    } = props;
-
+// "ordinary"
+// "list"
+// "tiles"
   return (
     <div className={cn.box}>
       <div className={cn.container}>
@@ -40,7 +43,7 @@ const CardWithDetails = ( props:ICardWithDetails ) => {
                 <div>4 (2+2)</div>
               </div>
               <div className={cn.amount_rooms}>{amount_rooms} комн.</div>
-              <div className={cn.square}>{square} м²</div>
+              {type_card === "ordinary" ? <div className={cn.square}>{square} м²</div> : <></>}
             </div>
           </div>
 
@@ -67,8 +70,21 @@ const CardWithDetails = ( props:ICardWithDetails ) => {
             Какое-то описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание квартиры, описание ...
           </div>
           <hr />
-          
+
           <div className={cn.wrapper_buttons}>
+
+            {type_card === "list" ?<Button 
+              text='icon' 
+              style="opacity_red" 
+              typeButton="without-text"
+              /> : <></>}
+
+            {type_card === "tiles" ?<Button 
+              text='icon' 
+              style="opacity_red" 
+              typeButton="left-icon"
+              /> : <></>}
+
             <button className={cn.button_contacts}>
               {/* <div>icon</div> */}
               <PhoneIcon />

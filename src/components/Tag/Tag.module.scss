@@ -1,4 +1,7 @@
 @import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/typography";
+
 
 .tag {
   display: flex;
@@ -7,16 +10,19 @@
   padding: 8px 14px;
   gap: 6px;
 
-  // position: absolute;
-  // width: 73px;
-  // height: 33px;
-  // left: 117px;
-  // top: 742px;
-
   /* #664EF9 */
 
   // background: #664EF9;
   background: $purple;
 
   border-radius: 16px;
+}
+
+.light_purple {
+  display: flex;
+  align-items: center;
+  background: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  @include typography(400, 14px, 100%);
+  color: #664EF9;
 }

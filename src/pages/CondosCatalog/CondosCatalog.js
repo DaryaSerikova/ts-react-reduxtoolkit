@@ -1,7 +1,11 @@
 import React from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
+import { Filters } from '../../components/Filters/Filters';
 import { Tag } from '../../components/Tag/Tag';
 import cn from "./CondosCatalog.module.scss";
+import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
+import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
+import { Button } from '../../components/Button/Button';
 
 
 
@@ -25,14 +29,31 @@ export const CondosCatalog = () => {
     "Центральный р.",
   ]
 
-  const tags = tagsInfo.map(el => <Tag text={el} />)
+  const tags = tagsInfo.map(el => <Tag text={el} style={'light_purple'} />);
+
+  const cardsWithDetails = CardWithDetailsInfo.map(
+    el => <CardWithDetails
+      type_card='list'
+      gold={el.gold}
+      price={el.price}
+      duration={el.duration}
+      // people={el.people}
+      amount_rooms={el.amount_rooms}
+      square={el.square}
+      city={el.city}
+      address={el.address} 
+      subway_station={el.subway_station} 
+      neighborhood={el.neighborhood} 
+    />)
 
   return (
     <main>
       <header className={cn.parent} >
         <div className={`${cn.purple_bg} ${cn.child_background}`}></div>
         <div className={`${cn.container} ${cn.child_content}`}>
-          <BreadCrumbs></BreadCrumbs>
+          <div className={cn.wrapper_bread_crumbs}>
+            <BreadCrumbs></BreadCrumbs>
+          </div>
           <h1 className={cn.title}>Аренда квартир на сутки в Минске</h1>
           <div className={cn.recommendation}>Рекомендуем посмотреть</div>
           <div className={cn.tags}>
@@ -40,15 +61,38 @@ export const CondosCatalog = () => {
           </div>
         </div>
 
+        <Filters />
+
+
+
         
       </header>
-      <article>
-        <div className={cn.style}>Найдено 234 результата</div>
 
-        <div className={cn.style}></div>
+      <article>
+        <div className={cn.container}>
+          <div className={cn.results}>Найдено 234 результата</div>
+
+          <div className={cn.cards}>
+            {cardsWithDetails}
+          </div>
+
+          <div className={cn.pagination_with_networks}>
+            <div className={cn.pagination}></div>
+            <div className={cn.networks}></div>
+          </div>
+        </div>
 
       </article>
-      <footer></footer>
+      <footer>
+        <div className={cn.style}>Показать найденные квартиры на карте</div>
+        <div className={cn.style}>Ищите новостройки рядом с работой, парком или родственниками</div>
+        <Button 
+          text="Открыть карту"
+          style="white"
+          typeButton="left-icon"
+        />
+
+      </footer>
     </main>
   )
 }

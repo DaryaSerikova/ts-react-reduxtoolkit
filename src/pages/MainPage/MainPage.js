@@ -26,6 +26,7 @@ const MainPage = () => {
 
   const cardsWithDetails = CardWithDetailsInfo.map(
     el => <CardWithDetails
+      type_card='ordinary'
       gold={el.gold}
       price={el.price}
       duration={el.duration}

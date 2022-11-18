@@ -27,6 +27,10 @@
   margin: 0 auto;
 }
 
+.wrapper_bread_crumbs {
+  padding-top: 52px;
+}
+
 h1.title {
   margin-top: 30px;
 }
@@ -41,7 +45,41 @@ h1.title {
 
 .tags {
   margin-top: 25px;
+  padding-bottom: 57px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 15px;
+}
+
+main {
+
+  .results {
+    margin-top: 83.5px;
+    display: flex;
+    align-items: center;
+    @include typography(700, 20px, 100%);
+    color: $light-black;
+  }
+
+  .cards, .pagination_with_networks {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cards {
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 31px;
+  }
+
+  .pagination_with_networks {
+    justify-content: space-between;
+
+    .networks {
+      display: flex;
+      flex-direction: row;
+
+    }
+  }
 }

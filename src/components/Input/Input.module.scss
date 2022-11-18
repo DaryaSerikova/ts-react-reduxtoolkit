@@ -1,0 +1,71 @@
+@import "../../assets/scss/mixins";
+
+
+.child_icon {
+  @include child(4);
+  position: absolute;
+  width: min-content;
+  height: 100%;
+  top: 15px;
+  left: 20px;
+}
+
+.without_icon {
+  @include child(4);
+  position: absolute;
+  width: min-content;
+  height: 100%;
+  top: 9px;
+  left: 14.2px
+}
+
+.child_input {
+  @include child(1);
+  width: min-content;
+}
+
+.parent {
+  position: relative;
+  width: min-content;
+
+}
+
+.wrapper_input {
+  width: 306px;
+  height: 50px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+
+  // background: rgba(102, 78, 249, 0.05);
+  // border-radius: 20px;
+  padding: 15px 20px 15px 55px;
+  background: #F7F7F7;
+  border: 2px solid transparent;
+  border-radius: 30px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+
+
+  &:hover, &:focus, &:active, :focus-visible {
+    outline: none;
+    background: #FFFFFF;
+    border: 2px solid rgba(78, 100, 249, 0.8);
+    border-radius: 30px;
+  }
+}
+
+.w100h37 {
+  width: 100px;
+  height: 37px;
+}
+
+.w80h37 {
+  width: 80px;
+  height: 37px;
+}

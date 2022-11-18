@@ -1,8 +1,8 @@
 import React from 'react';
 import cn from "./Tag.module.scss";
 
-export const Tag = ({ text }) => {
+export const Tag = ({ text, style }) => {
   return (
-    <div className={cn.tag}>{text}</div>
+    <div className={`${cn.tag} ${style ? cn[`${style}`] : ''}`}>{text}</div>
   )
 }
