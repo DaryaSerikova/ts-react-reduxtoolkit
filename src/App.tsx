@@ -26,9 +26,9 @@ function App() {
     <div className={cn.app}>
 
       { (path !== "/signin" && path !== "/signup") ? <Header /> : <></>}
-      <CondosCatalog />
+      {/* <CondosCatalog /> */}
 
-      {/* <Routes>
+      <Routes>
         <Route path="/newsList" element={<NewsListPage />} />
         <Route path="/oneNews" element={<OneNewsPage />} />
         <Route path="*" element={<Error404Page/>} />
@@ -42,7 +42,7 @@ function App() {
 
       </Routes>
 
-      <ModalSent /> */}
+      {/* <ModalSent /> */}
       
       { (path !== "/signin" && path !== "/signup") ? <Footer /> : <></>}
 

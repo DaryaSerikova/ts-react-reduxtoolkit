@@ -17,7 +17,7 @@ import data from "../../data/data";
 const MainPage = () => {
 
   const advertisingCards = AdvertisingCardInfo.map(
-    el => <AdvertisingCard title={el.title} text={el.text} />
+    el => <AdvertisingCard typeCard={el.typeCard} title={el.title} text={el.text} />
   )
 
   const menuCards = MenuCardInfo.map(

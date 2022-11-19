@@ -6,7 +6,7 @@ import cn from "./Button.module.scss";
 
 
 
-export const Button = ({text, style, typeButton}) => {
+export const Button = ({text, style, typeButton="without-icon"}) => {
   const getContent = () => {
     switch(typeButton) {
       case "right-icon":

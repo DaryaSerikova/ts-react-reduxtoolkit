@@ -1,3 +1,8 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/typography";
+@import "../../assets/scss/variables";
+
+
 .advertising_box {
   // max-width: 406px;
   min-width: 406px;
@@ -22,44 +27,41 @@
     .advertising_wrapper_title {
       display: flex;
       flex-direction: row;
-      gap: 27px;
+      gap: 8px;
 
       .advertising_icon {
-        background: #FFFFFF;
-        box-shadow: 0px 11px 20px rgba(127, 155, 187, 0.16);
+        margin: -8px 0 0 -20px;
+        // background: #FFFFFF;
+        // box-shadow: 0px 11px 20px rgba(127, 155, 187, 0.16);
       }
 
       .advertising_title {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        color: #664EF9;
+        margin-top: 31px;
+        @include typography(700, 18px, 22px);
+        color: $purple;
       }
 
     }
 
     .advertising_text {
-      margin-top: 25px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-
-      color: #1E2123;
+      margin-top: -9px;
+      @include typography(400, 14px, 17px);
+      color: $light-black;
     }
 
     .advertising_btn {
       margin-top: 34px;
-      width: min-content;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 10px 18px;
-      // gap: 5px;
+      // width: min-content;
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // padding: 10px 18px;
+      // // gap: 5px;
 
-      /* Linear */
-      background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
-      box-shadow: 0px 15px 40px rgba(254, 193, 0, 0.15);
-      border-radius: 17px;
+      // /* Linear */
+      // background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
+      // box-shadow: 0px 15px 40px rgba(254, 193, 0, 0.15);
+      // border-radius: 17px;
     }
   }
 }

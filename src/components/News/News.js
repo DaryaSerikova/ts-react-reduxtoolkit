@@ -1,15 +1,31 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import OneNews from '../OneNews/OneNews';
-import { OneNewsInfo } from '../OneNews/OneNewsInfo';
 import { ReactComponent as ArrowRightIcon } from "../../assets/img/arrow_right.svg";
 import cn from "./News.module.scss";
+import { CardsInfo } from '../../pages/NewsListPage/NewsListCardsInfo';
 
+
+
+const OneNews = ({ title, date }) => {
+  return (
+    <div className={cn.one_news}>
+      <div className={cn.onenews_title}>
+        {title}
+        {/* Линия Сталина: суровый отдых в усадьбах  на сутки */}
+      </div>
+      <div className={cn.onenews_date}>
+        {date}
+        {/* 14 Январь */}
+      </div>
+    </div>
+  )
+}
 
 
 const News = () => {
 
-  const news = OneNewsInfo.map(
+  const partOfNews = CardsInfo.slice(-5).reverse();
+  const news = partOfNews.map(
     el => <OneNews title={el.title} date={el.date} />
   )
 

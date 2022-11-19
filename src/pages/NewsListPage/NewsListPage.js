@@ -12,7 +12,7 @@ import cn from "./NewsListPage.module.scss";
 
 export default function NewsListPage() {
 
-  const Cards = CardsInfo.map(
+  const Cards = CardsInfo.reverse().map(
     item => <Card
       title={item.title}
       description={item.description}

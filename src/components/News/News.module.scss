@@ -1,6 +1,31 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/typography";
 
+.one_news {
+  display: flex;
+  flex-direction: column;
+  // border-bottom: 1px solid #664EF9;
+  border-bottom: 1px solid #654ef915;
+
+  &:last-child {
+    border: none;
+  }
+
+  .onenews_title {
+    margin-top: 10px;
+    @include typography(600, 14px, 17px);
+    color: $light-black;
+  }
+
+  .onenews_date {
+    margin-top: 6px;
+    padding-bottom: 10px;
+    @include typography(400, 12px, 15px);
+    color: $light-grey;
+  }
+}
+
+
 .news {
   // max-width: 406px;
   width: 406px;
