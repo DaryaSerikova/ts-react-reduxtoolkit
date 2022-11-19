@@ -43,7 +43,7 @@
     background-color:  $white_2;
 
     @include typography(400, 14px, 17px);
-    color: $light-gray;
+    color: $light-grey;
 
     .first_up_header, .second_up_header, .wrapper_point, .wrapper_heart {
       display: flex;
@@ -55,7 +55,7 @@
       margin-top: -3px;
 
       .header_link {
-        color: $light-gray;
+        color: $light-grey;
         text-decoration: none;
       }
     }

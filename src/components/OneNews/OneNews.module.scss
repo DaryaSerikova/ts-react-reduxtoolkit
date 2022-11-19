@@ -14,19 +14,13 @@
   .title {
     margin-top: 10px;
     @include typography(600, 14px, 17px);
-    // font-weight: 600;
-    // font-size: 14px;
-    // line-height: 17px;
-    color: #1E2123;
+    color: $light-black;
   }
 
   .date {
     margin-top: 6px;
     padding-bottom: 10px;
     @include typography(400, 12px, 15px);
-    // font-weight: 400;
-    // font-size: 12px;
-    // line-height: 15px;
-    color: #8291A3;
+    color: $light-grey;
   }
 }

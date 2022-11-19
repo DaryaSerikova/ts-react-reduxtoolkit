@@ -22,7 +22,7 @@ import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_ne
 import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
 import background from "../../assets/img/contact_background.png";
 import cn from "./ContactPage.module.scss";
-import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
+import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 
 
 

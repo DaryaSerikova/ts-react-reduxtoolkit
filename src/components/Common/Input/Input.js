@@ -1,7 +1,7 @@
 import React from 'react';
-import { ReactComponent as UserIcon } from "../../assets/img/signin_user.svg";
-import { ReactComponent as EmailIcon } from "../../assets/img/signin_mail.svg";
-import { ReactComponent as PasswordIcon } from "../../assets/img/signin_password.svg";
+import { ReactComponent as UserIcon } from "../../../assets/img/signin_user.svg";
+import { ReactComponent as EmailIcon } from "../../../assets/img/signin_mail.svg";
+import { ReactComponent as PasswordIcon } from "../../../assets/img/signin_password.svg";
 
 
 import cn from "./Input.module.scss";

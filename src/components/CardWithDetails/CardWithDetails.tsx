@@ -10,7 +10,7 @@ import { ReactComponent as PhoneIcon } from "../../assets/img/phone_1.svg";
 
 
 import cn from "./CardWithDetails.module.scss";
-import { Button } from '../Button/Button';
+import { Button } from '../Common/Button/Button';
 
 
 

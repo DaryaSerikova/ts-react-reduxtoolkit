@@ -1,19 +1,19 @@
 import React from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { Filters } from '../../components/Filters/Filters';
-import { Tag } from '../../components/Tag/Tag';
+import { Tag } from '../../components/Common/Tag/Tag';
 import cn from "./CondosCatalog.module.scss";
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
-import { Button } from '../../components/Button/Button';
-import {data} from "../../data/data";
+import { Button } from '../../components/Common/Button/Button';
+import { data } from "../../data/data";
 
 
 
 
 export const CondosCatalog = () => {
 
-  const tagsInfo = [ 
+  const tagsInfo = [
     "Недорогие",
     "1-комнатные",
     "2-комнатные",
@@ -57,9 +57,9 @@ export const CondosCatalog = () => {
       amount_rooms={el.amount_rooms}
       square={el.square}
       city={el.city}
-      address={el.address} 
-      subway_station={el.subway_station} 
-      neighborhood={el.neighborhood} 
+      address={el.address}
+      subway_station={el.subway_station}
+      neighborhood={el.neighborhood}
     />)
 
   return (
@@ -81,7 +81,7 @@ export const CondosCatalog = () => {
 
 
 
-        
+
       </header>
 
       <article>
@@ -102,7 +102,7 @@ export const CondosCatalog = () => {
       <footer>
         <div className={cn.style}>Показать найденные квартиры на карте</div>
         <div className={cn.style}>Ищите новостройки рядом с работой, парком или родственниками</div>
-        <Button 
+        <Button
           text="Открыть карту"
           style="white"
           typeButton="left-icon"

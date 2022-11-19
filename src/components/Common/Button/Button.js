@@ -1,7 +1,7 @@
 import React from 'react';
 // import { ArrowRightIcon as ComponentReact } from "../../assets/img/arrow_right.svg"
-import { ReactComponent as ArrowRightIcon } from "../../assets/img/arrow_right.svg";
-
+// import { ReactComponent as ArrowRightIcon } from "../../assets/img/arrow_right.svg";
+import { ReactComponent as ArrowRightIcon } from "../../../assets/img/catalog_arrow_right.svg";
 import cn from "./Button.module.scss";
 
 

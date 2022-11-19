@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
+import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
 import background from "../../assets/img/error404_background.png";
@@ -18,16 +18,16 @@ const Error404Page = () => {
         <img className={cn.white_background} src={background} alt={"white-background"}/>
       </div> */}
       <PurpleBackground>
-        <img className={cn.white_background} src={background} alt={"white-background"}/>
+        <img className={cn.white_background} src={background} alt={"white-background"} />
       </PurpleBackground>
-      
+
       {/* <div className={cn.child_background}></div> */}
 
       <div className={`${cn.container} ${cn.child_content}`}>
-      
+
 
         <div className={cn.page_error404}>
-        
+
           <div className={`${cn.first_column} ${cn.parent}`}>
             <div className={`${cn.child_background_2}`}>
               <YellowDots />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import background1 from "../../assets/img/sigin_background1.png";
 import background2 from "../../assets/img/sigin_background2.png";
-import { PurpleBackground } from '../../components/PurpleBackground/PurpleBackground';
+import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import cn from "./SignInPage.module.scss";
 
 
@@ -22,8 +22,8 @@ const SignInPage = () => {
         </div>
 
         <div className={`${cn.form} ${cn.container_form}`}>
-          <input className={cn.input} placeholder="icon"/>
-          <input className={cn.input} placeholder="icon"/>
+          <input className={cn.input} placeholder="icon" />
+          <input className={cn.input} placeholder="icon" />
 
           <div className={cn.login_settings}>
             <div className={cn.wrapper_settings_remember}>
