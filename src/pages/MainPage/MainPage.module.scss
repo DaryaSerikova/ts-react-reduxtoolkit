@@ -7,9 +7,11 @@
 //288 -> 272 -> 258
 
 .container {
-  margin: 0 auto;
-  // padding: 82px 0;
-  max-width: 1280px;
+  // margin: 0 auto;
+  // max-width: 1280px;
+
+  @extend %container;
+
 }
 
   .parent {
@@ -156,12 +158,21 @@
     margin-top: 188px;
     gap: 30px;
 
+    @media (max-width: 1350px) {
+      gap: 0px;
+      justify-content: space-between;
+    }
+
     .menu_cards {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
       max-width: 953px;
+
+      @media (max-width: 1320px) {
+        max-width: 910px;
+      }
     }
 
     .menu_text {
