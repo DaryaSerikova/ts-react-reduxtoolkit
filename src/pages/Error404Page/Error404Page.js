@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
@@ -10,6 +10,11 @@ import cn from "./Error404Page.module.scss";
 
 
 const Error404Page = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <main className={`${cn.parent}`}>
 

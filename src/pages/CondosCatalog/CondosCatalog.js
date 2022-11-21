@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { Filters } from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
@@ -12,6 +12,10 @@ import { data } from "../../data/data";
 
 
 export const CondosCatalog = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const tagsInfo = [
     "Недорогие",

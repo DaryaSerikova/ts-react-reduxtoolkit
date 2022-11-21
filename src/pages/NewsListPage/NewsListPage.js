@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import Card from '../../components/NewsCard/NewsCard';
 import { CardsInfo } from './NewsListCardsInfo';
@@ -11,6 +11,11 @@ import cn from "./NewsListPage.module.scss";
 
 
 export default function NewsListPage() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
 
   const Cards = CardsInfo.reverse().map(
     item => <Card
@@ -20,8 +25,8 @@ export default function NewsListPage() {
     />)
 
   return (
-    <main className={`${cn.container} ${cn.news_list} `}>
-
+    <main className={`${cn.container} ${cn.news_list} ${cn.news_list_page}`}>
+       
       <div className={cn.parent}>
         <PurpleRectangle className={cn.child_background} />
         <div className={cn.child_content}>

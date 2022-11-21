@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NewsCard from '../../components/NewsCard/NewsCard';
 import { ReactComponent as PurpleRectangle1 } from '../../assets/img/purple_rectangle_news.svg';
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
@@ -20,6 +20,10 @@ import photo from "../../assets/img/photo_2.jpg";
 
 
 const OneNewsPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const NewsCards = NewsCardsInfo.map(
     item => <NewsCard

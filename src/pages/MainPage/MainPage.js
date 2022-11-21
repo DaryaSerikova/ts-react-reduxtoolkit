@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {  useEffect } from 'react';
 import AdvertisingCard from '../../components/AdvertisingCard/AdvertisingCard';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import MenuCard from '../../components/MenuCard/MenuCard';
@@ -15,6 +15,10 @@ import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDe
 import data from "../../data/data";
 
 const MainPage = () => {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const advertisingCards = AdvertisingCardInfo.map(
     el => <AdvertisingCard typeCard={el.typeCard} title={el.title} text={el.text} />

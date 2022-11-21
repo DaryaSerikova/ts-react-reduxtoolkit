@@ -47,6 +47,10 @@ const ContactPage = () => {
     // }
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   // useEffect(() => {
   //   const subscription = watch((value, { name, type }) => 
   //     console.log(value, name, type));
