@@ -1,5 +1,8 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/patterns";
+@import "../../assets/scss/mixins";
+
+
 
 .app_header {
   display: flex;
@@ -9,6 +12,31 @@
   .container {
     margin: 0 auto;
     min-width: 1284px;
+
+    @media (min-width: 1180px) and (max-width: 1350px) {
+      min-width: 1150px;
+    }
+
+    @media (min-width: 1120px) and (max-width: 1180px) {
+      min-width: 1090px;
+    }
+
+    @media (min-width: 1060px) and (max-width: 1120px) {
+      min-width: 1030px;
+    }
+  
+    @media (min-width: 1000px) and (max-width: 1060px) {
+      min-width: 970px;
+    }
+  
+    @media (min-width: 800px) and (max-width: 940px) {
+      min-width: 780px;
+    }
+  
+    // @media (min-width: 700px) and (max-width: 940px) {
+    //   max-width: 690px;
+    // }
+
   }
 
   .container_up_header, .container_down_header, 
@@ -27,10 +55,7 @@
 
   .container_down_header {
     justify-content: space-between;
-    // @extend %fontStyle_7;
-    // line-height: 17px;
     @include typography(600, 14px, 17px);
-    // @include typography(700, 40px, 1.5);
 
   }
 
@@ -54,6 +79,14 @@
       gap: 58px;
       margin-top: -3px;
 
+      @media (min-width: 1050px) and (max-width: 1180px) {
+        gap: 40px;
+      }
+
+      @media (min-width: 940px) and (max-width: 1180px) {
+        gap: 30px;
+      }
+
       .header_link {
         color: $light-grey;
         text-decoration: none;
@@ -63,6 +96,10 @@
     .second_up_header {
       gap: 39px;
       margin-top: -3px;
+
+      @media (min-width: 1000px) and (max-width: 1060px) {
+        gap: 20px;
+      }
     }
   
     .wrapper_point {
@@ -101,6 +138,18 @@
       flex-direction: row;
       gap: 81px;
 
+      @media (min-width: 1180px) and (max-width: 1350px) {
+        gap: 45px;
+      }
+
+      @media (min-width: 1050px) and (max-width: 1180px) {
+        gap: 30px;
+      }
+
+      @media (min-width: 940px) and (max-width: 1180px) {
+        gap: 18px;
+      }
+
       .logo {
         margin: -2px 0px 0 1px;
       }
@@ -112,6 +161,10 @@
   
       .point_2_text {
         margin-right: 15px;
+
+        @media (min-width: 940px) and (max-width: 1180px) {
+          margin-right: 7px;
+        }
       }
     }
   
