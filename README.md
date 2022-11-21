@@ -1,7 +1,7 @@
 # Sdaem.by
 
-React + TS + Redux Toolkit
-Figma, Pixel Perfect
+React + TS + Redux Toolkit\
+Figma, Pixel Perfect\
 
 
 `Plans`
@@ -31,7 +31,7 @@ Figma, Pixel Perfect
     <li>[ ] MainPage</li>
   </ul>
 </ul>
-<li>TypeScript</li>:
+<li>[ ] TypeScript</li>:
   <ul>
     <li>[ ] NewsListPage</li>
     <li>[ ] OneNewsPage</li>
