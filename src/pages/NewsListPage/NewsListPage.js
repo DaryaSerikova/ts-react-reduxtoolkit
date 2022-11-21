@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import Card from '../../components/NewsCard/NewsCard';
+import NewsCard from '../../components/NewsCard/NewsCard';
 import { CardsInfo } from './NewsListCardsInfo';
 
 import { ReactComponent as Search } from '../../assets/img/search.svg';
@@ -11,17 +11,18 @@ import cn from "./NewsListPage.module.scss";
 
 
 export default function NewsListPage() {
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
 
 
   const Cards = CardsInfo.reverse().map(
-    item => <Card
+    item => <NewsCard
       title={item.title}
       description={item.description}
       date={item.date}
+      id={item.id}
     />)
 
   return (
@@ -30,7 +31,7 @@ export default function NewsListPage() {
       <div className={cn.parent}>
         <PurpleRectangle className={cn.child_background} />
         <div className={cn.child_content}>
-          <header>
+          <header className={cn.container}>
             <BreadCrumbs />
             <div className={cn.title_wrapper}>
               <h1 className={cn.title}>Новости</h1>

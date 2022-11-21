@@ -1,3 +1,91 @@
+@mixin card($w, $h) {
+  max-width: $w;
+  width: $w;
+  height: $h;
+
+
+  @media (min-width: 1182px) and (max-width: 1350px) {
+    max-width: $w*0.85;
+    height: $h*1.025;
+  }
+
+  @media (min-width: 800px) and (max-width: 940px) {
+    max-width: $w*0.8;
+    // width: $w*0.8;
+    height: $h*0.94;
+  }
+
+  @media (min-width: 700px) and (max-width: 800px) {
+    max-width: $w*0.71;
+    // width: $w*0.71;
+
+  }
+
+  .wrapper_img {
+    width: 100%;
+    max-height: 226.46px;
+  
+    @media (min-width: 1182px) and (max-width: 1350px) {
+      width: $w*0.85;
+      height: 227px*0.85;
+    }
+
+    @media (min-width: 700px) and (max-width: 940px) {
+      height: 227px*0.8;
+    }
+
+  }
+
+  .card_container {
+    max-width: $w*0.9;
+    margin: 0px auto;
+
+    @media (min-width: 1182px) and (max-width: 1350px) {
+      max-width: $w*0.85*0.9;
+    }
+  
+    @media (min-width: 800px) and (max-width: 940px) {
+      max-width: $w*0.8*0.9;
+    }
+  
+    @media (min-width: 700px) and (max-width: 800px) {
+      max-width: $w*0.65*0.9;
+    }
+
+  }
+
+}
+
+
+// @mixin card_container($w) {
+//   max-width: 365px;
+//   margin: 0px auto;
+
+//   @media (min-width: 1182px) and (max-width: 1350px) {
+//     width: 365px*0.8;
+//   }
+// }
+
+// @mixin container_card($w) {
+//   @media (min-width: 1180px) and (max-width: 1350px) {
+//     width: $w*0.8;
+//     height: $h*1.025;
+//   }
+
+//   // @media (min-width: 940px) and (max-width: 1180px) {
+//   //   max-width: 910px;
+//   // }
+
+//   // @media (min-width: 800px) and (max-width: 940px) {
+//   //   max-width: 780px;
+//   // }
+
+//   // @media (min-width: 700px) and (max-width: 940px) {
+//   //   max-width: 670px;
+//   // }
+// }
+
+
 @mixin typography($fw, $fs, $lh) {
   font-weight: $fw;
   font-size: $fs;

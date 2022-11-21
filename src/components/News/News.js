@@ -35,7 +35,7 @@ const News = () => {
         <div className={cn.title_news}>Новости</div>
         {news}
         <button className={cn.view_all}>
-          <Link to="/newsList" className={cn.news_btn_text}>Посмотреть все</Link>
+          <Link to="/news" className={cn.news_btn_text}>Посмотреть все</Link>
           <div className={cn.news_btn_icon}>
             <ArrowRightIcon />
           </div>

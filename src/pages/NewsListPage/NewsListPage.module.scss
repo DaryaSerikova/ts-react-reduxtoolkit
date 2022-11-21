@@ -1,18 +1,30 @@
 @import "../../assets/scss/variables";
-@import "../../assets/scss/typography";
+@import "../../assets/scss/patterns";
 @import "../../assets/scss/mixins";
 
-
 .container {
-  margin: 42px auto 0;
-  max-width: 1280px;
+  @extend %container;
 }
+// .container {
+//   margin: 42px auto 0;
+//   max-width: 1280px;
+
+//   @media (min-width: 1200px) and (max-width: 1350px) {
+//     max-width: 1100px;
+
+//   }
+// }
 
 .cards {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+
+  @media (max-width: 940px) {
+    gap: 20px;
+  }
 }
 
 .child_background {
@@ -39,10 +51,7 @@
 
   .title {
     @include typography(700, 30px, 100%);
-    // @extend %fontStyle_5;
-    // line-height: 100%;
     color: $dark-grey;
-
   }
 
   .input {

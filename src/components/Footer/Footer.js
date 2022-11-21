@@ -66,7 +66,7 @@ const Footer = () => {
 
 
           <div className={`${cn.column} ${cn.last_column}`}>
-            <Link to="/newsList" className={cn.item}>Новости</Link>
+            <Link to="/news" className={cn.item}>Новости</Link>
             <div className={cn.item}>Размещение и тарифы </div>
             <div className={cn.item}>Объявления на карте</div>
             <Link to="/contacts" className={cn.item}>Контакты</Link>

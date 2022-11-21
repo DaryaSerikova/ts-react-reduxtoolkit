@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useParams } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NewsListPage from './pages/NewsListPage/NewsListPage';
@@ -18,9 +18,11 @@ import { CondosCatalog } from './pages/CondosCatalog/CondosCatalog';
 
 function App() {
 
+  // const {newsId} = useParams();
   const location = useLocation();
   const path = location.pathname;
   console.log('path', location.pathname)
+
 
   return (
     <div className={cn.app}>
@@ -29,8 +31,10 @@ function App() {
       {/* <CondosCatalog /> */}
 
       <Routes>
-        <Route path="/newsList" element={<NewsListPage />} />
-        <Route path="/oneNews" element={<OneNewsPage />} />
+        <Route path="/news" element={<NewsListPage />} />
+        {/* <Route path="/oneNews" element={<OneNewsPage />} /> */}
+        <Route path="/news/:newsId" element={<OneNewsPage />} />
+
         <Route path="*" element={<Error404Page/>} />
         <Route path="/contacts" element={<ContactPage />} />
 

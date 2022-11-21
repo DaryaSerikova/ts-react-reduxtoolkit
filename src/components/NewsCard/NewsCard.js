@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import photo from "../../assets/img/photo_1.jpg";
 import cn from './NewsCard.module.scss';
 
 
 
-const NewsCard = ({title, description, date}) => {
+const NewsCard = ({title, description, date, id}) => {
   return (
     <div className={cn.card}>
       <header className={cn.header_card}>
@@ -22,7 +23,9 @@ const NewsCard = ({title, description, date}) => {
       
         <footer className={cn.card_footer}>
           <div className={cn.date}>{date}</div>
-          <button className={cn.btn}>Читать</button>
+          <Link to={`/news/${id}`}>
+            <button className={cn.btn}>Читать</button>
+          </Link>
         </footer>
       </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import NewsCard from '../../components/NewsCard/NewsCard';
 import { ReactComponent as PurpleRectangle1 } from '../../assets/img/purple_rectangle_news.svg';
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
@@ -15,11 +16,16 @@ import { NewsCardsInfo } from '../../components/NewsCards/NewsCardsInfo';
 import cn from "./OneNewsPage.module.scss";
 import NewsCards from '../../components/NewsCards/NewsCards';
 import photo from "../../assets/img/photo_2.jpg";
+import { CardsInfo } from '../NewsListPage/NewsListCardsInfo';
 
 
 
 
 const OneNewsPage = () => {
+  let { newsId } = useParams();
+  console.log(newsId)
+  const currentOneNews = CardsInfo.filter((el) => el.id === +newsId)[0]
+  console.log('currentOneNews: ', currentOneNews)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,10 +49,17 @@ const OneNewsPage = () => {
 
         <header >
           <BreadCrumbs />
-          <h1 className={cn.title}>Линия Сталина: суровый отдых в усадьбах на сутки </h1>
+          <h1 className={cn.title}>
+            {/* Линия Сталина: суровый отдых в усадьбах на сутки  */}
+            {currentOneNews.title}
+          </h1>
 
           <div className={cn.date_with_icons}>
-            <div className={cn.date}>14 Января 2008</div>
+            <div className={cn.date}>
+              {/* 14 Января 2008 */}
+              {currentOneNews.date}
+
+            </div>
             <div className={cn.wrapper_networks}>
               <div className={cn.networks_text}>Поделиться</div>
               <div className={cn.networks_icons}>
@@ -69,7 +82,9 @@ const OneNewsPage = () => {
               <img src={photo} alt={photo} />
             </div>
             <div className={cn.description}>
-              <p>
+              {currentOneNews.description}
+
+              {/* <p>
                 Итак, утром вы выезжаете в путь по Молодеченской трассе. Если автомобиля у вас нет - садитесь на маршрутку в сторону Молодечно от железнодорожного вокзала. Остановка называется «Линия Сталина» - да-да, именно здесь вы и проведёте ближайшие несколько часов, а вероятнее всего – останетесь до самого вечера.
               </p>
               <p>
@@ -83,7 +98,7 @@ const OneNewsPage = () => {
               </p>
               <p>
                 Отличная усадьба в 10 км от "Линии Сталина".
-              </p>
+              </p> */}
 
             </div>
           </div>
