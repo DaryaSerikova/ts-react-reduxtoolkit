@@ -3,20 +3,39 @@
 React + TS + Redux Toolkit
 Figma, Pixel Perfect
 
-Plans:
-[ ] PixelPerfect Layout
-[x] CSS modules
-[ ] SCSS
-[ ] Semantic Layout:
-  [x] NewsListPage
-  [] OneNewsPage
-  [] ContactPage
-  [] Error404Page
-  [] LoginPage
-  [] LogUpPage
-  [] MainPage
-[ ] Adaptive Layout
 
+> [!div class="checklist"]
+> * List item 1
+> * List item 2
+> * List item 3
+
+Plans:
+<ul>
+
+<li>[ ] PixelPerfect Layout</li>
+<li>[x] CSS modules</li>
+<li>[ ] SCSS</li>
+<li>[ ] Semantic Layout:</li>
+  <ul>
+    <li>[x] NewsListPage</li>
+    <li>[] OneNewsPage</li>
+    <li>[] ContactPage</li>
+    <li>[] Error404Page</li>
+    <li>[] LoginPage</li>
+    <li>[] LogUpPage</li>
+    <li>[] MainPage</li>
+  </ul>
+<li>[ ] Adaptive Layout:</li>
+  <ul>
+    <li>[x] NewsListPage</li>
+    <li>[] OneNewsPage</li>
+    <li>[] ContactPage</li>
+    <li>[] Error404Page</li>
+    <li>[] LoginPage</li>
+    <li>[] LogUpPage</li>
+    <li>[] MainPage</li>
+  </ul>
+</ul>
  and etc.
 
 
