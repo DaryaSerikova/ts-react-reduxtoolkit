@@ -43,7 +43,7 @@ const Error404Page = () => {
               <div className={cn.btn_icon}>
                 <HomeRun />
               </div>
-              <Link to="/main" className={cn.btn_text}>Вернуться на главную</Link>
+              <Link to="/" className={cn.btn_text}>Вернуться на главную</Link>
             </button>
           </div>
 

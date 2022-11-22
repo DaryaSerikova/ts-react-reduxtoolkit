@@ -56,7 +56,7 @@ const SignInPage = () => {
             <div className={cn.settings_password}>Забыли пароль?</div>
           </div>
 
-          <button className={cn.btn}>Войти</button>
+          <button className={cn.btn}><Link to="/">Войти</Link></button>
           <div className={cn.logup}>
             Еще нет аккаунта? <Link to="/signup" className={cn.create_account}>Создайте акканут</Link>
           </div>

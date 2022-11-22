@@ -39,12 +39,22 @@ const SignUpPage = () => {
               />
 
               <div className={cn.capcha}></div>
+              <Button
+                text="Ошибка ввода"
+                style="red"
+                typeButton="left-icon"
+                customStyle="signup"
+                />
               
               <Button
                 text="Зарегистрироваться"
                 style="yellow"
-                typeButton="without-icon"/>
+                typeButton="without-icon"
+                customStyle="signup"
+                />       
+              
 
+                
             </form>
 
 
@@ -56,7 +66,7 @@ const SignUpPage = () => {
               <li>добавлять фотографии объектов соответствующие действительности. Администрация сайта sdaem.by оставляет за собой право удалять любую информацию, размещенную пользователем, если сочтет, что информация не соответствует действительности, носит оскорбительный характер, нарушает права и законные интересы других граждан либо действующее законодательство Республики Беларусь.</li>
             </ul>
 
-            <div className={cn.wrapper_signin}>Уже есть аккаунта? <Link to="/sigin">Войдите</Link></div>
+            <div className={cn.wrapper_signin}>Уже есть аккаунта? <Link to="/signin">Войдите</Link></div>
           </div>
         </div>
 

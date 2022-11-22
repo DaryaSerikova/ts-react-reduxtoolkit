@@ -16,7 +16,7 @@ export default function Header() {
       <div className={`${cn.up_header}`}>
         <div className={`${cn.container} ${cn.container_up_header}`}>
           <div className={cn.first_up_header}>
-            <Link className={cn.header_link} to="/main">Главная</Link>
+            <Link className={cn.header_link} to="/">Главная</Link>
             <Link className={cn.header_link} to="/news">Новости</Link>
             <div>Размещение и тарифы</div>
             <div className={cn.wrapper_point}>

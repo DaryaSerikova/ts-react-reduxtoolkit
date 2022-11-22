@@ -13,6 +13,8 @@
   .container {
     margin: 142px auto 0;
     max-width: 1280px;
+    // margin: 0 auto;
+    // padding: 142px;
   }
   
   .wrapper_adress, .contact_details, .column {
@@ -71,8 +73,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+    width: 107.4%;
   
     .wrapper_networks {
+      margin-top: 7px;
       display: flex;
       flex-direction: row;
       gap: 20px;
@@ -91,11 +95,45 @@
         margin: -8px 0 0 5px;
       }
   
-      .payments {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
+    }
+
+    .payments {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: -8px;
+      gap: 16px;
+
+      .payment1 {
+        width: 42px;
+        height: 13px;
       }
+
+      .payment2 {
+        width: 86px;
+        height: 16px;
+      }
+
+      .payment3 {
+        width: 38px;
+        height: 16px;
+      }
+
+      .payment4 {
+        width: 26px;
+        height: 20px;
+      }
+
+      .payment5 {
+        width: 46px;
+        height: 16px;
+      }
+
+      .payment6 {
+        width: 22px;
+        height: 30px;
+      }
+
     }
   }
 

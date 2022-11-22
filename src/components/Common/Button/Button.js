@@ -6,7 +6,7 @@ import cn from "./Button.module.scss";
 
 
 
-export const Button = ({text, style, typeButton="without-icon"}) => {
+export const Button = ({text, style, typeButton="without-icon", customStyle=""}) => {
   const getContent = () => {
     switch(typeButton) {
       case "right-icon":
@@ -33,7 +33,7 @@ export const Button = ({text, style, typeButton="without-icon"}) => {
 
   return (
     <div>
-      <button type="button" className={`${cn.btn} ${cn[`${style}`]}`}>
+      <button type="button" className={`${cn.btn} ${cn[`${style}`]} ${cn[`${customStyle}`]}`}>
         {/* {content} */}
         {text}
 

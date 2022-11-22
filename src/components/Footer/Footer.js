@@ -1,20 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
-
 import { ReactComponent as NetworkIcon1 } from '../../assets/img/network_icon_1.svg';
 import { ReactComponent as NetworkIcon2 } from '../../assets/img/network_icon_2.svg';
 import { ReactComponent as NetworkIcon3 } from '../../assets/img/network_icon_3.svg';
-
-
-import { ReactComponent as PaymentIcon1 } from '../../assets/img/payment_icon_1.svg';
-import { ReactComponent as PaymentIcon2 } from '../../assets/img/payment_icon_2.svg';
-import { ReactComponent as PaymentIcon3 } from '../../assets/img/payment_icon_3.svg';
-import { ReactComponent as PaymentIcon4 } from '../../assets/img/payment_icon_4.svg';
-import { ReactComponent as PaymentIcon5 } from '../../assets/img/payment_icon_5.svg';
-import { ReactComponent as PaymentIcon6 } from '../../assets/img/payment_icon_6.svg';
-
-
+import PaymentIcon1 from '../../assets/img/payment_1.png';
+import PaymentIcon2 from '../../assets/img/payment_2.png';
+import PaymentIcon3 from '../../assets/img/payment_3.png';
+import PaymentIcon4 from '../../assets/img/payment_4.png';
+import PaymentIcon5 from '../../assets/img/payment_5.png';
+import PaymentIcon6 from '../../assets/img/payment_6.png';
 import cn from "./Footer.module.scss";
 
 
@@ -85,12 +80,13 @@ const Footer = () => {
           </div>
 
           <div className={cn.payments}>
-            <PaymentIcon1 />
-            <PaymentIcon2 />
-            <PaymentIcon3 />
-            <PaymentIcon4 />
-            <PaymentIcon5 />
-            <PaymentIcon6 />
+            <img src={PaymentIcon1} alt="PaymentIcon1" className={cn.payment1}/>
+            <img src={PaymentIcon2} alt="PaymentIcon1" className={cn.payment2}/>
+            <img src={PaymentIcon3} alt="PaymentIcon1" className={cn.payment3}/>
+            <img src={PaymentIcon4} alt="PaymentIcon1" className={cn.payment4}/>
+            <img src={PaymentIcon5} alt="PaymentIcon1" className={cn.payment5}/>
+            <img src={PaymentIcon6} alt="PaymentIcon1" className={cn.payment6}/>
+
           </div>
         </div>
 
