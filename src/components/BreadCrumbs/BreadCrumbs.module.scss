@@ -1,17 +1,17 @@
+@import "../../assets//scss/variables";
+@import "../../assets//scss/patterns";
+
+
 .bread_crumbs {
   display: flex;
   flex-direction: row;
   align-items: center;
 
   .bread_crumbs_item {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    /* identical to box height, or 14px */
-  
     display: flex;
     align-items: center;
-    color: #686868;
+    @include typography(400, 14px, 100%);
+    color: $grey;
   }
   
   .ellipse {
