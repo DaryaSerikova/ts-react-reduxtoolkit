@@ -2,12 +2,16 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import background1 from "../../assets/img/sigin_background1.png";
 import background2 from "../../assets/img/sigin_background2.png";
+import { Input } from '../../components/Common/Input/Input';
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import cn from "./SignInPage.module.scss";
 
 
 
 const SignInPage = () => {
+
+
+
   return (
     <div className={cn.wrapper_box}>
       <PurpleBackground>
@@ -22,8 +26,27 @@ const SignInPage = () => {
         </div>
 
         <div className={`${cn.form} ${cn.container_form}`}>
-          <input className={cn.input} placeholder="icon" />
-          <input className={cn.input} placeholder="icon" />
+          <div className={cn.wrapper_input} >
+            <Input 
+                typeInput="user" 
+                placeholder="Логин" 
+                style="sigin" 
+
+                />
+          </div>
+          <div className={cn.wrapper_input} >
+            <Input 
+                typeInput="password" 
+                placeholder="Пароль" 
+                style="sigin" 
+
+                />
+          </div>
+
+
+
+          {/* <input className={cn.input} placeholder="icon" /> */}
+          {/* <input className={cn.input} placeholder="icon" /> */}
 
           <div className={cn.login_settings}>
             <div className={cn.wrapper_settings_remember}>

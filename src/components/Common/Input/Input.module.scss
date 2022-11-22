@@ -42,6 +42,7 @@
   // background: rgba(102, 78, 249, 0.05);
   // border-radius: 20px;
   padding: 15px 20px 15px 55px;
+  padding-left: 55px !important;
   background: #F7F7F7;
   border: 2px solid transparent;
   border-radius: 30px;
@@ -68,4 +69,13 @@
 .w80h37 {
   width: 80px;
   height: 37px;
+}
+
+.signin {
+  padding: 17px 20px;
+  margin-bottom: 21px;
+
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
 }
