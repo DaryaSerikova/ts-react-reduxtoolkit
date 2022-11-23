@@ -12,7 +12,7 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 import ModalSent from './modals/ModalSent/ModalSent';
 import cn from './App.module.scss';
 import MainPage from './pages/MainPage/MainPage';
-import { CondosCatalog } from './pages/CondosCatalog/CondosCatalog';
+import CatalogPage from './pages/CatalogPage/CatalogPage';
 
 
 
@@ -42,7 +42,7 @@ function App() {
         <Route path="/signup" element={<SignUpPage />} />
 
         <Route path="/" element={<MainPage />} />
-        <Route path="/catalog" element={<CondosCatalog />} />
+        <Route path="/catalog" element={<CatalogPage />} />
 
         
 

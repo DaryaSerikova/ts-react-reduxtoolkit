@@ -1,23 +1,30 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
+
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { Filters } from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
-import cn from "./CondosCatalog.module.scss";
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { Button } from '../../components/Common/Button/Button';
 import { data } from "../../data/data";
+import cn from "./CatalogPage.module.scss";
 
 
 
 
-export const CondosCatalog = () => {
+
+const CatalogPage = () => {
 
   const amountRooms = useSelector(state => state.filters.amountRooms);
   const priceFrom = useSelector(state => state.filters.priceFrom);
   const priceTo = useSelector(state => state.filters.priceTo);
+  const allFlats = useSelector(state => state.flats.all);
+  const filteredFlats = useSelector(state => state.flats.filtered);
+
+
   const dispatch = useDispatch();
 
   console.log('amountRooms: ', amountRooms)
@@ -26,6 +33,8 @@ export const CondosCatalog = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    dispatch(updateAllFlats(data['minsk']));
+    
   }, [])
 
   const tagsInfo = [
@@ -62,7 +71,9 @@ export const CondosCatalog = () => {
   //     subway_station={el.subway_station} 
   //     neighborhood={el.neighborhood} 
   //   />)
-  const cardsWithDetails = data['minsk'].map(
+  // const cardsWithDetails = data['minsk'].map(
+
+  const cardsWithDetails = allFlats.map(
     el => <CardWithDetails
       type_card='list'
       gold={el.gold}
@@ -125,3 +136,5 @@ export const CondosCatalog = () => {
     </main>
   )
 }
+
+export default CatalogPage;

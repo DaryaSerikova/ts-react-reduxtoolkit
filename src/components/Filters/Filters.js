@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { updateAmountRooms, updatePriceFrom, updatePriceTo } from "../../store/filtersSlice";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -14,9 +14,9 @@ import cn from "./Filters.module.scss";
 
 export const Filters = () => {
 
-  const amountRooms = useSelector(state => state.filters.amountRooms);
-  const priceFrom = useSelector(state => state.filters.priceFrom);
-  const priceTo = useSelector(state => state.filters.priceTo);
+  // const amountRooms = useSelector(state => state.filters.amountRooms);
+  // const priceFrom = useSelector(state => state.filters.priceFrom);
+  // const priceTo = useSelector(state => state.filters.priceTo);
   const dispatch = useDispatch();
 
   const { 
@@ -41,12 +41,12 @@ export const Filters = () => {
 
   const onSubmit = (data) => {
     console.log('data:', data);
-    if (data.amount_rooms !== '') dispatch(updateAmountRooms(amountRooms));
-    if (data.price_from !== '') dispatch(updatePriceFrom(priceFrom));
-    if (data.price_to !== '') dispatch(updatePriceTo(priceTo));
+    if (data.amount_rooms !== '') dispatch(updateAmountRooms(data.amount_rooms));
+    if (data.price_from !== '') dispatch(updatePriceFrom(data.price_from));
+    if (data.price_to !== '') dispatch(updatePriceTo(data.price_to));
     reset();
   }
-  
+
   return (
     <div className={cn.wrapper_filters}>
       <div className={cn.container}>
