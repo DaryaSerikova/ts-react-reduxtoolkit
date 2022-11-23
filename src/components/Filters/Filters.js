@@ -13,6 +13,16 @@ import { Select } from '../Common/Select/Select';
 
 
 export const Filters = () => {
+
+  const arrOpt = [
+    'Выберите',
+    '1-комн.',
+    '2-комн.',
+    '3-комн.',
+    '4-комн.',
+    '5-комн.',
+  ]
+
   return (
     <div className={cn.wrapper_filters}>
       <div className={cn.container}>
@@ -21,14 +31,13 @@ export const Filters = () => {
         {/* <Input typeInput={"user"} placeholder="Ваше имя"/> */}
         {/* <Input typeInput={"От"} placeholder="Без иконки"/> */}
 
-        <Select />
-
 
         <div className={cn.filters}>
 
           <div className={cn.filters_item}>
             <div className={cn.filter_name}>Комнаты</div>
-            <select className={cn.filter}></select>
+            {/* <select className={cn.filter}></select> */}
+            <Select arrOptions={arrOpt}/>
           </div>
 
           <div className={cn.filters_item}>

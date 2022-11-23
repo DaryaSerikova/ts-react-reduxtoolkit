@@ -49,7 +49,7 @@ export default function Header() {
               <Logo className={cn.logo}/>
             </Link>
             <div className={cn.wrapper_point_2}>
-              <div className={cn.point_2_text}>Квартиры на сутки</div>
+              <Link to="/catalog" className={cn.point_2_text}>Квартиры на сутки</Link>
               <Point2 />
             </div>
             <div>Коттеджи и усадьбы</div>

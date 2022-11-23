@@ -1,8 +1,9 @@
 @import "../../../assets/scss/variables";
-@import "../../../assets/scss/typography";
+@import "../../../assets/scss/patterns";
 @import "../../../assets/scss/mixins";
 
 .select {
+  padding: 9px 12px 11px;
   @include typography(500, 14px, 17px);
   
   color: $light-black;

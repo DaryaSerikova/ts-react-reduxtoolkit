@@ -3,10 +3,12 @@ import cn from "./Select.module.scss";
 
 
 
-export const Select = () => {
+export const Select = ({arrOptions}) => {
+
+  const options = arrOptions.map(option => <option>{option}</option>)
   return (
     <div>
-      <select className={`${cn.select}`}></select>
+      <select className={`${cn.select}`}>{options}</select>
     </div>
   )
 }

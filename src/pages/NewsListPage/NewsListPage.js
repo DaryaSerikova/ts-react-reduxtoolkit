@@ -1,40 +1,46 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import NewsCard from '../../components/NewsCard/NewsCard';
-import { CardsInfo } from './NewsListCardsInfo';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { updateAllNews, updateSearched, updateSearchedValue } from '../../store/newsSlice';
 
+import NewsCard from '../../components/NewsCard/NewsCard';
+import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
+import { CardsInfo } from './NewsListCardsInfo';
 import { ReactComponent as Search } from '../../assets/img/search.svg';
 import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
-
 import cn from "./NewsListPage.module.scss";
 
 
 
 export default function NewsListPage() {
 
-  const [ allCards, setAllCards ] = useState([]);
-  const [ searchedCards, setSearchedCards] = useState([]);
-  const [ searchedValue, setSearchedValue] = useState('');
+  // const smth = useSelector(state => state.smth.smth);
+  const allNews = useSelector(state => state.news.allNews);
+  const searchedNews = useSelector(state => state.news.searched);
+  const searchedValue = useSelector(state => state.news.searchedValue);
+  const dispatch = useDispatch();
 
   
   useEffect(() => {
     window.scrollTo(0, 0);
-    setAllCards(CardsInfo);
+    dispatch(updateAllNews(CardsInfo));
   }, []);
 
   const search = (e) => {
-    console.log(e.target.value);
-    setSearchedValue(e.target.value)
+    // console.log(e.target.value);
+    dispatch(updateSearchedValue(e.target.value));
     if (e.target.value.trim()) {
       const searched = CardsInfo.filter((card) => 
         card.title.toLowerCase().includes(e.target.value.toLowerCase()))
-      setSearchedCards(searched);
-    } else setSearchedCards([...allCards]);
+      // console.log('searched: ', searched)
+      dispatch(updateSearched(searched))
+    } else dispatch(updateSearched([...allNews]));
   }
 
-  const viewCards = searchedCards.length === 0 ? allCards : searchedCards;
+  
+  let viewCards = searchedNews.length === 0 ? [...allNews] : [...searchedNews];
 
-  const cards = viewCards.reverse().map(
+  const cards = viewCards?.reverse().map(
     item => <NewsCard
       title={item.title}
       description={item.description}
@@ -43,8 +49,6 @@ export default function NewsListPage() {
     />)
 
 
-
-  
 
   return (
     <main className={`${cn.container} ${cn.news_list} ${cn.news_list_page}`}>
