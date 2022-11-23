@@ -1,12 +1,12 @@
 import React, {  useEffect } from 'react';
 import AdvertisingCard from '../../components/AdvertisingCard/AdvertisingCard';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
-import MenuCard from '../../components/MenuCard/MenuCard';
 import MenuTextList from '../../components/MenuTextList/MenuTextList';
+import MenuCard from '../../components/MenuCard/MenuCard';
 import News from '../../components/News/News';
 import { AdvertisingCardInfo } from '../../components/AdvertisingCard/AdvertisingCardInfo';
-import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
+import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
 import background from "../../assets/img/main_background_1.png";
 import background3 from "../../assets/img/main_background_3.png";
 
@@ -15,7 +15,7 @@ import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDe
 import data from "../../data/data";
 
 const MainPage = () => {
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])

@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { Filters } from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
@@ -12,6 +14,15 @@ import { data } from "../../data/data";
 
 
 export const CondosCatalog = () => {
+
+  const amountRooms = useSelector(state => state.filters.amountRooms);
+  const priceFrom = useSelector(state => state.filters.priceFrom);
+  const priceTo = useSelector(state => state.filters.priceTo);
+  const dispatch = useDispatch();
+
+  console.log('amountRooms: ', amountRooms)
+  console.log('priceFrom: ', priceFrom)
+  console.log('priceTo: ', priceTo)
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -82,8 +93,6 @@ export const CondosCatalog = () => {
         </div>
 
         <Filters />
-
-
 
 
       </header>

@@ -1,16 +1,31 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/patterns";
 @import "../../assets/scss/mixins";
+@import "../../assets/scss/components/input";
+
+
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
+.child_input {
+  @extend %child_input;
+}
+.parent {
+  @extend %parent;
+}
+.without_icon {
+  @extend %without_icon;
+}
+
+
 .wrapper_filters {
   background: #FFFFFF;
   box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.08);
   padding: 22px 0 23px;
+
 }
 
 .filters {
@@ -48,6 +63,18 @@
       .btn_setup {
         border: none;
         background: transparent;
+      }
+
+      .wrapper_input {
+        @extend %wrapper_input;
+      }
+
+      .input {
+        @extend %input;
+      }
+
+      .w100h37 {
+        @extend %w100h37;
       }
     }
   }

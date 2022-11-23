@@ -1,22 +1,17 @@
 import React, { useEffect } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { IFields } from './ContactPage.interface';
-
 // import ModalSent from '../../modals/ModalSent/ModalSent';
 import { ReactComponent as WarningIcon } from '../../assets/img/warning.svg';
-
 import { ReactComponent as ContactIcon1 } from '../../assets/img/contact_icon_1.svg';
 import { ReactComponent as ContactIcon2 } from '../../assets/img/contact_icon_2.svg';
 import { ReactComponent as ContactIcon3 } from '../../assets/img/contact_icon_3.svg';
 import { ReactComponent as ContactIcon4 } from '../../assets/img/contact_icon_4.svg';
-
 import { ReactComponent as UserIcon } from '../../assets/img/contact_user.svg';
 import { ReactComponent as MailIcon } from '../../assets/img/contact_mail.svg';
-
 import { ReactComponent as NetworkRight1 } from '../../assets/img/contact_network_r1.svg';
 import { ReactComponent as NetworkRight2 } from '../../assets/img/contact_network_r2.svg';
 import { ReactComponent as NetworkRight3 } from '../../assets/img/contact_network_r3.svg';
-
 import { ReactComponent as PurpleNetworkIcon3 } from '../../assets/img/purple_network_3.svg';
 import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_network_4.svg';
 import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
