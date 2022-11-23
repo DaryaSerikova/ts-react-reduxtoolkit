@@ -11,12 +11,10 @@ import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_ne
 import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
 
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-// import { CardsInfo } from './OneNewsCardsInfo';
-import { NewsCardsInfo } from '../../components/NewsCards/NewsCardsInfo';
-import cn from "./OneNewsPage.module.scss";
-import NewsCards from '../../components/NewsCards/NewsCards';
+import { ReadMoreInfo } from '../../components/NewsCards/ReadMoreInfo';
+import { NewsInfo } from '../../components/NewsCards/NewsInfo';
 import photo from "../../assets/img/photo_2.jpg";
-import { CardsInfo } from '../NewsListPage/NewsListCardsInfo';
+import cn from "./OneNewsPage.module.scss";
 
 
 
@@ -24,18 +22,19 @@ import { CardsInfo } from '../NewsListPage/NewsListCardsInfo';
 const OneNewsPage = () => {
   let { newsId } = useParams();
   console.log(newsId)
-  const currentOneNews = CardsInfo.filter((el) => el.id === +newsId)[0]
+  const currentOneNews = NewsInfo.filter((el) => el.id === +newsId)[0]
   console.log('currentOneNews: ', currentOneNews)
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
 
-  const NewsCards = NewsCardsInfo.map(
+  const ReadMoreCards = ReadMoreInfo.map(
     item => <NewsCard
       title={item.title}
       description={item.description}
       date={item.date}
+      key={item.key}
     />)
 
   return (
@@ -116,8 +115,7 @@ const OneNewsPage = () => {
         <div className={`${cn.child_content} ${cn.footer_container}`}>
           <div className={cn.content_footer_title}>Читайте также</div>
           <div className={cn.content_footer_cards}>
-            {/* <Cards arr={CardsInfo}/> */}
-            {NewsCards}
+            {ReadMoreCards}
           </div>
         </div>
       </div>

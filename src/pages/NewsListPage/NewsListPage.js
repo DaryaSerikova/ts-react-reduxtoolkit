@@ -5,7 +5,7 @@ import { updateAllNews, updateSearched, updateSearchedValue } from '../../store/
 
 import NewsCard from '../../components/NewsCard/NewsCard';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import { CardsInfo } from './NewsListCardsInfo';
+import { NewsInfo } from '../../components/NewsCards/NewsInfo';
 import { ReactComponent as Search } from '../../assets/img/search.svg';
 import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
 import cn from "./NewsListPage.module.scss";
@@ -20,24 +20,24 @@ export default function NewsListPage() {
   const searchedValue = useSelector(state => state.news.searchedValue);
   const dispatch = useDispatch();
 
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(updateAllNews(CardsInfo));
+    dispatch(updateAllNews({ allNews: NewsInfo }));
   }, []);
 
   const search = (e) => {
     // console.log(e.target.value);
-    dispatch(updateSearchedValue(e.target.value));
+    dispatch(updateSearchedValue({ searchedValue: e.target.value }));
     if (e.target.value.trim()) {
-      const searched = CardsInfo.filter((card) => 
+      const searched = NewsInfo.filter((card) =>
         card.title.toLowerCase().includes(e.target.value.toLowerCase()))
       // console.log('searched: ', searched)
-      dispatch(updateSearched(searched))
-    } else dispatch(updateSearched([...allNews]));
+      dispatch(updateSearched({ searched }))
+    } else dispatch(updateSearched({ searched: [...allNews] }));
   }
 
-  
+  console.log(searchedNews)
   let viewCards = searchedNews.length === 0 ? [...allNews] : [...searchedNews];
 
   const cards = viewCards?.reverse().map(
@@ -46,13 +46,14 @@ export default function NewsListPage() {
       description={item.description}
       date={item.date}
       id={item.id}
+      key={item.key}
     />)
 
 
 
   return (
     <main className={`${cn.container} ${cn.news_list} ${cn.news_list_page}`}>
-       
+
       <div className={cn.parent}>
         <PurpleRectangle className={cn.child_background} />
 
@@ -61,12 +62,12 @@ export default function NewsListPage() {
             <BreadCrumbs />
             <div className={cn.title_wrapper}>
               <h1 className={cn.title}>Новости</h1>
-              <input 
-                className={cn.input} 
+              <input
+                className={cn.input}
                 placeholder="Поиск по статьям"
                 value={searchedValue}
                 onChange={search}
-                />
+              />
             </div>
           </header>
 

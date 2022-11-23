@@ -10,16 +10,14 @@ const newsSlice = createSlice({
   },
   reducers: {
     updateAllNews(state, action) {
-      // console.log('state', state)
-      // console.log('state', state)
-
-      state.allNews = action.payload;
+      const { allNews } = action.payload; 
+      state.allNews = allNews;
     },
     updateSearched(state, action) {
-      state.searched = action.payload;
+      state.searched = action.payload.searched;
     },
-    updateSearchedValue(state, action) {
-      state.searchedValue = action.payload;
+    updateSearchedValue(state, action, searchedValue) {
+      state.searchedValue = action.payload.searchedValue;
     },
 
   }

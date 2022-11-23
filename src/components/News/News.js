@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowRightIcon } from "../../assets/img/arrow_right.svg";
-import { CardsInfo } from '../../pages/NewsListPage/NewsListCardsInfo';
+import { NewsInfo } from '../NewsCards/NewsInfo';
 import cn from "./News.module.scss";
 
 
@@ -24,7 +24,7 @@ const OneNews = ({ title, date }) => {
 
 const News = () => {
 
-  const partOfNews = CardsInfo.slice(-5).reverse();
+  const partOfNews = NewsInfo.slice(-5).reverse();
   const news = partOfNews.map(
     el => <OneNews title={el.title} date={el.date} />
   )
