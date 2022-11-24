@@ -9,7 +9,7 @@ import { Tag } from '../../components/Common/Tag/Tag';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { Button } from '../../components/Common/Button/Button';
-import { data } from "../../data/data";
+import { dataBackend } from "../../data/data";
 import cn from "./CatalogPage.module.scss";
 
 
@@ -27,13 +27,13 @@ const CatalogPage = () => {
 
   const dispatch = useDispatch();
 
-  console.log('amountRooms: ', amountRooms)
-  console.log('priceFrom: ', priceFrom)
-  console.log('priceTo: ', priceTo)
+  // console.log('amountRooms: ', amountRooms)
+  // console.log('priceFrom: ', priceFrom)
+  // console.log('priceTo: ', priceTo)
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(updateAllFlats(data['minsk']));
+    dispatch(updateAllFlats(dataBackend['minsk']));
     
   }, [])
 
@@ -57,23 +57,10 @@ const CatalogPage = () => {
 
   const tags = tagsInfo.map(el => <Tag text={el} style={'light_purple'} />);
 
-  // const cardsWithDetails = CardWithDetailsInfo.map(
-  //   el => <CardWithDetails
-  //     type_card='list'
-  //     gold={el.gold}
-  //     price={el.price}
-  //     duration={el.duration}
-  //     // people={el.people}
-  //     amount_rooms={el.amount_rooms}
-  //     square={el.square}
-  //     city={el.city}
-  //     address={el.address} 
-  //     subway_station={el.subway_station} 
-  //     neighborhood={el.neighborhood} 
-  //   />)
   // const cardsWithDetails = data['minsk'].map(
-
-  const cardsWithDetails = allFlats.map(
+  // const cardsWithDetails = allFlats.map(
+  const flats = filteredFlats === [] ?  allFlats : filteredFlats;
+  const cardsWithDetails = flats.map(
     el => <CardWithDetails
       type_card='list'
       gold={el.gold}
@@ -103,14 +90,14 @@ const CatalogPage = () => {
           </div>
         </div>
 
-        <Filters />
+        <Filters typeFilters="catalog"/>
 
 
       </header>
 
       <article>
         <div className={cn.container}>
-          <div className={cn.results}>Найдено 234 результата</div>
+          <div className={cn.results}>Найдено {filteredFlats.length} результата</div>
 
           <div className={cn.cards}>
             {cardsWithDetails}

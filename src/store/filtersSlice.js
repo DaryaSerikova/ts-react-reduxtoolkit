@@ -8,6 +8,8 @@ const filtersSlice = createSlice({
     amountRooms: '',
     priceFrom: '',
     priceTo: '',
+    subwayStation: '',
+    neighborhood: '',
   },
   reducers: {
     updateAmountRooms(state, action) {
@@ -19,9 +21,15 @@ const filtersSlice = createSlice({
     updatePriceTo(state, action) {
       state.priceTo = action.payload;
     },
+    updateSubwayStation(state, action) {
+      state.subwayStation = action.payload;
+    },
+    updateNeighborhood(state, action) {
+      state.neighborhood = action.payload;
+    },
   }
 })
 
-export const { updateAmountRooms, updatePriceFrom, updatePriceTo } = filtersSlice.actions;
+export const { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood } = filtersSlice.actions;
 
 export default filtersSlice.reducer;

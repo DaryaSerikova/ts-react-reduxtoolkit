@@ -7,12 +7,15 @@ import News from '../../components/News/News';
 import { AdvertisingCardInfo } from '../../components/AdvertisingCard/AdvertisingCardInfo';
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
-import background from "../../assets/img/main_background_1.png";
-import background3 from "../../assets/img/main_background_3.png";
-
-import cn from "./MainPage.module.scss";
+import { Filters } from '../../components/Filters/Filters';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import data from "../../data/data";
+import background from "../../assets/img/main_background_1.png";
+import background3 from "../../assets/img/main_background_3.png";
+import cn from "./MainPage.module.scss";
+
+
+
 
 const MainPage = () => {
 
@@ -64,7 +67,9 @@ const MainPage = () => {
               <div className={cn.tab}>Бани и сауны</div>
               <div className={cn.tab}>Авто напрокат</div>
             </div>
-            <div className={cn.filters}></div>
+            <div className={cn.filters}>
+              <Filters typeFilters="main"/>
+            </div>
           </div>
 
         </div>

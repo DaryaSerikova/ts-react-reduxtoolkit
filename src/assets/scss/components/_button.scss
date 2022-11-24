@@ -1,0 +1,105 @@
+%btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+}
+
+%light {
+  padding: 10px 16px;
+  gap: 10px;
+
+  background: $white_2;
+  border-radius: 22px;
+  @include typography(600, 14px, 17px);
+  color: $light-black;
+}
+
+%white {
+  padding: 10px 18px;
+  gap: 10px;
+
+  background: $white_3;
+  border-radius: 19px;
+  @include typography(600, 14px, 17px);
+  color: $light-black;
+}
+
+%purple {
+  padding: 9px 16px;
+  gap: 10px;
+  background: $purple;
+  border-radius: 22px;
+  @include typography(600, 14px, 17px);
+  color: $white_3;
+}
+
+%yellow {
+  padding: 9px 16px;
+  gap: 5px;
+
+  background: #FFD54F;
+  border-radius: 22px;
+  @include typography(700, 14px, 17px);
+  color: #242424;
+}
+
+%red {
+  background: #EB5757;
+  color: $white_3;
+}
+
+%signup {
+  padding: 12px 18px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 33px;
+  @include typography(700, 16px, 24px);
+  text-align: center;
+}
+
+%gradient_purple {
+  align-items: flex-start;
+  padding: 10px 18px;
+  gap: 5px;
+
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(270deg, #7E6AF3 0%, #6540CD 100%);
+  box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
+  border-radius: 17px;
+  @include typography(700, 14px, 17px);
+  color: $white_3;
+}
+
+%opacity_purple {
+  padding: 10px 15px;
+  gap: 10px;
+
+  background: #F8F8F8;
+  border-radius: 18px;
+  @include typography(700, 14px, 17px);
+  color: #664EF9;
+}
+
+%opacity_red {
+  padding: 9px 15px;
+  gap: 10px;
+
+  background: rgba(235, 87, 87, 0.1);
+  border-radius: 22px;
+  @include typography(600, 14px, 17px);
+  color: #EB5757;
+}
+
+%opacity_yellow {
+  padding: 10px 15px;
+  gap: 10px;
+
+  background: rgba(255, 213, 79, 0.1);
+  border-radius: 17px;
+  @include typography(700, 14px, 17px);
+  color: #FEC100;
+}

@@ -1,4 +1,4 @@
-export const data = {
+export const dataBackend = {
   "minsk": [
     // subway_station: "Каменная Горка",
     // neighborhood: "Фрунзенский",
