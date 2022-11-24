@@ -3,20 +3,19 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood } from "../../store/filtersSlice";
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
-
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import { Input } from '../Common/Input/Input';
+import { roomOptionsInfo, subwayOptionsInfo, neighborhoodOptionsInfo } from './FiltersInfo';
+import { Input, WrapperInput } from '../Common/Input/Input';
 import { Button } from '../Common/Button/Button';
 import { Select } from '../Common/Select/Select';
 import { ReactComponent as SetupIcon } from "../../assets/img/main_setup.svg";
 import { ReactComponent as LocationIcon } from "../../assets/img/main_location.svg";
 import { dataBackend } from "../../data/data";
-import { roomOptionsInfo, subwayOptionsInfo, neighborhoodOptionsInfo } from './FiltersInfo';
 import cn from "./Filters.module.scss";
 
 
 
-export const Filters = ({ typeFilters }) => {
+const Filters = ({ typeFilters }) => {
 
   const allFlats = useSelector(state => state.flats.all);
   const filteredFlats = useSelector(state => state.flats.filtered);
@@ -79,8 +78,19 @@ export const Filters = ({ typeFilters }) => {
 
           <div className={cn.base_filters}>
 
-            <div className={`${typeFilters === "catalog" ? cn.filters_catalog : cn.filters_main}`}>
-              <div className={cn.filter_name}>Комнаты</div>
+          {typeFilters === "main" ? <div className={`${cn.filter_main}`}>
+              <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
+              <select
+                className={`${cn.select}`}
+                name='city'
+                {...register('city')}
+              >
+                {roomOptions}
+              </select>
+            </div> : <></>}
+
+            <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main}`}>
+              <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
               {/* <Select arrOptions={arrOpt}/> */}
               <select
                 className={`${cn.select}`}
@@ -91,53 +101,46 @@ export const Filters = ({ typeFilters }) => {
               </select>
             </div>
 
-            <div className={cn.filters_item}>
-              <div className={cn.filter_name}>Цена за сутки (BYN)</div>
-              <div className={cn.filter}>
-
-                {/* <Input style="w100h37" typeInput={"От"} placeholder=" " /> */}
-                <div className={`${cn.wrapper_input} ${cn.parent} ${cn.w100h37}`}>
-                  <div className={`${cn.icon} ${cn.without_icon} `}>От</div>
-                  <input
-                    className={`${cn.input} ${cn.child_input}`}
-                    {...register('price_from')}
-                  />
-                </div>
-
+            <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main} ${cn.inputs}`}>
+              <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Цена за сутки (BYN)</div>
+              <div className={`${cn.filter} ${cn.wrapper_price}`}>
+                <WrapperInput style="w80h37" typeInput={"От"}>
+                    <input
+                      className={`${cn.input} ${cn.child_input}`}
+                      {...register('price_from')}
+                    />
+                </WrapperInput>
                 <span className={cn.dash}>-</span>
-
-                {/* <Input style="w100h37" typeInput={"До"} placeholder=" " /> */}
-                <div className={`${cn.wrapper_input} ${cn.parent} ${cn.w100h37}`}>
-                  <div className={`${cn.icon} ${cn.without_icon} `}>До</div>
+                <WrapperInput style="w80h37" typeInput={"До"}>
                   <input
                     className={`${cn.input} ${cn.child_input}`}
                     {...register('price_to')}
                   />
-                </div>
+                </WrapperInput>
               </div>
             </div>
 
-            <div className={cn.filters_item}>
-              <div className={cn.filter_name}>Больше опций </div>
+            <div className={`${cn.filter_catalog} ${cn.btn_more_details}`}>
+              <div className={`${cn.filter_name} ${cn.filter_name_moredetails}`}>Больше опций </div>
               <div className={cn.filter}>
                 <button type="button" className={`${cn.btn_setup} ${cn.btn}`}><SetupIcon /></button>
               </div>
             </div>
 
-            <div className={cn.filters_item}>
+            <div className={`${cn.filter_catalog} ${cn.wrapper_buttons}`}>
               {typeFilters === "main" ?
-                <button type="button" className={`${cn.btn} ${cn.white}`}>На карте</button>
-                : <i></i>}
-              {typeFilters === "main" ?
-                <button type="button" className={`${cn.btn} ${cn.yellow}`}>Показать</button>
-                : <i></i>}
+                <>
+                  <button type="button" className={`${cn.btn} ${cn.white}`}>На карте icon</button>
+                  <button type="button" className={`${cn.btn} ${cn.yellow}`}>Показать icon</button>
+                </>
+                : <></>}
 
               {typeFilters === "catalog" ?
+              <>
                 <button type="reset" onClick={onReset} className={`${cn.btn} ${cn.light}`}>Очистить</button>
-                : <i></i>}
-              {typeFilters === "catalog" ?
                 <button type="submit" className={`${cn.btn} ${cn.purple}`}>Показать объекты</button>
-                : <i></i>}
+              </>
+                : <></>}
 
               {/* <Button
                 text='Очистить'
@@ -150,8 +153,6 @@ export const Filters = ({ typeFilters }) => {
                 typeButton="right-icon"
                 // type="submit"
               /> */}
-
-              {/* <button>Показать объекты icon</button> */}
             </div>
           </div>
 
@@ -217,7 +218,7 @@ export const Filters = ({ typeFilters }) => {
         </form>
       </div>
     </div>
-
-
   )
 }
+
+export default Filters;

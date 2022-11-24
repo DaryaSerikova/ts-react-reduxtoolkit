@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
 
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import { Filters } from '../../components/Filters/Filters';
+import Filters from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
