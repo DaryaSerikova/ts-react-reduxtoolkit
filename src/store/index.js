@@ -3,6 +3,7 @@ import smthReducer from "./smthSlice";
 import newsReducer from "./newsSlice";
 import filtersReducer from "./filtersSlice";
 import flatsReducer from "./flatsSlice";
+import userReducer from "./userSlice";
 
 
 export default configureStore({
@@ -11,6 +12,7 @@ export default configureStore({
     news: newsReducer,
     filters: filtersReducer,
     flats: flatsReducer,
+    user: userReducer
 
   }
 })

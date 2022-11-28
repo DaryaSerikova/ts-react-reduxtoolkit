@@ -28,7 +28,7 @@ const MainPage = () => {
   )
 
   const menuCards = MenuCardInfo.map(
-    el => <MenuCard subtitle={el.subtitle} title={el.title} cities={el.cities} id={el.id} img={el.img} />
+    el => <MenuCard subtitle={el.subtitle} title={el.title} cities={el.cities} id={el.id} img={el.img} key={el.key} />
   )
 
   const cardsWithDetails = CardWithDetailsInfo.map(

@@ -26,6 +26,26 @@
   .items {
     margin-bottom: 40px;
 
+    @media (min-width: 1170px) and (max-width: 1250px) {
+      margin-bottom: 30px;
+
+    }
+  
+    @media (min-width: 1020px) and (max-width: 1170px) {
+      margin-bottom: 30px;
+
+    }
+
+    @media (min-width: 930px) and (max-width: 1020px) {
+      margin-bottom: 30px;
+
+    }
+  
+    @media (min-width: 800px) and (max-width: 930px) {
+      margin-bottom: 30px;
+
+    }
+
     .item {
       display: flex;
       flex-direction: row;

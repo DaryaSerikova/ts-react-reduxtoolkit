@@ -56,6 +56,47 @@
 
 }
 
+@mixin menu_card_media($w) {
+  @media (min-width: 1170px) and (max-width: 1320px) {
+    width: $w*0.95;
+  }
+  @media (min-width: 1020px) and (max-width: 1170px) {
+    width: $w*0.79;
+  }
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    width: $w*0.7;
+  }
+
+  @media (min-width: 880px) and (max-width: 940px) {
+    width: $w*0.63;
+  }
+
+  // @media (min-width: 800px) and (max-width: 940px) {
+  //   max-width: 790px;
+  // }
+
+  // @media (min-width: 700px) and (max-width: 940px) {
+  //   max-width: 690px;
+  // }
+}
+
+@mixin mt_media($mt) {
+  @media (min-width: 1170px) and (max-width: 1320px) {
+    margin-top: $mt*0.95;
+  }
+  @media (min-width: 1020px) and (max-width: 1170px) {
+    margin-top: $mt*0.9;
+  }
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    margin-top: $mt*0.85;
+  }
+
+  @media (min-width: 880px) and (max-width: 940px) {
+    margin-top: $mt*0.8;
+  }
+}
 
 // @mixin card_container($w) {
 //   max-width: 365px;

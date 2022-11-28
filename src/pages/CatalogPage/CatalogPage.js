@@ -9,7 +9,7 @@ import { Tag } from '../../components/Common/Tag/Tag';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { Button } from '../../components/Common/Button/Button';
-import { dataBackend } from "../../data/data";
+// import { dataBackend } from "../../data/data";
 import cn from "./CatalogPage.module.scss";
 
 
@@ -23,17 +23,11 @@ const CatalogPage = () => {
   const priceTo = useSelector(state => state.filters.priceTo);
   const allFlats = useSelector(state => state.flats.all);
   const filteredFlats = useSelector(state => state.flats.filtered);
-
-
   const dispatch = useDispatch();
-
-  // console.log('amountRooms: ', amountRooms)
-  // console.log('priceFrom: ', priceFrom)
-  // console.log('priceTo: ', priceTo)
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(updateAllFlats(dataBackend['minsk']));
+    // dispatch(updateAllFlats(dataBackend['minsk']));
     
   }, [])
 

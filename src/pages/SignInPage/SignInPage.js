@@ -4,13 +4,13 @@ import background1 from "../../assets/img/sigin_background1.png";
 import background2 from "../../assets/img/sigin_background2.png";
 import { Input } from '../../components/Common/Input/Input';
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
+import { getFakeJWT } from '../../utils/utils';
 import cn from "./SignInPage.module.scss";
 
 
 
 const SignInPage = () => {
-
-
+  const currentDate = new Date();
 
   return (
     <div className={cn.wrapper_box}>

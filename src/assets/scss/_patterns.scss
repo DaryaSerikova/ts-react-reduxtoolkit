@@ -28,12 +28,20 @@
     max-width: 990px;
   }
 
-  @media (min-width: 800px) and (max-width: 940px) {
-    max-width: 790px;
+  @media (min-width: 940px) and (max-width: 1020px) {
+    width: 890px;
   }
 
-  @media (min-width: 700px) and (max-width: 940px) {
-    max-width: 690px;
+  @media (min-width: 870px) and (max-width: 940px) {
+    width: 840px;
+  }
+
+  @media (min-width: 800px) and (max-width: 870px) {
+    width: 780px;
+  }
+
+  @media (min-width: 720px) and (max-width: 800px) {
+    width: 735px;
   }
 }
 

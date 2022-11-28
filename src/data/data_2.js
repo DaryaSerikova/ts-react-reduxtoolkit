@@ -1,5 +1,5 @@
-export const dataBackend = {
-  "minsk": [
+export const dataBackend_2 = [
+  /* minsk  */
     // subway_station: "Каменная Горка",
     // neighborhood: "Фрунзенский",
     {
@@ -752,10 +752,8 @@ export const dataBackend = {
       neighborhood: "Фрунзенский",
     },
 
-  ],
-
   /* vitebsk */
-  "vitebsk": [
+
     {
       gold: false,
       price: 53,
@@ -1518,9 +1516,9 @@ export const dataBackend = {
       subway_station: "Молодёжная",
       neighborhood: "Фрунзенский",
     },
-    
-  ],
-  "grodno": [
+
+/* grodno */
+
   {
     gold: false,
     price: 53,
@@ -2283,10 +2281,9 @@ export const dataBackend = {
     subway_station: "Молодёжная",
     neighborhood: "Фрунзенский",
   },
-  
-],
-  "gomel": {},
-  "brest": {},
-  "mogilev": {},
-}
-// cities: [ "Минск", "Витебск", "Гродно",  "Гомель", "Гомель", "Брест", "Могилев" ]
+
+  // "gomel": {},
+  // "brest": {},
+  // "mogilev": {},
+// }
+]

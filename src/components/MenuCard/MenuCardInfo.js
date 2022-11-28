@@ -5,6 +5,7 @@ import backgroundImg4 from "../../assets/img/main_menu_card_img4.jpg";
 
 export const MenuCardInfo = [
   {
+    key: 'menu_card1',
     id: 1,
     subtitle: "СНЯТЬ КВАРТИРУ",
     title: "Квартиры на сутки",
@@ -12,6 +13,7 @@ export const MenuCardInfo = [
     img: backgroundImg1,
   },
   {
+    key: 'menu_card2',
     id: 2,
     subtitle: "СНЯТЬ коттедж НА ПРАЗДНИК",
     title: "Коттеджи и усадьбы",
@@ -22,6 +24,7 @@ export const MenuCardInfo = [
 
   },
   {
+    key: 'menu_card3',
     id: 3,
     subtitle: "ПОПАРИТЬСЯ В БанЕ С ДРУЗЬЯМИ",
     title: "Бани и сауны",
@@ -31,6 +34,7 @@ export const MenuCardInfo = [
     // href: "../../assets/img/main_menu_card_img3.jpg",
   },
   {
+    key: 'menu_card4',
     id: 4,
     subtitle: "еСЛИ СРОЧНО НУЖНА МАШИНА",
     title: "Авто на прокат",

@@ -1,3 +1,13 @@
+export const cityOptionsInfo = [
+  {value: '', label: 'Выберите'},
+  {value: 'minsk', label: 'Минск'},
+  {value: "vitebsk", label: "Витебск"},
+  {value: "grodno", label: "Гродно"},
+  // {value: "gomel", label: "Гомель"},
+  // {value: "brest", label: "Брест"},
+  // {value: "mogilev", label: "Могилев"},
+];
+
 export const roomOptionsInfo = [
   {value: '', label: 'Выберите'},
   {value: 1, label: '1-комн.'},
@@ -5,7 +15,7 @@ export const roomOptionsInfo = [
   {value: 3, label: '3-комн.'},
   {value: 4, label: '4-комн.'},
   {value: 5, label: '5-комн.'},
-]
+];
 
 export const subwayOptionsInfo =[
   {value: '', label: 'Выберите'},
@@ -18,7 +28,7 @@ export const subwayOptionsInfo =[
   {value: "Грушевка", label: "Грушевка"},
   {value: "Пролетарская", label: "Пролетарская"},
   {value: "Молодёжная", label: "Молодёжная"},
-]
+];
 
 export const neighborhoodOptionsInfo = [
   {value: '', label: 'Выберите'},
@@ -29,7 +39,7 @@ export const neighborhoodOptionsInfo = [
   {value: "Ленинский", label: "Ленинский"},
   {value: "Фрунзенский", label: "Фрунзенский"},
 
-]
+];
 
 const fhjkdh = [
   "Газовая плита",

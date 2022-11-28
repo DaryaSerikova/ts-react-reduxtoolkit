@@ -128,45 +128,20 @@
 
 .box:nth-child(4n+1), .box:nth-child(4n) {
   width: 516px;
-
-  @media (min-width: 1170px) and (max-width: 1320px) {
-    width: 516px*0.95;
-  }
-  @media (min-width: 1000px) and (max-width: 1170px) {
-    width: 516px*0.85;
-  }
+  @include menu_card_media(516px);
 
   .container {
     max-width: 480px;
-
-    @media (min-width: 1170px) and (max-width: 1320px) {
-      max-width: 480px*0.95;
-    }
-
-    @media (min-width: 1000px) and (max-width: 1170px) {
-      max-width: 480px*0.85;
-    }
+    @include menu_card_media(480px);
   }
 }
 
 .box:nth-child(4n+2), .box:nth-child(4n+3) {
   width: 407px;
-
-  @media (min-width: 1170px) and (max-width: 1320px) {
-    width: 407px*0.95;
-  }
-  @media (min-width: 1000px) and (max-width: 1170px) {
-    width: 407px*0.85;
-  }
+  @include menu_card_media(407px);
 
   .container {
     max-width: 370px;
-
-    @media (min-width: 1170px) and (max-width: 1320px) {
-      max-width: 370px*0.95;
-    }
-    @media (min-width: 1000px) and (max-width: 1170px) {
-      max-width: 370px*0.85;
-    }
+    @include menu_card_media(370px);
   }
 }

@@ -1,24 +1,28 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood } from "../../store/filtersSlice";
-import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
+import { useNavigate } from "react-router-dom";
+import { useSelector,  useDispatch } from 'react-redux';
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import { roomOptionsInfo, subwayOptionsInfo, neighborhoodOptionsInfo } from './FiltersInfo';
+import { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood, updateCity } from "../../store/filtersSlice";
+import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
+import { cityOptionsInfo, roomOptionsInfo, subwayOptionsInfo, neighborhoodOptionsInfo } from './FiltersInfo';
 import { Input, WrapperInput } from '../Common/Input/Input';
 import { Button } from '../Common/Button/Button';
 import { Select } from '../Common/Select/Select';
 import { ReactComponent as SetupIcon } from "../../assets/img/main_setup.svg";
 import { ReactComponent as LocationIcon } from "../../assets/img/main_location.svg";
-import { dataBackend } from "../../data/data";
+// import { dataBackend } from "../../data/data";
+import { dataBackend_2 } from "../../data/data_2";
+
 import cn from "./Filters.module.scss";
 
 
 
 const Filters = ({ typeFilters }) => {
 
+  let navigate = useNavigate();
   const allFlats = useSelector(state => state.flats.all);
   const filteredFlats = useSelector(state => state.flats.filtered);
+  const city = useSelector(state => state.filters.city)
   const dispatch = useDispatch();
 
   const {
@@ -29,8 +33,15 @@ const Filters = ({ typeFilters }) => {
   } = useForm();
 
   useEffect(() => {
-    dispatch(updateAllFlats(dataBackend['minsk']));
-  }, [])
+    // dispatch(updateAllFlats(dataBackend['minsk']));
+    // if (city !== '') dispatch(updateAllFlats(dataBackend[`${city}`]));
+    dispatch(updateAllFlats(dataBackend_2));
+
+
+  }, []);
+
+  const cityOptions = cityOptionsInfo.map(option =>
+    <option value={option.value}>{option.label}</option>);
 
   const roomOptions = roomOptionsInfo.map(option =>
     <option value={option.value}>{option.label}</option>);
@@ -45,6 +56,8 @@ const Filters = ({ typeFilters }) => {
     reset();
   }
 
+  console.log('allFlats :', allFlats)
+
   const onSubmit = (data) => {
     console.log('data:', data);
 
@@ -54,17 +67,26 @@ const Filters = ({ typeFilters }) => {
     if (data.subway_station !== '') dispatch(updateSubwayStation(data.subway_station));
     if (data.neighborhood !== '') dispatch(updateNeighborhood(data.neighborhood));
 
+    const citiesFiltered = allFlats.filter(flat => (
+      (data.city !== '' ? (flat.city === data.city) : true) 
+    ))
+    console.log('citiesFiltered :', citiesFiltered);
+
     const filtered = allFlats.filter(flat => (
+      (data.city !== '' ? (flat.city === data.city) : true) &&
       (data.amount_rooms !== '' ? (+flat.amount_rooms === +data.amount_rooms) : true) &&
       (data.price_from !== '' ? (+flat.price >= +data.price_from) : true) &&
       (data.price_to !== '' ? (+flat.price <= +data.price_to) : true) &&
       (data.subway_station !== '' ? (flat.subway_station === data.subway_station) : true) &&
       (data.neighborhood !== '' ? (flat.neighborhood === data.neighborhood) : true)
 
-    )
-    )
+    ))
     console.log('filtered(in state) :', filtered);
     dispatch(updateFilteredFlats(filtered))
+
+    if (data.city !== '') dispatch(updateCity(data.city));
+    if ((data.city !== '') && (typeFilters === "main")) navigate("/catalog");;
+
 
     // reset();
   }
@@ -85,7 +107,7 @@ const Filters = ({ typeFilters }) => {
                 name='city'
                 {...register('city')}
               >
-                {roomOptions}
+                {cityOptions}
               </select>
             </div> : <></>}
 
@@ -131,7 +153,11 @@ const Filters = ({ typeFilters }) => {
               {typeFilters === "main" ?
                 <>
                   <button type="button" className={`${cn.btn} ${cn.white}`}>На карте icon</button>
-                  <button type="button" className={`${cn.btn} ${cn.yellow}`}>Показать icon</button>
+                  <button type="submit" className={`${cn.btn} ${cn.yellow}`}>
+                    {/* <Link to="/catalog"> */}
+                      Показать icon
+                    {/* </Link> */}
+                  </button>
                 </>
                 : <></>}
 
@@ -142,25 +168,16 @@ const Filters = ({ typeFilters }) => {
               </>
                 : <></>}
 
-              {/* <Button
-                text='Очистить'
-                style="light"
-                typeButton="without-icon"
-              /> */}
-              {/* <Button
-                text='Показать объекты'
-                style="purple"
-                typeButton="right-icon"
-                // type="submit"
-              /> */}
+              {/* <Button text='Очистить' style="light" typeButton="without-icon" /> */}
+              {/* <Button text='Показать объекты' style="purple" typeButton="right-icon"
+                // type="submit" /> */}
             </div>
           </div>
 
           {typeFilters === "catalog" ? <div className={cn.more_details}>
 
-            <div className={cn.filters_item}>
+            {/* <div className={cn.filters_item}>
               <div className={cn.filter_name}>Спальные места</div>
-              {/* <Select arrOptions={arrOpt}/> */}
               <select
                 className={`${cn.select}`}
               // name='amount_rooms'
@@ -168,11 +185,10 @@ const Filters = ({ typeFilters }) => {
               >
                 {roomOptions}
               </select>
-            </div>
+            </div> */}
 
-            <div className={cn.filters_item}>
+            {/* <div className={cn.filters_item}>
               <div className={cn.filter_name}>Район</div>
-              {/* <Select arrOptions={arrOpt}/> */}
               <select
                 className={`${cn.select}`}
                 name='neighborhood'
@@ -184,7 +200,6 @@ const Filters = ({ typeFilters }) => {
 
             <div className={cn.filters_item}>
               <div className={cn.filter_name}>Метро</div>
-              {/* <Select arrOptions={arrOpt}/> */}
               <select
                 className={`${cn.select}`}
                 name='subway_station'
@@ -192,7 +207,7 @@ const Filters = ({ typeFilters }) => {
               >
                 {subwayOptions}
               </select>
-            </div>
+            </div> */}
 
             <div className={cn.checkboxes}>
               {/* gas_stove "Газовая плита" */}

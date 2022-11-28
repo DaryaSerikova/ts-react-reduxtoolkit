@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const filtersSlice = createSlice({
   name: 'filters',
   initialState: {
-    // city: null,
+    city: '',
     amountRooms: '',
     priceFrom: '',
     priceTo: '',
@@ -12,6 +12,9 @@ const filtersSlice = createSlice({
     neighborhood: '',
   },
   reducers: {
+    updateCity(state, action) {
+      state.city = action.payload;
+    },
     updateAmountRooms(state, action) {
       state.amountRooms = action.payload;
     },
@@ -30,6 +33,6 @@ const filtersSlice = createSlice({
   }
 })
 
-export const { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood } = filtersSlice.actions;
+export const { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood, updateCity } = filtersSlice.actions;
 
 export default filtersSlice.reducer;
