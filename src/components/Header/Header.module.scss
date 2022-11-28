@@ -29,6 +29,10 @@
       min-width: 970px;
     }
   
+    @media (min-width: 940px) and (max-width: 1000px) {
+      min-width: 850px;
+    }
+
     @media (min-width: 800px) and (max-width: 940px) {
       min-width: 780px;
     }
@@ -51,12 +55,21 @@
 
   .container_up_header {
     justify-content: space-between;
+    @media (min-width: 900px) and (max-width: 1000px) {
+      gap: 35px;
+    }
   }
 
   .container_down_header {
     justify-content: space-between;
     @include typography(600, 14px, 17px);
 
+    @media (min-width: 940px) and (max-width: 1000px) {
+      gap: 20px;
+    }
+    @media (min-width: 800px) and (max-width: 940px) {
+      gap: 10px;
+    }
   }
 
   .up_header {
@@ -87,6 +100,10 @@
         gap: 30px;
       }
 
+      @media (min-width: 800px) and (max-width: 940px) {
+        gap: 18px;
+      }
+
       .header_link {
         color: $light-grey;
         text-decoration: none;
@@ -100,6 +117,11 @@
       @media (min-width: 1000px) and (max-width: 1060px) {
         gap: 20px;
       }
+
+      @media (min-width: 800px) and (max-width: 1000px) {
+        gap: 12px;
+
+      }
     }
   
     .wrapper_point {
@@ -112,10 +134,19 @@
 
     .wrapper_heart {
       width: 95px;
+
+      @media (max-width: 1000px) {
+        width: 17px;
+
+      }
     }
 
     .heart_text {
       margin-right: 13px;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
     }
 
     .sign_in {
@@ -133,6 +164,7 @@
     background: $white_3;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
 
+
     .down_header_items {
       display: flex;
       flex-direction: row;
@@ -146,7 +178,7 @@
         gap: 30px;
       }
 
-      @media (min-width: 940px) and (max-width: 1180px) {
+      @media (min-width: 800px) and (max-width: 1180px) {
         gap: 18px;
       }
 
@@ -187,9 +219,36 @@
       color: $white_3;
       text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 
+    
+      @media (min-width: 940px) and (max-width: 1000px) {
+        width: 136px;
+      }
+
+      @media (min-width: 800px) and (max-width: 940px) {
+        width: 40px;
+      }
+      
+
       .plus {
         margin-right: 7px;
         margin-top: -1px;
+
+        @media (min-width: 800px) and (max-width: 940px) {
+          font-size: 25px;
+          margin: 0 0 0 2px;
+        }
+      }
+
+      .plus_text_1 {
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      }
+
+      .plus_text_2 {
+        @media (max-width: 940px) {
+          display: none;
+        }
       }
     }
   }

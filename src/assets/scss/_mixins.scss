@@ -66,10 +66,12 @@
 
   @media (min-width: 940px) and (max-width: 1020px) {
     width: $w*0.7;
+    height: 270px*0.9;
   }
 
   @media (min-width: 880px) and (max-width: 940px) {
     width: $w*0.63;
+    height: 270px*0.8;
   }
 
   // @media (min-width: 800px) and (max-width: 940px) {
@@ -93,8 +95,12 @@
     margin-top: $mt*0.85;
   }
 
-  @media (min-width: 880px) and (max-width: 940px) {
+  @media (min-width: 860px) and (max-width: 940px) {
     margin-top: $mt*0.8;
+  }
+
+  @media (min-width: 780px) and (max-width: 860px) {
+    margin-top: $mt*0.75;
   }
 }
 

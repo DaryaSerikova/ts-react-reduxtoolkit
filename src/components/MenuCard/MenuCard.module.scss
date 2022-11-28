@@ -31,22 +31,11 @@
 
     img:nth-child(4n+1), img:nth-child(4n) {
       width: 595px;
-
-      // @media (min-width: 1180px) and (max-width: 1350px) {
-      //   width: 595px*0.9;
-      // max-width: 865px;
-      // }
     }
 
     img:nth-child(4n+2), img:nth-child(4n+3) {
       width: 523px;
-
-      // @media (min-width: 1180px) and (max-width: 1350px) {
-      //   width: 523px*0.9;
-      // }
     }
-
-    // .box:nth-child(4n+2), .box:nth-child(4n+3)
   }
   
 }
@@ -71,6 +60,11 @@
     // padding: 40px 37px 20px;
     width: 100%;
     padding: 40px 0px 20px 37px;
+
+    @media (min-width: 800px) and (max-width: 940px) {
+      padding: 25px 0px 20px 28px;
+    }
+
 
 
     .subtitle {
@@ -143,5 +137,18 @@
   .container {
     max-width: 370px;
     @include menu_card_media(370px);
+  }
+}
+
+.box:nth-child(4n+3), .box:nth-child(4n) {
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    margin-top: -90px;
+
+  }
+
+  @media (min-width: 880px) and (max-width: 940px) {
+    margin-top: -149px;
+
   }
 }
