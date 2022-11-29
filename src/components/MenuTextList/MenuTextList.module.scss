@@ -7,6 +7,41 @@
   max-width: 297px;
   @include typography(400, 14px, 17px);
 
+  @media (max-width: 940px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 800px) and (max-width: 940px) {
+    margin-top: 50px;
+    gap: 35px;
+  }
+
+  @media (min-width: 710px) and (max-width: 800px) {
+    margin-top: 48px;
+    gap: 32px;
+  }
+
+  @media (min-width: 640px) and (max-width: 710px) {
+    margin-top: 45px;
+    gap: 25px;
+  }
+
+  .menu_text_part {
+    @media (min-width: 800px) and (max-width: 940px) {
+      min-width: 220px;
+    }
+    
+    @media (min-width: 710px) and (max-width: 800px) {
+      min-width: 205px;
+    }
+
+    @media (min-width: 640px) and (max-width: 710px) {
+      min-width: 188px;
+    }
+  }
+
 
   .title {
     @include typography(700, 18px, 22px);
@@ -36,14 +71,13 @@
 
     }
 
-    @media (min-width: 930px) and (max-width: 1020px) {
+    @media (min-width: 940px) and (max-width: 1020px) {
       margin-bottom: 30px;
 
     }
   
-    @media (min-width: 800px) and (max-width: 930px) {
-      margin-bottom: 30px;
-
+    @media (max-width: 940px) {
+      margin-bottom: 0px;
     }
 
     .item {

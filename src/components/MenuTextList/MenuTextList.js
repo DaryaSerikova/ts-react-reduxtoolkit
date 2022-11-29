@@ -21,13 +21,13 @@ const MenuTextList = () => {
     )
 
     return (
-      <>
+      <div className={cn.menu_text_part}>
         <div className={cn.title}>{curTitle}</div>
         <div className={cn.items}>
           {items}
         </div>
         {/* <div>Популярные направления</div> */}
-      </>
+      </div>
     )
   })
 
@@ -37,8 +37,10 @@ const MenuTextList = () => {
   return(
     <div className={cn.menu_text}>
       {res}
-      <div className={`${cn.title} ${cn.popular_title}`}>Популярные направления</div>
-      {popularItems}
+      <div className={cn.menu_text_part}>
+        <div className={`${cn.title} ${cn.popular_title}`}>Популярные направления</div>
+        {popularItems}
+      </div>
     </div>
   );
 }

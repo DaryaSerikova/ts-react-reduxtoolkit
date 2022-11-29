@@ -40,14 +40,6 @@
   }
 }
 
-// .white_black {
-//   @extend %white_black;
-// }
-
-// .white_grey {
-//   @extend %white_grey;
-// }
-
 .btn {
   @extend %btn;
   height: 37px;
@@ -56,6 +48,7 @@
 .white {
   @extend %white;
   padding: 13px;
+  width: 111px;
 }
 
 .light {
@@ -95,8 +88,12 @@
 .wrapper_filters {
   background: #FFFFFF;
   box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.08);
-  // padding: 22px 0 23px;
   padding: 22px 21px 23px;
+
+  @media (min-width: 800px) and (max-width: 940px) {
+    gap: 10px; //mainPage
+    padding: 22px 17px 20px;
+  }
 }
 
 .filters {
@@ -109,17 +106,13 @@
     flex-direction: row;
     // gap: 50px;
     gap: 20px; //mainPage
-
-    // @media (min-width: 1020px) and (max-width: 1170px) {
-    //   width: 120px;
-    // }
   
     @media (min-width: 940px) and (max-width: 1020px) {
       gap: 14px; //mainPage
     }
 
     @media (min-width: 800px) and (max-width: 940px) {
-      gap: 10px; //mainPage
+      gap: 8px; //mainPage
     }
 
     .filter_catalog {
@@ -164,6 +157,11 @@
 
       .filter_name_moredetails {
         color: #1E2123;
+
+        @media (max-width: 940px) {
+          display: none;
+        }
+
       }
 
       .wrapper_price {
@@ -192,7 +190,7 @@
 
     .filter_catalog {
       @media (min-width: 800px) and (max-width: 940px) {
-        gap: 10px; //mainPage
+        gap: 5px; //mainPage
       }
     }
 
@@ -200,10 +198,6 @@
       flex-direction: column;
       gap: 11px;
       padding-right: 20px;
-
-    // @media (min-width: 1020px) and (max-width: 1170px) {
-    //   width: 120px;
-    // }
   
       @media (min-width: 800px) and (max-width: 1020px) {
         padding-right: 14px; //mainPage

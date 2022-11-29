@@ -10,6 +10,7 @@ import { Button } from '../Common/Button/Button';
 import { Select } from '../Common/Select/Select';
 import { ReactComponent as SetupIcon } from "../../assets/img/main_setup.svg";
 import { ReactComponent as LocationIcon } from "../../assets/img/main_location.svg";
+import { ReactComponent as ArrowIcon } from "../../assets/img/main_arrow_right_1.svg"
 // import { dataBackend } from "../../data/data";
 import { dataBackend_2 } from "../../data/data_2";
 
@@ -152,10 +153,13 @@ const Filters = ({ typeFilters }) => {
             <div className={`${cn.filter_catalog} ${cn.wrapper_buttons}`}>
               {typeFilters === "main" ?
                 <>
-                  <button type="button" className={`${cn.btn} ${cn.white}`}>На карте icon</button>
+                  <button type="button" className={`${cn.btn} ${cn.white}`}>На карте
+                  <LocationIcon/>
+                  </button>
                   <button type="submit" className={`${cn.btn} ${cn.yellow}`}>
                     {/* <Link to="/catalog"> */}
-                      Показать icon
+                      Показать
+                      <ArrowIcon />
                     {/* </Link> */}
                   </button>
                 </>
