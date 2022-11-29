@@ -8,6 +8,7 @@ import Filters from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
+import { CatalogPageTagInfo } from '../../components/Common/Tag/MainPageTagInfo';
 import { Button } from '../../components/Common/Button/Button';
 // import { dataBackend } from "../../data/data";
 import cn from "./CatalogPage.module.scss";
@@ -23,6 +24,7 @@ const CatalogPage = () => {
   const priceTo = useSelector(state => state.filters.priceTo);
   const allFlats = useSelector(state => state.flats.all);
   const filteredFlats = useSelector(state => state.flats.filtered);
+  const city = useSelector(state => state.filters.city)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,25 +33,28 @@ const CatalogPage = () => {
     
   }, [])
 
-  const tagsInfo = [
-    "Недорогие",
-    "1-комнатные",
-    "2-комнатные",
-    "3-комнатные",
-    "4-комнатные",
-    "5-комнатные",
-    "Заводской р.",
-    "Ленинский р. ",
-    "Московский р. ",
-    "Октябрьский р. ",
-    "Партизанский р.",
-    "Первомайский р.",
-    "Советский р.",
-    "Фрунзенский р.",
-    "Центральный р.",
-  ]
+  const getCityName = (city) => {
+    switch(city) {
+      case "minsk": return "Минске";
+      case "vitebsk": return "Витебске";
+      case "grodno": return "Гродно";
+      case "gomel": return "Гомеле";
+      case "brest": return "Бресте";
+      case "mogilev": return "Могилеве";
+      default: return 'не выбран'
+    }
+  }
 
-  const tags = tagsInfo.map(el => <Tag text={el} style={'light_purple'} />);
+  let cityName = getCityName(city);
+
+  const tags = CatalogPageTagInfo.map(el => 
+    <Tag 
+      key={el.key}
+      id={el.id}
+      text={el.text} 
+      value={el.value} 
+      style={'light_purple'} 
+      typeTag="catalog"/>);
 
   // const cardsWithDetails = data['minsk'].map(
   // const cardsWithDetails = allFlats.map(
@@ -77,14 +82,17 @@ const CatalogPage = () => {
           <div className={cn.wrapper_bread_crumbs}>
             <BreadCrumbs></BreadCrumbs>
           </div>
-          <h1 className={cn.title}>Аренда квартир на сутки в Минске</h1>
+          <h1 className={cn.title}>Аренда квартир на сутки в {cityName}</h1>
           <div className={cn.recommendation}>Рекомендуем посмотреть</div>
           <div className={cn.tags}>
             {tags}
           </div>
         </div>
 
-        <Filters typeFilters="catalog"/>
+        <Filters 
+          typeFilters="catalog"
+
+          />
 
 
       </header>

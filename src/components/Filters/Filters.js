@@ -38,8 +38,8 @@ const Filters = ({ typeFilters }) => {
     // if (city !== '') dispatch(updateAllFlats(dataBackend[`${city}`]));
     dispatch(updateAllFlats(dataBackend_2));
 
-
   }, []);
+
 
   const cityOptions = cityOptionsInfo.map(option =>
     <option value={option.value}>{option.label}</option>);
@@ -57,7 +57,7 @@ const Filters = ({ typeFilters }) => {
     reset();
   }
 
-  console.log('allFlats :', allFlats)
+  // console.log('allFlats :', allFlats)
 
   const onSubmit = (data) => {
     console.log('data:', data);
@@ -68,22 +68,31 @@ const Filters = ({ typeFilters }) => {
     if (data.subway_station !== '') dispatch(updateSubwayStation(data.subway_station));
     if (data.neighborhood !== '') dispatch(updateNeighborhood(data.neighborhood));
 
-    const citiesFiltered = allFlats.filter(flat => (
-      (data.city !== '' ? (flat.city === data.city) : true) 
-    ))
-    console.log('citiesFiltered :', citiesFiltered);
+    console.log('data.city :', data.city)
 
-    const filtered = allFlats.filter(flat => (
+
+
+    const getDataCity = (typeFilters) => {
+      if (typeFilters === "catalog") {
+        return city;
+      } else {
+        return data.city;
+      }
+    }
+
+    data.city = getDataCity(typeFilters);
+
+    let filteredBase = allFlats.filter(flat => (
       (data.city !== '' ? (flat.city === data.city) : true) &&
       (data.amount_rooms !== '' ? (+flat.amount_rooms === +data.amount_rooms) : true) &&
       (data.price_from !== '' ? (+flat.price >= +data.price_from) : true) &&
-      (data.price_to !== '' ? (+flat.price <= +data.price_to) : true) &&
-      (data.subway_station !== '' ? (flat.subway_station === data.subway_station) : true) &&
-      (data.neighborhood !== '' ? (flat.neighborhood === data.neighborhood) : true)
+      (data.price_to !== '' ? (+flat.price <= +data.price_to) : true) 
+      // (data.subway_station !== '' ? (flat.subway_station === data.subway_station) : true) &&
+      // (data.neighborhood !== '' ? (flat.neighborhood === data.neighborhood) : true)
 
     ))
-    console.log('filtered(in state) :', filtered);
-    dispatch(updateFilteredFlats(filtered))
+    console.log('filtered(into state, Filters) :', filteredBase);
+    dispatch(updateFilteredFlats(filteredBase))
 
     if (data.city !== '') dispatch(updateCity(data.city));
     if ((data.city !== '') && (typeFilters === "main")) navigate("/catalog");;
@@ -91,7 +100,7 @@ const Filters = ({ typeFilters }) => {
 
     // reset();
   }
-  console.log('typeFilters', typeFilters)
+  // console.log('typeFilters', typeFilters)
 
   return (
     <div className={cn.wrapper_filters}>

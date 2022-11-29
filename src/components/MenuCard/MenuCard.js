@@ -13,7 +13,13 @@ import cn from "./MenuCard.module.scss";
 
 const MenuCard = ({ subtitle, title, cities, id, img: src }) => {
 
-  const tags = MainPageTagInfo.map(el => <Tag text={el.text} />)
+  const tags = MainPageTagInfo.map(el => 
+    <Tag 
+      key={el.key}
+      id={el.id}
+      text={el.text} 
+      value={el.value} 
+      typeTag="main" />)
 
   return (
     <div className={`${cn.box} ${cn.parent}`}>
