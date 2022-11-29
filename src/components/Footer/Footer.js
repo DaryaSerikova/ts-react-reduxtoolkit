@@ -46,14 +46,14 @@ const Footer = () => {
 
             <div className={cn.row}>
               <div className={cn.column}>
-                <div className={cn.item}>Квартиры в Минске</div>
-                <div className={cn.item}>Квартиры в Гомеле</div>
-                <div className={cn.item}>Квартиры в Бресте</div>
+                <div className={cn.item}><span className={cn.item_hidden}>Квартиры </span> в Минске</div>
+                <div className={cn.item}><span className={cn.item_hidden}>Квартиры </span> в Гомеле</div>
+                <div className={cn.item}><span className={cn.item_hidden}>Квартиры </span> в Бресте</div>
               </div>
               <div className={cn.column}>
-                <div className={cn.item}>Квартиры в Витебске</div>
-                <div className={cn.item}>Квартиры в Гродно</div>
-                <div className={cn.item}>Квартиры в Могилеве</div>
+                <div className={cn.item}><span className={cn.item_hidden}>Квартиры </span> в Витебске</div>
+                <div className={cn.item}><span className={cn.item_hidden}>Квартиры </span> в Гродно</div>
+                <div className={cn.item}><span className={cn.item_hidden}>Квартиры </span> в Могилеве</div>
               </div>
 
             </div>

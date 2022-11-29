@@ -115,13 +115,74 @@
   }
 
   @media (min-width: 710px) and (max-width: 780px) {
-    margin-top: $mt*0.72;
+    margin-top: $mt*0.7;
   }
 
   @media (min-width: 640px) and (max-width: 710px) {
-    margin-top: $mt*0.7;
+    margin-top: $mt*0.65;
   }
 }
+
+@mixin gap_media($g) {
+  @media (min-width: 1170px) and (max-width: 1320px) {
+    gap: $g*0.85;
+  }
+  @media (min-width: 1020px) and (max-width: 1170px) {
+    gap: $g*0.7;
+  }
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    gap: $g*0.55;
+  }
+
+  @media (min-width: 860px) and (max-width: 940px) {
+    gap: $g*0.4;
+  }
+
+  @media (min-width: 780px) and (max-width: 860px) {
+    gap: $g*0.35;
+  }
+
+  @media (min-width: 710px) and (max-width: 780px) {
+    gap: $g*0.3;
+  }
+
+  @media (min-width: 640px) and (max-width: 710px) {
+    gap: $g*0.2;
+  }
+}
+
+@mixin padding_media($pt, $plr, $pb) {
+  @media (min-width: 1170px) and (max-width: 1320px) {
+    padding: $pt $plr*0.88 $pb;
+  }
+  @media (min-width: 1020px) and (max-width: 1170px) {
+    padding: $pt $plr*0.76 $pb;
+  }
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    padding: $pt*0.95 $plr*0.64 $pb*0.95;
+  }
+
+  @media (min-width: 860px) and (max-width: 940px) {
+    padding: $pt*0.95 $plr*0.52 $pb*0.95;
+  }
+
+  @media (min-width: 780px) and (max-width: 860px) {
+    padding: $pt*0.9 $plr*0.4 $pb*0.9;
+  }
+
+  @media (min-width: 710px) and (max-width: 780px) {
+    padding: $pt*0.9 $plr*0.28 $pb*0.9;
+
+  }
+
+  @media (min-width: 640px) and (max-width: 710px) {
+    padding: $pt*0.85 $plr*0.2 $pb*0.85;
+  }
+}
+
+
 
 // @mixin card_container($w) {
 //   max-width: 365px;

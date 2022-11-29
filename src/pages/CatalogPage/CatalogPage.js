@@ -78,14 +78,16 @@ const CatalogPage = () => {
     <main>
       <header className={cn.parent} >
         <div className={`${cn.purple_bg} ${cn.child_background}`}></div>
-        <div className={`${cn.container} ${cn.child_content}`}>
-          <div className={cn.wrapper_bread_crumbs}>
-            <BreadCrumbs></BreadCrumbs>
-          </div>
-          <h1 className={cn.title}>Аренда квартир на сутки в {cityName}</h1>
-          <div className={cn.recommendation}>Рекомендуем посмотреть</div>
-          <div className={cn.tags}>
-            {tags}
+        <div className={cn.child_content}>
+          <div className={cn.container}>
+            <div className={cn.wrapper_bread_crumbs}>
+              <BreadCrumbs></BreadCrumbs>
+            </div>
+            <h1 className={cn.title}>Аренда квартир на сутки в {cityName}</h1>
+            <div className={cn.recommendation}>Рекомендуем посмотреть</div>
+            <div className={cn.tags}>
+              {tags}
+            </div>
           </div>
         </div>
 
@@ -112,7 +114,7 @@ const CatalogPage = () => {
         </div>
 
       </article>
-      <footer>
+      <footer className={cn.container}>
         <div className={cn.style}>Показать найденные квартиры на карте</div>
         <div className={cn.style}>Ищите новостройки рядом с работой, парком или родственниками</div>
         <Button
