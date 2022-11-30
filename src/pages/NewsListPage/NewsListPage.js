@@ -13,7 +13,7 @@ import cn from "./NewsListPage.module.scss";
 
 
 
-export default function NewsListPage() {
+const NewsListPage = () => {
 
   // const smth = useSelector(state => state.smth.smth);
   const allNews = useSelector(state => state.news.allNews);
@@ -87,3 +87,5 @@ export default function NewsListPage() {
     </main>
   )
 }
+
+export default NewsListPage;

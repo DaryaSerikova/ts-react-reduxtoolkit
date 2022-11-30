@@ -1,19 +1,16 @@
 import React, { useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import NewsCard from '../../components/NewsCard/NewsCard';
+import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
+import { NewsInfo, ReadMoreInfo } from '../../components/NewsCards/NewsCardsInfo';
+
 import { ReactComponent as PurpleRectangle1 } from '../../assets/img/purple_rectangle_news.svg';
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
-
 import { ReactComponent as PurpleNetworkIcon1 } from '../../assets/img/purple_network_1.svg';
 import { ReactComponent as PurpleNetworkIcon2 } from '../../assets/img/purple_network_2.svg';
 import { ReactComponent as PurpleNetworkIcon3 } from '../../assets/img/purple_network_3.svg';
 import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_network_4.svg';
 import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
-
-import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import { ReadMoreInfo } from '../../components/NewsCards/NewsCardsInfo';
-import { NewsInfo } from '../../components/NewsCards/NewsCardsInfo';
-
 import photo from "../../assets/img/photo_2.jpg";
 import cn from "./OneNewsPage.module.scss";
 
@@ -21,10 +18,12 @@ import cn from "./OneNewsPage.module.scss";
 
 
 const OneNewsPage = () => {
-  let { newsId } = useParams();
-  console.log(newsId)
-  const currentOneNews = NewsInfo.filter((el) => el.id === +newsId)[0]
-  console.log('currentOneNews: ', currentOneNews)
+  const navigate = useNavigate();
+  let { newsIdUndefined } = useParams<{newsIdUndefined?: string | undefined }>();
+  let newsId = (newsIdUndefined === undefined) ? '999999999999' : newsIdUndefined;
+  const currentOneNews = NewsInfo.filter((el) => el.id === +newsId)[0];
+  if (currentOneNews === undefined) navigate('/error');
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,6 +34,7 @@ const OneNewsPage = () => {
       title={item.title}
       description={item.description}
       date={item.date}
+      id={item.id}
       key={item.key}
     />)
 

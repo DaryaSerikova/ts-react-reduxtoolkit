@@ -1,7 +1,7 @@
 # Sdaem.by
 
 React + TS + Redux Toolkit\
-Figma, Pixel Perfect\
+Figma, Pixel Perfect
 
 
 `Plans`
@@ -9,7 +9,7 @@ Figma, Pixel Perfect\
 
 <li>[ ] PixelPerfect Layout</li>
 <li>[x] CSS modules</li>
-<li>[ ] SCSS</li>
+<li>[x] SCSS</li>
 <li>[ ] Semantic Layout:</li>
   <ul>
     <li>[x] NewsListPage</li>
@@ -18,30 +18,35 @@ Figma, Pixel Perfect\
     <li>[ ] Error404Page</li>
     <li>[ ] LoginPage</li>
     <li>[ ] LogUpPage</li>
-    <li>[ ] MainPage</li>
+    <li>[x] MainPage</li>
+    <li>[x] CatalogPage</li>
+
   </ul>
 <li>[ ] Adaptive Layout:</li>
   <ul>
     <li>[ ] NewsListPage</li>
-    <li>[ ] OneNewsPage</li>
-    <li>[ ] ContactPage</li>
-    <li>[ ] Error404Page</li>
+    <li>[x] OneNewsPage from 800px</li>
+    <li>[x] ContactPage from 800px</li>
+    <li>[ ] Error404Page </li>
     <li>[ ] LoginPage</li>
     <li>[ ] LogUpPage</li>
-    <li>[ ] MainPage</li>
+    <li>[x] MainPage from 800px</li>
+    <li>[x] CatalogPage from 800px</li>
+
   </ul>
 </ul>
 <li>[ ] TypeScript</li>:
   <ul>
     <li>[ ] NewsListPage</li>
-    <li>[ ] OneNewsPage</li>
-    <li>[ ] ContactPage</li>
+    <li>[x] OneNewsPage</li>
+    <li>[x] ContactPage</li>
     <li>[ ] Error404Page</li>
     <li>[ ] LoginPage</li>
     <li>[ ] LogUpPage</li>
     <li>[ ] MainPage</li>
+    <li>[ ] CatalogPage</li>
   </ul>
-  <li>[ ] Redux Toolkit</li>
+  <li>[x] Redux Toolkit</li>
   <li>[ ] Firebase?</li>
  and etc.
 
