@@ -40,7 +40,7 @@ Figma, Pixel Perfect
     <li>[ ] NewsListPage</li>
     <li>[x] OneNewsPage</li>
     <li>[x] ContactPage</li>
-    <li>[ ] Error404Page</li>
+    <li>[x] Error404Page</li>
     <li>[ ] LoginPage</li>
     <li>[ ] LogUpPage</li>
     <li>[ ] MainPage</li>
