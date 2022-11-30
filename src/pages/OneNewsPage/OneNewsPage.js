@@ -11,8 +11,9 @@ import { ReactComponent as PurpleNetworkIcon4 } from '../../assets/img/purple_ne
 import { ReactComponent as PurpleNetworkIcon5 } from '../../assets/img/purple_network_5.svg';
 
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import { ReadMoreInfo } from '../../components/NewsCards/ReadMoreInfo';
-import { NewsInfo } from '../../components/NewsCards/NewsInfo';
+import { ReadMoreInfo } from '../../components/NewsCards/NewsCardsInfo';
+import { NewsInfo } from '../../components/NewsCards/NewsCardsInfo';
+
 import photo from "../../assets/img/photo_2.jpg";
 import cn from "./OneNewsPage.module.scss";
 

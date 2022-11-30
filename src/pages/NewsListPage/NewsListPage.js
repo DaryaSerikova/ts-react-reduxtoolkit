@@ -5,7 +5,8 @@ import { updateAllNews, updateSearched, updateSearchedValue } from '../../store/
 
 import NewsCard from '../../components/NewsCard/NewsCard';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import { NewsInfo } from '../../components/NewsCards/NewsInfo';
+import { NewsInfo } from '../../components/NewsCards/NewsCardsInfo';
+
 import { ReactComponent as Search } from '../../assets/img/search.svg';
 import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
 import cn from "./NewsListPage.module.scss";

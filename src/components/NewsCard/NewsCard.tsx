@@ -6,7 +6,15 @@ import cn from './NewsCard.module.scss';
 
 
 
-const NewsCard = ({title, description, date, id}) => {
+type TNewsCardProps = {
+  title: string;
+  description: string;
+  date: string;
+  id: number;
+}
+
+
+const NewsCard: React.FC<TNewsCardProps> = ({title, description, date, id}) => {
   return (
     <div className={cn.card}>
       <header className={cn.header_card}>

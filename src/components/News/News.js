@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowRightIcon } from "../../assets/img/arrow_right.svg";
-import { NewsInfo } from '../NewsCards/NewsInfo';
+import { NewsInfo } from '../NewsCards/NewsCardsInfo';
+
 import cn from "./News.module.scss";
 
 
