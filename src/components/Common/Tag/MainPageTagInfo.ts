@@ -1,8 +1,15 @@
 let idTagMain = 0;
 let idTagCatalog = 0;
 
+type TTagInfo = {
+  id: number;
+  key: string;
+  value: string;
+  text: string;
+  to: string;
+}
 
-export const MainPageTagInfo = [
+export const MainPageTagInfo: TTagInfo[] = [
   {
     id: idTagMain++,
     key: `main_${idTagMain}`,
@@ -48,7 +55,7 @@ export const MainPageTagInfo = [
   
 ]
 
-export const CatalogPageTagInfo = [
+export const CatalogPageTagInfo: TTagInfo[] = [
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
@@ -156,20 +163,20 @@ export const CatalogPageTagInfo = [
   },
 ]
 
-export const CatalogPageTagInfo2 = [
-  "Недорогие",
-  "1-комнатные",
-  "2-комнатные",
-  "3-комнатные",
-  "4-комнатные",
-  "5-комнатные",
-  "Заводской р.",
-  "Ленинский р. ",
-  "Московский р. ",
-  "Октябрьский р. ",
-  "Партизанский р.",
-  "Первомайский р.",
-  "Советский р.",
-  "Фрунзенский р.",
-  "Центральный р.",
-]
+// export const CatalogPageTagInfo2 = [
+//   "Недорогие",
+//   "1-комнатные",
+//   "2-комнатные",
+//   "3-комнатные",
+//   "4-комнатные",
+//   "5-комнатные",
+//   "Заводской р.",
+//   "Ленинский р. ",
+//   "Московский р. ",
+//   "Октябрьский р. ",
+//   "Партизанский р.",
+//   "Первомайский р.",
+//   "Советский р.",
+//   "Фрунзенский р.",
+//   "Центральный р.",
+// ]

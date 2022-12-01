@@ -1,6 +1,14 @@
+type TMenuTextItem = {
+  name: string;
+  amount: string;
+}
 
+type TMenuTextInfo = {
+  title: string;
+  items: TMenuTextItem[];
+}
 
-export const MenuTextListInfo = [
+export const MenuTextListInfo: TMenuTextInfo[] = [
   {
     title: "Квартиры",
     items: [

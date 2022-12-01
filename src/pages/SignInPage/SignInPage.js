@@ -13,11 +13,12 @@ import cn from "./SignInPage.module.scss";
 const SignInPage = () => {
   const currentDate = new Date();
   const navigate = useNavigate();
-  const { 
-    register, 
+  const {
+    register,
     handleSubmit,
     reset,
   } = useForm();
+
 
   const onSubmit = (data) => {
     console.log('data:', data);
@@ -28,8 +29,10 @@ const SignInPage = () => {
   return (
     <div className={cn.wrapper_box}>
       <PurpleBackground>
-        <img src={background1} alt="background1" />
-        <img src={background2} alt="background2" />
+        <div className={cn.wrapper_bg_img}>
+          <img src={background1} alt="background1" />
+          <img src={background2} alt="background2" className={cn.bg_2}/>
+        </div>
       </PurpleBackground>
       <div className={cn.box}>
 
@@ -38,29 +41,29 @@ const SignInPage = () => {
           Авторизируйтесь, чтобы начать публиковать свои объявления
         </div>
 
-        <form 
+        <form
           className={`${cn.form} ${cn.container_form}`}
           onSubmit={handleSubmit(onSubmit)}
-          >
+        >
           <div className={cn.wrapper_input} >
-            <Input 
-                typeInput="user" 
-                placeholder="Логин" 
-                style="sigin"
-                { ...register('login',
-                  // { required: 'Login is required field' }
-                )} 
-                />
+            <Input
+              typeInput="user"
+              placeholder="Логин"
+              style="sigin"
+              register={register}
+              label="login"
+              required
+            />
           </div>
           <div className={cn.wrapper_input} >
-            <Input 
-                typeInput="password" 
-                placeholder="Пароль" 
-                style="sigin"
-                { ...register('password',
-                  // { required: 'Password is required field' }
-                )} 
-                />
+            <Input
+              typeInput="password"
+              placeholder="Пароль"
+              style="sigin"
+              register={register}
+              label="password"
+              required
+            />
           </div>
 
 

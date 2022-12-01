@@ -15,6 +15,13 @@ import {
 
 
 
+ type TTagProps = {
+  value: string;
+  text: string;
+  style: string;
+  typeTag: string;
+ }
+
 export const Tag = ({ text, style, typeTag, value }) => {
   const city = useSelector(state => state.filters.city);
   const allFlats = useSelector(state => state.flats.all);

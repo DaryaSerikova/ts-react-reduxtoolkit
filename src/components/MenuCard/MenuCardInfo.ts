@@ -3,7 +3,18 @@ import backgroundImg2 from "../../assets/img/main_menu_card_img2.jpg";
 import backgroundImg3 from "../../assets/img/main_menu_card_img3.jpg";
 import backgroundImg4 from "../../assets/img/main_menu_card_img4.jpg";
 
-export const MenuCardInfo = [
+
+
+type TMenuCardInfo = {
+  key: string;
+  id: number;
+  subtitle: string;
+  title: string;
+  cities: string[] | "";
+  img: string;
+}
+
+export const MenuCardInfo: TMenuCardInfo[] = [
   {
     key: 'menu_card1',
     id: 1,
