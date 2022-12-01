@@ -69,7 +69,9 @@
   }
 
   .up_header {
-    height: 45px;
+    // height: 45px;
+    height: 42px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -85,8 +87,10 @@
     }
 
     .first_up_header {
-      gap: 58px;
       margin-top: -3px;
+      height: 100%;
+      align-items: center;
+      gap: 58px;
 
       @media (min-width: 1050px) and (max-width: 1180px) {
         gap: 40px;
@@ -103,6 +107,17 @@
       .header_link {
         color: $light-grey;
         text-decoration: none;
+      }
+
+      .header_link, .wrapper_point {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 4px solid transparent;
+      }
+
+      .border_top_yellow {
+        border-bottom: 4px solid $yellow;
       }
     }
   

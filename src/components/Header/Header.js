@@ -1,29 +1,46 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import cn from "./Header.module.scss";
+import {  Link, useLocation } from "react-router-dom";
 import { ReactComponent as Point } from '../../assets/img/point.svg';
 import { ReactComponent as Point2 } from '../../assets/img/point_2.svg';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
 import { ReactComponent as Heart } from '../../assets/img/heart.svg';
+import cn from "./Header.module.scss";
 
 
 
 
 export default function Header() {
+
+  const location = useLocation();
+  const path = location.pathname;
+
+
   return (
     <header className={cn.app_header}>
 
       <div className={`${cn.up_header}`}>
         <div className={`${cn.container} ${cn.container_up_header}`}>
           <div className={cn.first_up_header}>
-            <Link className={cn.header_link} to="/">Главная</Link>
-            <Link className={cn.header_link} to="/news">Новости</Link>
+            <Link 
+              className={`${cn.header_link} ${ path === "/" ? cn.border_top_yellow : ""}`} 
+              to="/">
+              Главная
+            </Link>
+            <Link 
+              className={`${cn.header_link} ${ path === "/news" ? cn.border_top_yellow : ""}`} 
+              to="/news">
+              Новости
+            </Link>
             <div>Размещение и тарифы</div>
             <div className={cn.wrapper_point}>
               <Point />
               <div className={cn.point_text}>Объявления на карте</div>
             </div>
-            <Link className={cn.header_link} to="/contacts">Контакты</Link>
+            <Link 
+              className={`${cn.header_link} ${ path === "/contacts" ? cn.border_top_yellow : ""}`} 
+              to="/contacts">
+              Контакты
+            </Link>
 
           </div>
 

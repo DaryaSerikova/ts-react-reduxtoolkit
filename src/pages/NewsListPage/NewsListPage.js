@@ -58,7 +58,7 @@ const NewsListPage = () => {
       <div className={cn.parent}>
         <PurpleRectangle className={cn.child_background} />
 
-        <div className={cn.child_content}>
+        <div className={`${cn.child_content} ${cn.content}`}>
           <header className={cn.container}>
             <BreadCrumbs />
             <div className={cn.title_wrapper}>

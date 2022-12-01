@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation, useParams } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NewsListPage from './pages/NewsListPage/NewsListPage';
@@ -18,10 +18,8 @@ import CatalogPage from './pages/CatalogPage/CatalogPage';
 
 function App() {
 
-  // const {newsId} = useParams();
   const location = useLocation();
   const path = location.pathname;
-  console.log('path', location.pathname)
 
 
   return (
