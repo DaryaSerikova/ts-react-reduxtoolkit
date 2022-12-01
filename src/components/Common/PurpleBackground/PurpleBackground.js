@@ -4,7 +4,7 @@ import cn from "./PurpleBackground.module.scss";
 
 
 
-export const PurpleBackground = ({children}) => {
+export const PurpleBackground = ({ children }) => {
 
   return (
     <>

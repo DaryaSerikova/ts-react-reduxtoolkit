@@ -6,48 +6,106 @@ Figma, Pixel Perfect
 
 `Plans`
 <ul>
-
-<li>[ ] PixelPerfect Layout</li>
-<li>[x] CSS modules</li>
-<li>[x] SCSS</li>
-<li>[ ] Semantic Layout:</li>
-  <ul>
-    <li>[x] NewsListPage</li>
-    <li>[ ] OneNewsPage</li>
-    <li>[ ] ContactPage</li>
-    <li>[ ] Error404Page</li>
-    <li>[ ] LoginPage</li>
-    <li>[ ] LogUpPage</li>
-    <li>[x] MainPage</li>
-    <li>[x] CatalogPage</li>
-
-  </ul>
-<li>[ ] Adaptive Layout:</li>
-  <ul>
-    <li>[ ] NewsListPage</li>
-    <li>[x] OneNewsPage from 800px</li>
-    <li>[x] ContactPage from 800px</li>
-    <li>[ ] Error404Page </li>
-    <li>[ ] LoginPage</li>
-    <li>[ ] LogUpPage</li>
-    <li>[x] MainPage from 800px</li>
-    <li>[x] CatalogPage from 800px</li>
-
-  </ul>
-</ul>
-<li>[ ] TypeScript</li>:
-  <ul>
-    <li>[ ] NewsListPage</li>
-    <li>[x] OneNewsPage</li>
-    <li>[x] ContactPage</li>
-    <li>[x] Error404Page</li>
-    <li>[ ] LoginPage</li>
-    <li>[ ] LogUpPage</li>
-    <li>[ ] MainPage</li>
-    <li>[ ] CatalogPage</li>
-  </ul>
+  <li>[ ] PixelPerfect Layout 90%</li>
+  <li>[x] CSS modules</li>
+  <li>[x] SCSS</li>
+  <li>[ ] Semantic Layout 6/8</li>
+  <li>[ ] Adaptive Layout 50%</li>
+  <li>[ ] TypeScript: JS:TS 1:2</li>:
   <li>[x] Redux Toolkit</li>
   <li>[ ] Firebase?</li>
+</ul>
+
+`Plans Details 1`
+<ul>
+  <li>Redux + TypeScript</li>
+  <li>[ ] Components:</li>
+      <ul>
+      <li>[ ] BreadCrumbs 0%</li>
+      <li>[ ] 2</li>
+      <li>[ ] 3</li>
+    </ul>
+  <li>[ ] NewsListPage:</li>
+    <ul>
+      <li>[ ] Input (adaptability, search icon)</li>
+      <li>[ ] Button: underline</li>
+      <li>[ ] NewsCard: to cut text in block, semantic: picture</li>
+      <li>[ ] Pagination??? without backend???</li>
+      <li>[ ] Typescript</li>
+      <li>[ ] Flexibility</li>
+      <li>[ ] Check PixelPerfect</li>
+    </ul>
+  <li>[ ] OneNewsPage:</li>
+      <ul>
+        <li>[ ] Don't work! Check!</li>
+        <li>[ ] All text: spaces, enter.. ?</li>
+        <li>[ ] Semantic Layout</li>
+        <li>[ ] Flexibility</li>
+        <li>[ ] Check PixelPerfect</li>
+        <li>[ ] Shared? vk, inst...</li>
+        <li>[ ] ...maybe something else?</li>
+      </ul>
+  <li>[ ] ContactPage:</li>
+    <ul>
+      <li>[ ] icons after phone number </li>
+      <li>[ ] add redux </li>
+      <li>[ ] post, axios</li>
+      <li>[ ] Semantic Layout</li>
+      <li>[ ] Flexibility</li>
+      <li>[ ] Check PixelPerfect</li>
+    </ul>
+  <li>[ ] Error404Page:</li>
+      <ul>
+        <li>[ ] button: underline </li>
+        <li>[ ] dots: yellow -> white </li>
+        <li>[ ] Flexibility</li>
+        <li>[ ] Check PixelPerfect</li>
+      </ul>
+  <li>[ ] SignInPage</li>
+  <li>[ ] SignUpPage</li>
+  <li>[ ] MainPage</li>
+  <li>[ ] CatalogPage</li>
+</ul>
+
+
+`Plans Details 2`
+<ul>
+  <li>[ ] Semantic Layout:</li>
+    <ul>
+      <li>[x] NewsListPage</li>
+      <li>[ ] OneNewsPage</li>
+      <li>[ ] ContactPage</li>
+      <li>[x] Error404Page</li>
+      <li>[x] SignInPage</li>
+      <li>[x] SignUpPage</li>
+      <li>[x] MainPage</li>
+      <li>[x] CatalogPage</li>
+    </ul>
+  <li>[ ] Adaptive Layout:</li>
+    <ul>
+      <li>[ ] NewsListPage</li>
+      <li>[x] OneNewsPage from 800px</li>
+      <li>[x] ContactPage from 800px</li>
+      <li>[ ] Error404Page </li>
+      <li>[ ] SignInPage</li>
+      <li>[ ] SignUpPage</li>
+      <li>[x] MainPage from 800px</li>
+      <li>[x] CatalogPage from 800px</li>
+
+    </ul>
+
+  <li>[ ] TypeScript</li>:
+    <ul>
+      <li>[ ] NewsListPage</li>
+      <li>[x] OneNewsPage</li>
+      <li>[x] ContactPage</li>
+      <li>[x] Error404Page</li>
+      <li>[ ] SignInPage</li>
+      <li>[ ] SignUpPage</li>
+      <li>[ ] MainPage</li>
+      <li>[ ] CatalogPage</li>
+    </ul>
+</ul>
  and etc.
 
 

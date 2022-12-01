@@ -27,7 +27,7 @@ const SignInPage = () => {
   }
 
   return (
-    <div className={cn.wrapper_box}>
+    <main className={cn.wrapper_box}>
       <PurpleBackground>
         <div className={cn.wrapper_bg_img}>
           <img src={background1} alt="background1" />
@@ -35,12 +35,12 @@ const SignInPage = () => {
         </div>
       </PurpleBackground>
       <div className={cn.box}>
-
-        <h1 className={cn.title}>Авторизация</h1>
-        <div className={cn.text}>
-          Авторизируйтесь, чтобы начать публиковать свои объявления
-        </div>
-
+        <header>
+          <h1 className={cn.title}>Авторизация</h1>
+          <div className={cn.text}>
+            Авторизируйтесь, чтобы начать публиковать свои объявления
+          </div>
+        </header>
         <form
           className={`${cn.form} ${cn.container_form}`}
           onSubmit={handleSubmit(onSubmit)}
@@ -68,10 +68,6 @@ const SignInPage = () => {
           </div>
 
 
-
-          {/* <input className={cn.input} placeholder="icon" /> */}
-          {/* <input className={cn.input} placeholder="icon" /> */}
-
           <div className={cn.login_settings}>
             <div className={cn.wrapper_settings_remember}>
               <div className={cn.toggle}>icon</div>
@@ -81,6 +77,7 @@ const SignInPage = () => {
           </div>
 
           <button className={cn.btn}>Войти</button>
+          
           <div className={cn.logup}>
             Еще нет аккаунта? <Link to="/signup" className={cn.create_account}>Создайте акканут</Link>
           </div>
@@ -88,7 +85,7 @@ const SignInPage = () => {
         </form>
 
       </div>
-    </div>
+    </main>
   )
 }
 

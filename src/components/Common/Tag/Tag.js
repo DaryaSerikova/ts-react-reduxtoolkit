@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateFilteredFlats } from "../../../store/flatsSlice";
-import { dataBackend_2 } from "../../../data/data_2";
 import cn from "./Tag.module.scss";
 import { 
   updateCity,
@@ -15,12 +14,12 @@ import {
 
 
 
- type TTagProps = {
-  value: string;
-  text: string;
-  style: string;
-  typeTag: string;
- }
+//  type TTagProps = {
+//   value: string;
+//   text: string;
+//   style: string;
+//   typeTag: string;
+//  }
 
 export const Tag = ({ text, style, typeTag, value }) => {
   const city = useSelector(state => state.filters.city);
@@ -49,7 +48,6 @@ export const Tag = ({ text, style, typeTag, value }) => {
       className={`${cn.tag} ${style ? cn[`${style}`] : ''}`} 
       typeTag={typeTag}
       onClick={handleClick}
-
       >
         {text}
       </div>

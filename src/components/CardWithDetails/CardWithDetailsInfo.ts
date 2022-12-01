@@ -1,6 +1,22 @@
-let CardWithDetails_id_200 = 0; 
+let CardWithDetails_id_200 = 0;
 
-export const CardWithDetailsInfo = [
+interface ICardWithDetails {
+  // type_card: string,
+  id: number,
+  key: string,
+  gold: boolean,
+  price: string, //number,
+  duration: string,
+  // people: "",
+  amount_rooms: string, //number,
+  square?: string, //number,
+  city: string,
+  address: string,
+  subway_station: string,
+  neighborhood: string,
+}
+
+export const CardWithDetailsInfo: ICardWithDetails[] = [
   {
     id: CardWithDetails_id_200++,
     key: `cardWithDetails_200_${CardWithDetails_id_200}`,

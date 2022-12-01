@@ -18,19 +18,11 @@ const Error404Page = () => {
   return (
     <main className={`${cn.parent}`}>
 
-      {/* <div className={`${cn.child_background} ${cn.purple_background}`}></div>
-      <div className={`${cn.child_background} `}>
-        <img className={cn.white_background} src={background} alt={"white-background"}/>
-      </div> */}
       <PurpleBackground>
         <img className={cn.white_background} src={background} alt={"white-background"} />
       </PurpleBackground>
 
-      {/* <div className={cn.child_background}></div> */}
-
       <div className={`${cn.container} ${cn.child_content}`}>
-
-
         <div className={cn.page_error404}>
 
           <div className={`${cn.first_column} ${cn.parent}`}>

@@ -63,7 +63,11 @@ const ContactPage = () => {
     <>
       <main className={`${cn.contact_page} ${cn.parent}`}>
         <PurpleBackground>
-          <img className={cn.white_background} src={background} alt={"white-background"}/>
+          <img 
+            className={cn.white_background} 
+            src={background} 
+            alt={"white-background"}
+          />
         </PurpleBackground>
 
         <div className={`${cn.container} ${cn.child_content}`}>

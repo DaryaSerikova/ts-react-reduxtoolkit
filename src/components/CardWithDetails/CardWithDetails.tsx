@@ -1,5 +1,5 @@
 import React from 'react';
-import { ICardWithDetails } from './CardWithDetailsInterface';
+// import { ICardWithDetails } from './CardWithDetailsInterface';
 import { ReactComponent as UserIcon } from "../../assets/img/user.svg";
 
 import { ReactComponent as LocationIcon } from "../../assets/img/point_3.svg";
@@ -13,6 +13,21 @@ import cn from "./CardWithDetails.module.scss";
 import { Button } from '../Common/Button/Button';
 
 
+
+interface ICardWithDetails {
+  type_card: string,
+  key: string,
+  gold: boolean,
+  price: number,
+  duration: string,
+  // people: "",
+  amount_rooms: number,
+  square?: number,
+  city: string,
+  address: string,
+  subway_station: string,
+  neighborhood: string,
+}
 
 const CardWithDetails = ( props:ICardWithDetails ) => {
   const { type_card, gold, price, duration,

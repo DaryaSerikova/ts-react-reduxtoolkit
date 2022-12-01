@@ -1,7 +1,7 @@
 export const getFakeJWT = () => {
   const login  = "dashs";
-  console.log('currentDate: ', currentDate);
   const currentDate = new Date();
+  console.log('currentDate: ', currentDate);
   const digitDate = Date.parse(currentDate);
   const first = `${digitDate}`.split("").slice(0, 3).join("");
   const second = login.split("").slice(0, 2).join("");

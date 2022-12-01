@@ -2,24 +2,19 @@ import React from 'react';
 import { ReactComponent as CircleArrow } from "../../assets/img/main_circle_arrow.svg";
 import { Tag } from '../Common/Tag/Tag';
 import { MainPageTagInfo } from '../Common/Tag/MainPageTagInfo';
-// import backgroundImg1 from "../../assets/img/main_menu_card_img1.jpg";
-// import backgroundImg2 from "../../assets/img/main_menu_card_img1.jpg";
-// import backgroundImg3 from "../../assets/img/main_menu_card_img1.jpg";
-// import backgroundImg4 from "../../assets/img/main_menu_card_img1.jpg";
-
 import cn from "./MenuCard.module.scss";
 
 
 
-type TMenuCardProps = {
-  key: string;
-  id: number;
-  subtitle: string;
-  title: string;
-  cities: string[] | "";
-  img: string;
+// type TMenuCardProps = {
+//   key: string;
+//   id: number;
+//   subtitle: string;
+//   title: string;
+//   cities: string[] | "";
+//   img: string;
 
-}
+// }
 
 const MenuCard = ({ subtitle, title, cities, id, img: src }) => {
 

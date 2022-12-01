@@ -29,7 +29,6 @@ const Filters = ({ typeFilters }) => {
     register,
     handleSubmit,
     reset,
-    control,
   } = useForm();
 
   useEffect(() => {
@@ -41,16 +40,16 @@ const Filters = ({ typeFilters }) => {
 
 
   const cityOptions = cityOptionsInfo.map(option =>
-    <option value={option.value}>{option.label}</option>);
+    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
 
   const roomOptions = roomOptionsInfo.map(option =>
-    <option value={option.value}>{option.label}</option>);
+    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
 
   const subwayOptions = subwayOptionsInfo.map(option =>
-    <option value={option.value}>{option.label}</option>);
+    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
 
   const neighborhoodOptions = neighborhoodOptionsInfo.map(option =>
-    <option value={option.value}>{option.label}</option>);
+    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
 
   const onReset = () => {
     reset();
@@ -66,9 +65,7 @@ const Filters = ({ typeFilters }) => {
     if (data.price_to !== '') dispatch(updatePriceTo(data.price_to));
     if (data.subway_station !== '') dispatch(updateSubwayStation(data.subway_station));
     if (data.neighborhood !== '') dispatch(updateNeighborhood(data.neighborhood));
-
     console.log('data.city :', data.city)
-
 
 
     const getDataCity = (typeFilters) => {
@@ -122,7 +119,6 @@ const Filters = ({ typeFilters }) => {
 
             <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main}`}>
               <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
-              {/* <Select arrOptions={arrOpt}/> */}
               <select
                 className={`${cn.select}`}
                 name='amount_rooms'
@@ -229,15 +225,6 @@ const Filters = ({ typeFilters }) => {
               {/* tableware "Посуда" */}
               {/* dishwasher "Посудомоечная машина " */}
 
-              <Controller
-                name="gas_stove"
-                control={control}
-                // render={({ field }) => <Checkbox {...field} />}
-                render={() => <div>
-                  <input type="checkbox" id="coding" name="interest" value="coding" checked />
-                  <label for="coding">Coding</label>
-                </div>}
-              />
             </div>
           </div>
             : <></>}
