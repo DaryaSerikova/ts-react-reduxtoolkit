@@ -31,7 +31,7 @@ const SignInPage = () => {
       <PurpleBackground>
         <div className={cn.wrapper_bg_img}>
           <img src={background1} alt="background1" />
-          <img src={background2} alt="background2" className={cn.bg_2}/>
+          <img src={background2} alt="background2" className={cn.bg_2} />
         </div>
       </PurpleBackground>
       <div className={cn.box}>
@@ -47,7 +47,7 @@ const SignInPage = () => {
         >
           <div className={cn.wrapper_input} >
             <Input
-              typeInput="user"
+              typeIcon="user"
               placeholder="Логин"
               style="sigin"
               register={register}
@@ -57,11 +57,12 @@ const SignInPage = () => {
           </div>
           <div className={cn.wrapper_input} >
             <Input
-              typeInput="password"
+              typeIcon="password"
               placeholder="Пароль"
               style="sigin"
               register={register}
               label="password"
+              typeInput="password"
               required
             />
           </div>

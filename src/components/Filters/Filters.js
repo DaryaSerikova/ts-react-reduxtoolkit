@@ -135,14 +135,14 @@ const Filters = ({ typeFilters }) => {
             <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main} ${cn.inputs}`}>
               <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Цена за сутки (BYN)</div>
               <div className={`${cn.filter} ${cn.wrapper_price}`}>
-                <WrapperInput style="w80h37" typeInput={"От"}>
+                <WrapperInput style="w80h37" typeIcon={"От"}>
                     <input
                       className={`${cn.input} ${cn.child_input}`}
                       {...register('price_from')}
                     />
                 </WrapperInput>
                 <span className={cn.dash}>-</span>
-                <WrapperInput style="w80h37" typeInput={"До"}>
+                <WrapperInput style="w80h37" typeIcon={"До"}>
                   <input
                     className={`${cn.input} ${cn.child_input}`}
                     {...register('price_to')}

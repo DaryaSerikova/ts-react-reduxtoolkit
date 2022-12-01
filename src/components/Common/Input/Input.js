@@ -10,11 +10,11 @@ import cn from "./Input.module.scss";
 
 
 
-export const Input = ({ typeInput, placeholder, style, label, register, required }) => {
+export const Input = ({ typeInput, typeIcon, placeholder, style, label, register, required }) => {
 
 
-  const getInputIcon = (typeInput) => {
-    switch (typeInput) {
+  const getInputIcon = (typeIcon) => {
+    switch (typeIcon) {
       case "email":
         return <div className={`${cn.icon} ${cn.child_icon} `}><EmailIcon /></div>;
       case "password":
@@ -22,11 +22,11 @@ export const Input = ({ typeInput, placeholder, style, label, register, required
       case "user":
         return <div className={`${cn.icon} ${cn.child_icon} `}><UserIcon /></div>;
       default:
-        return <div className={`${cn.icon} ${cn.without_icon} `}>{typeInput}</div>
+        return <div className={`${cn.icon} ${cn.without_icon} `}>{typeIcon}</div>
     }
   }
 
-  const inputIcon = getInputIcon(typeInput);
+  const inputIcon = getInputIcon(typeIcon);
 
 
   return (
@@ -37,21 +37,22 @@ export const Input = ({ typeInput, placeholder, style, label, register, required
         {...register(label, { required })}
         className={`${cn.input} ${cn.child_input}`}
         placeholder={placeholder}
+        type={typeInput}
       />
     </div>
   )
 };
 
 
-export const Input2 = ({ typeInput, placeholder, style,
+export const Input2 = ({ typeIcon, placeholder, style,
   registerName }) => {
 
   const {
     register,
   } = useForm();
 
-  const getInputIcon = (typeInput) => {
-    switch (typeInput) {
+  const getInputIcon = (typeIcon) => {
+    switch (typeIcon) {
       case "email":
         return <div className={`${cn.icon} ${cn.child_icon} `}><EmailIcon /></div>;
       case "password":
@@ -59,11 +60,11 @@ export const Input2 = ({ typeInput, placeholder, style,
       case "user":
         return <div className={`${cn.icon} ${cn.child_icon} `}><UserIcon /></div>;
       default:
-        return <div className={`${cn.icon} ${cn.without_icon} `}>{typeInput}</div>
+        return <div className={`${cn.icon} ${cn.without_icon} `}>{typeIcon}</div>
     }
   }
 
-  const inputIcon = getInputIcon(typeInput);
+  const inputIcon = getInputIcon(typeIcon);
 
   return (
     <div className={`${cn.wrapper_input} ${cn.parent} ${cn[`${style}`]}`}>
@@ -77,10 +78,10 @@ export const Input2 = ({ typeInput, placeholder, style,
   )
 }
 
-export const WrapperInput = ({ typeInput, style, children }) => {
+export const WrapperInput = ({ typeIcon, style, children }) => {
 
-  const getInputIcon = (typeInput) => {
-    switch (typeInput) {
+  const getInputIcon = (typeIcon) => {
+    switch (typeIcon) {
       case "email":
         return <div className={`${cn.icon} ${cn.child_icon} `}><EmailIcon /></div>;
       case "password":
@@ -88,11 +89,11 @@ export const WrapperInput = ({ typeInput, style, children }) => {
       case "user":
         return <div className={`${cn.icon} ${cn.child_icon} `}><UserIcon /></div>;
       default:
-        return <div className={`${cn.icon} ${cn.without_icon} `}>{typeInput}</div>
+        return <div className={`${cn.icon} ${cn.without_icon} `}>{typeIcon}</div>
     }
   }
 
-  const inputIcon = getInputIcon(typeInput);
+  const inputIcon = getInputIcon(typeIcon);
 
   return (
     <div className={`${cn.wrapper_input} ${cn.parent} ${cn[`${style}`]}`}>

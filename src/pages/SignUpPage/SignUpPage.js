@@ -1,41 +1,77 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { Button } from '../../components/Common/Button/Button';
 import { Input } from '../../components/Common/Input/Input';
+import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
+import background1 from "../../assets/img/sigin_background1.png";
+import background2 from "../../assets/img/sigin_background2.png";
 import cn from "./SignUpPage.module.scss";
 
 
 
 const SignUpPage = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log('data:', data);
+    reset();
+    // navigate("/");
+  }
+
+
   return (
-    <main className={cn.container}>
+    <main className={cn.wrapper_box}>
+
+    <PurpleBackground>
+      <div className={cn.wrapper_bg_img}>
+        <img src={background1} alt="background1" />
+        <img src={background2} alt="background2" className={cn.bg_2} />
+      </div>
+    </PurpleBackground>
+    <div className={cn.container}>
       <div className={cn.box}>
         <div className={cn.wrapper_columns}>
           <div className={cn.first_column}>
             <h1 className={cn.title}>Регистрация</h1>
-            <form className={cn.form}>
-              <Input 
-                typeInput="user" 
-                placeholder="Логин" 
-                // style="sigin" 
+            <form className={cn.form} onSubmit={handleSubmit(onSubmit)}>
+              <Input
+                typeIcon="user"
+                placeholder="Логин"
+                // style="sigin"
+                register={register}
+                label="login"
               />
 
-              <Input 
-                typeInput="email" 
-                placeholder="Электронная почта" 
+              <Input
+                typeIcon="email"
+                placeholder="Электронная почта"
                 // style="sigin" 
+                typeInput="email"
+                register={register}
+                label="email"
               />
 
-              <Input 
-                typeInput="password" 
-                placeholder="Пароль" 
+              <Input
+                typeIcon="password"
+                placeholder="Пароль"
                 // style="sigin" 
+                typeInput="password"
+                register={register}
+                label="password"
               />
 
-              <Input 
-                typeInput="password" 
-                placeholder="Повторите пароль" 
+              <Input
+                typeIcon="password"
+                placeholder="Повторите пароль"
                 // style="sigin" 
+                typeInput="password"
+                register={register}
+                label="confirmPassword"
               />
 
               <div className={cn.capcha}></div>
@@ -44,17 +80,17 @@ const SignUpPage = () => {
                 style="red"
                 typeButton="left-icon"
                 customStyle="signup"
-                />
-              
+              />
+
               <Button
                 text="Зарегистрироваться"
                 style="yellow"
                 typeButton="without-icon"
                 customStyle="signup"
-                />       
-              
+              />
 
-                
+
+
             </form>
 
 
@@ -71,6 +107,7 @@ const SignUpPage = () => {
         </div>
 
       </div>
+    </div>
     </main>
   )
 }
