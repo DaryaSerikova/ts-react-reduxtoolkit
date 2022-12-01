@@ -10,8 +10,7 @@ import { Button } from '../Common/Button/Button';
 import { Select } from '../Common/Select/Select';
 import { ReactComponent as SetupIcon } from "../../assets/img/main_setup.svg";
 import { ReactComponent as LocationIcon } from "../../assets/img/main_location.svg";
-import { ReactComponent as ArrowIcon } from "../../assets/img/main_arrow_right_1.svg"
-// import { dataBackend } from "../../data/data";
+import { ReactComponent as ArrowIcon } from "../../assets/img/main_arrow_right_1.svg";
 import { dataBackend_2 } from "../../data/data_2";
 
 import cn from "./Filters.module.scss";

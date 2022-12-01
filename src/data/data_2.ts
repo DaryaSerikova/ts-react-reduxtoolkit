@@ -1,5 +1,20 @@
-export const dataBackend = {
-  "minsk": [
+type TData = {
+  gold: boolean;
+  price: number;
+  duration: string;
+  // people: "",
+  amount_rooms: number;
+  square: number;
+  city: string;
+  address: string;
+  subway_station: string;
+  neighborhood: string;
+}
+// cities: [ "Минск", "Витебск", "Гродно",  "Гомель", "Гомель", "Брест", "Могилев" ]
+
+
+export const dataBackend_2: TData[] = [
+  /* minsk  */
     // subway_station: "Каменная Горка",
     // neighborhood: "Фрунзенский",
     {
@@ -752,10 +767,8 @@ export const dataBackend = {
       neighborhood: "Фрунзенский",
     },
 
-  ],
-
   /* vitebsk */
-  "vitebsk": [
+
     {
       gold: false,
       price: 53,
@@ -1518,9 +1531,9 @@ export const dataBackend = {
       subway_station: "Молодёжная",
       neighborhood: "Фрунзенский",
     },
-    
-  ],
-  "grodno": [
+
+/* grodno */
+
   {
     gold: false,
     price: 53,
@@ -2283,10 +2296,9 @@ export const dataBackend = {
     subway_station: "Молодёжная",
     neighborhood: "Фрунзенский",
   },
-  
-],
-  "gomel": {},
-  "brest": {},
-  "mogilev": {},
-}
-// cities: [ "Минск", "Витебск", "Гродно",  "Гомель", "Гомель", "Брест", "Могилев" ]
+
+  // "gomel": {},
+  // "brest": {},
+  // "mogilev": {},
+// }
+]

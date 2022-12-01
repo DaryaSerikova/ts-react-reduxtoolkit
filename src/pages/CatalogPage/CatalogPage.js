@@ -10,7 +10,6 @@ import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { CatalogPageTagInfo } from '../../components/Common/Tag/MainPageTagInfo';
 import { Button } from '../../components/Common/Button/Button';
-// import { dataBackend } from "../../data/data";
 import cn from "./CatalogPage.module.scss";
 
 

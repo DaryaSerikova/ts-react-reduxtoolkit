@@ -9,7 +9,6 @@ import { AdvertisingCardInfo } from '../../components/AdvertisingCard/Advertisin
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
-import data from "../../data/data";
 import background from "../../assets/img/main_background_1.png";
 import background3 from "../../assets/img/main_background_3.png";
 import cn from "./MainPage.module.scss";
