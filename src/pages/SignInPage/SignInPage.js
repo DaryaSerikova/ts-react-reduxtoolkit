@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import background1 from "../../assets/img/sigin_background1.png";
 import background2 from "../../assets/img/sigin_background2.png";
 import { Input } from '../../components/Common/Input/Input';
@@ -11,6 +12,18 @@ import cn from "./SignInPage.module.scss";
 
 const SignInPage = () => {
   const currentDate = new Date();
+  const navigate = useNavigate();
+  const { 
+    register, 
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log('data:', data);
+    reset();
+    navigate("/");
+  }
 
   return (
     <div className={cn.wrapper_box}>
@@ -25,21 +38,28 @@ const SignInPage = () => {
           Авторизируйтесь, чтобы начать публиковать свои объявления
         </div>
 
-        <div className={`${cn.form} ${cn.container_form}`}>
+        <form 
+          className={`${cn.form} ${cn.container_form}`}
+          onSubmit={handleSubmit(onSubmit)}
+          >
           <div className={cn.wrapper_input} >
             <Input 
                 typeInput="user" 
                 placeholder="Логин" 
-                style="sigin" 
-
+                style="sigin"
+                { ...register('login',
+                  // { required: 'Login is required field' }
+                )} 
                 />
           </div>
           <div className={cn.wrapper_input} >
             <Input 
                 typeInput="password" 
                 placeholder="Пароль" 
-                style="sigin" 
-
+                style="sigin"
+                { ...register('password',
+                  // { required: 'Password is required field' }
+                )} 
                 />
           </div>
 
@@ -56,12 +76,12 @@ const SignInPage = () => {
             <div className={cn.settings_password}>Забыли пароль?</div>
           </div>
 
-          <button className={cn.btn}><Link to="/">Войти</Link></button>
+          <button className={cn.btn}>Войти</button>
           <div className={cn.logup}>
             Еще нет аккаунта? <Link to="/signup" className={cn.create_account}>Создайте акканут</Link>
           </div>
 
-        </div>
+        </form>
 
       </div>
     </div>

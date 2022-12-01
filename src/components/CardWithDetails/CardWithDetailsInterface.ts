@@ -1,5 +1,6 @@
 export interface ICardWithDetails {
   type_card: string,
+  key: string,
   gold: boolean,
   price: number,
   duration: string,

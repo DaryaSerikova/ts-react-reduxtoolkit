@@ -5,9 +5,19 @@ import cn from "./AdvertisingCard.module.scss";
 import { Button } from '../Common/Button/Button';
 
 
-const AdvertisingCard = ({ typeCard, title, text }) => {
 
-  const getIcon = (typeCard) => {
+type TAdvCardProps = {
+  typeCard: string;
+  id: number;
+  key: string;
+  title: string;
+  text: string;
+}
+
+
+const AdvertisingCard = ({ typeCard, title, text }: TAdvCardProps) => {
+
+  const getIcon = (typeCard: string) => {
     switch(typeCard) {
       case "1":
         return <AdvertisingIcon1 className={cn.icon} />
@@ -20,7 +30,7 @@ const AdvertisingCard = ({ typeCard, title, text }) => {
     }
   }
 
-  const getBtn = (typeCard) => {
+  const getBtn = (typeCard: string) => {
     switch(typeCard) {
       case "1": 
         return <>

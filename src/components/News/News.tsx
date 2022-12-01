@@ -9,9 +9,11 @@ import cn from "./News.module.scss";
 type TOneNews = {
   title: string;
   date: string;
+  key: string;
+  id: number;
 }
 
-const OneNews = ({ title, date }: TOneNews) => {
+const OneNews = ({ title, date, id, key }: TOneNews) => {
   return (
     <div className={cn.one_news}>
       <div className={cn.onenews_title}>
@@ -31,7 +33,7 @@ const News = () => {
 
   const partOfNews = NewsInfo.slice(-5).reverse();
   const news = partOfNews.map(
-    el => <OneNews title={el.title} date={el.date} />
+    el => <OneNews title={el.title} date={el.date} id={el.id} key={el.key}/>
   )
 
   return (

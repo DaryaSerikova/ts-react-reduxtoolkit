@@ -24,7 +24,7 @@ const MainPage = () => {
   }, [])
 
   const advertisingCards = AdvertisingCardInfo.map(
-    el => <AdvertisingCard typeCard={el.typeCard} title={el.title} text={el.text} />
+    el => <AdvertisingCard typeCard={el.typeCard} title={el.title} text={el.text} id={el.id} key={el.key}/>
   )
 
   const menuCards = MenuCardInfo.map(
@@ -34,6 +34,7 @@ const MainPage = () => {
   const cardsWithDetails = CardWithDetailsInfo.map(
     el => <CardWithDetails
       type_card='ordinary'
+      key={el.key}
       gold={el.gold}
       price={el.price}
       duration={el.duration}

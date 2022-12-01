@@ -10,7 +10,7 @@ import cn from "./Input.module.scss";
 
 
 
-export const Input = ({ typeInput, placeholder, style }) => {
+export const Input = React.forwardRef(({ typeInput, placeholder, style }, ref) => {
 
 
   const getInputIcon = (typeInput) => {
@@ -34,12 +34,13 @@ export const Input = ({ typeInput, placeholder, style }) => {
       {/* <div className={`${cn.icon} ${cn.child_icon} `}>{inputIcon}</div> */}
       {inputIcon}
       <input 
+        ref={ref}
         className={`${cn.input} ${cn.child_input}`} 
         placeholder={placeholder}
         />
     </div>
   ) 
-}
+});
 
 
 export const Input2 = ({ typeInput, placeholder, style,
