@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
+import { Input } from '../../components/Common/Input/Input';
+import { getFakeJWT } from '../../utils/utils';
 import background1 from "../../assets/img/sigin_background1.png";
 import background2 from "../../assets/img/sigin_background2.png";
-import { Input } from '../../components/Common/Input/Input';
-import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
-import { getFakeJWT } from '../../utils/utils';
 import cn from "./SignInPage.module.scss";
 
 
@@ -77,7 +77,7 @@ const SignInPage = () => {
           </div>
 
           <button className={cn.btn}>Войти</button>
-          
+
           <div className={cn.logup}>
             Еще нет аккаунта? <Link to="/signup" className={cn.create_account}>Создайте акканут</Link>
           </div>

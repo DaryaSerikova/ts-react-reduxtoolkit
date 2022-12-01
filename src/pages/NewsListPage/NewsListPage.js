@@ -13,6 +13,7 @@ import cn from "./NewsListPage.module.scss";
 
 
 
+
 const NewsListPage = () => {
 
   // const smth = useSelector(state => state.smth.smth);

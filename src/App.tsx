@@ -8,11 +8,11 @@ import Error404Page from './pages/Error404Page/Error404Page';
 import ContactPage from './pages/ContactPage/ContactPage';
 import SignInPage from './pages/SignInPage/SignInPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+import MainPage from './pages/MainPage/MainPage';
+import CatalogPage from './pages/CatalogPage/CatalogPage';
 
 import ModalSent from './modals/ModalSent/ModalSent';
 import cn from './App.module.scss';
-import MainPage from './pages/MainPage/MainPage';
-import CatalogPage from './pages/CatalogPage/CatalogPage';
 
 
 
@@ -26,13 +26,10 @@ function App() {
     <div className={cn.app}>
 
       { (path !== "/signin" && path !== "/signup") ? <Header /> : <></>}
-      {/* <CondosCatalog /> */}
-
       <Routes>
-        <Route path="/news" element={<NewsListPage />} />
-        {/* <Route path="/oneNews" element={<OneNewsPage />} /> */}
-        <Route path="/news/:newsId" element={<OneNewsPage />} />
 
+        <Route path="/news" element={<NewsListPage />} />
+        <Route path="/news/:newsId" element={<OneNewsPage />} />
         <Route path="*" element={<Error404Page/>} />
         <Route path="/contacts" element={<ContactPage />} />
 
@@ -42,14 +39,9 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/catalog" element={<CatalogPage />} />
 
-        
-
       </Routes>
-
       {/* <ModalSent /> */}
-      
       { (path !== "/signin" && path !== "/signup") ? <Footer /> : <></>}
-
 
     </div>
   );

@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
 
-import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
+import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import Filters from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
-import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
+import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { CatalogPageTagInfo } from '../../components/Common/Tag/MainPageTagInfo';
 import { Button } from '../../components/Common/Button/Button';

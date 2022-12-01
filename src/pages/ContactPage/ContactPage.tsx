@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
-import { IFields } from './ContactPage.interface';
 // import ModalSent from '../../modals/ModalSent/ModalSent';
 import { ReactComponent as WarningIcon } from '../../assets/img/warning.svg';
 import { ReactComponent as ContactIcon1 } from '../../assets/img/contact_icon_1.svg';
@@ -21,6 +20,12 @@ import { PurpleBackground } from '../../components/Common/PurpleBackground/Purpl
 
 
 
+
+interface IFields {
+  email: string
+  name: string
+  message: string
+}
 
 const ContactPage = () => {
 

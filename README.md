@@ -11,7 +11,7 @@ Figma, Pixel Perfect
   <li>[x] SCSS</li>
   <li>[ ] Semantic Layout 6/8</li>
   <li>[ ] Adaptive Layout 50%</li>
-  <li>[ ] TypeScript: JS:TS 1:2</li>:
+  <li>[ ] TypeScript: JS:TS 1:2</li>
   <li>[x] Redux Toolkit</li>
   <li>[ ] Firebase?</li>
 </ul>
@@ -20,10 +20,21 @@ Figma, Pixel Perfect
 <ul>
   <li>Redux + TypeScript</li>
   <li>[ ] Components:</li>
-      <ul>
+    <ul>
       <li>[ ] BreadCrumbs 0%</li>
-      <li>[ ] 2</li>
-      <li>[ ] 3</li>
+      <li>[ ] ModalSent</li>
+      <li>[ ] Filters</li>
+      <li>[ ] Header 85%</li>
+      <li>[ ] Footer 92%</li>
+      <li>[ ] CardWithDetails</li>
+      <li>[ ] Common:</li>
+        <ul>
+          <li>[ ] Button</li>
+          <li>[ ] input</li>
+          <li>[ ] Select</li>
+          <li>[ ] Tag</li>
+          <li>[ ] PurpleBackground</li>
+        </ul>
     </ul>
   <li>[ ] NewsListPage:</li>
     <ul>
@@ -48,6 +59,7 @@ Figma, Pixel Perfect
   <li>[ ] ContactPage:</li>
     <ul>
       <li>[ ] icons after phone number </li>
+      <li>[ ] ModalSent after Submit </li>
       <li>[ ] add redux </li>
       <li>[ ] post, axios</li>
       <li>[ ] Semantic Layout</li>
@@ -91,7 +103,6 @@ Figma, Pixel Perfect
       <li>[ ] SignUpPage</li>
       <li>[x] MainPage from 800px</li>
       <li>[x] CatalogPage from 800px</li>
-
     </ul>
 
   <li>[ ] TypeScript</li>:

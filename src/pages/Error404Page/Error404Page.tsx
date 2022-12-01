@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
-import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
+import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
 import background from "../../assets/img/error404_background.png";
 import cn from "./Error404Page.module.scss";
 
