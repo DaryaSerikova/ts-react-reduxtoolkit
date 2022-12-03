@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import smthReducer from "./smthSlice";
+// import smthReducer from "./smthSlice";
 import newsReducer from "./newsSlice";
 import filtersReducer from "./filtersSlice";
 import flatsReducer from "./flatsSlice";
 import userReducer from "./userSlice";
 
 
-export default configureStore({
+let store = configureStore({
   reducer: {
     // smth: smthReducer,
     news: newsReducer,
@@ -17,4 +17,7 @@ export default configureStore({
   }
 })
 
+export default store;
 
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

@@ -1,4 +1,9 @@
-type TData = {
+let idFlat = 0;
+
+
+export type TOneNews = {
+  id?: number;
+  key: string;
   gold: boolean;
   price: number;
   duration: string;
@@ -13,11 +18,13 @@ type TData = {
 // cities: [ "Минск", "Витебск", "Гродно",  "Гомель", "Гомель", "Брест", "Могилев" ]
 
 
-export const dataBackend_2: TData[] = [
+export const dataBackend_2: TOneNews[] = [
   /* minsk  */
     // subway_station: "Каменная Горка",
     // neighborhood: "Фрунзенский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 52,
       duration: "за сутки",
@@ -30,6 +37,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 98,
       duration: "за сутки",
@@ -43,6 +52,8 @@ export const dataBackend_2: TData[] = [
     },
 
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 88,
       duration: "за сутки",
@@ -57,6 +68,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Парк Челюскинцев",
     // neighborhood: "Первомайский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 70,
       duration: "за сутки",
@@ -69,6 +82,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Первомайский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 44,
       duration: "за сутки",
@@ -83,6 +98,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Площадь Победы",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 78,
       duration: "за сутки",
@@ -95,6 +112,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -107,6 +126,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 48,
       duration: "за сутки",
@@ -119,6 +140,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 97,
       duration: "за сутки",
@@ -131,6 +154,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 99,
       duration: "за сутки",
@@ -145,6 +170,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Октябрьская",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 82,
       duration: "за сутки",
@@ -157,6 +184,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 68,
       duration: "за сутки",
@@ -169,6 +198,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 62,
       duration: "за сутки",
@@ -181,6 +212,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 64,
       duration: "за сутки",
@@ -193,6 +226,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 95,
       duration: "за сутки",
@@ -205,6 +240,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 100,
       duration: "за сутки",
@@ -217,6 +254,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 95,
       duration: "за сутки",
@@ -231,6 +270,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Немига",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 50,
       duration: "за сутки",
@@ -243,6 +284,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 48,
       duration: "за сутки",
@@ -255,6 +298,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 50,
       duration: "за сутки",
@@ -267,6 +312,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 42,
       duration: "за сутки",
@@ -279,6 +326,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -291,6 +340,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -303,6 +354,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 92,
       duration: "за сутки",
@@ -315,6 +368,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 97,
       duration: "за сутки",
@@ -327,6 +382,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 101,
       duration: "за сутки",
@@ -339,6 +396,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 110,
       duration: "за сутки",
@@ -353,6 +412,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Купаловская",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -365,6 +426,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -377,6 +440,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -389,6 +454,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 50,
       duration: "за сутки",
@@ -401,6 +468,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 55,
       duration: "за сутки",
@@ -413,6 +482,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 57,
       duration: "за сутки",
@@ -425,6 +496,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 69,
       duration: "за сутки",
@@ -437,6 +510,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 65,
       duration: "за сутки",
@@ -449,6 +524,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 99,
       duration: "за сутки",
@@ -461,6 +538,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 108,
       duration: "за сутки",
@@ -475,6 +554,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Грушевка",
     // neighborhood: "Московский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 46,
       duration: "за сутки",
@@ -487,6 +568,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 39,
       duration: "за сутки",
@@ -499,6 +582,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 39,
       duration: "за сутки",
@@ -511,6 +596,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 48,
       duration: "за сутки",
@@ -523,6 +610,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 57,
       duration: "за сутки",
@@ -535,6 +624,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 51,
       duration: "за сутки",
@@ -547,6 +638,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 56,
       duration: "за сутки",
@@ -559,6 +652,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 54,
       duration: "за сутки",
@@ -573,6 +668,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Пролетарская",
     // neighborhood: "Ленинский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 53,
       duration: "за сутки",
@@ -585,6 +682,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 49,
       duration: "за сутки",
@@ -597,6 +696,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 46,
       duration: "за сутки",
@@ -609,6 +710,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 44,
       duration: "за сутки",
@@ -621,6 +724,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 48,
       duration: "за сутки",
@@ -633,6 +738,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 41,
       duration: "за сутки",
@@ -645,6 +752,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 34,
       duration: "за сутки",
@@ -657,6 +766,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 85,
       duration: "за сутки",
@@ -669,6 +780,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 92,
       duration: "за сутки",
@@ -683,6 +796,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Молодёжная",
     // neighborhood: "Фрунзенский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 94,
       duration: "за сутки",
@@ -695,6 +810,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 40,
       duration: "за сутки",
@@ -707,6 +824,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -719,6 +838,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 48,
       duration: "за сутки",
@@ -731,6 +852,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -743,6 +866,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 56,
       duration: "за сутки",
@@ -755,6 +880,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 105,
       duration: "за сутки",
@@ -770,6 +897,8 @@ export const dataBackend_2: TData[] = [
   /* vitebsk */
 
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 53,
       duration: "за сутки",
@@ -783,6 +912,8 @@ export const dataBackend_2: TData[] = [
     },
 
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 52,
       duration: "за сутки",
@@ -795,6 +926,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 98,
       duration: "за сутки",
@@ -808,6 +941,8 @@ export const dataBackend_2: TData[] = [
     },
 
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 88,
       duration: "за сутки",
@@ -822,6 +957,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Парк Челюскинцев",
     // neighborhood: "Первомайский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 70,
       duration: "за сутки",
@@ -834,6 +971,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Первомайский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 44,
       duration: "за сутки",
@@ -848,6 +987,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Площадь Победы",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 78,
       duration: "за сутки",
@@ -860,6 +1001,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -872,6 +1015,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 48,
       duration: "за сутки",
@@ -884,6 +1029,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 97,
       duration: "за сутки",
@@ -896,6 +1043,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 99,
       duration: "за сутки",
@@ -910,6 +1059,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Октябрьская",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 82,
       duration: "за сутки",
@@ -922,6 +1073,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 68,
       duration: "за сутки",
@@ -934,6 +1087,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 62,
       duration: "за сутки",
@@ -946,6 +1101,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 64,
       duration: "за сутки",
@@ -958,6 +1115,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 95,
       duration: "за сутки",
@@ -970,6 +1129,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 100,
       duration: "за сутки",
@@ -982,6 +1143,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 95,
       duration: "за сутки",
@@ -996,6 +1159,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Немига",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 50,
       duration: "за сутки",
@@ -1008,6 +1173,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 48,
       duration: "за сутки",
@@ -1020,6 +1187,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 50,
       duration: "за сутки",
@@ -1032,6 +1201,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 42,
       duration: "за сутки",
@@ -1044,6 +1215,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -1056,6 +1229,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -1068,6 +1243,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 92,
       duration: "за сутки",
@@ -1080,6 +1257,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 97,
       duration: "за сутки",
@@ -1092,6 +1271,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 101,
       duration: "за сутки",
@@ -1104,6 +1285,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 110,
       duration: "за сутки",
@@ -1118,6 +1301,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Купаловская",
     // neighborhood: "Центральный",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -1130,6 +1315,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -1142,6 +1329,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 45,
       duration: "за сутки",
@@ -1154,6 +1343,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 50,
       duration: "за сутки",
@@ -1166,6 +1357,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 55,
       duration: "за сутки",
@@ -1178,6 +1371,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 57,
       duration: "за сутки",
@@ -1190,6 +1385,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 69,
       duration: "за сутки",
@@ -1202,6 +1399,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 65,
       duration: "за сутки",
@@ -1214,6 +1413,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 99,
       duration: "за сутки",
@@ -1226,6 +1427,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Центральный",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 108,
       duration: "за сутки",
@@ -1240,6 +1443,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Грушевка",
     // neighborhood: "Московский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 46,
       duration: "за сутки",
@@ -1252,6 +1457,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 39,
       duration: "за сутки",
@@ -1264,6 +1471,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 39,
       duration: "за сутки",
@@ -1276,6 +1485,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 48,
       duration: "за сутки",
@@ -1288,6 +1499,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 57,
       duration: "за сутки",
@@ -1300,6 +1513,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 51,
       duration: "за сутки",
@@ -1312,6 +1527,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 56,
       duration: "за сутки",
@@ -1324,6 +1541,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Московский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 54,
       duration: "за сутки",
@@ -1338,6 +1557,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Пролетарская",
     // neighborhood: "Ленинский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 53,
       duration: "за сутки",
@@ -1350,6 +1571,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 49,
       duration: "за сутки",
@@ -1362,6 +1585,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 46,
       duration: "за сутки",
@@ -1374,6 +1599,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 44,
       duration: "за сутки",
@@ -1386,6 +1613,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 48,
       duration: "за сутки",
@@ -1398,6 +1627,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 41,
       duration: "за сутки",
@@ -1410,6 +1641,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 34,
       duration: "за сутки",
@@ -1422,6 +1655,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 85,
       duration: "за сутки",
@@ -1434,6 +1669,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Ленинский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 92,
       duration: "за сутки",
@@ -1448,6 +1685,8 @@ export const dataBackend_2: TData[] = [
     // subway_station: "Молодёжная",
     // neighborhood: "Фрунзенский",
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 94,
       duration: "за сутки",
@@ -1460,6 +1699,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 40,
       duration: "за сутки",
@@ -1472,6 +1713,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -1484,6 +1727,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 48,
       duration: "за сутки",
@@ -1496,6 +1741,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 43,
       duration: "за сутки",
@@ -1508,6 +1755,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: true,
       price: 56,
       duration: "за сутки",
@@ -1520,6 +1769,8 @@ export const dataBackend_2: TData[] = [
       neighborhood: "Фрунзенский",
     },
     {
+      id: idFlat++,
+      key: `flat_${idFlat}`,
       gold: false,
       price: 105,
       duration: "за сутки",
@@ -1535,6 +1786,8 @@ export const dataBackend_2: TData[] = [
 /* grodno */
 
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 53,
     duration: "за сутки",
@@ -1548,6 +1801,8 @@ export const dataBackend_2: TData[] = [
   },
 
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 52,
     duration: "за сутки",
@@ -1560,6 +1815,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 98,
     duration: "за сутки",
@@ -1573,6 +1830,8 @@ export const dataBackend_2: TData[] = [
   },
 
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 88,
     duration: "за сутки",
@@ -1587,6 +1846,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Парк Челюскинцев",
   // neighborhood: "Первомайский",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 70,
     duration: "за сутки",
@@ -1599,6 +1860,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Первомайский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 44,
     duration: "за сутки",
@@ -1613,6 +1876,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Площадь Победы",
   // neighborhood: "Центральный",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 78,
     duration: "за сутки",
@@ -1625,6 +1890,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 45,
     duration: "за сутки",
@@ -1637,6 +1904,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 48,
     duration: "за сутки",
@@ -1649,6 +1918,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 97,
     duration: "за сутки",
@@ -1661,6 +1932,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 99,
     duration: "за сутки",
@@ -1675,6 +1948,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Октябрьская",
   // neighborhood: "Центральный",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 82,
     duration: "за сутки",
@@ -1687,6 +1962,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 68,
     duration: "за сутки",
@@ -1699,6 +1976,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 62,
     duration: "за сутки",
@@ -1711,6 +1990,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 64,
     duration: "за сутки",
@@ -1723,6 +2004,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 95,
     duration: "за сутки",
@@ -1735,6 +2018,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 100,
     duration: "за сутки",
@@ -1747,6 +2032,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 95,
     duration: "за сутки",
@@ -1761,6 +2048,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Немига",
   // neighborhood: "Центральный",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 50,
     duration: "за сутки",
@@ -1773,6 +2062,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 48,
     duration: "за сутки",
@@ -1785,6 +2076,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 50,
     duration: "за сутки",
@@ -1797,6 +2090,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 42,
     duration: "за сутки",
@@ -1809,6 +2104,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 43,
     duration: "за сутки",
@@ -1821,6 +2118,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 43,
     duration: "за сутки",
@@ -1833,6 +2132,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 92,
     duration: "за сутки",
@@ -1845,6 +2146,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 97,
     duration: "за сутки",
@@ -1857,6 +2160,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 101,
     duration: "за сутки",
@@ -1869,6 +2174,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 110,
     duration: "за сутки",
@@ -1883,6 +2190,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Купаловская",
   // neighborhood: "Центральный",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 45,
     duration: "за сутки",
@@ -1895,6 +2204,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 45,
     duration: "за сутки",
@@ -1907,6 +2218,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 45,
     duration: "за сутки",
@@ -1919,6 +2232,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 50,
     duration: "за сутки",
@@ -1931,6 +2246,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 55,
     duration: "за сутки",
@@ -1943,6 +2260,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 57,
     duration: "за сутки",
@@ -1955,6 +2274,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 69,
     duration: "за сутки",
@@ -1967,6 +2288,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 65,
     duration: "за сутки",
@@ -1979,6 +2302,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 99,
     duration: "за сутки",
@@ -1991,6 +2316,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Центральный",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 108,
     duration: "за сутки",
@@ -2005,6 +2332,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Грушевка",
   // neighborhood: "Московский",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 46,
     duration: "за сутки",
@@ -2017,6 +2346,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 39,
     duration: "за сутки",
@@ -2029,6 +2360,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 39,
     duration: "за сутки",
@@ -2041,6 +2374,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 48,
     duration: "за сутки",
@@ -2053,6 +2388,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 57,
     duration: "за сутки",
@@ -2065,6 +2402,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 51,
     duration: "за сутки",
@@ -2077,6 +2416,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 56,
     duration: "за сутки",
@@ -2089,6 +2430,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Московский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 54,
     duration: "за сутки",
@@ -2103,6 +2446,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Пролетарская",
   // neighborhood: "Ленинский",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 53,
     duration: "за сутки",
@@ -2115,6 +2460,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 49,
     duration: "за сутки",
@@ -2127,6 +2474,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 46,
     duration: "за сутки",
@@ -2139,6 +2488,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 44,
     duration: "за сутки",
@@ -2151,6 +2502,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 48,
     duration: "за сутки",
@@ -2163,6 +2516,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 41,
     duration: "за сутки",
@@ -2175,6 +2530,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 34,
     duration: "за сутки",
@@ -2187,6 +2544,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 85,
     duration: "за сутки",
@@ -2199,6 +2558,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Ленинский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 92,
     duration: "за сутки",
@@ -2213,6 +2574,8 @@ export const dataBackend_2: TData[] = [
   // subway_station: "Молодёжная",
   // neighborhood: "Фрунзенский",
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 94,
     duration: "за сутки",
@@ -2225,6 +2588,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 40,
     duration: "за сутки",
@@ -2237,6 +2602,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 43,
     duration: "за сутки",
@@ -2249,6 +2616,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 48,
     duration: "за сутки",
@@ -2261,6 +2630,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 43,
     duration: "за сутки",
@@ -2273,6 +2644,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: true,
     price: 56,
     duration: "за сутки",
@@ -2285,6 +2658,8 @@ export const dataBackend_2: TData[] = [
     neighborhood: "Фрунзенский",
   },
   {
+    id: idFlat++,
+    key: `flat_${idFlat}`,
     gold: false,
     price: 105,
     duration: "за сутки",

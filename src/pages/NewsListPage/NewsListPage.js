@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../../store/hook';
 import { updateAllNews, updateSearched, updateSearchedValue } from '../../store/newsSlice';
 
 import NewsCard from '../../components/NewsCard/NewsCard';
@@ -17,10 +17,15 @@ import cn from "./NewsListPage.module.scss";
 const NewsListPage = () => {
 
   // const smth = useSelector(state => state.smth.smth);
-  const allNews = useSelector(state => state.news.allNews);
-  const searchedNews = useSelector(state => state.news.searched);
-  const searchedValue = useSelector(state => state.news.searchedValue);
-  const dispatch = useDispatch();
+  // const allNews = useSelector(state => state.news.allNews);
+  // const searchedNews = useSelector(state => state.news.searched);
+
+  const allNews = useAppSelector(state => state.news.allNews);
+  const searchedNews = useAppSelector(state => state.news.searched);
+  const searchedValue = useAppSelector(state => state.news.searchedValue);
+  // const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
 
 
   useEffect(() => {

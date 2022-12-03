@@ -60,6 +60,7 @@ const CatalogPage = () => {
   const cardsWithDetails = flats.map(
     el => <CardWithDetails
       type_card='list'
+      key={el.key}
       gold={el.gold}
       price={el.price}
       duration={el.duration}

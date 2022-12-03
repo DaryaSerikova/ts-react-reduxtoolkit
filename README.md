@@ -18,7 +18,7 @@ Figma, Pixel Perfect
 
 `Plans Details 1`
 <ul>
-  <li>Redux + TypeScript</li>
+  <li>[ ] Redux + TypeScript</li>
   <li>[ ] Components:</li>
     <ul>
       <li>[ ] BreadCrumbs 0%</li>
@@ -30,7 +30,7 @@ Figma, Pixel Perfect
       <li>[ ] Common:</li>
         <ul>
           <li>[ ] Button</li>
-          <li>[ ] input</li>
+          <li>[ ] Input</li>
           <li>[ ] Select</li>
           <li>[ ] Tag</li>
           <li>[ ] PurpleBackground</li>

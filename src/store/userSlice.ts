@@ -1,12 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
+type TUser = {
+  access: string;
+}
+
+const initialState: TUser = {
+  access: '',
+}
+
 const userSlice = createSlice({
   name: 'user',
-  initialState: {
-    access: '',
-
-  },
+  initialState,
   reducers: {
     updateAccess(state, action) {
       state.access = action.payload;
