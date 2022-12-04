@@ -6,14 +6,15 @@ import { NewsInfo } from '../NewsCards/NewsCardsInfo';
 import cn from "./News.module.scss";
 
 
-type TOneNews = {
-  title: string;
-  date: string;
+type TOneNewsProps = {
   key: string;
   id: number;
+  title: string;
+  date: string;
+
 }
 
-const OneNews = ({ title, date, id, key }: TOneNews) => {
+const OneNews = ({ key, id, title, date  }: TOneNewsProps) => {
   return (
     <div className={cn.one_news}>
       <div className={cn.onenews_title}>

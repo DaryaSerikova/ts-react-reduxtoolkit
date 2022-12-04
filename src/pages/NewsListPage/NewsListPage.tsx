@@ -5,7 +5,7 @@ import { updateAllNews, updateSearched, updateSearchedValue } from '../../store/
 
 import NewsCard from '../../components/NewsCard/NewsCard';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import { NewsInfo } from '../../components/NewsCards/NewsCardsInfo';
+import { NewsInfo, TNewsCardInfo } from '../../components/NewsCards/NewsCardsInfo';
 
 import { ReactComponent as Search } from '../../assets/img/search.svg';
 import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
@@ -17,34 +17,29 @@ import cn from "./NewsListPage.module.scss";
 const NewsListPage = () => {
 
   // const smth = useSelector(state => state.smth.smth);
-  // const allNews = useSelector(state => state.news.allNews);
-  // const searchedNews = useSelector(state => state.news.searched);
-
   const allNews = useAppSelector(state => state.news.allNews);
   const searchedNews = useAppSelector(state => state.news.searched);
   const searchedValue = useAppSelector(state => state.news.searchedValue);
-  // const dispatch = useDispatch();
   const dispatch = useAppDispatch();
-
 
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(updateAllNews({ allNews: NewsInfo }));
+    dispatch(updateAllNews(NewsInfo));
   }, []);
 
-  const search = (e) => {
-    // console.log(e.target.value);
-    dispatch(updateSearchedValue({ searchedValue: e.target.value }));
+
+  const search = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(updateSearchedValue(e.target.value));
+
     if (e.target.value.trim()) {
       const searched = NewsInfo.filter((card) =>
         card.title.toLowerCase().includes(e.target.value.toLowerCase()))
-      // console.log('searched: ', searched)
-      dispatch(updateSearched({ searched }))
-    } else dispatch(updateSearched({ searched: [...allNews] }));
+      dispatch(updateSearched(searched))
+    } else dispatch(updateSearched([...allNews]));
   }
 
-  console.log(searchedNews)
+  console.log(searchedNews);
   let viewCards = searchedNews.length === 0 ? [...allNews] : [...searchedNews];
 
   const cards = viewCards?.reverse().map(
@@ -54,7 +49,7 @@ const NewsListPage = () => {
       date={item.date}
       id={item.id}
       key={item.key}
-    />)
+    />);
 
 
 

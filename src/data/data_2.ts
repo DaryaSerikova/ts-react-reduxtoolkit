@@ -1,7 +1,7 @@
 let idFlat = 0;
 
 
-export type TOneNews = {
+export type TFlatCard = {
   id?: number;
   key: string;
   gold: boolean;
@@ -18,7 +18,7 @@ export type TOneNews = {
 // cities: [ "Минск", "Витебск", "Гродно",  "Гомель", "Гомель", "Брест", "Могилев" ]
 
 
-export const dataBackend_2: TOneNews[] = [
+export const dataBackend_2: TFlatCard[] = [
   /* minsk  */
     // subway_station: "Каменная Горка",
     // neighborhood: "Фрунзенский",

@@ -7,9 +7,7 @@ const cardsWithDetailsSlice = createSlice({
     all: [],
     filter: []
   },
-  // reducers: {
-  //   addCard: (state, { payload }) => {}
-  // }
+
 })
 
 const smthSlice = createSlice({

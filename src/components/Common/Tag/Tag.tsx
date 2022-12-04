@@ -1,6 +1,7 @@
 import React from 'react';
-import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from '../../../store/hook';
 import { updateFilteredFlats } from "../../../store/flatsSlice";
 import cn from "./Tag.module.scss";
 import { 
@@ -14,17 +15,20 @@ import {
 
 
 
-//  type TTagProps = {
-//   value: string;
-//   text: string;
-//   style: string;
-//   typeTag: string;
-//  }
+ type TTagProps = {
+  value: string;
+  text: string;
+  style: string;
+  typeTag: string;
+ }
 
-export const Tag = ({ text, style, typeTag, value }) => {
-  const city = useSelector(state => state.filters.city);
-  const allFlats = useSelector(state => state.flats.all);
-  const dispatch = useDispatch();
+export const Tag = ({ text, style, typeTag, value }: TTagProps) => {
+  // const city = useSelector(state => state.filters.city);
+  // const allFlats = useSelector(state => state.flats.all);
+  // const dispatch = useDispatch();
+  const city = useAppSelector(state => state.filters.city);
+  const allFlats = useAppSelector(state => state.flats.all);
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
 

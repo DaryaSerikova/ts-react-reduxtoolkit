@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TOneNews } from "../data/data_2";
+import { TFlatCard } from "../data/data_2";
+import { TNewsCardInfo } from "../../src/components/NewsCards/NewsCardsInfo"
 
 type TNews = {
-  allNews: TOneNews[];
-  searched: TOneNews[];
+  allNews: TNewsCardInfo[];
+  searched: TNewsCardInfo[];
   searchedValue: string;
 }
 
@@ -13,25 +14,28 @@ const initialState: TNews = {
   searchedValue: ""
 }
 
-// type TAllNews = {
-//   allNews: 
-// }
 
 
 const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
-    updateAllNews(state, action: PayloadAction<TNews>) {
+    updateAllNews(state, action: PayloadAction<TNewsCardInfo[]>) {
       // const { allNews } = action.payload; 
       // state.allNews = allNews;
-      state.allNews = action.payload.allNews;
+      // state.allNews = action.payload.allNews;
+      state.allNews = action.payload;
+
     },
-    updateSearched(state, action: PayloadAction<TNews>) {
-      state.searched = action.payload.searched;
+    updateSearched(state, action: PayloadAction<TNewsCardInfo[]>) {
+      // state.searched = action.payload.searched;
+      state.searched = action.payload;
+
     },
-    updateSearchedValue(state, action: PayloadAction<TNews>) {
-      state.searchedValue = action.payload.searchedValue;
+    updateSearchedValue(state, action: PayloadAction<string>) {
+      // state.searchedValue = action.payload.searchedValue;
+      state.searchedValue = action.payload;
+
     },
 
   }
