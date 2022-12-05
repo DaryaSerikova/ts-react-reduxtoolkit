@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { useSelector,  useDispatch } from 'react-redux';
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
+// import { useSelector,  useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../../store/hook';
 import { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood, updateCity } from "../../store/filtersSlice";
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
 import { cityOptionsInfo, roomOptionsInfo, subwayOptionsInfo, neighborhoodOptionsInfo } from './FiltersInfo';
@@ -12,18 +13,32 @@ import { ReactComponent as SetupIcon } from "../../assets/img/main_setup.svg";
 import { ReactComponent as LocationIcon } from "../../assets/img/main_location.svg";
 import { ReactComponent as ArrowIcon } from "../../assets/img/main_arrow_right_1.svg";
 import { dataBackend_2 } from "../../data/data_2";
-
 import cn from "./Filters.module.scss";
 
 
 
-const Filters = ({ typeFilters }) => {
+export interface IFormValues {
+  "city": string;
+  "amount_rooms": string;
+  "price_from": string;
+  "price_to": string;
+}
+
+type FiltersProps = {
+  typeFilters: string;
+}
+
+const Filters = ({ typeFilters }: FiltersProps) => {
 
   let navigate = useNavigate();
-  const allFlats = useSelector(state => state.flats.all);
-  const filteredFlats = useSelector(state => state.flats.filtered);
-  const city = useSelector(state => state.filters.city)
-  const dispatch = useDispatch();
+  // const allFlats = useSelector(state => state.flats.all);
+  // const filteredFlats = useSelector(state => state.flats.filtered);
+  // const city = useSelector(state => state.filters.city)
+  // const dispatch = useDispatch();
+  const allFlats = useAppSelector(state => state.flats.all);
+  const filteredFlats = useAppSelector(state => state.flats.filtered);
+  const city = useAppSelector(state => state.filters.city)
+  const dispatch = useAppDispatch();
 
   const {
     register,
@@ -40,16 +55,24 @@ const Filters = ({ typeFilters }) => {
 
 
   const cityOptions = cityOptionsInfo.map(option =>
-    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
+    <option 
+    // id={option.id} 
+    key={option.key} value={option.value}>{option.label}</option>);
 
   const roomOptions = roomOptionsInfo.map(option =>
-    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
+    <option 
+    // id={option.id} 
+    key={option.key} value={option.value}>{option.label}</option>);
 
   const subwayOptions = subwayOptionsInfo.map(option =>
-    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
+    <option 
+    // id={option.id} 
+    key={option.key} value={option.value}>{option.label}</option>);
 
   const neighborhoodOptions = neighborhoodOptionsInfo.map(option =>
-    <option id={option.id} key={option.key} value={option.value}>{option.label}</option>);
+    <option 
+    // id={option.id} 
+    key={option.key} value={option.value}>{option.label}</option>);
 
   const onReset = () => {
     reset();
@@ -57,18 +80,18 @@ const Filters = ({ typeFilters }) => {
 
   // console.log('allFlats :', allFlats)
 
-  const onSubmit = (data) => {
+  const onSubmit: SubmitHandler<IFormValues> = (data) => {
     console.log('data:', data);
 
     if (data.amount_rooms !== '') dispatch(updateAmountRooms(data.amount_rooms));
     if (data.price_from !== '') dispatch(updatePriceFrom(data.price_from));
     if (data.price_to !== '') dispatch(updatePriceTo(data.price_to));
-    if (data.subway_station !== '') dispatch(updateSubwayStation(data.subway_station));
-    if (data.neighborhood !== '') dispatch(updateNeighborhood(data.neighborhood));
+    // if (data.subway_station !== '') dispatch(updateSubwayStation(data.subway_station));
+    // if (data.neighborhood !== '') dispatch(updateNeighborhood(data.neighborhood));
     console.log('data.city :', data.city)
 
 
-    const getDataCity = (typeFilters) => {
+    const getDataCity = (typeFilters: string) => {
       if (typeFilters === "catalog") {
         return city;
       } else {
@@ -110,7 +133,7 @@ const Filters = ({ typeFilters }) => {
               <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
               <select
                 className={`${cn.select}`}
-                name='city'
+                // name='city'
                 {...register('city')}
               >
                 {cityOptions}
@@ -121,7 +144,7 @@ const Filters = ({ typeFilters }) => {
               <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
               <select
                 className={`${cn.select}`}
-                name='amount_rooms'
+                // name='amount_rooms'
                 {...register('amount_rooms')}
               >
                 {roomOptions}

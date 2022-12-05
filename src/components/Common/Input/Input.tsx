@@ -3,15 +3,15 @@ import { useForm, UseFormRegister, Path } from "react-hook-form";
 import { ReactComponent as UserIcon } from "../../../assets/img/signin_user.svg";
 import { ReactComponent as EmailIcon } from "../../../assets/img/signin_mail.svg";
 import { ReactComponent as PasswordIcon } from "../../../assets/img/signin_password.svg";
+import { IFormValues } from '../../Filters/Filters';
 import cn from "./Input.module.scss";
 
-interface IFormValues {
-  "city": string;
-  "amount_rooms": string;
-  "price_from": string;
-  "price_to": string;
-
-}
+// interface IFormValues {
+//   "city": string;
+//   "amount_rooms": string;
+//   "price_from": string;
+//   "price_to": string;
+// }
 
 type TInput = {
   typeInput: string;
