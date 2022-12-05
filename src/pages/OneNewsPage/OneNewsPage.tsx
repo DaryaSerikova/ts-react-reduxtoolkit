@@ -48,7 +48,7 @@ const OneNewsPage = () => {
       <div className={`${cn.container_text} ${cn.content} ${cn.child_content}`}>
 
         <header >
-          <BreadCrumbs />
+          <BreadCrumbs typeBreadCrumbs="/onenews"/>
           <h1 className={cn.title}>
             {/* Линия Сталина: суровый отдых в усадьбах на сутки  */}
             {currentOneNews.title}

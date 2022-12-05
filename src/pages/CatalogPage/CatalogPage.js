@@ -80,7 +80,7 @@ const CatalogPage = () => {
         <div className={cn.child_content}>
           <div className={cn.container}>
             <div className={cn.wrapper_bread_crumbs}>
-              <BreadCrumbs></BreadCrumbs>
+              <BreadCrumbs typeBreadCrumbs="/catalog" />
             </div>
             <h1 className={cn.title}>Аренда квартир на сутки в {cityName}</h1>
             <div className={cn.recommendation}>Рекомендуем посмотреть</div>

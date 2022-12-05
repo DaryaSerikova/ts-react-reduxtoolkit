@@ -20,7 +20,6 @@ import {
   value: string;
   text: string;
   style?: string;
-  // typeTag: string | undefined;
   typeTag: "catalog" | "main";
  }
 

@@ -13,6 +13,10 @@
     @include typography(400, 14px, 100%);
     color: $grey;
   }
+
+  .no_active {
+    color: #4E64F9;
+  }
   
   .ellipse {
     margin: 0 7px 0;

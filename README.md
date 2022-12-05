@@ -11,7 +11,7 @@ Figma, Pixel Perfect
   <li>[x] SCSS</li>
   <li>[ ] Semantic Layout 6/8</li>
   <li>[ ] Adaptive Layout 50%</li>
-  <li>[ ] TypeScript: JS:TS 1:2</li>
+  <li>[ ] TypeScript: 77%</li>
   <li>[x] Redux Toolkit</li>
   <li>[ ] Firebase?</li>
 </ul>

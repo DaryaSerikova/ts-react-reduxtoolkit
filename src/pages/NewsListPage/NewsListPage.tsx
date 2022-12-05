@@ -61,7 +61,7 @@ const NewsListPage = () => {
 
         <div className={`${cn.child_content} ${cn.content}`}>
           <header className={cn.container}>
-            <BreadCrumbs />
+            <BreadCrumbs typeBreadCrumbs="/news"/>
             <div className={cn.title_wrapper}>
               <h1 className={cn.title}>Новости</h1>
               <input
