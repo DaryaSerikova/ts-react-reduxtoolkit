@@ -6,7 +6,7 @@ type TTagInfo = {
   key: string;
   value: string;
   text: string;
-  to: string;
+  // to: string;
 }
 
 export const MainPageTagInfo: TTagInfo[] = [
@@ -15,42 +15,42 @@ export const MainPageTagInfo: TTagInfo[] = [
     key: `main_${idTagMain}`,
     value: "minsk",
     text: "Минск",
-    to: ""
+    // to: ""
   },
   {
     id: idTagMain++,
     key: `main_${idTagMain}`,
     value: "vitebsk",
     text: "Витебск",
-    to: ""
+    // to: ""
   },
   {
     id: idTagMain++,
     key: `main_${idTagMain}`,
     value: "grodno",
     text: "Гродно",
-    to: ""
+    // to: ""
   },
   {
     id: idTagMain++,
     key: `main_${idTagMain}`,
     value: "gomel",
     text: "Гомель",
-    to: ""
+    // to: ""
   },
   {
     id: idTagMain++,
     key: `main_${idTagMain}`,
     value: "brest",
     text: "Брест",
-    to: ""
+    // to: ""
   },
   {
     id: idTagMain++,
     key: `main_${idTagMain}`,
     value: "mogilev",
     text: "Могилев",
-    to: ""
+    // to: ""
   },
   
 ]
@@ -61,105 +61,105 @@ export const CatalogPageTagInfo: TTagInfo[] = [
     key: `main_${idTagCatalog}`,
     value: "Недорогие",
     text: "Недорогие",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "1-комнатные",
     text: "1-комнатные",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "2-комнатные",
     text: "2-комнатные",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "3-комнатные",
     text: "3-комнатные",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "4-комнатные",
     text: "4-комнатные",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "5-комнатные",
     text: "5-комнатные",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Заводской р.",
     text: "Заводской р.",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Ленинский р. ",
     text: "Ленинский р. ",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Московский р. ",
     text: "Московский р. ",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Октябрьский р. ",
     text: "Октябрьский р. ",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Партизанский р.",
     text: "Партизанский р.",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Первомайский р.",
     text: "Первомайский р.",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Советский р.",
     text: "Советский р.",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Фрунзенский р.",
     text: "Фрунзенский р.",
-    to: ""
+    // to: ""
   },
   {
     id: idTagCatalog++,
     key: `main_${idTagCatalog}`,
     value: "Центральный р.",
     text: "Центральный р.",
-    to: ""
+    // to: ""
   },
 ]
 

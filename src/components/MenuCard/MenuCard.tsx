@@ -6,17 +6,17 @@ import cn from "./MenuCard.module.scss";
 
 
 
-// type TMenuCardProps = {
-//   key: string;
-//   id: number;
-//   subtitle: string;
-//   title: string;
-//   cities: string[] | "";
-//   img: string;
+type TMenuCardProps = {
+  key: string;
+  id: number;
+  subtitle: string;
+  title: string;
+  cities: string[] | "";
+  img: string;
 
-// }
+}
 
-const MenuCard = ({ subtitle, title, cities, id, img: src }) => {
+const MenuCard = ({ subtitle, title, cities, id, img: src }: TMenuCardProps) => {
 
   const tags = MainPageTagInfo.map(el => 
     <Tag 

@@ -18,7 +18,7 @@ Figma, Pixel Perfect
 
 `Plans Details 1`
 <ul>
-  <li>[ ] Redux + TypeScript</li>
+  <li>[ ] Redux + TypeScript 12%</li>
   <li>[ ] Components:</li>
     <ul>
       <li>[ ] BreadCrumbs 0%</li>
@@ -105,7 +105,7 @@ Figma, Pixel Perfect
       <li>[x] CatalogPage from 800px</li>
     </ul>
 
-  <li>[ ] TypeScript</li>:
+  <li>[ ] TypeScript:</li>
     <ul>
       <li>[ ] NewsListPage</li>
       <li>[x] OneNewsPage</li>

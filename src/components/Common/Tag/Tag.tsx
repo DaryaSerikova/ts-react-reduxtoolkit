@@ -16,13 +16,15 @@ import {
 
 
  type TTagProps = {
+  id: number;
   value: string;
   text: string;
-  style: string;
-  typeTag: string;
+  style?: string;
+  // typeTag: string | undefined;
+  typeTag: "catalog" | "main";
  }
 
-export const Tag = ({ text, style, typeTag, value }: TTagProps) => {
+export const Tag = ({ text, style, typeTag, value, id }: TTagProps) => {
   // const city = useSelector(state => state.filters.city);
   // const allFlats = useSelector(state => state.flats.all);
   // const dispatch = useDispatch();
@@ -50,7 +52,6 @@ export const Tag = ({ text, style, typeTag, value }: TTagProps) => {
   return (
     <div 
       className={`${cn.tag} ${style ? cn[`${style}`] : ''}`} 
-      typeTag={typeTag}
       onClick={handleClick}
       >
         {text}
