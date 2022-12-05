@@ -21,10 +21,10 @@ Figma, Pixel Perfect
   <li>[ ] Redux + TypeScript 12%</li>
   <li>[ ] Components:</li>
     <ul>
-      <li>[ ] BreadCrumbs 0%</li>
+      <li>[x] BreadCrumbs</li>
       <li>[ ] ModalSent</li>
       <li>[ ] Filters</li>
-      <li>[ ] Header 85%</li>
+      <li>[ ] Header 87%</li>
       <li>[ ] Footer 92%</li>
       <li>[ ] CardWithDetails</li>
       <li>[ ] Common:</li>
@@ -32,7 +32,7 @@ Figma, Pixel Perfect
           <li>[ ] Button</li>
           <li>[ ] Input</li>
           <li>[ ] Select</li>
-          <li>[ ] Tag</li>
+          <li>[x] Tag</li>
           <li>[ ] PurpleBackground</li>
         </ul>
     </ul>
@@ -107,7 +107,7 @@ Figma, Pixel Perfect
 
   <li>[ ] TypeScript:</li>
     <ul>
-      <li>[ ] NewsListPage</li>
+      <li>[x] NewsListPage</li>
       <li>[x] OneNewsPage</li>
       <li>[x] ContactPage</li>
       <li>[x] Error404Page</li>

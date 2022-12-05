@@ -8,7 +8,6 @@
 
 
 
-
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -70,9 +69,10 @@
 .input {
   @extend %input;
   background: #F8F8F8;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+  @include typography(500, 14px, 17px);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 17px;
 
   color: #686868;
   padding: 16px 16px 15px 36px !important;
