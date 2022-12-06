@@ -18,10 +18,14 @@ import cn from "./Filters.module.scss";
 
 
 export interface IFormValues {
-  "city": string;
-  "amount_rooms": string;
-  "price_from": string;
-  "price_to": string;
+  // "city": string;
+  // "amount_rooms": string;
+  // "price_from": string;
+  // "price_to": string;
+  city: string,
+  amount_rooms: string,
+  price_from: string,
+  price_to: string,
 }
 
 type FiltersProps = {
@@ -44,7 +48,7 @@ const Filters = ({ typeFilters }: FiltersProps) => {
     register,
     handleSubmit,
     reset,
-  } = useForm();
+  } = useForm<IFormValues>();
 
   useEffect(() => {
     // dispatch(updateAllFlats(dataBackend['minsk']));
@@ -55,24 +59,16 @@ const Filters = ({ typeFilters }: FiltersProps) => {
 
 
   const cityOptions = cityOptionsInfo.map(option =>
-    <option 
-    // id={option.id} 
-    key={option.key} value={option.value}>{option.label}</option>);
+    <option key={option.key} value={option.value}>{option.label}</option>);
 
   const roomOptions = roomOptionsInfo.map(option =>
-    <option 
-    // id={option.id} 
-    key={option.key} value={option.value}>{option.label}</option>);
+    <option key={option.key} value={option.value}>{option.label}</option>);
 
   const subwayOptions = subwayOptionsInfo.map(option =>
-    <option 
-    // id={option.id} 
-    key={option.key} value={option.value}>{option.label}</option>);
+    <option key={option.key} value={option.value}>{option.label}</option>);
 
   const neighborhoodOptions = neighborhoodOptionsInfo.map(option =>
-    <option 
-    // id={option.id} 
-    key={option.key} value={option.value}>{option.label}</option>);
+    <option key={option.key} value={option.value}>{option.label}</option>);
 
   const onReset = () => {
     reset();

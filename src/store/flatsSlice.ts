@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 
-type TFlat = {
-  type_card: string,
+export type TFlat = {
+  // type_card: string,
+  id?: number; /// data_2
   key: string,
   gold: boolean,
   price: number,

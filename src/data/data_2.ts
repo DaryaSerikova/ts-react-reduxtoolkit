@@ -1,8 +1,11 @@
+import { TFlat } from "../store/flatsSlice";
+
 let idFlat = 0;
 
 
 export type TFlatCard = {
-  id?: number;
+  // type_card?: string;////////
+  id?: number; // ? flatSlice TFlat
   key: string;
   gold: boolean;
   price: number;
