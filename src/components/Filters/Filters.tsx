@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
-// import { useSelector,  useDispatch } from 'react-redux';
 import { useAppSelector, useAppDispatch } from '../../store/hook';
 import { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood, updateCity } from "../../store/filtersSlice";
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
@@ -18,14 +17,11 @@ import cn from "./Filters.module.scss";
 
 
 export interface IFormValues {
-  // "city": string;
-  // "amount_rooms": string;
-  // "price_from": string;
-  // "price_to": string;
   city: string,
   amount_rooms: string,
   price_from: string,
   price_to: string,
+
 }
 
 type FiltersProps = {
@@ -35,10 +31,6 @@ type FiltersProps = {
 const Filters = ({ typeFilters }: FiltersProps) => {
 
   let navigate = useNavigate();
-  // const allFlats = useSelector(state => state.flats.all);
-  // const filteredFlats = useSelector(state => state.flats.filtered);
-  // const city = useSelector(state => state.filters.city)
-  // const dispatch = useDispatch();
   const allFlats = useAppSelector(state => state.flats.all);
   const filteredFlats = useAppSelector(state => state.flats.filtered);
   const city = useAppSelector(state => state.filters.city)
@@ -129,7 +121,6 @@ const Filters = ({ typeFilters }: FiltersProps) => {
               <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
               <select
                 className={`${cn.select}`}
-                // name='city'
                 {...register('city')}
               >
                 {cityOptions}
@@ -140,7 +131,6 @@ const Filters = ({ typeFilters }: FiltersProps) => {
               <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
               <select
                 className={`${cn.select}`}
-                // name='amount_rooms'
                 {...register('amount_rooms')}
               >
                 {roomOptions}
@@ -180,10 +170,7 @@ const Filters = ({ typeFilters }: FiltersProps) => {
                   <LocationIcon/>
                   </button>
                   <button type="submit" className={`${cn.btn} ${cn.yellow}`}>
-                    {/* <Link to="/catalog"> */}
-                      Показать
-                      <ArrowIcon />
-                    {/* </Link> */}
+                      Показать<ArrowIcon />
                   </button>
                 </>
                 : <></>}

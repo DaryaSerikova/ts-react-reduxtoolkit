@@ -11,7 +11,7 @@ Figma, Pixel Perfect
   <li>[x] SCSS</li>
   <li>[ ] Semantic Layout 6/8</li>
   <li>[ ] Adaptive Layout 50%</li>
-  <li>[ ] TypeScript: 77%</li>
+  <li>[ ] TypeScript: 80%</li>
   <li>[x] Redux Toolkit</li>
   <li>[ ] Firebase?</li>
 </ul>
@@ -21,9 +21,9 @@ Figma, Pixel Perfect
   <li>[ ] Redux + TypeScript 12%</li>
   <li>[ ] Components:</li>
     <ul>
-      <li>[x] BreadCrumbs</li>
+      <li>[ ] BreadCrumbs 65%</li>
       <li>[ ] ModalSent</li>
-      <li>[ ] Filters</li>
+      <li>[ ] Filters 60%</li>
       <li>[ ] Header 87%</li>
       <li>[ ] Footer 92%</li>
       <li>[ ] CardWithDetails</li>
@@ -42,7 +42,7 @@ Figma, Pixel Perfect
       <li>[ ] Button: underline</li>
       <li>[ ] NewsCard: to cut text in block, semantic: picture</li>
       <li>[ ] Pagination??? without backend???</li>
-      <li>[ ] Typescript</li>
+      <li>[x] Typescript</li>
       <li>[ ] Flexibility</li>
       <li>[ ] Check PixelPerfect</li>
     </ul>
