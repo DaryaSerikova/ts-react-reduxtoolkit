@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
-
+import { useAppSelector, useAppDispatch } from '../../store/hook';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import Filters from '../../components/Filters/Filters';
 import { Tag } from '../../components/Common/Tag/Tag';
@@ -17,13 +17,13 @@ import cn from "./CatalogPage.module.scss";
 
 const CatalogPage = () => {
 
-  const amountRooms = useSelector(state => state.filters.amountRooms);
-  const priceFrom = useSelector(state => state.filters.priceFrom);
-  const priceTo = useSelector(state => state.filters.priceTo);
-  const allFlats = useSelector(state => state.flats.all);
-  const filteredFlats = useSelector(state => state.flats.filtered);
-  const city = useSelector(state => state.filters.city)
-  const dispatch = useDispatch();
+  const amountRooms = useAppSelector(state => state.filters.amountRooms);
+  const priceFrom = useAppSelector(state => state.filters.priceFrom);
+  const priceTo = useAppSelector(state => state.filters.priceTo);
+  const allFlats = useAppSelector(state => state.flats.all);
+  const filteredFlats = useAppSelector(state => state.flats.filtered);
+  const city = useAppSelector(state => state.filters.city)
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +31,7 @@ const CatalogPage = () => {
     
   }, [])
 
-  const getCityName = (city) => {
+  const getCityName = (city: string) => {
     switch(city) {
       case "minsk": return "Минске";
       case "vitebsk": return "Витебске";
@@ -39,7 +39,7 @@ const CatalogPage = () => {
       case "gomel": return "Гомеле";
       case "brest": return "Бресте";
       case "mogilev": return "Могилеве";
-      default: return 'не выбран'
+      default: return '"город не выбран"'
     }
   }
 
@@ -56,7 +56,9 @@ const CatalogPage = () => {
 
   // const cardsWithDetails = data['minsk'].map(
   // const cardsWithDetails = allFlats.map(
-  const flats = filteredFlats === [] ?  allFlats : filteredFlats;
+  const flats = filteredFlats.length === 0 ?  allFlats : filteredFlats;
+  // const flats = filteredFlats === [] ?  allFlats : filteredFlats;
+
   const cardsWithDetails = flats.map(
     el => <CardWithDetails
       type_card='list'
@@ -92,7 +94,6 @@ const CatalogPage = () => {
 
         <Filters 
           typeFilters="catalog"
-
           />
 
 
