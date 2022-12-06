@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { ReactComponent as YellowDots } from '../../assets/img/onenews_yellow_dots.svg';
+import { ReactComponent as WhiteDots } from '../../assets/img/error_white_dots.svg';
 import { ReactComponent as HomeRun } from "../../assets/img/home_run_2.svg"
 import background from "../../assets/img/error404_background.png";
 import cn from "./Error404Page.module.scss";
@@ -42,8 +43,7 @@ const Error404Page = () => {
           <div className={`${cn.second_column} ${cn.parent}`}>
             <div className={cn.huge_error404}>404</div>
             <div className={`${cn.child_background_3}`}>
-              <YellowDots />
-              {/* WhiteDots !!!!!!!!!!!!!!!!!!!!!!! */}
+              <WhiteDots />
             </div>
           </div>
 

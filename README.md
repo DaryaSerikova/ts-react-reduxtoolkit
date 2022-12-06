@@ -25,7 +25,7 @@ Figma, Pixel Perfect
       <li>[ ] ModalSent</li>
       <li>[ ] Filters 60%</li>
       <li>[ ] Header 87%</li>
-      <li>[ ] Footer 92%</li>
+      <li>[ ] Footer 95%</li>
       <li>[ ] CardWithDetails</li>
       <li>[ ] Common:</li>
         <ul>
@@ -69,7 +69,7 @@ Figma, Pixel Perfect
   <li>[ ] Error404Page:</li>
       <ul>
         <li>[ ] button: underline </li>
-        <li>[ ] dots: yellow -> white </li>
+        <li>[x] dots: yellow -> white </li>
         <li>[ ] Flexibility</li>
         <li>[ ] Check PixelPerfect</li>
       </ul>
