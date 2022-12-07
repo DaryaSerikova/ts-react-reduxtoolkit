@@ -2,13 +2,17 @@
 @import "../../assets/scss/patterns";
 @import "../../assets/scss/variables";
 
+.gold_box {
+  background: linear-gradient(105.54deg, #FFD54F 33.53%, #FEC100 94.13%) !important;
+}
+
 
 .advertising_box {
   // max-width: 406px;
   min-width: 406px;
 
   background: #FFFEFE;
-  padding: 27px 0 55px;
+  padding: 27px 0 45px;
 
   box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
   border-radius: 10px;
@@ -33,18 +37,34 @@
         margin: -8px 0 0 -20px;
         // background: #FFFFFF;
         // box-shadow: 0px 11px 20px rgba(127, 155, 187, 0.16);
+        height: 125px;
       }
 
       .advertising_title {
-        margin-top: 31px;
+        margin-top: 28px;
         @include typography(700, 18px, 22px);
         color: $purple;
       }
 
     }
 
+    .advertising_wrapper_gold_title {
+      display: flex;
+      justify-content: center;
+
+      .advertising_gold_title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+
+        color: #333333;
+      }
+    }
+
     .advertising_text {
-      margin-top: -9px;
+      // margin-top: -9px;
       @include typography(400, 14px, 17px);
       color: $light-black;
     }

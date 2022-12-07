@@ -9,8 +9,10 @@ import { AdvertisingCardInfo } from '../../components/AdvertisingCard/Advertisin
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
+import { ReactComponent as LocationYellow } from "../../assets/img/main_location_yellow.svg";
 import background from "../../assets/img/main_background_1.png";
 import background3 from "../../assets/img/main_background_3.png";
+import apartmentImg from "../../assets/img/main_apartment_img.jpg";
 import cn from "./MainPage.module.scss";
 
 
@@ -137,8 +139,9 @@ const MainPage = () => {
               <h2 className={`${cn.search_title} ${cn.title}`}>Поиск квартир на карте</h2>
               <div className={cn.search_text}>Ищите квартиры на сутки в центре города, возле парка или в живописном районе</div>
               <button className={cn.search_btn}>
-                <div>icon</div>
-                <div>Поиск квартир на карте</div>
+                {/* <div>icon</div> */}
+                <LocationYellow />
+                Открыть карту
               </button>
             </div>
 
@@ -153,7 +156,9 @@ const MainPage = () => {
             <div className={cn.purple_subtitle}>ЧТО ТАКОЕ SDAEM.BY</div>
             <h2 className={`${cn.apartment_title} ${cn.title}`}>Квартира на сутки в Минске</h2>
 
-            <div className={cn.apartment_img}>img</div>
+            <div className={cn.apartment_img}>
+              <img src={apartmentImg} alt={apartmentImg} className={cn.class} />
+            </div>
             <div className={cn.apartment_text}>
               Нужна квартира на сутки в Минске?
               На веб-сайте sdaem.by вас ждет масса выгодных предложений. Каталог насчитывает более 500 квартир. Благодаря удобной навигации вы быстро найдете подходящий вариант.

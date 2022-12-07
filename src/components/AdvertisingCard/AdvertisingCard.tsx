@@ -5,9 +5,18 @@ import cn from "./AdvertisingCard.module.scss";
 import { Button } from '../Common/Button/Button';
 
 
+type TAdvCardCommonProps = {
+  // typeCard: string;
+  // id?: number | undefined;
+  id: number;
+  key?: string;
+  title: string;
+  text: string;
+}
 
 type TAdvCardProps = {
   typeCard: string;
+  // id: number | undefined;
   id: number;
   key: string;
   title: string;
@@ -15,24 +24,34 @@ type TAdvCardProps = {
 }
 
 
-const AdvertisingCard = ({ typeCard, title, text }: TAdvCardProps) => {
+const GoldCard = ({ title, text, id }: TAdvCardCommonProps) => {
+  return (
+    <>
+      <div className={cn.advertising_wrapper_gold_title}>
+        {/* <div className={cn.advertising_icon}>
+          <AdvertisingIcon1 className={cn.icon} />
+        </div> */}
+        <div className={cn.advertising_gold_title}>{title}</div>
+      </div>
 
-  const getIcon = (typeCard: string) => {
-    switch(typeCard) {
-      case "1":
-        return <AdvertisingIcon1 className={cn.icon} />
-      case "2":
-        return <AdvertisingIcon2 className={cn.icon} />
-      case "gold":
-        return <></>
-      default:
-        return <></>
-    }
-  }
+      <div className={cn.advertising_text}>{text}</div>
+      <div className={cn.advertising_btn}>
+        <Button 
+           style="gradient_purple"
+           text="Еще о тарифе Gold"
+           typeButton="right-icon"
+         />
+      </div>
+    </>
+  )
+};
 
-  const getBtn = (typeCard: string) => {
-    switch(typeCard) {
-      case "1": 
+
+const OrdinaryCard = ({ title, text, id }: TAdvCardCommonProps) => {
+
+  const getBtn = (id: number) => {
+    switch(id) {
+      case 0: 
         return <>
         <Button 
           style="yellow"
@@ -41,7 +60,7 @@ const AdvertisingCard = ({ typeCard, title, text }: TAdvCardProps) => {
         />
       </>
 
-      case "2":
+      case 1:
         return <>
         <Button 
           style="yellow"
@@ -49,38 +68,120 @@ const AdvertisingCard = ({ typeCard, title, text }: TAdvCardProps) => {
           typeButton="right-icon"
         />
       </>
-      case "gold":
-        return <>
-        <Button 
-          style="gradient_purple"
-          text="Еще о тарифе Gold"
-          typeButton="right-icon"
-        />
-        </>
+
       default:
         return <></>
     }
   }
 
-  const icon = getIcon(typeCard);
-  const btn = getBtn(typeCard);
+  const btn = getBtn(id);
 
 
   return (
-    <div className={cn.advertising_box}>
+    <>
+      <div className={cn.advertising_wrapper_title}>
+        <div className={cn.advertising_icon}>
+          <AdvertisingIcon1 className={cn.icon} />
+        </div>
+        <div className={cn.advertising_title}>{title}</div>
+      </div>
+
+      <div className={cn.advertising_text}>{text}</div>
+      <div className={cn.advertising_btn}>{btn}</div>
+    </>
+  )
+
+}
+
+
+const AdvertisingCard = ({ typeCard, id, title, text }: TAdvCardProps) => {
+
+  // const getIcon = (typeCard: string) => {
+  //   switch(typeCard) {
+  //     case "1":
+  //       return <AdvertisingIcon1 className={cn.icon} />
+  //     case "2":
+  //       return <AdvertisingIcon2 className={cn.icon} />
+  //     case "gold":
+  //       return <></>
+  //     default:
+  //       return <></>
+  //   }
+  // }
+
+  // const getBtn = (typeCard: string) => {
+  //   switch(typeCard) {
+  //     case "1": 
+  //       return <>
+  //       <Button 
+  //         style="yellow"
+  //         text="+  Разместить объявление"
+  //         typeButton="without-icon"
+  //       />
+  //     </>
+
+  //     case "2":
+  //       return <>
+  //       <Button 
+  //         style="yellow"
+  //         text="Узнать стоимость услуги"
+  //         typeButton="right-icon"
+  //       />
+  //     </>
+  //     case "gold":
+  //       return <>
+  //       <Button 
+  //         style="gradient_purple"
+  //         text="Еще о тарифе Gold"
+  //         typeButton="right-icon"
+  //       />
+  //       </>
+  //     default:
+  //       return <></>
+  //   }
+  // }
+
+  // const icon = getIcon(typeCard);
+  // const btn = getBtn(typeCard);
+
+
+  // return (
+  //   <div className={cn.advertising_box}>
+  //     <div className={cn.advertising_container}>
+  //       <div className={cn.wrapper_advertising}>
+  //         <div className={cn.advertising_wrapper_title}>
+  //             <div className={cn.advertising_icon}>
+  //               {icon}
+  //             </div>
+  //             <div className={cn.advertising_title}>{title}</div>
+  //           </div>
+
+  //           <div className={cn.advertising_text}>{text}</div>
+  //           <div className={cn.advertising_btn}>{btn}</div>
+  //       </div>
+
+  //     </div>
+  //   </div>
+  // )
+
+  let getAdvCard = (typeCard: string) => {
+    switch (typeCard) {
+      case "ordinary":
+        return <OrdinaryCard title={title} text={text} id={id}/>
+      case "gold":
+        return <GoldCard title={title} text={text} id={id}/>
+    }
+  }
+
+  let advCard = getAdvCard(typeCard);
+
+
+  return (
+    <div className={`${cn.advertising_box} ${typeCard === "gold" ? cn.gold_box : ''}`}>
       <div className={cn.advertising_container}>
         <div className={cn.wrapper_advertising}>
-          <div className={cn.advertising_wrapper_title}>
-              <div className={cn.advertising_icon}>
-                {icon}
-              </div>
-              <div className={cn.advertising_title}>{title}</div>
-            </div>
-
-            <div className={cn.advertising_text}>{text}</div>
-            <div className={cn.advertising_btn}>{btn}</div>
+          {advCard}
         </div>
-
       </div>
     </div>
   )

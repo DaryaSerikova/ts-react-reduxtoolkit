@@ -10,14 +10,14 @@ type TAdvCardInfo = {
 
 export const AdvertisingCardInfo: TAdvCardInfo[] = [
   {
-    typeCard: "1",
+    typeCard: "ordinary",
     id: advCardId++,
     key: `adv_card_${advCardId}`,
     title: "Начните привлекать клиентов бесплатно!",
     text: "Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно бесплатно создавать и публиковать объявления на сайте. ",
   },
   {
-    typeCard: "2",
+    typeCard: "ordinary",
     id: advCardId++,
     key: `adv_card_${advCardId}`,
     title: "Поднимайте объявления",
