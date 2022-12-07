@@ -21,15 +21,11 @@
   @media (min-width: 1170px) and (max-width: 1320px) {
     min-width: 360px;
   }
-
   
   @media (min-width: 1020px) and (max-width: 1170px) {
     min-width: 310px;
   }
 
-  @media (min-width: 870px) and (max-width: 1020px) {
-    min-width: 260px;
-  }
   
 
   .advertising_container {
@@ -40,12 +36,8 @@
       max-width: 315px;
     }
 
-    @media (min-width: 1020px) and (max-width: 1170px) {  
+    @media (min-width: 940px) and (max-width: 1170px) {  
       max-width: 250px;
-    }
-
-    @media (min-width: 870px) and (max-width: 1020px) {  
-      max-width: 200px;
     }
 
 
@@ -76,7 +68,6 @@
       
         @media (min-width: 940px) and (max-width: 1020px) {
           width: 125px;
-
         }
       }
 
@@ -93,18 +84,12 @@
       justify-content: center;
 
       .advertising_gold_title {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 36px;
-
+        @include typography(700, 30px, 36px);
         color: #333333;
       }
     }
 
     .advertising_text {
-      // margin-top: -9px;
       @include typography(400, 14px, 17px);
       color: $light-black;
     }

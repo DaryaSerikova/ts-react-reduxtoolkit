@@ -530,6 +530,10 @@
   .advertising_cards, .apartment_with_news {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 510px) {
+      flex-direction: column;
+    }
   }
 
   .advertising_cards {
@@ -542,6 +546,7 @@
 
     @media (max-width: 1320px) {
       justify-content: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -557,10 +562,22 @@
       flex-direction: column;
       max-width: 842.5px;
 
+      @media (min-width: 800px) and (max-width: 1020px) {
+        max-width: 500px;
+        margin-right: 5px;
+      }
+
+
       .apartment_title {
         margin-top: 15px;
         margin-bottom: 33px;
         color: $dark-grey;
+      }
+
+      .apartment_wrapper_img {
+        .apartment_img {
+          margin: -12px 0 0 -30px;
+        }
       }
 
       .apartment_text {

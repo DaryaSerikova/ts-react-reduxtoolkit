@@ -30,6 +30,10 @@
   // max-width: 406px;
   width: 406px;
 
+  @media (min-width: 800px) and (max-width: 940px) {
+    width: 340px;
+  }
+
   background: $white_1;
   
   box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
@@ -39,7 +43,16 @@
     margin: 0 auto;
     padding: 33px 22px 31px;;
     width: 360px;
-    // max-width: 360px;
+
+    @media (min-width: 800px) and (max-width: 940px) {
+      width: 290px;
+    }
+
+    @media (min-width: 710px) and (max-width: 800px) {
+      width: 220px;
+    }
+
+    //    width: 220px;
 
 
     .title_news {

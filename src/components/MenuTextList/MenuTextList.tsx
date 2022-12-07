@@ -1,10 +1,18 @@
 import React from 'react';
+import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
+import { useAppSelector, useAppDispatch } from '../../store/hook';
 import { MenuTextListInfo, PopularInfo } from './MenuTextListInfo';
 import cn from "./MenuTextList.module.scss";
 
 
 
 const MenuTextList = () => {
+
+  // const allFlats = useAppSelector(state => state.flats.all);
+  // const filteredFlats = useAppSelector(state => state.flats.filtered);
+  const amount = useAppSelector(state => state.flats.amount);
+
+  const dispatch = useAppDispatch();
 
   const res = MenuTextListInfo.map(el => {
     
@@ -14,7 +22,7 @@ const MenuTextList = () => {
     const items = arrItems.map(item => {
         return(
         <div className={cn.item}>
-          <div className={cn.item_name}>{item.name}</div>
+          <div className={cn.item_name}>Квартиры в {item.label}</div>
           <div className={cn.item_amount}>{item.amount}</div>
         </div>)
       }

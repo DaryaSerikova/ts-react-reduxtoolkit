@@ -17,14 +17,49 @@ export type TFlat = {
   neighborhood: string,
 }
 
+type TAmount = {
+  ["minsk"]: number,
+  ["vitebsk"]: number,
+  ["grodno"]: number,
+  ["gomel"]: number,
+  ["brest"]: number,
+  ["mogilev"]: number,
+}
+
+type TMenuTextList = { 
+  name: string; 
+  label: string; 
+  amount: number;
+}
+
+
 type TFlats = {
   all: TFlat[];
   filtered: TFlat[];
+  amount: TAmount;
+  menu_text_list: TMenuTextList[];
 }
 
 const initialState: TFlats = {
   all: [],
-  filtered: []
+  filtered: [],
+  amount: {
+    ["minsk"]: 0,
+    ["vitebsk"]: 0,
+    ["grodno"]: 0,
+    ["gomel"]: 0,
+    ["brest"]: 0,
+    ["mogilev"]: 0,
+  },
+
+  menu_text_list: [
+    { name: "minsk", label: "Минске", amount: 0 },
+    { name: "vitebsk", label: "Витебске", amount: 0 },
+    { name: "grodno", label: "Гродно", amount: 0 },
+    { name: "gomel", label: "Гомеле", amount: 0 },
+    { name: "brest", label: "Бресте", amount: 0 },
+    { name: "mogilev", label: "Могилеве", amount: 0 },
+  ]
 }
 
 const flatsSlice = createSlice({
@@ -37,9 +72,27 @@ const flatsSlice = createSlice({
     updateFilteredFlats(state, action: PayloadAction<TFlat[]>) {
       state.filtered = action.payload;
     },
+    updateAmountFlatsMinsk(state, action: PayloadAction<number>) {
+      state.amount["minsk"] = action.payload;
+    },
+    updateAmountFlatsVitebsk(state, action: PayloadAction<number>) {
+      state.amount["vitebsk"] = action.payload;
+    },
+    updateAmountFlatsGrodno(state, action: PayloadAction<number>) {
+      state.amount["grodno"] = action.payload;
+    },
+    updateAmountFlatsGomel(state, action: PayloadAction<number>) {
+      state.amount["gomel"] = action.payload;
+    },
+    updateAmountFlatsBrest(state, action: PayloadAction<number>) {
+      state.amount["brest"] = action.payload;
+    },
+    updateAmountFlatsMogilev(state, action: PayloadAction<number>) {
+      state.amount["mogilev"] = action.payload;
+    },
   }
 })
 
-export const { updateAllFlats, updateFilteredFlats } = flatsSlice.actions;
+export const { updateAllFlats, updateFilteredFlats, updateAmountFlatsMinsk } = flatsSlice.actions;
 
 export default flatsSlice.reducer;

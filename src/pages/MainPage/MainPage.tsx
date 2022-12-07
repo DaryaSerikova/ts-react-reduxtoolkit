@@ -86,7 +86,7 @@ const MainPage = () => {
 
 
       <article>
-        {/* <section className={`${cn.parent}`}>
+        <section className={`${cn.parent}`}>
           <div className={`${cn.child_background} ${cn.purple_background2}`}></div>
           <div className={`${cn.child_content} ${cn.container}`}>
             <div className={cn.rent_titles_with_selects}>
@@ -128,7 +128,7 @@ const MainPage = () => {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         <section className={`${cn.parent}`}>
           <div className={`${cn.child_background} ${cn.purple_background3}`}>
@@ -156,8 +156,8 @@ const MainPage = () => {
             <div className={cn.purple_subtitle}>ЧТО ТАКОЕ SDAEM.BY</div>
             <h2 className={`${cn.apartment_title} ${cn.title}`}>Квартира на сутки в Минске</h2>
 
-            <div className={cn.apartment_img}>
-              <img src={apartmentImg} alt={apartmentImg} className={cn.class} />
+            <div className={cn.apartment_wrapper_img}>
+              <img src={apartmentImg} alt={apartmentImg} className={cn.apartment_img} />
             </div>
             <div className={cn.apartment_text}>
               Нужна квартира на сутки в Минске?
