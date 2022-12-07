@@ -39,7 +39,7 @@ Figma, Pixel Perfect
   <li>[ ] NewsListPage:</li>
     <ul>
       <li>[ ] Input (adaptability, search icon)</li>
-      <li>[ ] Button: underline</li>
+      <li>[x] Button: underline</li>
       <li>[ ] NewsCard: to cut text in block, semantic: picture</li>
       <li>[ ] Pagination??? without backend???</li>
       <li>[x] Typescript</li>

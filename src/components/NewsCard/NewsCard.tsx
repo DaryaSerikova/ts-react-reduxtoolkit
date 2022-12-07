@@ -30,7 +30,7 @@ const NewsCard: React.FC<TNewsCardProps> = ({title, description, date, id}) => {
       
         <footer className={cn.card_footer}>
           <div className={cn.date}>{date}</div>
-          <Link to={`/news/${id}`}>
+          <Link className={cn.btn_link} to={`/news/${id}`}>
             <button className={cn.btn}>Читать</button>
           </Link>
         </footer>

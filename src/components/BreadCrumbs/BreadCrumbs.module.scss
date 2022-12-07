@@ -12,6 +12,7 @@
     align-items: center;
     @include typography(400, 14px, 100%);
     color: $grey;
+    cursor: pointer;
   }
 
   .no_active {

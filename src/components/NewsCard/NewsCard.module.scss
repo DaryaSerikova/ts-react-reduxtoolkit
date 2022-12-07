@@ -77,6 +77,10 @@
       color: $light-grey;
     }
 
+    .btn_link {
+      text-decoration: none;
+    }
+
     .btn {
       display: flex;
       flex-direction: row;
@@ -89,6 +93,8 @@
       border-radius: 17px;
       @include typography(700, 14px, 17px);
       color: $purple;
+      cursor: pointer;
+
     }
   }
 }

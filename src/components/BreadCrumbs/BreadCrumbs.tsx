@@ -13,6 +13,9 @@ type TPartOfBreadCrumbs = {
 
 type TBreadCrumbs = {
   typeBreadCrumbs: "/news" | "/onenews" | "/catalog";
+  // city?: "minsk" | "vitebsk" | "grodno" | "gomel" | "brest" | "mogilev" | undefined;
+  city?: string;
+
 }
 
 const PartOfBreadCrumbs = ({text, noActive}: TPartOfBreadCrumbs) => {
@@ -23,7 +26,7 @@ const PartOfBreadCrumbs = ({text, noActive}: TPartOfBreadCrumbs) => {
 }
 
 
-export const BreadCrumbs = ({ typeBreadCrumbs }: TBreadCrumbs) => {
+export const BreadCrumbs = ({ typeBreadCrumbs, city }: TBreadCrumbs) => {
 
   // const location = useLocation();
   // const path = location.pathname;
@@ -35,7 +38,7 @@ export const BreadCrumbs = ({ typeBreadCrumbs }: TBreadCrumbs) => {
       <HomeRun />
       {(typeBreadCrumbs === "/onenews" || typeBreadCrumbs === "/news") ? <PartOfBreadCrumbs text="Новости" noActive={typeBreadCrumbs === "/onenews" ? true : false}/> : <></>}
       {typeBreadCrumbs !== "/onenews" ? <></> : <PartOfBreadCrumbs text="Линия Сталина: суровый отдых в усадьбах на сутки" noActive={false}/>}
-      {typeBreadCrumbs !== "/catalog" ? <></> : <PartOfBreadCrumbs text="Квартиры в Минске" noActive={false} />}
+      {typeBreadCrumbs !== "/catalog" ? <></> : <PartOfBreadCrumbs text={`Квартиры в ${city}`} noActive={false} />}
 
     </div>
   )

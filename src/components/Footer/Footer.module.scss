@@ -99,6 +99,7 @@
     margin-bottom: 8px;
     @include typography(400, 14px, 17px);
     color: $light-grey;
+    cursor: pointer;
   
     &:last-child {
       margin-bottom: 0px;

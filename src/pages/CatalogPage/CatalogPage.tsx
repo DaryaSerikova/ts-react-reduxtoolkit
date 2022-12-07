@@ -31,7 +31,7 @@ const CatalogPage = () => {
     
   }, [])
 
-  const getCityName = (city: string) => {
+  const getCityNameRu = (city: string) => {
     switch(city) {
       case "minsk": return "Минске";
       case "vitebsk": return "Витебске";
@@ -43,7 +43,20 @@ const CatalogPage = () => {
     }
   }
 
-  let cityName = getCityName(city);
+  const getAmountRoomsRu = (city: string) => {
+    switch(city) {
+      case "1": return "1-комнатных";
+      case "2": return "2-комнатных";
+      case "3": return "3-комнатных";
+      case "4": return "4-комнатных";
+      case "5": return "5-комнатных";
+      default: return ""
+    }
+  }
+
+  let cityName = getCityNameRu(city);
+  let amountRoomsRu = getAmountRoomsRu(amountRooms);
+
 
   const tags = CatalogPageTagInfo.map(el => 
     <Tag 
@@ -56,10 +69,10 @@ const CatalogPage = () => {
 
   // const cardsWithDetails = data['minsk'].map(
   // const cardsWithDetails = allFlats.map(
-  const flats = filteredFlats.length === 0 ?  allFlats : filteredFlats;
-  // const flats = filteredFlats === [] ?  allFlats : filteredFlats;
+  // const flats = filteredFlats.length === 0 ?  allFlats : filteredFlats;
 
-  const cardsWithDetails = flats.map(
+  // const cardsWithDetails = flats.map(
+  const cardsWithDetails = filteredFlats.map(
     el => <CardWithDetails
       type_card='list'
       key={el.key}
@@ -82,9 +95,11 @@ const CatalogPage = () => {
         <div className={cn.child_content}>
           <div className={cn.container}>
             <div className={cn.wrapper_bread_crumbs}>
-              <BreadCrumbs typeBreadCrumbs="/catalog" />
+              <BreadCrumbs typeBreadCrumbs="/catalog" city={cityName} />
             </div>
-            <h1 className={cn.title}>Аренда квартир на сутки в {cityName}</h1>
+            <h1 className={cn.title}>
+              Аренда {city === "" ? "" : amountRoomsRu} квартир на сутки в {cityName}
+            </h1>
             <div className={cn.recommendation}>Рекомендуем посмотреть</div>
             <div className={cn.tags}>
               {tags}
@@ -102,7 +117,6 @@ const CatalogPage = () => {
       <article>
         <div className={cn.container}>
           <div className={cn.results}>Найдено {filteredFlats.length} результата</div>
-
           <div className={cn.cards}>
             {cardsWithDetails}
           </div>
