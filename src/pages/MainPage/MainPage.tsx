@@ -53,7 +53,7 @@ const MainPage = () => {
     <main>
       <div className={`${cn.container} ${cn.parent}`}>
         <div className={`${cn.child_background} ${cn.purple_background} ${cn.semicircular_rectangle}`}></div>
-        <div className={`${cn.child_background} `}>
+        <div className={`${cn.child_background} ${cn.semicircular_rectangle} ${cn.wrapper_white_bg}`}>
           <img className={cn.white_background} src={background} alt={"white-background"} />
         </div>
       </div>
@@ -86,7 +86,7 @@ const MainPage = () => {
 
 
       <article>
-        <section className={`${cn.parent}`}>
+        {/* <section className={`${cn.parent}`}>
           <div className={`${cn.child_background} ${cn.purple_background2}`}></div>
           <div className={`${cn.child_content} ${cn.container}`}>
             <div className={cn.rent_titles_with_selects}>
@@ -128,7 +128,7 @@ const MainPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className={`${cn.parent}`}>
           <div className={`${cn.child_background} ${cn.purple_background3}`}>

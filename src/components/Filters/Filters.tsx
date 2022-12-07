@@ -115,77 +115,78 @@ const Filters = ({ typeFilters }: FiltersProps) => {
 
         <form className={cn.filters} onSubmit={handleSubmit(onSubmit)}>
 
-          <div className={cn.base_filters}>
+          <div className={cn.base_filters_with_buttons}>
+            <div className={cn.base_filters}>
+              {typeFilters === "main" ? <div className={`${cn.filter_main}`}>
+                <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
+                <select
+                  className={`${cn.select}`}
+                  {...register('city')}
+                >
+                  {cityOptions}
+                </select>
+              </div> : <></>}
 
-          {typeFilters === "main" ? <div className={`${cn.filter_main}`}>
-              <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
-              <select
-                className={`${cn.select}`}
-                {...register('city')}
-              >
-                {cityOptions}
-              </select>
-            </div> : <></>}
+              <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main}`}>
+                <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
+                <select
+                  className={`${cn.select}`}
+                  {...register('amount_rooms')}
+                >
+                  {roomOptions}
+                </select>
+              </div>
 
-            <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main}`}>
-              <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
-              <select
-                className={`${cn.select}`}
-                {...register('amount_rooms')}
-              >
-                {roomOptions}
-              </select>
-            </div>
-
-            <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main} ${cn.inputs}`}>
-              <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Цена за сутки (BYN)</div>
-              <div className={`${cn.filter} ${cn.wrapper_price}`}>
-                <WrapperInput style="w80h37" typeIcon={"От"}>
+              <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main} ${cn.inputs}`}>
+                <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Цена за сутки (BYN)</div>
+                <div className={`${cn.filter} ${cn.wrapper_price}`}>
+                  <WrapperInput style="w80h37" typeIcon={"От"}>
+                      <input
+                        className={`${cn.input} ${cn.child_input}`}
+                        {...register('price_from')}
+                      />
+                  </WrapperInput>
+                  <span className={cn.dash}>-</span>
+                  <WrapperInput style="w80h37" typeIcon={"До"}>
                     <input
                       className={`${cn.input} ${cn.child_input}`}
-                      {...register('price_from')}
+                      {...register('price_to')}
                     />
-                </WrapperInput>
-                <span className={cn.dash}>-</span>
-                <WrapperInput style="w80h37" typeIcon={"До"}>
-                  <input
-                    className={`${cn.input} ${cn.child_input}`}
-                    {...register('price_to')}
-                  />
-                </WrapperInput>
+                  </WrapperInput>
+                </div>
               </div>
-            </div>
 
-            <div className={`${cn.filter_catalog} ${cn.btn_more_details}`}>
-              <div className={`${cn.filter_name} ${cn.filter_name_moredetails}`}>Больше опций </div>
-              <div className={cn.filter}>
-                <button type="button" className={`${cn.btn_setup} ${cn.btn}`}><SetupIcon /></button>
+              <div className={`${cn.filter_catalog} ${cn.btn_more_details}`}>
+                <div className={`${cn.filter_name} ${cn.filter_name_moredetails}`}>Больше опций </div>
+                <div className={cn.filter}>
+                  <button type="button" className={`${cn.btn_setup} ${cn.btn}`}><SetupIcon /></button>
+                </div>
               </div>
             </div>
 
             <div className={`${cn.filter_catalog} ${cn.wrapper_buttons}`}>
-              {typeFilters === "main" ?
+                {typeFilters === "main" ?
+                  <>
+                    <button type="button" className={`${cn.btn} ${cn.white}`}>На карте
+                    <LocationIcon/>
+                    </button>
+                    <button type="submit" className={`${cn.btn} ${cn.yellow}`}>
+                        Показать<ArrowIcon />
+                    </button>
+                  </>
+                  : <></>}
+
+                {typeFilters === "catalog" ?
                 <>
-                  <button type="button" className={`${cn.btn} ${cn.white}`}>На карте
-                  <LocationIcon/>
-                  </button>
-                  <button type="submit" className={`${cn.btn} ${cn.yellow}`}>
-                      Показать<ArrowIcon />
-                  </button>
+                  <button type="reset" onClick={onReset} className={`${cn.btn} ${cn.light}`}>Очистить</button>
+                  <button type="submit" className={`${cn.btn} ${cn.purple}`}>Показать объекты</button>
                 </>
-                : <></>}
+                  : <></>}
 
-              {typeFilters === "catalog" ?
-              <>
-                <button type="reset" onClick={onReset} className={`${cn.btn} ${cn.light}`}>Очистить</button>
-                <button type="submit" className={`${cn.btn} ${cn.purple}`}>Показать объекты</button>
-              </>
-                : <></>}
-
-              {/* <Button text='Очистить' style="light" typeButton="without-icon" /> */}
-              {/* <Button text='Показать объекты' style="purple" typeButton="right-icon"
-                // type="submit" /> */}
-            </div>
+                {/* <Button text='Очистить' style="light" typeButton="without-icon" /> */}
+                {/* <Button text='Показать объекты' style="purple" typeButton="right-icon"
+                  // type="submit" /> */}
+              </div>
           </div>
 
           {typeFilters === "catalog" ? <div className={cn.more_details}>

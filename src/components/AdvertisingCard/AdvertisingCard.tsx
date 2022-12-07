@@ -6,8 +6,6 @@ import { Button } from '../Common/Button/Button';
 
 
 type TAdvCardCommonProps = {
-  // typeCard: string;
-  // id?: number | undefined;
   id: number;
   key?: string;
   title: string;
@@ -16,7 +14,6 @@ type TAdvCardCommonProps = {
 
 type TAdvCardProps = {
   typeCard: string;
-  // id: number | undefined;
   id: number;
   key: string;
   title: string;
@@ -28,9 +25,6 @@ const GoldCard = ({ title, text, id }: TAdvCardCommonProps) => {
   return (
     <>
       <div className={cn.advertising_wrapper_gold_title}>
-        {/* <div className={cn.advertising_icon}>
-          <AdvertisingIcon1 className={cn.icon} />
-        </div> */}
         <div className={cn.advertising_gold_title}>{title}</div>
       </div>
 
@@ -48,6 +42,17 @@ const GoldCard = ({ title, text, id }: TAdvCardCommonProps) => {
 
 
 const OrdinaryCard = ({ title, text, id }: TAdvCardCommonProps) => {
+
+    const getIcon = (id: number) => {
+    switch(id) {
+      case 0:
+        return <AdvertisingIcon1 className={cn.icon} />
+      case 1:
+        return <AdvertisingIcon2 className={cn.icon} />
+      default:
+        return <></>
+    }
+  }
 
   const getBtn = (id: number) => {
     switch(id) {
@@ -74,6 +79,7 @@ const OrdinaryCard = ({ title, text, id }: TAdvCardCommonProps) => {
     }
   }
 
+  const icon = getIcon(id);
   const btn = getBtn(id);
 
 
@@ -81,7 +87,7 @@ const OrdinaryCard = ({ title, text, id }: TAdvCardCommonProps) => {
     <>
       <div className={cn.advertising_wrapper_title}>
         <div className={cn.advertising_icon}>
-          <AdvertisingIcon1 className={cn.icon} />
+          {icon}
         </div>
         <div className={cn.advertising_title}>{title}</div>
       </div>

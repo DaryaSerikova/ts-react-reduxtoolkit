@@ -40,8 +40,35 @@
     width: 780px;
   }
 
-  @media (min-width: 720px) and (max-width: 800px) {
-    width: 735px;
+  @media (min-width: 710px) and (max-width: 800px) {
+    width: 695px;
+  }
+
+  @media (min-width: 660px) and (max-width: 710px) {
+    width: 645px;
+  }
+
+  @media (min-width: 600px) and (max-width: 660px) {
+    width: 580px;
+  }
+
+  @media (min-width: 550px) and (max-width: 600px) {
+    width: 530px;
+  }
+  @media (min-width: 500px) and (max-width: 550px) {
+    width: 480px;
+  }
+
+  @media (min-width: 450px) and (max-width: 500px) {
+    width: 430px;
+  }
+
+  @media (min-width: 400px) and (max-width: 450px) {
+    width: 390px;
+  }
+
+  @media (min-width: 350px) and (max-width: 400px) {
+    width: 330px;
   }
 }
 

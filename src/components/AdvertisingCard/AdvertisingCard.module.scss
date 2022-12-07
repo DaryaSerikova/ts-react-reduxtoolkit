@@ -13,13 +13,40 @@
 
   background: #FFFEFE;
   padding: 27px 0 45px;
+  @include padding_media(22px, 0, 40px);
 
   box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
   border-radius: 10px;
 
+  @media (min-width: 1170px) and (max-width: 1320px) {
+    min-width: 360px;
+  }
+
+  
+  @media (min-width: 1020px) and (max-width: 1170px) {
+    min-width: 310px;
+  }
+
+  @media (min-width: 870px) and (max-width: 1020px) {
+    min-width: 260px;
+  }
+  
+
   .advertising_container {
     margin: 0px auto;
     max-width: 330px;
+
+    @media (min-width: 1170px) and (max-width: 1320px) {
+      max-width: 315px;
+    }
+
+    @media (min-width: 1020px) and (max-width: 1170px) {  
+      max-width: 250px;
+    }
+
+    @media (min-width: 870px) and (max-width: 1020px) {  
+      max-width: 200px;
+    }
 
 
 
@@ -38,6 +65,19 @@
         // background: #FFFFFF;
         // box-shadow: 0px 11px 20px rgba(127, 155, 187, 0.16);
         height: 125px;
+
+        @media (min-width: 1170px) and (max-width: 1320px) {
+          width: 125px;
+        }
+
+        @media (min-width: 1020px) and (max-width: 1170px) {
+          width: 125px;
+        }
+      
+        @media (min-width: 940px) and (max-width: 1020px) {
+          width: 125px;
+
+        }
       }
 
       .advertising_title {

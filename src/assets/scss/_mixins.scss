@@ -1,3 +1,15 @@
+// @media (min-width: 760px) and (max-width: 800px) { }
+
+// @media (min-width: 710px) and (max-width: 760px) { }
+
+// @media (min-width: 660px) and (max-width: 710px) { }
+       
+// @media (min-width: 610px) and (max-width: 660px) { }
+
+// @media (min-width: 560px) and (max-width: 610px) { }
+
+// @media (min-width: 510px) and (max-width: 560px) { }
+
 @mixin card($w, $h) {
   max-width: $w;
   width: $w;
@@ -121,6 +133,51 @@
   @media (min-width: 640px) and (max-width: 710px) {
     margin-top: $mt*0.65;
   }
+
+  @media (min-width: 570px) and (max-width: 640px) {
+    margin-top: $mt*0.6;
+  }
+
+  @media (min-width: 500px) and (max-width: 570px) {
+    margin-top: $mt*0.55;
+  }
+}
+
+@mixin pt_media($pt) {
+  @media (min-width: 1170px) and (max-width: 1320px) {
+    padding-top: $pt*0.95;
+  }
+  @media (min-width: 1020px) and (max-width: 1170px) {
+    padding-top: $pt*0.9;
+  }
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    padding-top: $pt*0.85;
+  }
+
+  @media (min-width: 860px) and (max-width: 940px) {
+    padding-top: $pt*0.8;
+  }
+
+  @media (min-width: 780px) and (max-width: 860px) {
+    padding-top: $pt*0.75;
+  }
+
+  @media (min-width: 710px) and (max-width: 780px) {
+    padding-top: $pt*0.7;
+  }
+
+  @media (min-width: 640px) and (max-width: 710px) {
+    padding-top: $pt*0.65;
+  }
+
+  @media (min-width: 570px) and (max-width: 640px) {
+    padding-top: $pt*0.6;
+  }
+
+  @media (min-width: 500px) and (max-width: 570px) {
+    padding-top: $pt*0.55;
+  }
 }
 
 @mixin gap_media($g) {
@@ -151,6 +208,7 @@
     gap: $g*0.2;
   }
 }
+
 
 @mixin padding_media($pt, $plr, $pb) {
   @media (min-width: 1170px) and (max-width: 1320px) {
