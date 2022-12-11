@@ -53,12 +53,12 @@ const initialState: TFlats = {
   },
 
   menu_text_list: [
-    { name: "minsk", label: "Минске", amount: 0 },
-    { name: "vitebsk", label: "Витебске", amount: 0 },
-    { name: "grodno", label: "Гродно", amount: 0 },
-    { name: "gomel", label: "Гомеле", amount: 0 },
-    { name: "brest", label: "Бресте", amount: 0 },
-    { name: "mogilev", label: "Могилеве", amount: 0 },
+    { name: "minsk", label: "Минске", amount: 1 },
+    { name: "vitebsk", label: "Витебске", amount: 2 },
+    { name: "grodno", label: "Гродно", amount: 3 },
+    { name: "gomel", label: "Гомеле", amount: 4 },
+    { name: "brest", label: "Бресте", amount: 5 },
+    { name: "mogilev", label: "Могилеве", amount: 6 },
   ]
 }
 

@@ -11,6 +11,8 @@ const MenuTextList = () => {
   // const allFlats = useAppSelector(state => state.flats.all);
   // const filteredFlats = useAppSelector(state => state.flats.filtered);
   const amount = useAppSelector(state => state.flats.amount);
+  // const amount = useAppSelector(state => state.flats.amount);
+
 
   const dispatch = useAppDispatch();
 
@@ -22,8 +24,10 @@ const MenuTextList = () => {
     const items = arrItems.map(item => {
         return(
         <div className={cn.item}>
+          {/* <div className={cn.item_name}>Квартиры в {item.label}</div>
+          <div className={cn.item_amount}>{item.amount}</div> */}
           <div className={cn.item_name}>Квартиры в {item.label}</div>
-          <div className={cn.item_amount}>{item.amount}</div>
+          <div className={cn.item_amount}>{amount["minsk"]}</div>
         </div>)
       }
     )

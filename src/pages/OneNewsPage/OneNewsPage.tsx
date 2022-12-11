@@ -19,9 +19,11 @@ import cn from "./OneNewsPage.module.scss";
 
 const OneNewsPage = () => {
   const navigate = useNavigate();
-  let { newsIdUndefined } = useParams<{newsIdUndefined?: string | undefined }>();
-  let newsId = (newsIdUndefined === undefined) ? '999999999999' : newsIdUndefined;
-  const currentOneNews = NewsInfo.filter((el) => el.id === +newsId)[0];
+  let { newsId } = useParams<{newsId: string }>();
+
+  // let { newsIdUndefined } = useParams<{newsIdUndefined?: string | undefined }>();
+  // let newsId = (newsIdUndefined === undefined) ? '999999999999' : newsIdUndefined;
+  const currentOneNews = NewsInfo.filter((el) => `${el.id}` === newsId)[0];
   if (currentOneNews === undefined) navigate('/error');
   
 
@@ -44,6 +46,7 @@ const OneNewsPage = () => {
       <div className={cn.child_background_1}>
         <PurpleRectangle1 />
       </div>
+      <div dangerouslySetInnerHTML={{__html: '<p>First</p> &middot; Second'}}/>
 
       <div className={`${cn.container_text} ${cn.content} ${cn.child_content}`}>
 

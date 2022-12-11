@@ -6,6 +6,8 @@ export type TNewsCardInfo = {
   id: number;
   title: string;
   description: string;
+
+  // description: string | Element;
   description2?: string; ///?????????????????????????
   date: string;
 }
@@ -16,6 +18,9 @@ export const ReadMoreInfo: TNewsCardInfo[] = [
     key: `news_cards_0_${cardInfoId_2++}`,
     id: cardInfoId_2,
     title: "Линия Сталина: суровый отдых в усадьбах на сутки",
+    // description: <>
+    // <p>Чем заняться в выходные?</p> 
+    //  </>,
     description: "Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...",
     date: "14 Января 2008",
   },
