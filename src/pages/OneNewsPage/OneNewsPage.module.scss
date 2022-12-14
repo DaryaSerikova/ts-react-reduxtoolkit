@@ -89,6 +89,14 @@
     height: 563px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+
+    .photo {
+      margin-top: -20px;
+      margin-left: -2px;
+      width: 114%;
+      height: 114.39275741578%;
+    }
   }
 
   .description {

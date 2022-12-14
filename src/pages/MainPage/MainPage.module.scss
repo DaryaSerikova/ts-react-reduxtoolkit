@@ -360,6 +360,12 @@
     }
   }
 
+  .offers_yellow_dots {
+    position: absolute;
+    top: -101px;
+    left: 46px;
+  }
+
 
   .rent_titles_with_selects {
     margin-top: 146px;
@@ -527,6 +533,19 @@
     }
   }
 
+  .search_white_dots {
+    position: absolute;
+    right: 140px;
+    top: 46px;
+    z-index: 10;
+  }
+
+  .search_yellow_dots {
+    position: absolute;
+    right: 150px;
+    bottom: -114px;
+  }
+
   .advertising_cards, .apartment_with_news {
     display: flex;
     flex-direction: row;
@@ -574,9 +593,28 @@
         color: $dark-grey;
       }
 
-      .apartment_wrapper_img {
-        .apartment_img {
-          margin: -12px 0 0 -30px;
+      .apartment_wrapper_img_dots {
+
+        float: left;
+        position: relative;
+
+        .apartment_wrapper_img  {
+
+          // float: left;
+          width: 405px;
+          height: 230px;
+          margin: 18px 24px 14px 0;
+          overflow: hidden;
+
+          .apartment_img {
+            margin: -12px 0 0 -30px;
+          }
+        }
+
+        .apartment_yellow_dots {
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
         }
       }
 

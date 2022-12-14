@@ -6,8 +6,9 @@ import { updateAllNews, updateSearched, updateSearchedValue } from '../../store/
 import NewsCard from '../../components/NewsCard/NewsCard';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { NewsInfo, TNewsCardInfo } from '../../components/NewsCards/NewsCardsInfo';
+import { ReactComponent as SearchIcon } from '../../assets/img/news_list_search_icon.svg';
 
-import { ReactComponent as Search } from '../../assets/img/search.svg';
+//news_list_search_icon.svg
 import { ReactComponent as PurpleRectangle } from '../../assets/img/rectangle_293.svg';
 import cn from "./NewsListPage.module.scss";
 
@@ -64,12 +65,23 @@ const NewsListPage = () => {
             <BreadCrumbs typeBreadCrumbs="/news"/>
             <div className={cn.title_wrapper}>
               <h1 className={cn.title}>Новости</h1>
-              <input
-                className={cn.input}
-                placeholder="Поиск по статьям"
-                value={searchedValue}
-                onChange={search}
-              />
+              <div className={cn.wrapper_input}>
+                <input
+                  className={cn.input}
+                  placeholder="Поиск по статьям"
+                  value={searchedValue}
+                  onChange={search}
+                />
+                <div className={cn.wrapper_search_icon}>
+                  <div className={cn.search_icon}>
+                    <SearchIcon />
+
+                  </div>
+                </div>
+                
+              </div>
+
+
             </div>
           </header>
 

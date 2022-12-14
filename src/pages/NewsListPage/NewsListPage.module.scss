@@ -27,6 +27,48 @@
   top: -11px;
   left: 321px;
   position: absolute;
+
+  @media (max-width: 660px) {
+    width: 500px;
+  }
+
+  @media (min-width: 800px) and (max-width: 1170px) {
+    left: 225px;
+    top: -11px;
+  }
+
+  @media (min-width: 940px) and (max-width: 1020px) {
+    left: 170px;
+    top: -11px;
+  }
+
+  @media (min-width: 710px) and (max-width: 800px) {
+    left: 171px;
+    top: -67px;
+  }
+
+  @media (min-width: 700px) and (max-width: 710px) {
+    left: 155px;
+    top: -98px;
+  }
+
+  @media (min-width: 660px) and (max-width: 700px) {
+    left: 240px;
+  }
+
+  @media (min-width: 660px) and (max-width: 700px) {
+    top: -98px;
+  }
+
+  @media (min-width: 600px) and (max-width: 660px) {
+    top: -138px;
+    left: 185px;
+  }
+
+  @media (min-width: 550px) and (max-width: 600px) {
+    top: -170px;
+    left: 155px;
+  }
 }
 
 .child_content {
@@ -49,26 +91,51 @@
     color: $dark-grey;
   }
 
-  .input {
-    width: 620px;
-    height: 35px;
+  .wrapper_input {
     margin: 26px 0 0 0;
-    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
 
-    @include typography(500, 14px, 17px);
-    color: $grey;
-    background: $white_3;
-    box-shadow: 0px 10px 20px rgba(0, 96, 206, 0.05);
-    border-radius: 20px;
-    border: 2px solid transparent;
+    .input {
+      width: 620px;
+      height: 37px;
+      padding: 0px 20px;
+  
+      @include typography(500, 14px, 17px);
+      color: $grey;
+      background: $white_3;
+      box-shadow: 0px 10px 20px rgba(0, 96, 206, 0.05);
+      border-radius: 20px;
+      border: 2px solid transparent;
+  
+      &:hover, &:focus, &:active, :focus-visible {
+        outline: none;
+        background: #FFFFFF;
+        border: 2px solid rgba(78, 100, 249, 0.8);
+        border-radius: 30px;
+      }
 
-    &:hover, &:focus, &:active, :focus-visible {
-      outline: none;
-      background: #FFFFFF;
-      border: 2px solid rgba(78, 100, 249, 0.8);
-      border-radius: 30px;
+      @media (min-width: 700px) and (max-width: 940px) {
+        width: 470px;
+      }
+
+      @media (min-width: 550px) and (max-width: 700px) {
+        width: 350px;
+      }
+    }
+
+    .wrapper_search_icon {
+
+      .search_icon {
+        position: absolute;
+        width: 53.07px;
+        height: 37.07px;
+        right: -1px;
+      }
     }
   }
+
+
 }
 
 .pagination {

@@ -10,6 +10,9 @@ import { PurpleBackground } from '../../components/Common/PurpleBackground/Purpl
 import { MenuCardInfo } from '../../components/MenuCard/MenuCardInfo';
 import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDetailsInfo';
 import { ReactComponent as LocationYellow } from "../../assets/img/main_location_yellow.svg";
+import { ReactComponent as YellowDots } from "../../assets/img/main__yellow_dots.svg";
+import { ReactComponent as WhiteDots } from "../../assets/img/main__white_dots.svg";
+
 import background from "../../assets/img/main_background_1.png";
 import background3 from "../../assets/img/main_background_3.png";
 import apartmentImg from "../../assets/img/main_apartment_img.jpg";
@@ -87,6 +90,7 @@ const MainPage = () => {
 
       <article>
         <section className={`${cn.parent}`}>
+          <YellowDots className={cn.offers_yellow_dots}/>
           <div className={`${cn.child_background} ${cn.purple_background2}`}></div>
           <div className={`${cn.child_content} ${cn.container}`}>
             <div className={cn.rent_titles_with_selects}>
@@ -133,7 +137,10 @@ const MainPage = () => {
         <section className={`${cn.parent}`}>
           <div className={`${cn.child_background} ${cn.purple_background3}`}>
             <img className={cn.white_background3} src={background3} alt="white-background-3" />
+            <WhiteDots className={cn.search_white_dots}/>
+
           </div>
+
           <div className={`${cn.child_content} ${cn.container}`}>
             <div className={cn.wrapper_search}>
               <h2 className={`${cn.search_title} ${cn.title}`}>Поиск квартир на карте</h2>
@@ -149,25 +156,36 @@ const MainPage = () => {
               {advertisingCards}
             </div>
           </div>
+          <YellowDots className={cn.search_yellow_dots}/>
         </section>
 
         <section className={`${cn.apartment_with_news} ${cn.container}`}>
           <div className={cn.apartment_for_day}>
             <div className={cn.purple_subtitle}>ЧТО ТАКОЕ SDAEM.BY</div>
             <h2 className={`${cn.apartment_title} ${cn.title}`}>Квартира на сутки в Минске</h2>
+            <div>
 
-            <div className={cn.apartment_wrapper_img}>
-              <img src={apartmentImg} alt={apartmentImg} className={cn.apartment_img} />
+              <div className={cn.apartment_wrapper_img_dots}>
+                <div className={cn.apartment_wrapper_img}>
+                  <img src={apartmentImg} alt={apartmentImg} className={cn.apartment_img} />
+                  <YellowDots className={cn.apartment_yellow_dots}/>
+                </div>
+              </div>  
+              <div className={cn.apartment_text}>
+                <p>
+                  <b> Нужна квартира на сутки в Минске?</b>
+                  <br/>
+                  На веб-сайте sdaem.by вас ждет масса выгодных предложений. Каталог насчитывает более 500 квартир. Благодаря удобной навигации вы быстро найдете подходящий вариант.
+                </p>
+
+                <p>
+                  В каталоге представлены комфортабельные однокомнатные квартиры на сутки 
+                  и квартиры с большим количеством комнат в разных районах города, 
+                  с различной степенью удобства от дешевых до VIP с джакузи.
+                </p>
+              </div>
+              <div className={cn.apartment_text}>Чтобы снять квартиру на сутки в Минске, вам достаточно определиться с выбором и связаться с владельцем для уточнения условий аренды и заключить договор. Заметим, на сайте представлены исключительно квартиры на сутки без посредников, что избавляет посетителей от необходимости взаимодействовать с агентствами, тратя свое время и деньги. Также пользователи сайта могут совершенно бесплатно размещать объявления о готовности сдать квартиру на сутки.    </div>
             </div>
-            <div className={cn.apartment_text}>
-              Нужна квартира на сутки в Минске?
-              На веб-сайте sdaem.by вас ждет масса выгодных предложений. Каталог насчитывает более 500 квартир. Благодаря удобной навигации вы быстро найдете подходящий вариант.
-
-              В каталоге представлены комфортабельные однокомнатные квартиры на сутки и квартиры с большим количеством комнат в разных районах города, с различной степенью удобства от дешевых до VIP
-              с джакузи.
-            </div>
-            <div className={cn.apartment_text}>Чтобы снять квартиру на сутки в Минске, вам достаточно определиться с выбором и связаться с владельцем для уточнения условий аренды и заключить договор. Заметим, на сайте представлены исключительно квартиры на сутки без посредников, что избавляет посетителей от необходимости взаимодействовать с агентствами, тратя свое время и деньги. Также пользователи сайта могут совершенно бесплатно размещать объявления о готовности сдать квартиру на сутки.    </div>
-
           </div>
           <News />
         </section>

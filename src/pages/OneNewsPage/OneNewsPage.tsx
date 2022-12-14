@@ -46,7 +46,7 @@ const OneNewsPage = () => {
       <div className={cn.child_background_1}>
         <PurpleRectangle1 />
       </div>
-      <div dangerouslySetInnerHTML={{__html: '<p>First</p> &middot; Second'}}/>
+      {/* <div dangerouslySetInnerHTML={{__html: '<p>First</p> &middot; Second'}}/> */}
 
       <div className={`${cn.container_text} ${cn.content} ${cn.child_content}`}>
 
@@ -82,12 +82,12 @@ const OneNewsPage = () => {
           </div>
           <div className={cn.child_content}>
             <div className={cn.wrapper_photo}>
-              <img src={photo} alt={photo} />
+              <img src={photo} alt={photo} className={cn.photo}/>
             </div>
             <div className={cn.description}>
-              {currentOneNews.description}
+              {/* {currentOneNews.description} */}
 
-              {/* <p>
+              <p>
                 Итак, утром вы выезжаете в путь по Молодеченской трассе. Если автомобиля у вас нет - садитесь на маршрутку в сторону Молодечно от железнодорожного вокзала. Остановка называется «Линия Сталина» - да-да, именно здесь вы и проведёте ближайшие несколько часов, а вероятнее всего – останетесь до самого вечера.
               </p>
               <p>
@@ -101,7 +101,7 @@ const OneNewsPage = () => {
               </p>
               <p>
                 Отличная усадьба в 10 км от "Линии Сталина".
-              </p> */}
+              </p>
 
             </div>
           </div>
