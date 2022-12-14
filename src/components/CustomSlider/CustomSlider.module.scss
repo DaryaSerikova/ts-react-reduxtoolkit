@@ -1,0 +1,33 @@
+@import "../../assets/scss/mixins";
+
+
+.cards_with_details {
+  margin-top: 40px;
+  @include mt_media(40px);
+
+  // flex-wrap: wrap;
+  gap: 30px;
+}
+
+.wrapper_buttons {
+  margin-top: 31px;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  /* background-color: black; */
+  border-radius: 80px;
+  width: 40px;
+  height: 41px;
+  padding: 0;
+  margin: 6.57px;
+
+  &:hover, &:active {
+    background: rgba(102, 78, 249, 0.1);
+  }
+}
+
+.btn_right {
+  transform: rotate(180deg);
+}

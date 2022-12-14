@@ -30,7 +30,7 @@ export const CardWithDetailsInfo: ICardWithDetails[] = [
     key: `cardWithDetails_200_${CardWithDetails_id_200}`,
     gold: true,
     // price: "65.00",
-    price: 65.00,
+    price: 60.00,
 
     duration: "за сутки",
     // people: "",
@@ -62,7 +62,55 @@ export const CardWithDetailsInfo: ICardWithDetails[] = [
     key: `cardWithDetails_200_${CardWithDetails_id_200}`,
     gold: true,
     // price: "65.00",
-    price: 65.00,
+    price: 70.00,
+
+    duration: "за сутки",
+    // people: "",
+    amount_rooms: 4,
+    square: 179,
+    city: "Минск",
+    address: "б-р Мулявина, д. 10",
+    subway_station: "Грушевка",
+    neighborhood: "Шабаны"
+  },
+  {
+    id: CardWithDetails_id_200++,
+    key: `cardWithDetails_200_${CardWithDetails_id_200}`,
+    gold: true,
+    // price: "65.00",
+    price: 75.00,
+
+    duration: "за сутки",
+    // people: "",
+    amount_rooms: 4,
+    square: 179,
+    city: "Минск",
+    address: "б-р Мулявина, д. 10",
+    subway_station: "Грушевка",
+    neighborhood: "Шабаны"
+  },
+  {
+    id: CardWithDetails_id_200++,
+    key: `cardWithDetails_200_${CardWithDetails_id_200}`,
+    gold: false,
+    // price: "65.00",
+    price: 80.00,
+
+    duration: "за сутки",
+    // people: "",
+    amount_rooms: 4,
+    square: 179,
+    city: "Минск",
+    address: "б-р Мулявина, д. 10",
+    subway_station: "Грушевка",
+    neighborhood: "Шабаны"
+  },
+  {
+    id: CardWithDetails_id_200++,
+    key: `cardWithDetails_200_${CardWithDetails_id_200}`,
+    gold: true,
+    // price: "65.00",
+    price: 85.00,
 
     duration: "за сутки",
     // people: "",

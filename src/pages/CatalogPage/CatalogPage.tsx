@@ -71,6 +71,13 @@ const CatalogPage = () => {
   // const cardsWithDetails = allFlats.map(
   // const flats = filteredFlats.length === 0 ?  allFlats : filteredFlats;
 
+  console.log(' filteredFlats.length: ', filteredFlats.length)
+  console.log('filteredFlats.length/9: ', filteredFlats.length/9);
+  console.log('AmountPages: ', Math.ceil(filteredFlats.length/9));
+  //
+
+  //
+
   // const cardsWithDetails = flats.map(
   const cardsWithDetails = filteredFlats.map(
     el => <CardWithDetails

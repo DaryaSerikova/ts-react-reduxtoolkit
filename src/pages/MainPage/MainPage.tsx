@@ -17,6 +17,10 @@ import background from "../../assets/img/main_background_1.png";
 import background3 from "../../assets/img/main_background_3.png";
 import apartmentImg from "../../assets/img/main_apartment_img.jpg";
 import cn from "./MainPage.module.scss";
+import CustomSlider from '../../components/CustomSlider/CustomSlider';
+
+
+
 
 
 
@@ -112,12 +116,14 @@ const MainPage = () => {
               </div>
 
             </div>
+              <CustomSlider />
 
-            <div className={cn.cards_with_details}>
-              {cardsWithDetails}
-            </div>
+            {/* <div className={cn.cards_with_details}> */}
+              {/* {cardsWithDetails} */}
 
-            <div className={cn.btns_carousel}>buttons carousel</div>
+            {/* </div> */}
+
+            {/* <div className={cn.btns_carousel}>buttons carousel</div> */}
 
             <div className={cn.offers_for_minsk}>
               <div className={cn.wrapper_offers}>
