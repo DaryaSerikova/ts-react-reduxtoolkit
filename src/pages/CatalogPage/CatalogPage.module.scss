@@ -83,20 +83,44 @@ main {
       @include typography(700, 18px, 22px);
       color: #000000;
 
+      .pagination_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22px;
+        height: 22px;
+
+      }
+
       .active {
         border-bottom: 2px solid $yellow;
       }
     }
 
-    .networks {
+    .wrapper_networks {
       display: flex;
       flex-direction: row;
+      gap: 20px;
 
+      .networks_text {
+        display: flex;
+        align-items: center;
+        @include typography(500, 14px, 17px);
+        text-align: right;
+        color: #686868;
+      }
+
+      .networks_icons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
     }
   }
 
   footer {
     position: relative;
+    margin-top: 58.58px;
 
     .blue_background, .purple_background {
       position: absolute;
@@ -117,6 +141,9 @@ main {
 
     .white_background {
       position: absolute;
+      // mix-blend-mode: overlay;
+      opacity: 0.8;
+      filter: blur(2px);
 
     }
 

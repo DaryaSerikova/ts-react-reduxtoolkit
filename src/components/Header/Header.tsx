@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Link, useLocation } from "react-router-dom";
+import {  Link, useLocation, useNavigate } from "react-router-dom";
 import { ReactComponent as Point } from '../../assets/img/point.svg';
 import { ReactComponent as Point2 } from '../../assets/img/point_2.svg';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
@@ -11,8 +11,26 @@ import cn from "./Header.module.scss";
 
 export default function Header() {
 
+  const navigate = useNavigate();
   const location = useLocation();
   const path = location.pathname;
+
+  // if (localStorage.user) console.log('localStorage.user.parse(): ', localStorage.user.parse())
+  // if (localStorage.user) {
+  //   let parseUser = localStorage.user.parse()
+  //   console.log('parseUser', parseUser)
+  // }
+
+  const handlerSignOut = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    localStorage.removeItem('token');
+    localStorage.removeItem('name');
+
+    localStorage.removeItem('user');
+
+    navigate("/");
+  }
 
 
   return (
@@ -49,12 +67,19 @@ export default function Header() {
               <div className={cn.heart_text}>Закладки</div>
               <Heart />
             </div>
-            <Link
-              to="/signin"
-              className={cn.sign_in}
-            >
-              Вход и регистрация
-            </Link>
+
+            {!localStorage.token ? 
+              <Link
+                to="/signin"
+                className={cn.sign_in}
+                >
+                Вход и регистрация 
+                </Link>
+
+                : <>
+                <div>{localStorage.name}</div>
+                <button onClick={handlerSignOut}>sign out</button>
+                </>}
           </div>
         </div>
       </div>

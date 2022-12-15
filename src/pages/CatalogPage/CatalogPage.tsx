@@ -10,8 +10,14 @@ import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDe
 import { CatalogPageTagInfo } from '../../components/Common/Tag/MainPageTagInfo';
 import { Button } from '../../components/Common/Button/Button';
 import cn from "./CatalogPage.module.scss";
-import { getCurrentCardsOnPage } from '../../utils/utils_ts';
-
+import { getCurrentCardsOnPage, getPagesRange } from '../../utils/utils_ts';
+import { ReactComponent as NetworksIcon1 } from "../../assets/img/catalog__networks_icon_1.svg";
+import { ReactComponent as NetworksIcon2 } from "../../assets/img/catalog__networks_icon_2.svg";
+import { ReactComponent as NetworksIcon3 } from "../../assets/img/catalog__networks_icon_3.svg";
+import { ReactComponent as NetworksIcon4 } from "../../assets/img/catalog__networks_icon_4.svg";
+import { ReactComponent as NetworksIcon5 } from "../../assets/img/catalog__networks_icon_5.svg";
+import { ReactComponent as LocationYellow } from "../../assets/img/main_location_yellow.svg";
+import whiteBackground from "../../assets/img/catalog__white_background.png";
 
 
 
@@ -72,25 +78,21 @@ const CatalogPage = () => {
 
   // getCurrentCardsOnPage(filteredFlats, 2, 9);
   const currentCardsOnPage = getCurrentCardsOnPage(filteredFlats, currentPageNumber, 9);
-
   const amountPages =  Math.ceil(filteredFlats.length/9); //7
+  let pagesRange = getPagesRange(amountPages);
 
-  // const hfjh = [...Array(9).keys()]
-  const getPagesRange = (amountPages: number) => {
-    let i = 0;
-    let pagesRange = [];
-
-    while ( i < amountPages ) {
-      i++;
-      pagesRange.push(i);
-    }
-
-    return pagesRange;
+  const handlerPaginationClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    console.log('e: ', e);
+    console.log('e.target.innerHTML :', e?.currentTarget?.innerHTML);
+    let currentPageNumber = e?.currentTarget?.innerHTML
+    // updateCurrentPageNumber(dispatch(+currentPageNumber));
   }
 
-  let pagesRange = getPagesRange(amountPages);
   let pagesNumbers = pagesRange.map(pageNumber => 
-    <div className={`${cn.pagination_item} ${currentPageNumber === pageNumber ? cn.active : ''}`}>
+    <div
+      className={`${cn.pagination_item} ${currentPageNumber === pageNumber ? cn.active : ''}`}
+      onClick={handlerPaginationClick}
+      >
       {pageNumber}
     </div>)
 
@@ -154,7 +156,17 @@ const CatalogPage = () => {
             <div className={cn.pagination}>
               {pagesNumbers}
             </div>
-            <div className={cn.networks}>networks</div>
+            <div className={cn.wrapper_networks}>
+              <div className={cn.networks_text}>Поделиться</div>
+              <div className={cn.networks_icons}>
+                <NetworksIcon1 />
+                <NetworksIcon2 />
+                <NetworksIcon3 />
+                <NetworksIcon4 />
+                <NetworksIcon5 />
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -163,13 +175,15 @@ const CatalogPage = () => {
         <div className={cn.blue_background}></div>
         <div className={cn.purple_background}></div>
 
-        <div className={cn.white_background}></div>
+        <div className={cn.white_background}>
+          <img src={whiteBackground} alt="white-background"/>
+        </div>
         <div className={`${cn.container} ${cn.footer_content}`}>
           <div className={cn.map_title}>Показать найденные квартиры на карте</div>
           <div className={cn.map_text}>Ищите новостройки рядом с работой, парком или родственниками</div>
           <div className={cn.wrapper_btn}>
             <Button
-              text="Открыть карту"
+              text="icon Открыть карту"
               style="white"
               typeButton="left-icon"
             />

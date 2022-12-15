@@ -30,38 +30,22 @@ type TCheckboxesInfo = {
 }
 
 export const cityOptionsInfo: TOptionsInfo[]  = [
-  {// id idCityOptions++, 
-    key: `city_options_${idCityOptions}`, value: '', label: 'Выберите'},
-  {// id idCityOptions++, 
-    key: `city_options_${idCityOptions}`, value: 'minsk', label: 'Минск'},
-  {// id idCityOptions++, 
-    key: `city_options_${idCityOptions}`, value: "vitebsk", label: "Витебск"},
-  {// id idCityOptions++, 
-    key: `city_options_${idCityOptions}`, value: "grodno", label: "Гродно"},
+  { key: `city_options_${idCityOptions++}`, value: '', label: 'Выберите'},
+  { key: `city_options_${idCityOptions++}`, value: 'minsk', label: 'Минск'},
+  { key: `city_options_${idCityOptions++}`, value: "vitebsk", label: "Витебск"},
+  { key: `city_options_${idCityOptions++}`, value: "grodno", label: "Гродно"},
   // {id: idCityOptions++, key: `city_options_${idCityOptions}`, value: "gomel", label: "Гомель"},
   // {id: idCityOptions++, key: `city_options_${idCityOptions}`, value: "brest", label: "Брест"},
   // {id: idCityOptions++, key: `city_options_${idCityOptions}`, value: "mogilev", label: "Могилев"},
 ];
 
 export const roomOptionsInfo: TRoomOptionsInfo[] = [
-  {
-    // id: idRoomOptions++,
-     key: `room_options_${idRoomOptions}`, value: '', label: 'Выберите'},
-  {
-    // id: idRoomOptions++,
-     key: `room_options_${idRoomOptions}`, value: 1, label: '1-комн.'},
-  {
-    // id: idRoomOptions++,
-     key: `room_options_${idRoomOptions}`, value: 2, label: '2-комн.'},
-  {
-    // id: idRoomOptions++,
-     key: `room_options_${idRoomOptions}`, value: 3, label: '3-комн.'},
-  {
-    // id: idRoomOptions++,
-     key: `room_options_${idRoomOptions}`, value: 4, label: '4-комн.'},
-  {
-    // id: idRoomOptions++,
-     key: `room_options_${idRoomOptions}`, value: 5, label: '5-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: '', label: 'Выберите'},
+  { key: `room_options_${idRoomOptions++}`, value: 1, label: '1-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: 2, label: '2-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: 3, label: '3-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: 4, label: '4-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: 5, label: '5-комн.'},
 ];
 
 export const subwayOptionsInfo: TOptionsInfo[] = [

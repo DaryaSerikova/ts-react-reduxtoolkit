@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { PurpleBackground } from '../../components/Common/PurpleBackground/PurpleBackground';
 import { Input } from '../../components/Common/Input/Input';
-import { getFakeJWT } from '../../utils/utils';
+import { getFakeToken, getConfirmAccess } from '../../utils/utils';
 import background1 from "../../assets/img/sigin_background1.png";
 import background2 from "../../assets/img/sigin_background2.png";
 import cn from "./SignInPage.module.scss";
@@ -11,8 +11,20 @@ import cn from "./SignInPage.module.scss";
 
 
 const SignInPage = () => {
-  const currentDate = new Date();
   const navigate = useNavigate();
+
+  if (localStorage.token) navigate("/")
+  const currentDate = new Date();
+  // const location = useLocation();
+
+  // let query = location.search;
+  // const urlParams = new URLSearchParams(query);
+  // const token = urlParams.get('token');
+  // const userId = urlParams.get('user_id');
+  // const accessToken = urlParams.get('access');
+  // const refreshToken = urlParams.get('refresh');
+  // const paidAccess = urlParams.get('token_access');
+
   const {
     register,
     handleSubmit,
@@ -23,7 +35,31 @@ const SignInPage = () => {
   const onSubmit = (data) => {
     console.log('data:', data);
     reset();
-    navigate("/");
+    const access = getConfirmAccess(data.login, data.password);
+    if (access) {
+      let fakeToken = getFakeToken();
+      let userName = "Darya";
+      let userLogin = "login";
+
+      // let user = JSON.stringify({
+      //   token: fakeToken,
+      //   name: userName,
+      //   login: userLogin,
+      // })
+
+      // localStorage.setItem('user', user);
+      localStorage.setItem('token', fakeToken);
+      localStorage.setItem('name', userName);
+
+
+      navigate("/");
+      console.log('fakeToken', fakeToken);
+
+    } else {
+      console.log('No access')
+    }
+
+
   }
 
   return (
