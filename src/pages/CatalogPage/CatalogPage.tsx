@@ -18,6 +18,8 @@ import { ReactComponent as NetworksIcon4 } from "../../assets/img/catalog__netwo
 import { ReactComponent as NetworksIcon5 } from "../../assets/img/catalog__networks_icon_5.svg";
 import { ReactComponent as LocationYellow } from "../../assets/img/main_location_yellow.svg";
 import whiteBackground from "../../assets/img/catalog__white_background.png";
+import Pagination from '../../components/Pagination/Pagination';
+import { getDynamicTitle, getCityNameRu } from '../../utils/title';
 
 
 
@@ -39,31 +41,9 @@ const CatalogPage = () => {
     
   }, [])
 
-  const getCityNameRu = (city: string) => {
-    switch(city) {
-      case "minsk": return "Минске";
-      case "vitebsk": return "Витебске";
-      case "grodno": return "Гродно";
-      case "gomel": return "Гомеле";
-      case "brest": return "Бресте";
-      case "mogilev": return "Могилеве";
-      default: return '"город не выбран"'
-    }
-  }
-
-  const getAmountRoomsRu = (city: string) => {
-    switch(city) {
-      case "1": return "1-комнатных";
-      case "2": return "2-комнатных";
-      case "3": return "3-комнатных";
-      case "4": return "4-комнатных";
-      case "5": return "5-комнатных";
-      default: return ""
-    }
-  }
-
   let cityName = getCityNameRu(city);
-  let amountRoomsRu = getAmountRoomsRu(amountRooms);
+  // let amountRoomsRu = getAmountRoomsRu(amountRooms);
+  let dynamicTitle = getDynamicTitle(city, amountRooms);
 
 
   const tags = CatalogPageTagInfo.map(el => 
@@ -78,8 +58,7 @@ const CatalogPage = () => {
 
   // getCurrentCardsOnPage(filteredFlats, 2, 9);
   const currentCardsOnPage = getCurrentCardsOnPage(filteredFlats, currentPageNumber, 9);
-  const amountPages =  Math.ceil(filteredFlats.length/9); //7
-  let pagesRange = getPagesRange(amountPages);
+
 
   const handlerPaginationClick = (e: React.MouseEvent<HTMLDivElement>) => {
     console.log('e: ', e);
@@ -88,19 +67,8 @@ const CatalogPage = () => {
     // updateCurrentPageNumber(dispatch(+currentPageNumber));
   }
 
-  let pagesNumbers = pagesRange.map(pageNumber => 
-    <div
-      className={`${cn.pagination_item} ${currentPageNumber === pageNumber ? cn.active : ''}`}
-      onClick={handlerPaginationClick}
-      >
-      {pageNumber}
-    </div>)
-
   // const cardsWithDetails = data['minsk'].map(
   // const cardsWithDetails = allFlats.map(
-  // const flats = filteredFlats.length === 0 ?  allFlats : filteredFlats;
-  // const cardsWithDetails = flats.map(
-
   // const cardsWithDetails = filteredFlats.map(
   const cardsWithDetails = currentCardsOnPage.map(
     el => <CardWithDetails
@@ -124,23 +92,24 @@ const CatalogPage = () => {
         <div className={`${cn.purple_bg} ${cn.child_background}`}></div>
         <div className={cn.child_content}>
           <div className={cn.container}>
+
             <div className={cn.wrapper_bread_crumbs}>
               <BreadCrumbs typeBreadCrumbs="/catalog" city={cityName} />
             </div>
+
             <h1 className={cn.title}>
-              Аренда {city === "" ? "" : amountRoomsRu} квартир на сутки в {cityName}
+              {dynamicTitle}
+              {/* Аренда {city === "" ? "" : amountRoomsRu} квартир на сутки в {cityName} */}
             </h1>
             <div className={cn.recommendation}>Рекомендуем посмотреть</div>
             <div className={cn.tags}>
               {tags}
             </div>
+
           </div>
         </div>
 
-        <Filters 
-          typeFilters="catalog"
-          />
-
+        <Filters typeFilters="catalog" />
 
       </header>
 
@@ -153,9 +122,12 @@ const CatalogPage = () => {
           </div>
 
           <div className={cn.pagination_with_networks}>
-            <div className={cn.pagination}>
-              {pagesNumbers}
-            </div>
+            {/* <div className={cn.pagination}>{pagesNumbers}</div> */}
+            <Pagination 
+              arrCards={filteredFlats}
+              currentPageNumber={currentPageNumber}
+              handlerPaginationClick={handlerPaginationClick} 
+              />
             <div className={cn.wrapper_networks}>
               <div className={cn.networks_text}>Поделиться</div>
               <div className={cn.networks_icons}>

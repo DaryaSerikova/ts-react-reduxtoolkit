@@ -76,26 +76,26 @@ main {
     justify-content: space-between;
     margin-top: 86px;
 
-    .pagination {
-      display: flex;
-      flex-direction: row;
-      gap: 13px;
-      @include typography(700, 18px, 22px);
-      color: #000000;
+    // .pagination {
+    //   display: flex;
+    //   flex-direction: row;
+    //   gap: 13px;
+    //   @include typography(700, 18px, 22px);
+    //   color: #000000;
 
-      .pagination_item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 22px;
-        height: 22px;
+    //   .pagination_item {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: 22px;
+    //     height: 22px;
 
-      }
+    //   }
 
-      .active {
-        border-bottom: 2px solid $yellow;
-      }
-    }
+    //   .active {
+    //     border-bottom: 2px solid $yellow;
+    //   }
+    // }
 
     .wrapper_networks {
       display: flex;
