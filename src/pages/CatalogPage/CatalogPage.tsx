@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
+import { updateAllFlats, updateFilteredFlats, updateCurrentPageNumber, TFlat } from "../../store/flatsSlice";
 import { useAppSelector, useAppDispatch } from '../../store/hook';
 import CardWithDetails from '../../components/CardWithDetails/CardWithDetails';
 import Filters from '../../components/Filters/Filters';
@@ -10,6 +10,7 @@ import { CardWithDetailsInfo } from '../../components/CardWithDetails/CardWithDe
 import { CatalogPageTagInfo } from '../../components/Common/Tag/MainPageTagInfo';
 import { Button } from '../../components/Common/Button/Button';
 import cn from "./CatalogPage.module.scss";
+import { getCurrentCardsOnPage } from '../../utils/utils_ts';
 
 
 
@@ -22,6 +23,7 @@ const CatalogPage = () => {
   const priceTo = useAppSelector(state => state.filters.priceTo);
   const allFlats = useAppSelector(state => state.flats.all);
   const filteredFlats = useAppSelector(state => state.flats.filtered);
+  const currentPageNumber = useAppSelector(state => state.flats.current_page_number);
   const city = useAppSelector(state => state.filters.city)
   const dispatch = useAppDispatch();
 
@@ -67,19 +69,38 @@ const CatalogPage = () => {
       style={'light_purple'} 
       typeTag="catalog"/>);
 
+
+  // getCurrentCardsOnPage(filteredFlats, 2, 9);
+  const currentCardsOnPage = getCurrentCardsOnPage(filteredFlats, currentPageNumber, 9);
+
+  const amountPages =  Math.ceil(filteredFlats.length/9); //7
+
+  // const hfjh = [...Array(9).keys()]
+  const getPagesRange = (amountPages: number) => {
+    let i = 0;
+    let pagesRange = [];
+
+    while ( i < amountPages ) {
+      i++;
+      pagesRange.push(i);
+    }
+
+    return pagesRange;
+  }
+
+  let pagesRange = getPagesRange(amountPages);
+  let pagesNumbers = pagesRange.map(pageNumber => 
+    <div className={`${cn.pagination_item} ${currentPageNumber === pageNumber ? cn.active : ''}`}>
+      {pageNumber}
+    </div>)
+
   // const cardsWithDetails = data['minsk'].map(
   // const cardsWithDetails = allFlats.map(
   // const flats = filteredFlats.length === 0 ?  allFlats : filteredFlats;
-
-  console.log(' filteredFlats.length: ', filteredFlats.length)
-  console.log('filteredFlats.length/9: ', filteredFlats.length/9);
-  console.log('AmountPages: ', Math.ceil(filteredFlats.length/9));
-  //
-
-  //
-
   // const cardsWithDetails = flats.map(
-  const cardsWithDetails = filteredFlats.map(
+
+  // const cardsWithDetails = filteredFlats.map(
+  const cardsWithDetails = currentCardsOnPage.map(
     el => <CardWithDetails
       type_card='list'
       key={el.key}
@@ -125,24 +146,36 @@ const CatalogPage = () => {
         <div className={cn.container}>
           <div className={cn.results}>Найдено {filteredFlats.length} результата</div>
           <div className={cn.cards}>
-            {cardsWithDetails}
+            {/* {currentCardsOnPage} */}
+            {currentCardsOnPage.length !== 0 ? cardsWithDetails : <></>}
           </div>
 
           <div className={cn.pagination_with_networks}>
-            <div className={cn.pagination}></div>
-            <div className={cn.networks}></div>
+            <div className={cn.pagination}>
+              {pagesNumbers}
+            </div>
+            <div className={cn.networks}>networks</div>
           </div>
         </div>
 
       </article>
-      <footer className={cn.container}>
-        <div className={cn.style}>Показать найденные квартиры на карте</div>
-        <div className={cn.style}>Ищите новостройки рядом с работой, парком или родственниками</div>
-        <Button
-          text="Открыть карту"
-          style="white"
-          typeButton="left-icon"
-        />
+      <footer className={cn.footer}>
+        <div className={cn.blue_background}></div>
+        <div className={cn.purple_background}></div>
+
+        <div className={cn.white_background}></div>
+        <div className={`${cn.container} ${cn.footer_content}`}>
+          <div className={cn.map_title}>Показать найденные квартиры на карте</div>
+          <div className={cn.map_text}>Ищите новостройки рядом с работой, парком или родственниками</div>
+          <div className={cn.wrapper_btn}>
+            <Button
+              text="Открыть карту"
+              style="white"
+              typeButton="left-icon"
+            />
+          </div>
+
+        </div>
 
       </footer>
     </main>

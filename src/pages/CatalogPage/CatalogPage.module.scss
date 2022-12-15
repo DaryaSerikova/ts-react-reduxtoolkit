@@ -74,11 +74,76 @@ main {
 
   .pagination_with_networks {
     justify-content: space-between;
+    margin-top: 86px;
+
+    .pagination {
+      display: flex;
+      flex-direction: row;
+      gap: 13px;
+      @include typography(700, 18px, 22px);
+      color: #000000;
+
+      .active {
+        border-bottom: 2px solid $yellow;
+      }
+    }
 
     .networks {
       display: flex;
       flex-direction: row;
 
+    }
+  }
+
+  footer {
+    position: relative;
+
+    .blue_background, .purple_background {
+      position: absolute;
+      height: 310px;
+      width: 100%;
+    }
+    .purple_background {
+      background: linear-gradient(0deg, #7E6AF3 0.06%, #6540CD 100.06%);
+    }
+
+    .blue_background {
+      background: linear-gradient(90deg, #94AFFF 0%, #4E64F9 94.5%);
+    }
+
+
+
+
+
+    .white_background {
+      position: absolute;
+
+    }
+
+    .footer_content {
+      position: relative;
+      padding: 74px 0 87px 0;
+    }
+
+    .map_title {
+      @include typography(700, 25px, 30px);
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .map_text {
+      margin: 20px auto 0;
+      max-width: 319px;
+
+      @include typography(500, 16px, 19px);
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .wrapper_btn {
+      margin-top: 23px;
+      display: flex;
+      justify-content: center;
     }
   }
 }

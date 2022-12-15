@@ -36,6 +36,7 @@ type TMenuTextList = {
 type TFlats = {
   all: TFlat[];
   filtered: TFlat[];
+  current_page_number: number;
   amount: TAmount;
   menu_text_list: TMenuTextList[];
 }
@@ -43,6 +44,7 @@ type TFlats = {
 const initialState: TFlats = {
   all: [],
   filtered: [],
+  current_page_number: 1,
   amount: {
     ["minsk"]: 0,
     ["vitebsk"]: 0,
@@ -72,6 +74,11 @@ const flatsSlice = createSlice({
     updateFilteredFlats(state, action: PayloadAction<TFlat[]>) {
       state.filtered = action.payload;
     },
+
+    updateCurrentPageNumber(state, action: PayloadAction<number>) {
+      state.current_page_number = action.payload;
+    },
+
     updateAmountFlatsMinsk(state, action: PayloadAction<number>) {
       state.amount["minsk"] = action.payload;
     },
@@ -90,9 +97,15 @@ const flatsSlice = createSlice({
     updateAmountFlatsMogilev(state, action: PayloadAction<number>) {
       state.amount["mogilev"] = action.payload;
     },
+
   }
 })
 
-export const { updateAllFlats, updateFilteredFlats, updateAmountFlatsMinsk } = flatsSlice.actions;
+export const { 
+  updateAllFlats, 
+  updateFilteredFlats,
+  updateCurrentPageNumber,
+  updateAmountFlatsMinsk,
+} = flatsSlice.actions;
 
 export default flatsSlice.reducer;
