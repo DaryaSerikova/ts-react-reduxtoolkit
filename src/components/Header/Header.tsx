@@ -78,7 +78,7 @@ export default function Header() {
 
                 : <>
                 <div>{localStorage.name}</div>
-                <button onClick={handlerSignOut}>sign out</button>
+                <button className={cn.signout} onClick={handlerSignOut}>Выйти</button>
                 </>}
           </div>
         </div>

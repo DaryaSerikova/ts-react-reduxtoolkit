@@ -8,9 +8,10 @@
   border: 2px solid transparent;
 
 
-  &:hover, &:active, &:focus {
+  &:hover, &:active, &:focus, &:focus-visible {
     background: $white_3;
     border: 2px solid rgba(102, 78, 249, 0.8);
+    outline: none;
   }
 }
 
