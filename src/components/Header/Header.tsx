@@ -1,5 +1,6 @@
 import React from 'react';
 import {  Link, useLocation, useNavigate } from "react-router-dom";
+import { Dropdown } from '../Common/Dropdown/Dropdown';
 import { ReactComponent as Point } from '../../assets/img/point.svg';
 import { ReactComponent as Point2 } from '../../assets/img/point_2.svg';
 import { ReactComponent as Logo } from '../../assets/img/logo.svg';
@@ -91,8 +92,10 @@ export default function Header() {
               <Logo className={cn.logo}/>
             </Link>
             <div className={cn.wrapper_point_2}>
-              <Link to="/catalog" className={cn.point_2_text}>Квартиры на сутки</Link>
-              <Point2 />
+              {/* <Link to="/catalog" className={cn.point_2_text}>Квартиры на сутки</Link> */}
+              <Dropdown />
+              
+              {/* <Point2 /> */}
             </div>
             <div>Коттеджи и усадьбы</div>
             <div>Бани и Сауны</div>
