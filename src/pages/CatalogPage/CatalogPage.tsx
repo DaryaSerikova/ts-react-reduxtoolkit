@@ -50,10 +50,10 @@ const CatalogPage = () => {
     <Tag 
       key={el.key}
       id={el.id}
-      text={el.text} 
+      label={el.label} 
       value={el.value} 
       style={'light_purple'} 
-      typeTag="catalog"/>);
+      typePage="catalog"/>);
 
 
   // getCurrentCardsOnPage(filteredFlats, 2, 9);

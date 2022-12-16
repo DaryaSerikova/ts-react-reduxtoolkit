@@ -22,9 +22,9 @@ const MenuCard = ({ subtitle, title, cities, id, img: src }: TMenuCardProps) => 
     <Tag 
       key={el.key}
       id={el.id}
-      text={el.text} 
+      label={el.label} 
       value={el.value} 
-      typeTag="main" />)
+      typePage="main" />)
 
   return (
     <div className={`${cn.box} ${cn.parent}`}>

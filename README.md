@@ -27,14 +27,21 @@ Figma, Pixel Perfect
       <li>[ ] Header 87%</li>
       <li>[ ] Footer 95%</li>
       <li>[ ] CardWithDetails</li>
-      <li>[ ] Common:</li>
+      <li>[ ] Dropdown:</li>
         <ul>
-          <li>[ ] Button</li>
-          <li>[ ] Input</li>
-          <li>[ ] Select</li>
-          <li>[x] Tag</li>
-          <li>[ ] PurpleBackground</li>
+          <li>[ ] out onClick: close options</li>
+          <li>[ ] another pages (not CatalogPage) must have 
+          innerHTML = "Квартиры на сутки"</li>
         </ul>
+      <li>[ ] Button</li>
+      <li>[ ] Input</li>
+      <li>[ ] Select</li>
+      <li>[ ] Tag</li>
+        <ul>
+          <li>[ ] onClick, filters for neighborhood</li>
+          <li>[ ] Filter of filter. Example: amount rooms and neighborhood - together</li>
+        </ul>
+      <li>[ ] PurpleBackground</li>
     </ul>
   <li>[ ] NewsListPage:</li>
     <ul>
@@ -48,7 +55,7 @@ Figma, Pixel Perfect
     </ul>
   <li>[ ] OneNewsPage:</li>
       <ul>
-        <li>[ ] Don't work! Check!</li>
+        <li>[x] Don't work! Check!</li>
         <li>[ ] All text: spaces, enter.. ?</li>
         <li>[ ] Semantic Layout</li>
         <li>[ ] Flexibility</li>
@@ -68,7 +75,7 @@ Figma, Pixel Perfect
     </ul>
   <li>[ ] Error404Page:</li>
       <ul>
-        <li>[ ] button: underline </li>
+        <li>[x] button: underline </li>
         <li>[x] dots: yellow -> white </li>
         <li>[ ] Flexibility</li>
         <li>[ ] Check PixelPerfect</li>
