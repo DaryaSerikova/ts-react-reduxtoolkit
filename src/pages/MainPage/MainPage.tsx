@@ -65,7 +65,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      {/* <div> */}
+
       <header className={`${cn.container}`}>
         <h1 className={cn.middle_title}>Sdaem.by - у нас живут ваши объявления</h1>
         <div className={cn.wrapper_filters}>
@@ -82,13 +82,13 @@ const MainPage = () => {
           </div>
 
         </div>
-        <div className={cn.wrapper_menus}>
+        {/* <div className={cn.wrapper_menus}>
           <div className={cn.menu_cards}>
             {menuCards}
           </div>
 
           <MenuTextList />
-        </div>
+        </div> */}
       </header>
 
 
@@ -104,11 +104,14 @@ const MainPage = () => {
               </div>
               <div className={cn.rent_selects}>
                 <select className={cn.rent_select}>
+                  /* Метро */
                   <option className={cn.rent_option}>1option</option>
                   <option className={cn.rent_option}>2option</option>
                   <option className={cn.rent_option}>3option</option>
                 </select>
                 <select className={cn.rent_select}>
+                  /* Район */
+
                   <option className={cn.rent_option}>1option</option>
                   <option className={cn.rent_option}>2option</option>
                   <option className={cn.rent_option}>3option</option>

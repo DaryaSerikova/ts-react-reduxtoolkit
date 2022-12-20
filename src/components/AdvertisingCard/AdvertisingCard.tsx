@@ -1,6 +1,9 @@
 import React from 'react';
 import { ReactComponent as AdvertisingIcon1 } from "../../assets/img/advertising_icon1.svg";
 import { ReactComponent as AdvertisingIcon2 } from "../../assets/img/advertising_icon2.svg";
+import { ReactComponent as GoldStars } from "../../assets/img/advertising__gold_stars.svg";
+
+//advertising__gold_stars.svg
 import cn from "./AdvertisingCard.module.scss";
 import { Button } from '../Common/Button/Button';
 
@@ -20,8 +23,37 @@ type TAdvCardProps = {
   text: string;
 }
 
-
 const GoldCard = ({ title, text, id }: TAdvCardCommonProps) => {
+  return (
+    <>
+      <div className={cn.advertising_wrapper_gold_title}>
+        <div className={cn.advertising_gold_title}>{title}</div>
+      </div>
+
+      <div className={cn.advertising_text}>
+        <p>
+          Приоритетное размещение <b>Gold</b> позволяет <b>закрепить 
+          ваше объявление</b> в верхней части каталога!
+        </p>
+        <p>
+          Gold объявления <b>перемещаются каждые 5 мин</b> на 
+          1 позицию, что делает размещение одинаковым для всех.
+        </p>
+
+      </div>
+      <div className={cn.advertising_btn}>
+        <Button 
+           style="gradient_purple"
+           text="Еще о тарифе Gold"
+           typeButton="right-icon"
+         />
+      </div>
+    </>
+  )
+};
+
+
+const GoldCard_0 = ({ title, text, id }: TAdvCardCommonProps) => {
   return (
     <>
       <div className={cn.advertising_wrapper_gold_title}>

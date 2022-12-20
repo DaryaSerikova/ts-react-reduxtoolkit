@@ -44,6 +44,7 @@ const CatalogPage = () => {
   let cityName = getCityNameRu(city);
   // let amountRoomsRu = getAmountRoomsRu(amountRooms);
   let dynamicTitle = getDynamicTitle(city, amountRooms);
+  // ДИНАМИЧЕСКИЙ TITLE ДОЛЖЕН ОБНОВЛЯТЬСЯ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА КОМНАТ
 
 
   const tags = CatalogPageTagInfo.map(el => 

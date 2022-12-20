@@ -10,6 +10,30 @@
 
 // @media (min-width: 510px) and (max-width: 560px) { }
 
+@mixin icon_media($w, $h) {
+
+  @media (min-width: 1182px) and (max-width: 1350px) {
+    width: $w*0.9;
+    height: $h*0.9;
+  }
+
+  @media (min-width: 940px) and (max-width: 1182px) {
+    width: $w*0.85;
+    height: $h*0.85;
+  }
+
+  @media (min-width: 800px) and (max-width: 940px) {
+    width: $w*0.8;
+    height: $h*0.8;
+  }
+
+  @media (min-width: 710px) and (max-width: 800px) {
+    width: $w*0.7;
+    height: $h*0.7;
+  }
+
+}
+
 @mixin card($w, $h) {
   max-width: $w;
   width: $w;
@@ -65,6 +89,79 @@
     }
 
   }
+
+}
+
+@mixin adv_card_container_media($w) {
+
+  max-width: $w*0.81;
+  // @media (min-width: 1182px) and (max-width: 1350px) {
+  //   max-width: $w*0.92*0.9;
+  // }
+
+  // @media (min-width: 1020px) and (max-width: 1182px) {
+  //   max-width: $w*0.88*0.9;
+  // }
+
+  // @media (min-width: 940px) and (max-width: 1020px) {
+  //   max-width: $w*0.88*0.9;
+  // }
+
+  @media (min-width: 800px) and (max-width: 940px) {
+    max-width: $w*0.83*0.9;
+  }
+
+  @media (min-width: 710px) and (max-width: 800px) {
+    max-width: $w*0.85*0.9;
+  }
+
+}
+
+@mixin adv_card_media($w, $h) {
+
+  @media (min-width: 1250px) and (max-width: 1350px) {
+    width: $w*0.97;
+    height: $h*0.97;
+  }
+
+  @media (min-width: 1182px) and (max-width: 1250px) {
+    width: $w*0.93;
+    height: $h*0.93;
+  }
+
+  @media (min-width: 940px) and (max-width: 1182px) {
+    width: $w*0.91;
+    height: $h*0.91;
+  }
+
+  @media (min-width: 800px) and (max-width: 940px) {
+    width: $w*0.89;
+    height: $h*0.89;
+  }
+
+  @media (min-width: 710px) and (max-width: 800px) {
+    width: $w*0.87;
+    height: $h*0.87;
+  }
+
+
+  // .card_container {
+  //   max-width: $w*0.9;
+  //   margin: 0px auto;
+
+  //   @media (min-width: 1182px) and (max-width: 1350px) {
+  //     max-width: $w*0.85*0.9;
+  //   }
+  
+  //   @media (min-width: 800px) and (max-width: 940px) {
+  //     max-width: $w*0.8*0.9;
+  //   }
+  
+  //   @media (min-width: 700px) and (max-width: 800px) {
+  //     max-width: $w*0.65*0.9;
+  //   }
+
+  // }
 
 }
 
@@ -181,7 +278,7 @@
 }
 
 @mixin gap_media($g) {
-  @media (min-width: 1170px) and (max-width: 1320px) {
+  @media (min-width: 1170px) and (max-width: 1350px) {
     gap: $g*0.85;
   }
   @media (min-width: 1020px) and (max-width: 1170px) {
@@ -240,35 +337,25 @@
   }
 }
 
+@mixin height_media($h) {
 
+  @media (min-width: 1182px) and (max-width: 1350px) {
+    height: $h*0.9;
+  }
 
-// @mixin card_container($w) {
-//   max-width: 365px;
-//   margin: 0px auto;
+  @media (min-width: 940px) and (max-width: 1182px) {
+    height: $h*0.85;
+  }
 
-//   @media (min-width: 1182px) and (max-width: 1350px) {
-//     width: 365px*0.8;
-//   }
-// }
+  @media (min-width: 800px) and (max-width: 940px) {
+    height: $h*0.8;
+  }
 
-// @mixin container_card($w) {
-//   @media (min-width: 1180px) and (max-width: 1350px) {
-//     width: $w*0.8;
-//     height: $h*1.025;
-//   }
+  @media (min-width: 710px) and (max-width: 800px) {
+    height: $h*0.7;
+  }
 
-//   // @media (min-width: 940px) and (max-width: 1180px) {
-//   //   max-width: 910px;
-//   // }
-
-//   // @media (min-width: 800px) and (max-width: 940px) {
-//   //   max-width: 780px;
-//   // }
-
-//   // @media (min-width: 700px) and (max-width: 940px) {
-//   //   max-width: 670px;
-//   // }
-// }
+}
 
 
 @mixin typography($fw, $fs, $lh) {
