@@ -18,6 +18,7 @@ import background3 from "../../assets/img/main_background_3.png";
 import apartmentImg from "../../assets/img/main_apartment_img.jpg";
 import cn from "./MainPage.module.scss";
 import CustomSlider from '../../components/CustomSlider/CustomSlider';
+import { Select } from '../../components/Common/Select/Select_2';
 
 
 
@@ -103,19 +104,27 @@ const MainPage = () => {
                 <h2 className={`${cn.rent_title} ${cn.title}`}>Аренда квартир в Минске</h2>
               </div>
               <div className={cn.rent_selects}>
-                <select className={cn.rent_select}>
-                  /* Метро */
-                  <option className={cn.rent_option}>1option</option>
-                  <option className={cn.rent_option}>2option</option>
-                  <option className={cn.rent_option}>3option</option>
-                </select>
-                <select className={cn.rent_select}>
-                  /* Район */
 
+                <Select 
+                  defaultName="Метро" 
+                  typeUpdateData="subwayStation"
+                />
+                <Select 
+                  defaultName="Район" 
+                  typeUpdateData="neighborhood"
+                />
+                {/*neighborhood*/}
+
+                {/* <select className={cn.rent_select}>
                   <option className={cn.rent_option}>1option</option>
                   <option className={cn.rent_option}>2option</option>
                   <option className={cn.rent_option}>3option</option>
-                </select>
+                </select> */}
+                {/* <select className={cn.rent_select}>
+                  <option className={cn.rent_option}>1option</option>
+                  <option className={cn.rent_option}>2option</option>
+                  <option className={cn.rent_option}>3option</option>
+                </select> */}
               </div>
 
             </div>

@@ -13,41 +13,20 @@
 
 .advertising_box {
   width: 406px;
-  // width: 406px;
   // height: 345px;
-
   background: #FFFEFE;
   padding: 27px 0 45px;
   @include padding_media(22px, 0, 40px);
 
   box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
   border-radius: 10px;
-
-  // @media (min-width: 1170px) and (max-width: 1320px) {
-  //   min-width: 360px;
-  // }
-  
-  // @media (min-width: 1020px) and (max-width: 1170px) {
-  //   min-width: 310px;
-  // }
-
   @include adv_card_media(406px, 345px);
 
   
   .advertising_container {
     margin: 0px auto;
     max-width: 330px;
-
     @include adv_card_container_media(406px);
-
-    // @media (min-width: 1170px) and (max-width: 1320px) {
-    //   max-width: 315px;
-    // }
-
-    // @media (min-width: 940px) and (max-width: 1170px) {  
-    //   max-width: 250px;
-    // }
-
 
     .wrapper_advertising {
       display: flex;
