@@ -42,14 +42,14 @@
   padding: 9px 16px;
   gap: 5px;
 
-  background: #FFD54F;
+  background: $yellow;
   border-radius: 22px;
   @include typography(700, 14px, 17px);
   color: #242424;
 }
 
 .red {
-  background: #EB5757;
+  background: coral;
   color: $white_3;
 }
 
@@ -82,10 +82,10 @@
   padding: 10px 15px;
   gap: 10px;
 
-  background: #F8F8F8;
+  background: $white_2;
   border-radius: 18px;
   @include typography(700, 14px, 17px);
-  color: #664EF9;
+  color: $purple;
 }
 
 .opacity_red {
@@ -95,7 +95,7 @@
   background: rgba(235, 87, 87, 0.1);
   border-radius: 22px;
   @include typography(600, 14px, 17px);
-  color: #EB5757;
+  color: $coral;
 }
 
 .opacity_yellow {

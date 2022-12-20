@@ -1,4 +1,6 @@
 @import "../../../assets/scss/mixins";
+@import "../../../assets/scss/variables";
+
 
 
 .child_icon {
@@ -50,12 +52,12 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  color: #686868;
+  color: $grey;
 
 
   &:hover, &:focus, &:active, :focus-visible {
     outline: none;
-    background: #FFFFFF;
+    background: $white_3;
     border: 2px solid rgba(78, 100, 249, 0.8);
     border-radius: 30px;
   }

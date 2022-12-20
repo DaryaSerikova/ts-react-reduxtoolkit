@@ -23,7 +23,7 @@
     @include typography(500, 14px, 17px);
     
     color: $light-black;
-    background: #FFFFFF;
+    background: $white_3;
     box-shadow: 0px 10px 20px rgba(0, 96, 206, 0.1);
     border-radius: 20px;
     border: 2px solid transparent;
@@ -58,22 +58,18 @@
   }
   
   .options {
-    // display: none;
-    width: 242px;
-    height: 222px;
     padding: 0;
     display: block;
     position: absolute;
     top: 51px;
   
     list-style-type: none;
-    background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
     border-radius: 10px;
     overflow: hidden;
   
     @include typography(500, 14px, 17px);
-    color: #1E2123;
+    color: $dark-grey;
   
   
     .option {
@@ -81,12 +77,14 @@
       padding: 10px 15px 10px 11px ;
       gap: 10px;
   
-      width: 100%;
+      width: 242px;
       height: 37px;
       cursor: pointer;
+      background: $white_3;
+
   
       &:hover {
-        background: #F8F8F8;
+        background: $white_2;
       }
 
       &:first-child {
