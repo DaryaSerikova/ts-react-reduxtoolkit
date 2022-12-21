@@ -150,7 +150,9 @@ export const Select = ({defaultName, typeUpdateData}: IPropsSelect) => {
         onClick={handleClose}
       >
         <div className={cn.flex_row}>
-          <div  data-value={valueButton} className={cn.select_btn_text}>{valueButton}</div> 
+          <div  data-value={valueButton} className={cn.select_btn_text}>
+            {valueButton}
+          </div> 
         </div>
       </button>
       <ul className={`${cn.options} ${display ? '' : cn.close}`}>
