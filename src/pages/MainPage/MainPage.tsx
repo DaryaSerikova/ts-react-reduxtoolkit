@@ -20,13 +20,31 @@ import cn from "./MainPage.module.scss";
 import CustomSlider from '../../components/CustomSlider/CustomSlider';
 import { Select } from '../../components/Common/Select/Select_2';
 
+import{ default as Select4} from "react-select";
+// import c from '../../components/Common/Select/Select_4.module.scss';
+// import '../../components/Common/Select/Select_4';
+// import '../../components/Common/Select/Select_41.scss';
 
+
+
+//Select.scss
+
+
+//styled components
+// import * as React from "react";
+import { ThemeProvider } from "styled-components";
+// import { theme } from "./theme";
+import { theme } from "../../components/Common/Select/theme";
+import { useForm, Controller } from "react-hook-form";
+import Select3 from "../../components/Common/Select/Select_3";
 
 
 
 
 
 const MainPage = () => {
+  const { handleSubmit, reset, watch, control, register } = useForm();
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,6 +84,8 @@ const MainPage = () => {
         </div>
       </div>
 
+      
+
 
       <header className={`${cn.container}`}>
         <h1 className={cn.middle_title}>Sdaem.by - у нас живут ваши объявления</h1>
@@ -104,15 +124,69 @@ const MainPage = () => {
                 <h2 className={`${cn.rent_title} ${cn.title}`}>Аренда квартир в Минске</h2>
               </div>
               <div className={cn.rent_selects}>
+          <Controller
+            name="country"
+            control={control}
+            render={({ field: { onChange, value, name, ref }, }) => (
+              <Select4
+                placeholder="Метро"
+                onChange={onChange}
+                classNamePrefix='custom_select'
+                options={ [
+                  { label: "Bangladesh", value: "Bangladesh" },
+                  { label: "India", value: "India" },
+                  { label: "China", value: "China" },
+                  { label: "Finland", value: "Finland" }
+                ]}
+              />
+            )}
 
-                <Select 
+            rules={{ required: true }}
+          />
+
+          <button
+            onClick={handleSubmit((data) => {
+              console.log(data);
+            })}
+          >btn</button>
+
+                {/* <Select
                   defaultName="Метро" 
                   typeUpdateData="subwayStation"
-                />
+                /> */}
                 <Select 
                   defaultName="Район" 
                   typeUpdateData="neighborhood"
                 />
+                {/* <Select3
+                value={state.dog}
+                  // defaultName="Метро" 
+                  selectProps={{
+                    ...register('dog')
+                  }}
+                  error={Boolean(errors.dog)}
+                  options={[
+                    { value: "bullDog", label: "Bull Dog" },
+                    { value: "husky", label: "Husky" },
+                    { value: "dobermann", label: "Dobermann" }
+                  ]}
+                  name='dog'
+                /> */}
+                      {/* <button
+        // onClick={handleSubmit((data) => {
+        //   console.log(data);
+        //   setChoice(data.dog);
+        // })}
+      ></button> */}
+                {/* <Select3
+                  // defaultName="Район"
+                  options={[
+                    { value: "bullDog", label: "Bull Dog" },
+                    { value: "husky", label: "Husky" },
+                    { value: "dobermann", label: "Dobermann" }
+                  ]}
+                  name='region'
+                /> */}
                 {/*neighborhood*/}
 
                 {/* <select className={cn.rent_select}>

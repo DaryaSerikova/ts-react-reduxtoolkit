@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { useAppSelector, useAppDispatch } from '../../store/hook';
 import { updateAmountRooms, updatePriceFrom, updatePriceTo, updateSubwayStation, updateNeighborhood, updateCity } from "../../store/filtersSlice";
 import { updateAllFlats, updateFilteredFlats } from "../../store/flatsSlice";
@@ -13,6 +13,9 @@ import { ReactComponent as LocationIcon } from "../../assets/img/main_location.s
 import { ReactComponent as ArrowIcon } from "../../assets/img/main_arrow_right_1.svg";
 import { dataBackend_2 } from "../../data/data_2";
 import cn from "./Filters.module.scss";
+
+import { default as Select4} from "react-select";
+import '../../components/Common/Select/Select_41.scss';
 
 
 
@@ -40,6 +43,8 @@ const Filters = ({ typeFilters }: FiltersProps) => {
     register,
     handleSubmit,
     reset,
+
+    watch, control,
   } = useForm<IFormValues>();
 
   useEffect(() => {
@@ -117,7 +122,8 @@ const Filters = ({ typeFilters }: FiltersProps) => {
 
           <div className={cn.base_filters_with_buttons}>
             <div className={cn.base_filters}>
-              {typeFilters === "main" ? <div className={`${cn.filter_main}`}>
+
+              {/* {typeFilters === "main" ? <div className={`${cn.filter_main}`}>
                 <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
                 <select
                   className={`${cn.select}`}
@@ -125,7 +131,28 @@ const Filters = ({ typeFilters }: FiltersProps) => {
                 >
                   {cityOptions}
                 </select>
+              </div> : <></>} */}
+
+              {typeFilters === "main" ? <div className={`${cn.filter_main}`}>
+                <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Город</div>
+                <Controller
+                  name='city'
+                  control={control}
+                  render={({ field: { onChange, value, name, ref }, }) => (
+                    <Select4
+                      placeholder="Выберите"
+                      onChange={onChange}
+                      classNamePrefix='custom_select'
+                      options={cityOptionsInfo}
+                    />
+                  )}
+
+                  rules={{ required: true }}
+                />
               </div> : <></>}
+
+
+
 
               <div className={`${typeFilters === "catalog" ? cn.filter_catalog : cn.filter_main}`}>
                 <div className={`${cn.filter_name} ${cn.filter_name_main}`}>Комнаты</div>
