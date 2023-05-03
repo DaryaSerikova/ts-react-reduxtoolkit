@@ -174,7 +174,7 @@ export default Select5;
 </div>
 ```
 Чтобы стилизовать эту абракадабру мы сделаем следующее.\
-Возьмем в пример `<div class=" css-qbdosj-Input" data-value="">`
+Возьмем пример `<div class=" css-qbdosj-Input" data-value="">`
 
 ```
   [class$="-Input"] {
