@@ -3,6 +3,7 @@
 React + TS + Redux Toolkit\
 Figma, Pixel Perfect
 
+[Ссылка на макет](https://www.figma.com/file/KA7GM9MwNHEfiPcgKNLzPf/%C2%ABSDAEM.BY%C2%BB---%D1%81%D1%82%D0%B0%D0%B6%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0?node-id=0-1)
 
 `Plans`
 <ul>
@@ -128,6 +129,58 @@ Figma, Pixel Perfect
 
 
 
+## react-select and css-modules. Solution
+
+```
+import React from 'react';
+import RS from 'react-select';
+import style from './Select_4.module.scss';
+
+const options = [
+  {label: "hi", value: "hi"}
+]
+
+function Select5(props: any) {
+  return (
+    <RS
+    placeholder="Выберите"
+      options={options}
+      className={style.select}
+    />
+  )
+}
+
+export default Select5;
+```
+
+Мы имеем вот такой Select
+```
+<div class=" css-13cymwt-control">
+
+  <div class=" css-1fdsijx-ValueContainer">
+    <div class=" css-1jqq78o-placeholder" id="react-select-3-placeholder">Выберите</div>
+    <div class=" css-qbdosj-Input" data-value="">
+      <input class="" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-3-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-describedby="react-select-3-placeholder" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2 / auto / auto; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;">
+    </div>
+  </div>
+
+  <div class=" css-1hb7zxy-IndicatorsContainer">
+    <span class=" css-1u9des2-indicatorSeparator"></span>
+    <div class=" css-1xc3v61-indicatorContainer" aria-hidden="true">
+      <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-tj5bde-Svg"><path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg>
+    </div>
+  </div>
+
+</div>
+```
+Чтобы стилизовать эту абракадабру мы сделаем следующее.
+Возьмем в пример `<div class=" css-qbdosj-Input" data-value="">`
+
+```
+  [class$="-Input"] {
+    display: flex !important;
+  }
+```
 
 
 

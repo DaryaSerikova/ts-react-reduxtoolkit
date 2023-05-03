@@ -15,7 +15,10 @@ import { dataBackend_2 } from "../../data/data_2";
 import cn from "./Filters.module.scss";
 
 import { default as Select4} from "react-select";
-import '../../components/Common/Select/Select_41.scss';
+// import '../../components/Common/Select/Select_41.scss';
+import '../../components/Common/Select/Select_4.module.scss';
+import Select5 from '../Common/Select/Select_5';
+
 
 
 
@@ -139,10 +142,16 @@ const Filters = ({ typeFilters }: FiltersProps) => {
                   name='city'
                   control={control}
                   render={({ field: { onChange, value, name, ref }, }) => (
-                    <Select4
-                      placeholder="Выберите"
+                    // <Select4
+                    //   placeholder="Выберите"
+                    //   onChange={onChange}
+                    //   classNamePrefix='custom_select'
+                    //   options={cityOptionsInfo}
+                    // />
+                    <Select5 
+                      // placeholder="Выберите"
                       onChange={onChange}
-                      classNamePrefix='custom_select'
+                      // classNamePrefix='custom_select'
                       options={cityOptionsInfo}
                     />
                   )}
