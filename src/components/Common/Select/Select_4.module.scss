@@ -4,13 +4,45 @@
 @import "../../../assets/scss/components/select";
 
 //for select 5
+@keyframes scaleIn {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
 
 
 .select {
   // outline: 1px solid red;
+  
+  // [class$="-container"] {
+  //   border: 2px solid red !important;
+  //   margin: 20px !important;
+  //   outline: none !important;
+  
+  // }
+
+//   :focus-visible {
+//     outline: -webkit-focus-ring-color auto 1px;
+// }
+//class="Select_4_select__KeF-I css-b62m3t-container"
 
   [class$="-control"] {
     // background-color: salmon;
+    cursor: pointer;
+    border-color: transparent !important;
+    // outline: none !important;
 
     @extend %select;
     width: 150px;
@@ -21,9 +53,16 @@
     background-image: url("../../../assets/img/select__arrow_down.svg"); 
 
     background-repeat: no-repeat, repeat;
-    background-position: right .7em top 50%, 0 0;
+    // background-position: top .7em top 50%, 0 0;
+    background-position: right .55em top 50%, 0 0;
+
     // background-size: .65em auto, 100%; 
+    
+    &:hover, &:active, &:focus-visible, &:target {
+      box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3) !important;
+    }
   
+
     @media (min-width: 1020px) and (max-width: 1170px) {
       width: 120px;
     }
@@ -47,9 +86,18 @@
     padding: 0;
   }
 
+  [class$="-singleValue"] {
+    display: flex;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000000;
+    margin: 0;
+}
+
   [class$="-placeholder"] {
     padding-right: 1px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #000000;
@@ -62,7 +110,42 @@
   }
 
   [class$="-menu"] {
-    // background-color: #b22323;
+    animation: scaleIn 0.3s ease-in-out;
     z-index: 1000;
   }
+
+  [class$="-MenuList"] {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+    border-radius: 10px;
+  }
+
+  [class$="-option"] {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #000000;
+
+    &:hover, &:active, &:focus-visible, &:target {
+      background: #F8F8F8 !important;
+      color: #000000 !important;
+    }
+
+    // {
+    //   background: #F8F8F8 !important;
+
+    // }
+  }
+
+  // [class$="-option--is-selected"] {
+  //   background: #F8F8F8 !important;
+  // }
+  // [class$="-option-IsSelected"] {
+  //   background: #F8F8F8 !important;
+  //   color: black !important;
+  // }
+
+  //option--is-selected
+  //-menu-is-open
+  
+
 }

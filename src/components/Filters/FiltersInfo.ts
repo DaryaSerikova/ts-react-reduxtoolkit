@@ -39,13 +39,22 @@ export const cityOptionsInfo: TOptionsInfo[]  = [
   // {id: idCityOptions++, key: `city_options_${idCityOptions}`, value: "mogilev", label: "Могилев"},
 ];
 
-export const roomOptionsInfo: TRoomOptionsInfo[] = [
+// export const roomOptionsInfo: TRoomOptionsInfo[] = [
+//   { key: `room_options_${idRoomOptions++}`, value: '', label: 'Выберите'},
+//   { key: `room_options_${idRoomOptions++}`, value: 1, label: '1-комн.'},
+//   { key: `room_options_${idRoomOptions++}`, value: 2, label: '2-комн.'},
+//   { key: `room_options_${idRoomOptions++}`, value: 3, label: '3-комн.'},
+//   { key: `room_options_${idRoomOptions++}`, value: 4, label: '4-комн.'},
+//   { key: `room_options_${idRoomOptions++}`, value: 5, label: '5-комн.'},
+// ];
+
+export const roomOptionsInfo: TOptionsInfo[] = [
   { key: `room_options_${idRoomOptions++}`, value: '', label: 'Выберите'},
-  { key: `room_options_${idRoomOptions++}`, value: 1, label: '1-комн.'},
-  { key: `room_options_${idRoomOptions++}`, value: 2, label: '2-комн.'},
-  { key: `room_options_${idRoomOptions++}`, value: 3, label: '3-комн.'},
-  { key: `room_options_${idRoomOptions++}`, value: 4, label: '4-комн.'},
-  { key: `room_options_${idRoomOptions++}`, value: 5, label: '5-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: '1', label: '1-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: '2', label: '2-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: '3', label: '3-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: '4', label: '4-комн.'},
+  { key: `room_options_${idRoomOptions++}`, value: '5', label: '5-комн.'},
 ];
 
 export const subwayOptionsInfo: TOptionsInfo[] = [

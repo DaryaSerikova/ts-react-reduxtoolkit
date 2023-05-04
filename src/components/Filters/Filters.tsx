@@ -18,6 +18,7 @@ import { default as Select4} from "react-select";
 // import '../../components/Common/Select/Select_41.scss';
 import '../../components/Common/Select/Select_4.module.scss';
 import Select5 from '../Common/Select/Select_5';
+import Select6 from '../Common/Select/Select_6';
 
 
 
@@ -148,11 +149,15 @@ const Filters = ({ typeFilters }: FiltersProps) => {
                     //   classNamePrefix='custom_select'
                     //   options={cityOptionsInfo}
                     // />
-                    <Select5 
-                      // placeholder="Выберите"
-                      onChange={onChange}
-                      // classNamePrefix='custom_select'
-                      options={cityOptionsInfo}
+
+                    // <Select5 
+                    //   onChange={onChange}
+                    //   options={cityOptionsInfo}
+                    // />
+                    <Select6 
+                    onChange={onChange}
+                    // options={cityOptionsInfo}
+                    typeUpdateData="city"
                     />
                   )}
 

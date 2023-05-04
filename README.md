@@ -172,10 +172,37 @@ export default Select5;
   </div>
 
 </div>
+
+
+<div class=" css-1nmdiq5-menu" id="react-select-3-listbox">
+  <div class=" css-1n6sfyn-MenuList">
+    <div class=" css-10wo9uf-option" aria-disabled="false" id="react-select-3-option-0" tabindex="-1">Выберите</div>
+    <div class=" css-10wo9uf-option" aria-disabled="false" id="react-select-3-option-1" tabindex="-1">Минск</div>
+    <div class=" css-10wo9uf-option" aria-disabled="false" id="react-select-3-option-2" tabindex="-1">Витебск</div>
+    <div class=" css-tr4s17-option" aria-disabled="false" id="react-select-3-option-3" tabindex="-1">Гродно</div>
+  </div>
+</div>
 ```
+<div class=" css-1nmdiq5-menu" id="react-select-3-listbox">
+  <div class=" css-1n6sfyn-MenuList">
+    <div class=" css-10wo9uf-option" aria-disabled="false" id="react-select-3-option-0" tabindex="-1">Выберите</div>
+    <div class=" css-10wo9uf-option" aria-disabled="false" id="react-select-3-option-1" tabindex="-1">Минск</div>
+    <div class=" css-tr4s17-option" aria-disabled="false" id="react-select-3-option-2" tabindex="-1">Витебск</div>
+    <div class=" css-10wo9uf-option" aria-disabled="false" id="react-select-3-option-3" tabindex="-1">Гродно</div>
+  </div>
+</div>
+
 Чтобы стилизовать эту абракадабру мы сделаем следующее.\
 Возьмем пример `<div class=" css-qbdosj-Input" data-value="">`
-
+Обращение к классу идет следующим образом. Смотрим название класса в нашей разметке, видим что-то вроде `css-jdjkefejkf-option`.
+Отсекаем несуразную красотищу в виде `css-jdjkefejkf`, оставляю только читабельный кусок с черточкой `-option`.
+Получаем стилизацию опции:
+```
+  [class$="-option"] {
+    font-size: 40px;
+  }
+```
+C Input аналогично:
 ```
   [class$="-Input"] {
     display: flex !important;
@@ -192,11 +219,6 @@ P.S. Есть еще два решения этой проблемы, но на 
 
 
 -----------------------------------------------------------------------------
-
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
